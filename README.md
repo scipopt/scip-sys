@@ -1,4 +1,10 @@
 # scip-sys
+[![][img_crates]][crates] [![][img_doc]][doc]
+[img_crates]: https://img.shields.io/crates/v/scip-sys.svg
+[crates]: https://crates.io/crates/scip-sys
+[img_doc]: https://img.shields.io/badge/rust-documentation-blue.svg
+[doc]: https://docs.rs/scip-sys/
+
 Raw rust bindings to [SCIP](https://scipopt.org/)'s C-API. The bindings are automatically generated using [bindgen](https://github.com/rust-lang/rust-bindgen). 
 Meant to provide full control over SCIP's API, for a more restricted memory-safe API see [russcip](https://github.com/scipopt/russcip).
 
