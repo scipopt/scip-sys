@@ -1,5 +1,6 @@
 # scip-sys
 [![][img_crates]][crates] [![][img_doc]][doc]
+
 [img_crates]: https://img.shields.io/crates/v/scip-sys.svg
 [crates]: https://crates.io/crates/scip-sys
 [img_doc]: https://img.shields.io/badge/rust-documentation-blue.svg
