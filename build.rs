@@ -101,7 +101,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             .header(scip_header_file)
             .header(scipdefplugins_header_file)
             .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-            .clang_arg(format!("-I{}", headers_dir_path));
+            .clang_arg(format!("-I{}", headers_dir_path))
+            .clang_arg(format!("-Llib/{}", env::consts::OS));
     }
 
     println!("cargo:rustc-link-lib=scip");
