@@ -7,3 +7,18 @@
 #![allow(improper_ctypes)]
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+
+#[cfg(test)]
+mod tests {
+    use std::mem::MaybeUninit;
+
+    #[test]
+    fn test_scip_version() {
+        let mut scip = MaybeUninit::uninit();
+        unsafe { crate::SCIPcreate(&mut scip.as_mut_ptr()) };
+        let mut scip = unsafe { scip.assume_init() };
+        unsafe { crate::SCIPprintVersion(&mut scip, std::ptr::null_mut()) };
+    }
+
+
+}
