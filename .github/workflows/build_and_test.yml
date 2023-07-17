@@ -1,0 +1,16 @@
+name: build_and_test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  macos-tests:
+    runs-on: macos-latest
+    steps:
+      - name: Test
+        run: |
+          cargo test version
