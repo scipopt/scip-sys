@@ -23,5 +23,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Test
         run: |
+          sudo apt install -y gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 patchelf
           cargo test version
 
