@@ -8,9 +8,11 @@ on:
     branches:
       - main
 
-macos-test:
+jobs:
+  macos-test:
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Test
         run: |
           cargo test version
