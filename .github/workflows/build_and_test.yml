@@ -8,7 +8,7 @@ on:
     branches:
       - main
 
-  macos-tests:
+  macos-test:
     runs-on: macos-latest
     steps:
       - name: Test
