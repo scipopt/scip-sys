@@ -78,8 +78,8 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         match env::consts::OS {
             "linux" => {
-                println!("cargo:rustc-link-search=lib/macos",);
-                println!("cargo:rustc-link-arg=-Wl,-rpath,lib/macos");
+                println!("cargo:rustc-link-search=lib/linux",);
+                println!("cargo:rustc-link-arg=-Wl,-rpath,lib/linux");
             },
             "macos" => {
                 println!("cargo:rustc-link-search=lib/macos",);
