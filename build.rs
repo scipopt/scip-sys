@@ -87,7 +87,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             os => panic!("Unsupported OS: {}", os),
         };
 
-        let lib_path = env::current_dir().unwrap().join(PathBuf::from(lib_subdir)).to_str().unwrap();
+        let lib_path_buf =env::current_dir().unwrap().join(PathBuf::from(lib_subdir));
+        let lib_path = lib_path_buf.to_str().unwrap();
         println!("cargo:rustc-link-search={}", lib_path);
         println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_path);
 
