@@ -77,17 +77,20 @@ fn main() -> Result<(), Box<dyn Error>> {
     if !found_scip {
         println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, linking against packaged libscip files");
 
-        match env::consts::OS {
+        let lib_subdir = match env::consts::OS {
             "linux" => {
-                println!("cargo:rustc-link-search={}", PathBuf::from("lib/linux").to_str().unwrap());
-                println!("cargo:rustc-link-arg=-Wl,-rpath,{}", PathBuf::from("lib/linux").to_str().unwrap());
+                "lib/linux"
             }
             "macos" => {
-                println!("cargo:rustc-link-search={}", PathBuf::from("lib/macos").to_str().unwrap());
-                println!("cargo:rustc-link-arg=-Wl,-rpath,{}", PathBuf::from("lib/macos").to_str().unwrap());
+                "lib/macos"
             }
             os => panic!("Unsupported OS: {}", os),
         };
+
+        let lib_path = env::current_dir().unwrap().join(PathBuf::from(lib_subdir)).to_str().unwrap();
+        println!("cargo:rustc-link-search={}", lib_path);
+        println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_path);
+
 
         let headers_dir_path = "include/";
         let headers_dir = PathBuf::from(headers_dir_path);
