@@ -1,9 +1,10 @@
 extern crate bindgen;
 
-use glob::glob;
 use std::env;
 use std::error::Error;
 use std::path::PathBuf;
+
+use glob::glob;
 
 fn _build_from_scip_dir(path: String) -> bindgen::Builder {
     let lib_dir = PathBuf::from(&path).join("lib");
@@ -78,13 +79,13 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         match env::consts::OS {
             "linux" => {
-                println!("cargo:rustc-link-search=lib/linux",);
-                println!("cargo:rustc-link-arg=-Wl,-rpath,lib/linux");
-            },
+                println!("cargo:rustc-link-search={}", PathBuf::from("lib/linux").to_str().unwrap());
+                println!("cargo:rustc-link-arg=-Wl,-rpath,{}", PathBuf::from("lib/linux").to_str().unwrap());
+            }
             "macos" => {
-                println!("cargo:rustc-link-search=lib/macos",);
-                println!("cargo:rustc-link-arg=-Wl,-rpath,lib/macos");
-            },
+                println!("cargo:rustc-link-search={}", PathBuf::from("lib/macos").to_str().unwrap());
+                println!("cargo:rustc-link-arg=-Wl,-rpath,{}", PathBuf::from("lib/macos").to_str().unwrap());
+            }
             os => panic!("Unsupported OS: {}", os),
         };
 
