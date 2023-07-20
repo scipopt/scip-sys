@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test
         run: |
-          export DYLD_LIBRARY_PATH="${{ runner.workspace }}/lib/macos/:$DYLD_LIBRARY_PATH"
+          export DYLD_LIBRARY_PATH="${{ runner.workspace }}/lib/macos:$DYLD_LIBRARY_PATH"
           cargo test version
 
   linux-test:
