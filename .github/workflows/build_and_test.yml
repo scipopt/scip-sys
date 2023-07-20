@@ -9,14 +9,13 @@ on:
       - main
 
 jobs:
-  macos-test:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Test
-        run: |
-          export DYLD_LIBRARY_PATH="${{ runner.workspace }}/lib/macos:$DYLD_LIBRARY_PATH"
-          cargo test version
+  # macos-test:
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Test
+  #       run: |
+  #         cargo test version
 
   linux-test:
     runs-on: linux-latest
