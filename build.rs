@@ -77,9 +77,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     if !found_scip {
         println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, linking against packaged libscip files");
 
-        let lib_subdir = match env::consts::OS {
-            "linux" => "lib/linux",
-            "macos" => "lib/macos",
+        let info = os_info::get();
+        println!("cargo:warning=Detected OS: {}", info.os_type());
+
+        let lib_subdir = match info.os_type() {
+            os_info::Type::Ubuntu => "lib/ubuntu",
+            os_info::Type::Debian => "lib/debian",
+            os_info::Type::Macos => "lib/macos",
             os => panic!("Unsupported OS: {}", os),
         };
 
