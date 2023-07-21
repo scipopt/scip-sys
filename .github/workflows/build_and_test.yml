@@ -29,7 +29,9 @@ jobs:
   
 
   debian-test:
-    runs-on: debian-latest
+    runs-on: ubuntu-20.04
+    container:
+      image: debian:latest
     steps:
       - uses: actions/checkout@v3
       - name: Test
