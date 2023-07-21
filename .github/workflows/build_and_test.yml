@@ -32,12 +32,15 @@ jobs:
     runs-on: ubuntu-20.04
     container:
       image: debian:latest
+    env:
+      RUSTFLAGS: "-C link-arg=-Wl,-rpath,/usr/lib/x86_64-linux-gnu"
+      LD_LIBRARY_PATH: "/usr/lib/x86_64-linux-gnu"
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y gcc g++ gfortran liblapacke libtbb2 libcliquer1 libopenblas-dev libgsl-dev patchelf curl clang libclang-dev
+          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf curl clang libclang-dev
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
