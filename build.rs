@@ -78,20 +78,28 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, linking against packaged libscip files");
 
         let lib_subdir = match env::consts::OS {
-            "linux" => {
-                "lib/linux"
-            }
-            "macos" => {
-                "lib/macos"
-            }
+            "linux" => "lib/linux",
+            "macos" => "lib/macos",
             os => panic!("Unsupported OS: {}", os),
         };
 
-        let lib_path_buf =env::current_dir().unwrap().join(PathBuf::from(lib_subdir));
+        let lib_path_buf = env::current_dir().unwrap().join(PathBuf::from(lib_subdir));
         let lib_path = lib_path_buf.to_str().unwrap();
-        println!("cargo:rustc-link-search={}", lib_path);
-        println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_path);
+        println!("cargo:warning=Using SCIP from {}", lib_path);
 
+        println!("cargo:rustc-link-search={}/", lib_path);
+        println!("cargo:rustc-link-arg=-Wl,-rpath,{}/", lib_path);
+        println!("cargo:rustc-link-lib=scip");
+
+        if env::consts::OS == "macos" {
+            println!(
+                "cargo:warning=You might need to add to the DYLD_LIBRARY_PATH environment variable"
+            );
+            println!(
+                "cargo:warning=export DYLD_LIBRARY_PATH={}/:$DYLD_LIBRARY_PATH",
+                lib_path
+            );
+        }
 
         let headers_dir_path = "include/";
         let headers_dir = PathBuf::from(headers_dir_path);
@@ -112,7 +120,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             .header(scipdefplugins_header_file)
             .parse_callbacks(Box::new(bindgen::CargoCallbacks))
             .clang_arg(format!("-I{}", headers_dir_path))
-            .clang_arg(format!("-Llib/{}/libscip.8.0.3.0.dylib", env::consts::OS));
+            .clang_arg(format!("-L{}", lib_path))
+            .clang_arg("-lscip");
     }
 
     println!("cargo:rustc-link-lib=scip");
