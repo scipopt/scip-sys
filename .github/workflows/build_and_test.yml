@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf curl
+          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf curl clang libclang-dev
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
