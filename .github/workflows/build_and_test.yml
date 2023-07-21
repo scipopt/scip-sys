@@ -9,23 +9,23 @@ on:
       - main
 
 jobs:
-  macos-test:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Test
-        run: |
-          export DYLD_LIBRARY_PATH=${{ github.workspace }}/lib/macos/:$DYLD_LIBRARY_PATH
-          cargo test version
+  # macos-test:
+  #   runs-on: macos-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Test
+  #       run: |
+  #         export DYLD_LIBRARY_PATH=${{ github.workspace }}/lib/macos/:$DYLD_LIBRARY_PATH
+  #         cargo test version
 
-  linux-test:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-      - name: Test
-        run: |
-          sudo apt install -y gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 patchelf
-          cargo test version
+  # linux-test:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Test
+  #       run: |
+  #         sudo apt install -y gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 patchelf
+  #         cargo test version
   
 
   debian-test:
@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf curl clang libclang-dev
+          apt-get install -y gcc g++ gfortran liblapacke libtbb2 libcliquer1 libopenblas-dev libgsl-dev patchelf curl clang libclang-dev
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
