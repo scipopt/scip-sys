@@ -34,6 +34,10 @@ jobs:
       image: debian:latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf curl
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
@@ -41,6 +45,4 @@ jobs:
           override: true
       - name: Test
         run: |
-          apt-get update
-          apt-get install -y gcc g++ gfortran liblapacke libtbb-dev libcliquer1 libopenblas-dev libgsl-dev patchelf
           cargo test version
