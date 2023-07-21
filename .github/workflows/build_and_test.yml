@@ -34,6 +34,11 @@ jobs:
       image: debian:latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
       - name: Test
         run: |
           apt-get update
