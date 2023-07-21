@@ -26,4 +26,13 @@ jobs:
         run: |
           sudo apt install -y gcc g++ gfortran liblapack3 libtbb2 libcliquer1 libopenblas-dev libgsl23 patchelf
           cargo test version
+  
 
+  debian-test:
+    runs-on: debian-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test
+        run: |
+          sudo apt install -y gcc g++ gfortran liblapack3 libtbb-dev libcliquer1 libopenblas-dev libgsl23 patchelf
+          cargo test version
