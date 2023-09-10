@@ -23,6 +23,7 @@ fn download_lib_files() -> Result<String, Box<dyn Error>> {
     };
 
     let arch = std::env::consts::ARCH;
+    println!("cargo:warning=Detected arch: {}", arch);
 
     let url_base = "https://github.com/JuliaBinaryWrappers/SCIP_jll.jl/releases/download/SCIP-v800.0.301%2B0/SCIP.v800.0.301.";
     let url = format!("{}{}-{}.tar.gz", url_base, arch, os);
@@ -75,7 +76,7 @@ fn _build_from_scip_dir(path: String) -> bindgen::Builder {
             )
         );
     }
-    println!("cargo:rustc-link-search={}", lib_dir_path);
+    println!("cargo:rustc-link-search={}/lib", lib_dir_path);
     println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
 
     let include_dir = PathBuf::from(&path).join("include");
@@ -129,47 +130,8 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if !found_scip {
         println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, downloading SCIP from GitHub releases");
-
-        let lib_subdir = download_lib_files().unwrap();
-        let lib_path_buf = env::current_dir().unwrap().join(PathBuf::from(lib_subdir));
-        let lib_path = lib_path_buf.to_str().unwrap();
-        println!("cargo:warning=Using SCIP from {}", lib_path);
-
-        println!("cargo:rustc-link-search={}/", lib_path);
-        println!("cargo:rustc-link-arg=-Wl,-rpath,{}/", lib_path);
-        println!("cargo:rustc-link-lib=scip");
-
-        if env::consts::OS == "macos" {
-            println!(
-                "cargo:warning=You might need to add to the DYLD_LIBRARY_PATH environment variable"
-            );
-            println!(
-                "cargo:warning=export DYLD_LIBRARY_PATH={}/:$DYLD_LIBRARY_PATH",
-                lib_path
-            );
-        }
-
-        let headers_dir_path = "include/";
-        let headers_dir = PathBuf::from(headers_dir_path);
-        let scip_header_file = PathBuf::from(&headers_dir)
-            .join("scip")
-            .join("scip.h")
-            .to_str()
-            .unwrap()
-            .to_owned();
-        let scipdefplugins_header_file = PathBuf::from(&headers_dir)
-            .join("scip")
-            .join("scipdefplugins.h")
-            .to_str()
-            .unwrap()
-            .to_owned();
-        builder = bindgen::Builder::default()
-            .header(scip_header_file)
-            .header(scipdefplugins_header_file)
-            .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-            .clang_arg(format!("-I{}", headers_dir_path))
-            .clang_arg(format!("-L{}", lib_path))
-            .clang_arg("-lscip");
+        let lib_path = download_lib_files().unwrap();
+        builder = _build_from_scip_dir(lib_path);
     }
 
     println!("cargo:rustc-link-lib=scip");
