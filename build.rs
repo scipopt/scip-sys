@@ -1,10 +1,63 @@
 extern crate bindgen;
 
+use flate2::read::GzDecoder;
 use std::env;
 use std::error::Error;
+use std::fs::File;
 use std::path::PathBuf;
+use std::process::Stdio;
+use tar::Archive;
 
 use glob::glob;
+
+// Download libscip files from GitHub releases
+fn download_lib_files() -> Result<String, Box<dyn Error>> {
+    let info = os_info::get();
+    println!("cargo:warning=Detected OS: {}", info.os_type());
+
+    let os = match info.os_type() {
+        os_info::Type::Ubuntu => "linux-gnu-cxx11",
+        os_info::Type::Macos => "apple-darwin",
+        os_info::Type::Windows => "w64-mingw32-cxx11",
+        os => panic!("Unsupported OS: {}", os),
+    };
+
+    let arch = std::env::consts::ARCH;
+
+    let url_base = "https://github.com/JuliaBinaryWrappers/SCIP_jll.jl/releases/download/SCIP-v800.0.301%2B0/SCIP.v800.0.301.";
+    let url = format!("{}{}-{}.tar.gz", url_base, arch, os);
+
+    let out_dir = env::var("OUT_DIR").unwrap();
+    let out_dir = PathBuf::from(out_dir);
+    let out_dir = out_dir.join("lib");
+    let out_dir = out_dir.to_str().unwrap();
+
+    // Download libscip files using curl
+    println!("cargo:warning=Downloading libscip files from {}", url);
+    let output = std::process::Command::new("curl")
+        .args(&["-L", &url, "-o", "libscip.tar.gz"])
+        .stdout(Stdio::null())
+        .stderr(Stdio::null())
+        .output()
+        .map_err(|e| format!("Failed to download libscip files: {}", e))?;
+
+    if !output.status.success() {
+        panic!("Failed to download libscip files");
+    }
+
+    // Extract libscip files
+    println!("cargo:warning=Extracting libscip files to {}", out_dir);
+    let tar_gz = File::open("libscip.tar.gz")?;
+    let tar = GzDecoder::new(tar_gz);
+    let mut archive = Archive::new(tar);
+    archive.unpack(out_dir)?;
+
+    println!("cargo:warning=libscip files extracted to {}", out_dir);
+    println!("cargo:warning=cleaning up libscip.tar.gz");
+    std::fs::remove_file("libscip.tar.gz")?;
+
+    Ok(out_dir.to_owned())
+}
 
 fn _build_from_scip_dir(path: String) -> bindgen::Builder {
     let lib_dir = PathBuf::from(&path).join("lib");
@@ -75,18 +128,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     if !found_scip {
-        println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, linking against packaged libscip files");
+        println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt, downloading SCIP from GitHub releases");
 
-        let info = os_info::get();
-        println!("cargo:warning=Detected OS: {}", info.os_type());
-
-        let lib_subdir = match info.os_type() {
-            os_info::Type::Ubuntu => "lib/ubuntu",
-            os_info::Type::Debian => "lib/debian",
-            os_info::Type::Macos => "lib/macos",
-            os => panic!("Unsupported OS: {}", os),
-        };
-
+        let lib_subdir = download_lib_files().unwrap();
         let lib_path_buf = env::current_dir().unwrap().join(PathBuf::from(lib_subdir));
         let lib_path = lib_path_buf.to_str().unwrap();
         println!("cargo:warning=Using SCIP from {}", lib_path);
