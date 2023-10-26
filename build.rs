@@ -97,6 +97,9 @@ fn main() -> Result<(), Box<dyn Error>> {
             .clang_arg(format!("-I{}", headers_dir_path));
     }
 
+    #[cfg(windows)]
+    println!("cargo:rustc-link-lib=libscip");
+    #[cfg(not(windows))]
     println!("cargo:rustc-link-lib=scip");
 
     let builder = builder
