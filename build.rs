@@ -99,11 +99,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     if is_bundled_feature_enabled() {
         download_scip();
         let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
-        _build_from_scip_dir(path.to_str().unwrap());
+        _build_from_scip_dir(path.to_str().unwrap())
     } else {
         let builder = look_in_scipoptdir_and_conda_env();
         if builder.is_some() {
-
             builder.unwrap()
         } else {
             println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
