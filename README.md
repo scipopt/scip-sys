@@ -1,5 +1,6 @@
 # scip-sys
-[![tests](https://github.com/scipopt/scip-sys/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/scipopt/scip-sys/actions/workflows/build_and_test.yml) ![][img_crates]][crates] [![][img_doc]][doc] 
+[![tests](https://github.com/scipopt/scip-sys/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/scipopt/scip-sys/actions/workflows/build_and_test.yml)
+[![][img_crates]][crates] [![][img_doc]][doc] 
 
 [img_crates]: https://img.shields.io/crates/v/scip-sys.svg
 [crates]: https://crates.io/crates/scip-sys
