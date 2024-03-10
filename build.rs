@@ -102,15 +102,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     } else {
         let builder = look_in_scipoptdir_and_conda_env();
         if builder.is_some() {
+
             builder.unwrap()
         } else {
             println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
             println!("cargo:warning=Looking for SCIP in system libraries");
-
-            #[cfg(windows)]
-            println!("cargo:rustc-link-lib=libscip");
-            #[cfg(not(windows))]
-            println!("cargo:rustc-link-lib=scip");
 
             let headers_dir_path = "headers/";
             let headers_dir = PathBuf::from(headers_dir_path);
@@ -134,6 +130,11 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .clang_arg(format!("-I{}", headers_dir_path))
         }
     };
+
+    #[cfg(windows)]
+    println!("cargo:rustc-link-lib=libscip");
+    #[cfg(not(windows))]
+    println!("cargo:rustc-link-lib=scip");
 
     let builder = builder
         .blocklist_item("FP_NAN")

@@ -7,3 +7,18 @@
 #![allow(improper_ctypes)]
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+
+
+#[cfg(test)]
+mod tests {
+    use std::mem::MaybeUninit;
+    use super::*;
+
+    #[test]
+    fn test_create() {
+        let mut scip_ptr = MaybeUninit::uninit();
+        unsafe { SCIPcreate(scip_ptr.as_mut_ptr()) };
+        let mut scip_ptr = unsafe { scip_ptr.assume_init() };
+        unsafe { SCIPfree(&mut scip_ptr) };
+    }
+}
