@@ -1,0 +1,13 @@
+matrix :
+  os: [ubuntu-20.04, macos-latest, windows-latest]
+
+bundled-test:
+  runs-on: ${{ matrix.os }}
+  strategy:
+    matrix:
+      os: [ubuntu-latest, macos-latest, windows-latest]
+  steps:
+    - uses: actions/checkout@v3
+    - name: Test
+      run:
+       cargo test --features bundled create
