@@ -10,11 +10,10 @@ Raw rust bindings to [SCIP](https://scipopt.org/)'s C-API. The bindings are auto
 Meant to provide full control over SCIP's API, for a more restricted memory-safe API see [russcip](https://github.com/scipopt/russcip).
 
 ## Dependencies 
-This crate depends on SCIP at runtime, as of version 0.1.7 we provide the `bundled` feature that tries to download a precompiled binary for your OS and architecture
-to enable it add the following to your `Cargo.toml` file
-```toml
-[dependencies]
-scip-sys = { version = "0.1.7", features = ["bundled"] }
+This crate depends on SCIP at runtime, the crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
+run the following command to add the crate with the `bundled` feature
+```bash
+cargo add scip-sys --features bundled
 ```
 
 If the `bundled` feature is not enabled, will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
