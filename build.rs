@@ -27,7 +27,7 @@ pub fn is_bundled_feature_enabled() -> bool {
     false
 }
 
-fn _build_from_scip_dir(path: String) -> bindgen::Builder {
+fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
     let lib_dir = PathBuf::from(&path).join("lib");
     let lib_dir_path = lib_dir.to_str().unwrap();
 
@@ -83,7 +83,7 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
         if let Ok(scip_dir) = env_var {
             println!("cargo:warning=Looking for SCIP in {}", scip_dir);
             if lib_scip_in_dir(&scip_dir) {
-                return Some(_build_from_scip_dir(scip_dir));
+                return Some(_build_from_scip_dir(&scip_dir));
             } else {
                 println!("cargo:warning=SCIP was not found in {}", scip_dir);
             }
@@ -98,7 +98,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     let builder =
     if is_bundled_feature_enabled() {
         download_scip();
-        _build_from_scip_dir(format!("{}/scip_install", env::var("OUT_DIR").unwrap()))
+        let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
+        _build_from_scip_dir(path.to_str().unwrap());
     } else {
         let builder = look_in_scipoptdir_and_conda_env();
         if builder.is_some() {
