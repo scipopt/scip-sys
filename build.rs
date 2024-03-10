@@ -29,6 +29,7 @@ pub fn is_bundled_feature_enabled() -> bool {
 
 fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
     let lib_dir = PathBuf::from(&path).join("lib");
+
     let lib_dir_path = lib_dir.to_str().unwrap();
 
     if lib_dir.exists() {
@@ -166,7 +167,13 @@ fn download_scip() {
     println!("cargo:warning=Detected OS: {}", os);
     println!("cargo:warning=Detected arch: {}", arch);
 
-    let os_string = if os == os_info::Type::Ubuntu && arch == "x86_64" {
+    let linux_os = os == os_info::Type::Ubuntu ||
+        os == os_info::Type::Debian ||
+        os == os_info::Type::Fedora ||
+        os == os_info::Type::CentOS ||
+        os == os_info::Type::Redhat;
+
+    let os_string = if linux_os && arch == "x86_64" {
         "Linux-x86_64"
     } else if os == os_info::Type::Macos && arch == "x86_64" {
         "Darwin-x86_64"
@@ -190,7 +197,6 @@ fn download_scip() {
 
 #[cfg(not(feature = "bundled"))]
 fn download_scip() {}
-
 
 
 #[cfg(feature = "bundled")]
