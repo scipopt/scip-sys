@@ -28,6 +28,9 @@ pub fn is_bundled_feature_enabled() -> bool {
 }
 
 fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
+    #[cfg(windows)]
+    let lib_dir = PathBuf::from(&path).join("bin");
+    #[cfg(not(windows))]
     let lib_dir = PathBuf::from(&path).join("lib");
 
     let lib_dir_path = lib_dir.to_str().unwrap();
