@@ -8,14 +8,13 @@ license = "Apache-2.0"
 links = "scip"
 
 [features]
-bundled = ["os_info", "reqwest", "zip", "tempfile", "zip-extract"]
+bundled = ["reqwest", "zip", "tempfile", "zip-extract"]
 
 [build-dependencies]
 bindgen = "0.64"
 cc = "1.0.73"
 glob = "0.3.1"
 # dependencies for the static feature
-os_info = { version = "3", default-features = false, optional = true }
 reqwest = { version = "0.11", features = ["blocking", "json"], optional = true }
 zip = { version = "0.5", optional = true }
 tempfile = { version = "3.2", optional = true }

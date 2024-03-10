@@ -166,25 +166,18 @@ fn download_scip() {
         return;
     }
 
-    let info = os_info::get();
-    let os = info.os_type();
+    let os = env::consts::OS;
     let arch = std::env::consts::ARCH;
     println!("cargo:warning=Detected OS: {}", os);
     println!("cargo:warning=Detected arch: {}", arch);
 
-    let linux_os = os == os_info::Type::Ubuntu ||
-        os == os_info::Type::Debian ||
-        os == os_info::Type::Fedora ||
-        os == os_info::Type::CentOS ||
-        os == os_info::Type::Redhat;
-
-    let os_string = if linux_os && arch == "x86_64" {
+    let os_string = if os == "linux" && arch == "x86_64" {
         "Linux-x86_64"
-    } else if os == os_info::Type::Macos && arch == "x86_64" {
+    } else if os == "macos" && arch == "x86_64" {
         "Darwin-x86_64"
-    } else if os == os_info::Type::Macos && arch == "aarch64" {
+    } else if os == "macos" && arch == "aarch64" {
         "Darwin-arm"
-    } else if info.os_type() == os_info::Type::Windows && arch == "x86_64" {
+    } else if os == "windows" && arch == "x86_64" {
         "win64-VS22"
     } else {
         panic!("Unsupported OS-arch combination: {}-{}", os, arch);
