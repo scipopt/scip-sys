@@ -1,0 +1,25 @@
+name: build_and_test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  bundled-test:
+    strategy:
+      matrix:
+        os: [
+          ubuntu-latest,
+          macos-latest,
+          windows-latest,
+        ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test
+        run:
+          cargo t --features bundled create
