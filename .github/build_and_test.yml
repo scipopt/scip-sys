@@ -1,4 +1,12 @@
-matrix :
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+matrix:
   os: [ubuntu-20.04, macos-latest, windows-latest]
 
 bundled-test:
