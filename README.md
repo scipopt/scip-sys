@@ -10,12 +10,18 @@ Raw rust bindings to [SCIP](https://scipopt.org/)'s C-API. The bindings are auto
 Meant to provide full control over SCIP's API, for a more restricted memory-safe API see [russcip](https://github.com/scipopt/russcip).
 
 ## Dependencies 
-This crate depends on SCIP at runtime, the easiest way to install it is to install a precompiled package from [here](https://scipopt.org/index.php#download) or through conda by running
+This crate depends on SCIP at runtime, as of version 0.1.5 we provide the `bundled` feature that tries to download a precompiled binary for your OS and architecture
+to enable it add the following to your `Cargo.toml` file
+```toml
+[dependencies]
+scip-sys = { version = "0.1.5", features = ["bundled"] }
+```
+
+If the `bundled` feature is not enabled, will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
+to install SCIP using conda run the following command
 ```bash
 conda install --channel conda-forge scip
 ```
-After which `scip-sys` would be able to find the installation in the current Conda environment. Alternatively, you can specify the installation directory through the `SCIPOPTDIR` environment variable. 
-
 
 ## License
 This repo is distributed under the open-source Apache 2.0 [license](https://www.apache.org/licenses/LICENSE-2.0). Although, to simplify the building process the C-headers for the SCIPOptSuite and its dependent software are included.
