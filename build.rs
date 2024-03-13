@@ -184,7 +184,7 @@ fn download_scip() {
     };
 
     let url = format!(
-        "https://scip.zib.de/download/release/SCIP-9.0.0-{os_string}.zip"
+        "https://github.com/scipopt/scip/releases/download/v900/SCIP-9.0.0-{os_string}.zip"
     );
 
     download_and_extract_zip(&url, &extract_path).unwrap_or_else(
