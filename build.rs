@@ -172,19 +172,19 @@ fn download_scip() {
     println!("cargo:warning=Detected arch: {}", arch);
 
     let os_string = if os == "linux" && arch == "x86_64" {
-        "Linux-x86_64"
+        "linux"
     } else if os == "macos" && arch == "x86_64" {
-        "Darwin-x86_64"
+        "macos"
     } else if os == "macos" && arch == "aarch64" {
-        "Darwin-arm"
+        "macos-arm"
     } else if os == "windows" && arch == "x86_64" {
-        "win64-VS22"
+        "windows"
     } else {
         panic!("Unsupported OS-arch combination: {}-{}", os, arch);
     };
 
     let url = format!(
-        "https://github.com/scipopt/scip/releases/download/v900/SCIP-9.0.0-{os_string}.zip"
+        "https://github.com/scip-sys/binaries/binaries/libscip-{os_string}.zip"
     );
 
     download_and_extract_zip(&url, &extract_path).unwrap_or_else(
