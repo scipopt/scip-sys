@@ -138,9 +138,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     };
 
     #[cfg(windows)]
-    println!("cargo:rustc-link-lib=libscip");
+    println!("cargo:rustc-link-lib=static=libscip");
     #[cfg(not(windows))]
-    println!("cargo:rustc-link-lib=scip");
+    println!("cargo:rustc-link-lib=static=scip");
 
     let builder = builder
         .blocklist_item("FP_NAN")
