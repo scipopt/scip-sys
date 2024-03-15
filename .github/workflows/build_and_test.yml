@@ -21,6 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Test
-        run:
+        run: |
           cargo t --features bundled create
           cargo t --features bundled --examples
