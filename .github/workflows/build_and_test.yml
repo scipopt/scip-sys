@@ -23,3 +23,4 @@ jobs:
       - name: Test
         run:
           cargo t --features bundled create
+          cargo t --features bundled --examples
