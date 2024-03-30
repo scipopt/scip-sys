@@ -68,22 +68,8 @@ jobs:
 
       - name: Setup vcpkg
         uses: lukka/run-vcpkg@v11
-        with:
-          vcpkgArguments: 'tbb'
-          vcpkgDirectory: '${{ runner.workspace }}/vcpkg/'
-          appendedCacheKey: ${{ hashFiles( '**/vcpkg.json' ) }}
-          vcpkgGitURL: 'https://github.com/microsoft/vcpkg.git'
-          setupOnly: true
-
-      - name: Cache vcpkg artifacts
-        uses: actions/cache@v4
-        with:
-          path: |
-            ${{ runner.workspace }}/vcpkg/installed
-            !**/packages
-          key: ${{ runner.os }}-tbb-${{ hashFiles('**/vcpkg.json') }}
-          restore-keys: |
-            ${{ runner.os }}-tbb-
+        run: |
+          vcpkg install tbb:x64-windows
 
       - name: Test from-source
         run: |
