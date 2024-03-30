@@ -18,14 +18,14 @@ to install SCIP using conda run the following command
 conda install --channel conda-forge scip
 ```
 
-## `bundled` feature
+### `bundled` feature
 The crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
 run the following command to add the crate with the `bundled` feature
 ```bash
 cargo add scip-sys --features bundled
 ```
 
-## `from-source` feature
+### `from-source` feature
 The crate provides the `from-source` feature that tries to download the source code and compile it. This provides the most flexibility but the compilation process can be slow. 
 run the following command to add the crate with the `from-source` feature
 ```bash
