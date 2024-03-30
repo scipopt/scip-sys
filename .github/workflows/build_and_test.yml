@@ -33,19 +33,29 @@ jobs:
 #          cargo t --features from-source --examples
 
 
-  macos-from-source:
-    strategy:
-      matrix:
-        os: [
-          macos-latest,
-          macos-14,
-        ]
-    runs-on: ${{ matrix.os }}
+#  macos-from-source:
+#    strategy:
+#      matrix:
+#        os: [
+#          macos-latest,
+#          macos-14,
+#        ]
+#    runs-on: ${{ matrix.os }}
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Test from-source
+#        run: |
+#          brew install bison
+#          cargo b --features from-source -vv
+#          cargo t --features from-source create
+#          cargo t --features from-source --examples
+
+  ubuntu-from-source:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Test from-source
         run: |
-          brew install bison
           cargo b --features from-source -vv
           cargo t --features from-source create
           cargo t --features from-source --examples
