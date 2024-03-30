@@ -65,8 +65,29 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup vcpkg
+        uses: lukka/run-vcpkg@v9
+        with:
+          vcpkgArguments: 'tbb'
+          vcpkgDirectory: '${{ runner.workspace }}/vcpkg/'
+          appendedCacheKey: ${{ hashFiles( '**/vcpkg.json' ) }}
+          vcpkgGitURL: 'https://github.com/microsoft/vcpkg.git'
+          setupOnly: true
+
+      - name: Cache vcpkg artifacts
+        uses: actions/cache@v2
+        with:
+          path: |
+            ${{ runner.workspace }}/vcpkg/installed
+            !**/packages
+          key: ${{ runner.os }}-tbb-${{ hashFiles('**/vcpkg.json') }}
+          restore-keys: |
+            ${{ runner.os }}-tbb-
+
       - name: Test from-source
         run: |
+          echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
           cargo b --features from-source -vv
           cargo t --features from-source create
           cargo t --features from-source --examples
