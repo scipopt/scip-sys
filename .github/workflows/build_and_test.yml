@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  bundled-test:
+  bundled-and-from-source-test:
     strategy:
       matrix:
         os: [
@@ -21,7 +21,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - name: Test
+      - name: Test bundled
         run: |
+          cargo b --features bundled -vv
           cargo t --features bundled create
           cargo t --features bundled --examples
+      - name: Test from-source
+        run: |
+          cargo b --features from-source -vv
+          cargo t --features from-source create
+          cargo t --features from-source --examples
