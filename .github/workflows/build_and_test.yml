@@ -65,6 +65,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: lukka/get-cmake@latest
       - uses: lukka/run-vcpkg@v11
       - name: Test from-source
         run: |
