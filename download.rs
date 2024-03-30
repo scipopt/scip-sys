@@ -1,4 +1,3 @@
-use std::env;
 use std::error::Error;
 use tempfile::tempdir;
 use std::fs::File;
