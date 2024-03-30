@@ -67,6 +67,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: lukka/get-cmake@latest
       - uses: lukka/run-vcpkg@v11
+        with:
+           vcpkgGitCommitId: "6c296b9"
+
       - name: Test from-source
         run: |
           vcpkg install tbb:x64-windows
