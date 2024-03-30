@@ -1,5 +1,7 @@
 mod bundled;
 mod from_source;
+
+#[cfg(any(feature = "bundled", feature = "from-source"))]
 mod download;
 
 extern crate bindgen;

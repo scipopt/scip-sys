@@ -33,47 +33,36 @@ jobs:
 #          cargo t --features from-source --examples
 
 
-#  macos-from-source:
-#    strategy:
-#      matrix:
-#        os: [
-#          macos-latest,
-#          macos-14,
-#        ]
-#    runs-on: ${{ matrix.os }}
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Test from-source
-#        run: |
-#          brew install bison
-#          cargo b --features from-source -vv
-#          cargo t --features from-source create
-#          cargo t --features from-source --examples
-
-#  ubuntu-from-source:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Test from-source
-#        run: |
-#          cargo b --features from-source -vv
-#          cargo t --features from-source create
-#          cargo t --features from-source --examples
-
-
-  windows-from-source:
-    runs-on: windows-latest
+  from-source-test:
+    strategy:
+      matrix:
+        os: [
+          macos-latest,
+          macos-14,
+          ubuntu-latest,
+        ]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - uses: lukka/get-cmake@latest
-      - uses: lukka/run-vcpkg@v11
-        with:
-           vcpkgGitCommitId: "6c296b9"
-
+      - name: Install bison
+        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-14' }}
+        run: |
+          brew install bison
       - name: Test from-source
         run: |
-          vcpkg install tbb:x64-windows
-          echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
           cargo b --features from-source -vv
           cargo t --features from-source create
           cargo t --features from-source --examples
+
+# TODO: fix this, needs tbb
+#  windows-from-source:
+#    runs-on: windows-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Test from-source
+#        run: |
+#          echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
+#          cargo b --features from-source -vv
+#          cargo t --features from-source create
+#          cargo t --features from-source --examples
