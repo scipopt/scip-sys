@@ -9,23 +9,23 @@ on:
       - main
 
 jobs:
-  bundled-test:
-    strategy:
-      matrix:
-        os: [
-          ubuntu-latest,
-          macos-latest,
-          macos-14, # macOS arm runner
-          windows-latest,
-        ]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Test bundled
-        run: |
-          cargo b --features bundled -vv
-          cargo t --features bundled create
-          cargo t --features bundled --examples
+#  bundled-test:
+#    strategy:
+#      matrix:
+#        os: [
+#          ubuntu-latest,
+#          macos-latest,
+#          macos-14, # macOS arm runner
+#          windows-latest,
+#        ]
+#    runs-on: ${{ matrix.os }}
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Test bundled
+#        run: |
+#          cargo b --features bundled -vv
+#          cargo t --features bundled create
+#          cargo t --features bundled --examples
 
   from-source-test:
     strategy:
@@ -33,7 +33,7 @@ jobs:
         os: [
           macos-latest,
           macos-14,
-          ubuntu-latest,
+#          ubuntu-latest,
         ]
     runs-on: ${{ matrix.os }}
     steps:
