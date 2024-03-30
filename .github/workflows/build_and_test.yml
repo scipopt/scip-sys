@@ -65,10 +65,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v11
-
+      - uses: lukka/run-vcpkg@v11
       - name: Test from-source
         run: |
           vcpkg install tbb:x64-windows
