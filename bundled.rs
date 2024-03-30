@@ -2,7 +2,6 @@
 use std::env;
 #[cfg(feature = "bundled")]
 use std::path::PathBuf;
-
 #[cfg(feature = "bundled")]
 use crate::download::download_and_extract_zip;
 

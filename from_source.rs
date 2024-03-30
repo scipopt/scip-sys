@@ -1,7 +1,6 @@
+use std::path::PathBuf;
 #[cfg(feature = "from-source")]
 use std::env;
-#[cfg(feature = "from-source")]
-use std::path::PathBuf;
 #[cfg(feature = "from-source")]
 use crate::download::download_and_extract_zip;
 
