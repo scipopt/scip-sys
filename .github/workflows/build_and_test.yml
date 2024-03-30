@@ -68,11 +68,10 @@ jobs:
 
       - name: Setup vcpkg
         uses: lukka/run-vcpkg@v11
-        run: |
-          vcpkg install tbb:x64-windows
 
       - name: Test from-source
         run: |
+          vcpkg install tbb:x64-windows
           echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
           cargo b --features from-source -vv
           cargo t --features from-source create
