@@ -41,7 +41,7 @@ jobs:
       - name: Install bison
         if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-14' }}
         run: |
-          brew install bison
+          brew install bison gcc
       - name: Test from-source
         run: |
           cargo b --features from-source -vv
