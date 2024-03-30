@@ -9,6 +9,7 @@ links = "scip"
 
 [features]
 bundled = ["reqwest", "zip", "tempfile", "zip-extract"]
+from_source = ["reqwest", "zip", "tempfile", "zip-extract"]
 
 [build-dependencies]
 bindgen = "0.64"
