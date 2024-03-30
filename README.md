@@ -11,16 +11,25 @@ Raw rust bindings to [SCIP](https://scipopt.org/)'s C-API. The bindings are auto
 Meant to provide full control over SCIP's API, for a more restricted memory-safe API see [russcip](https://github.com/scipopt/russcip).
 
 ## Dependencies 
-This crate depends on SCIP at runtime, the crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
+This crate depends on SCIP at runtime, the crate provides optional features ([bundled](#bundled-feature), [from-source](#from-source-feature)) to install SCIP.
+If no feature is enabled, it will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
+to install SCIP using conda run the following command 
+```bash
+conda install --channel conda-forge scip
+```
+
+## `bundled` feature
+The crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
 run the following command to add the crate with the `bundled` feature
 ```bash
 cargo add scip-sys --features bundled
 ```
 
-If the `bundled` feature is not enabled, will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
-to install SCIP using conda run the following command
+## `from-source` feature
+The crate provides the `from-source` feature that tries to download the source code and compile it. This provides the most flexibility but the compilation process can be slow. 
+run the following command to add the crate with the `from-source` feature
 ```bash
-conda install --channel conda-forge scip
+cargo add scip-sys --features from-source
 ```
 
 ## License
