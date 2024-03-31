@@ -26,6 +26,7 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
     if lib_dir.exists() {
         println!("cargo:warning=Using SCIP from {}", lib_dir_path);
         println!("cargo:rustc-link-search={}", lib_dir_path);
+        println!("cargo:libdir={}", lib_dir_path);
 
         #[cfg(windows)]
             let lib_dir_path = PathBuf::from(&path).join("bin");
