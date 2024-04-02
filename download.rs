@@ -6,13 +6,14 @@ use std::io::Read;
 use std::io::Write;
 use std::path::Path;
 use std::path::PathBuf;
+use std::time::Duration;
 use zip_extract::extract;
 
 
 pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
     // Download the ZIP file
     println!("cargo:warning=Downloading from {}", url);
-    let resp = ureq::get(url).call()?;
+    let resp = ureq::get(url).timeout(Duration::from_secs(300)).call()?;
     let mut content: Vec<u8> = Vec::new();
     resp.into_reader().read_to_end(&mut content)?;
 
