@@ -2,6 +2,7 @@ use std::error::Error;
 use tempfile::tempdir;
 use std::fs::File;
 use std::io::Cursor;
+use std::io::Read;
 use std::io::Write;
 use std::path::Path;
 use std::path::PathBuf;
@@ -11,8 +12,9 @@ use zip_extract::extract;
 pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
     // Download the ZIP file
     println!("cargo:warning=Downloading from {}", url);
-    let response = reqwest::blocking::Client::new().get(url).send()?;
-    let content = response.bytes()?;
+    let resp = ureq::get(url).call()?;
+    let mut content: Vec<u8> = Vec::new();
+    resp.into_reader().read_to_end(&mut content)?;
 
     // Create a temporary file to store the ZIP
     let dir = tempdir()?;
