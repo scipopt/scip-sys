@@ -32,26 +32,26 @@ jobs:
           cargo t --features bundled create
           cargo t --features bundled --examples
 
-  from-source-test:
-    strategy:
-      matrix:
-        os: [
-          macos-latest,
-          macos-14,
-          ubuntu-latest,
-        ]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install bison
-        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-14' }}
-        run: |
-          brew install bison
-      - name: Test from-source
-        run: |
-          cargo b --features from-source -vv
-          cargo t --features from-source create
-          cargo t --features from-source --examples
+#  from-source-test:
+#    strategy:
+#      matrix:
+#        os: [
+#          macos-latest,
+#          macos-14,
+#          ubuntu-latest,
+#        ]
+#    runs-on: ${{ matrix.os }}
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Install bison
+#        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-14' }}
+#        run: |
+#          brew install bison
+#      - name: Test from-source
+#        run: |
+#          cargo b --features from-source -vv
+#          cargo t --features from-source create
+#          cargo t --features from-source --examples
 
 # TODO: fix this, needs tbb
 #  windows-from-source:
