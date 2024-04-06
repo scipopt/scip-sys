@@ -150,8 +150,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=dylib=blas");
     }
 
-    #[cfg(linux)]
-    println!("cargo:rustc-cfg=PIE");
+    println!("cargo:rustc-link-arg=-no-pie");
 
     let builder = builder
         .blocklist_item("FP_NAN")
