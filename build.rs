@@ -145,15 +145,18 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=static=soplex-pic");
         println!("cargo:rustc-link-lib=static=z");
         println!("cargo:rustc-link-lib=static=scip");
-        println!("cargo:rustc-link-lib=c++");
         println!("cargo:rustc-link-lib=lapack");
         println!("cargo:rustc-link-lib=blas");
     }
+    //
+    // #[cfg(darwin)]
+    // println!("cargo:rustc-link-lib=dylib=c++");
+    // #[cfg(linux)]
+    println!("cargo:rustc-link-lib=stdc++");
+
 
     println!("cargo:rustc-link-arg=-no-pie");
 
-    #[cfg(linux)]
-    println!("cargo:rustc-link-lib=stdc++");
 
     let builder = builder
         .blocklist_item("FP_NAN")
