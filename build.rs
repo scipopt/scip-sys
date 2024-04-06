@@ -42,7 +42,7 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         );
     }
 
-    println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
+    // println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
 
     let include_dir = PathBuf::from(&path).join("include");
     let include_dir_path = include_dir.to_str().unwrap();
@@ -134,10 +134,29 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         };
 
+
     #[cfg(windows)]
-    println!("cargo:rustc-link-lib=libscip");
+    println!("cargo:rustc-link-lib=static=libscip");
     #[cfg(not(windows))]
-    println!("cargo:rustc-link-lib=scip");
+    {
+        println!("cargo:rustc-link-lib=static=gmp");
+        println!("cargo:rustc-link-lib=static=gmpxx");
+        println!("cargo:rustc-link-lib=static=ipopt");
+        println!("cargo:rustc-link-lib=static=soplex-pic");
+        println!("cargo:rustc-link-lib=static=z");
+        println!("cargo:rustc-link-lib=static=scip");
+        println!("cargo:rustc-link-lib=lapack");
+        println!("cargo:rustc-link-lib=blas");
+    }
+    //
+    // #[cfg(darwin)]
+    // println!("cargo:rustc-link-lib=dylib=c++");
+    // #[cfg(linux)]
+    println!("cargo:rustc-link-lib=stdc++");
+
+
+    println!("cargo:rustc-link-arg=-no-pie");
+
 
     let builder = builder
         .blocklist_item("FP_NAN")
