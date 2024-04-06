@@ -146,6 +146,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=static=scip");
         println!("cargo:rustc-link-lib=dylib=c++");
         println!("cargo:rustc-link-lib=dylib=lapack");
+        println!("cargo:rustc-link-lib=dylib=blas");
     }
 
     let builder = builder

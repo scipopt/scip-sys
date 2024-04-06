@@ -52,6 +52,6 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
 }
 
 #[cfg(not(feature = "from-source"))]
-pub fn compile_scip(source_path: PathBuf) -> PathBuf {
+pub fn compile_scip(_source_path: PathBuf) -> PathBuf {
     unimplemented!("Cannot compile SCIP without the `from-source` feature")
 }
