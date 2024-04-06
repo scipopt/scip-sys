@@ -1,3 +1,9 @@
+mod bundled;
+mod from_source;
+
+#[cfg(any(feature = "bundled", feature = "from-source"))]
+mod download;
+
 extern crate bindgen;
 
 use glob::glob;
@@ -5,22 +11,8 @@ use std::env;
 use std::error::Error;
 use std::path::PathBuf;
 
-#[cfg(feature = "bundled")]
-use tempfile::tempdir;
-#[cfg(feature = "bundled")]
-use std::fs::File;
-#[cfg(feature = "bundled")]
-use std::io::Cursor;
-#[cfg(feature = "bundled")]
-use std::io::Write;
-#[cfg(feature = "bundled")]
-use std::path::Path;
-
-
-#[cfg(feature = "bundled")]
-pub fn is_bundled_feature_enabled() -> bool {
-    true
-}
+use bundled::*;
+use crate::from_source::{download_scip_source, is_from_source_feature_enabled, compile_scip};
 
 #[cfg(not(feature = "bundled"))]
 pub fn is_bundled_feature_enabled() -> bool {
@@ -34,12 +26,12 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
     if lib_dir.exists() {
         println!("cargo:warning=Using SCIP from {}", lib_dir_path);
         println!("cargo:rustc-link-search={}", lib_dir_path);
+        println!("cargo:libdir={}", lib_dir_path);
 
         #[cfg(windows)]
-        let lib_dir_path = PathBuf::from(&path).join("bin");
+            let lib_dir_path = PathBuf::from(&path).join("bin");
         #[cfg(windows)]
         println!("cargo:rustc-link-search={}", lib_dir_path.to_str().unwrap());
-
     } else {
         panic!(
             "{}",
@@ -98,44 +90,49 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
         }
     }
 
-    return None
+    return None;
 }
+
 fn main() -> Result<(), Box<dyn Error>> {
     let builder =
-    if is_bundled_feature_enabled() {
-        download_scip();
-        let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
-        _build_from_scip_dir(path.to_str().unwrap())
-    } else {
-        let builder = look_in_scipoptdir_and_conda_env();
-        if builder.is_some() {
-            builder.unwrap()
+        if is_bundled_feature_enabled() {
+            download_scip();
+            let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
+            _build_from_scip_dir(path.to_str().unwrap())
+        } else if is_from_source_feature_enabled() {
+            let source_path = download_scip_source();
+            let build_path = compile_scip(source_path);
+            _build_from_scip_dir(build_path.to_str().unwrap())
         } else {
-            println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
-            println!("cargo:warning=Looking for SCIP in system libraries");
+            let builder = look_in_scipoptdir_and_conda_env();
+            if builder.is_some() {
+                builder.unwrap()
+            } else {
+                println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
+                println!("cargo:warning=Looking for SCIP in system libraries");
 
-            let headers_dir_path = "headers/";
-            let headers_dir = PathBuf::from(headers_dir_path);
-            let scip_header_file = PathBuf::from(&headers_dir)
-                .join("scip")
-                .join("scip.h")
-                .to_str()
-                .unwrap()
-                .to_owned();
-            let scipdefplugins_header_file = PathBuf::from(&headers_dir)
-                .join("scip")
-                .join("scipdefplugins.h")
-                .to_str()
-                .unwrap()
-                .to_owned();
+                let headers_dir_path = "headers/";
+                let headers_dir = PathBuf::from(headers_dir_path);
+                let scip_header_file = PathBuf::from(&headers_dir)
+                    .join("scip")
+                    .join("scip.h")
+                    .to_str()
+                    .unwrap()
+                    .to_owned();
+                let scipdefplugins_header_file = PathBuf::from(&headers_dir)
+                    .join("scip")
+                    .join("scipdefplugins.h")
+                    .to_str()
+                    .unwrap()
+                    .to_owned();
 
-            bindgen::Builder::default()
-                .header(scip_header_file)
-                .header(scipdefplugins_header_file)
-                .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-                .clang_arg(format!("-I{}", headers_dir_path))
-        }
-    };
+                bindgen::Builder::default()
+                    .header(scip_header_file)
+                    .header(scipdefplugins_header_file)
+                    .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+                    .clang_arg(format!("-I{}", headers_dir_path))
+            }
+        };
 
     #[cfg(windows)]
     println!("cargo:rustc-link-lib=static=libscip");
@@ -162,69 +159,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let bindings = builder.generate()?;
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     bindings.write_to_file(out_path.join("bindings.rs"))?;
-
-    Ok(())
-}
-
-#[cfg(feature = "bundled")]
-fn download_scip() {
-    let extract_path = PathBuf::from(env::var("OUT_DIR").unwrap());
-
-    if extract_path.join("scip_install").exists() {
-        println!("cargo:warning=SCIP was previously downloaded, skipping download");
-        return;
-    }
-
-    let os = env::consts::OS;
-    let arch = std::env::consts::ARCH;
-    println!("cargo:warning=Detected OS: {}", os);
-    println!("cargo:warning=Detected arch: {}", arch);
-
-    let os_string = if os == "linux" && arch == "x86_64" {
-        "linux"
-    } else if os == "macos" && arch == "x86_64" {
-        "macos"
-    } else if os == "macos" && arch == "aarch64" {
-        "macos-arm"
-    } else if os == "windows" && arch == "x86_64" {
-        "windows"
-    } else {
-        panic!("Unsupported OS-arch combination: {}-{}", os, arch);
-    };
-
-    let url = format!(
-        "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/libscip-{os_string}.zip"
-    );
-
-    download_and_extract_zip(&url, &extract_path).unwrap_or_else(
-        |e| panic!("Failed to download and extract SCIP: {}", e),
-    );
-}
-
-
-#[cfg(not(feature = "bundled"))]
-fn download_scip() {}
-
-
-#[cfg(feature = "bundled")]
-fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
-    // Download the ZIP file
-    println!("cargo:warning=Downloading from {}", url);
-    let response = reqwest::blocking::Client::new().get(url).send()?;
-    let content = response.bytes()?;
-
-    // Create a temporary file to store the ZIP
-    let dir = tempdir()?;
-    let zip_path = dir.path().join("scip.zip");
-    let mut temp_file = File::create(&zip_path)?;
-    temp_file.write_all(&content)?;
-    let target_dir = PathBuf::from(extract_path);
-
-    println!("cargo:warning=Downloaded to {:?}", zip_path);
-    println!("cargo:warning=Extracting to {:?}", target_dir);
-    zip_extract::extract(Cursor::new(
-        std::fs::read(zip_path).unwrap(),
-    ), &target_dir, false)?;
 
     Ok(())
 }

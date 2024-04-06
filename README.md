@@ -11,17 +11,37 @@ Raw rust bindings to [SCIP](https://scipopt.org/)'s C-API. The bindings are auto
 Meant to provide full control over SCIP's API, for a more restricted memory-safe API see [russcip](https://github.com/scipopt/russcip).
 
 ## Dependencies 
-This crate depends on SCIP at runtime, the crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
+This crate depends on SCIP at runtime, the crate provides optional features ([bundled](#bundled-feature), [from-source](#from-source-feature)) to install SCIP.
+If no feature is enabled, it will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
+to install SCIP using conda run the following command 
+```bash
+conda install --channel conda-forge scip
+```
+
+### `bundled` feature
+The crate provides the `bundled` feature that tries to download a precompiled binary for your OS and architecture
 run the following command to add the crate with the `bundled` feature
 ```bash
 cargo add scip-sys --features bundled
 ```
 
-If the `bundled` feature is not enabled, will look for a scip installation in the current conda environment, if it is not found it will look for the `SCIPOPTDIR` environment variable.
-to install SCIP using conda run the following command
+### `from-source` feature
+The crate provides the `from-source` feature that tries to download the source code and compile it. This provides the most flexibility but the compilation process can be slow. 
+run the following command to add the crate with the `from-source` feature
 ```bash
-conda install --channel conda-forge scip
+cargo add scip-sys --features from-source
 ```
+
+### Finding libscip at runtime 
+`scip-sys` will emit the path where it found libscip in the environment variable `DEP_SCIP_LIBDIR` at build time.
+You can use this variable to find the path to the shared library at runtime. You can do so by adding the following to your `build.rs`
+```rust
+fn main() {
+    let libscip_dir = std::env::var("DEP_SCIP_LIBDIR").unwrap();
+    println!("cargo:rustc-link-arg=-Wl,-rpath,{}", libscip_dir);
+}
+```
+
 
 ## License
 This repo is distributed under the open-source Apache 2.0 [license](https://www.apache.org/licenses/LICENSE-2.0). Although, to simplify the building process the C-headers for the SCIPOptSuite and its dependent software are included.
