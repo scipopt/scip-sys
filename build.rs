@@ -141,7 +141,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=static=gmp");
         println!("cargo:rustc-link-lib=static=gmpxx");
         println!("cargo:rustc-link-lib=static=ipopt");
-        println!("cargo:rustc-link-lib=static=soplex");
+        println!("cargo:rustc-link-lib=static=soplex-pic");
         println!("cargo:rustc-link-lib=static=z");
         println!("cargo:rustc-link-lib=static=scip");
         println!("cargo:rustc-link-lib=dylib=c++");
