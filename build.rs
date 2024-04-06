@@ -149,6 +149,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=dylib=blas");
     }
 
+
+    println!("cargo:rustc-link-arg=-pie");
+
     let builder = builder
         .blocklist_item("FP_NAN")
         .blocklist_item("FP_INFINITE")
