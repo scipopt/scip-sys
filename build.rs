@@ -134,6 +134,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         };
 
+
     #[cfg(windows)]
     println!("cargo:rustc-link-lib=static=libscip");
     #[cfg(not(windows))]
@@ -149,8 +150,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=dylib=blas");
     }
 
-
-    println!("cargo:rustc-link-arg=-pie");
+    #[cfg(linux)]
+    println!("cargo:rustc-cfg=PIE");
 
     let builder = builder
         .blocklist_item("FP_NAN")
