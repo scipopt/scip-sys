@@ -34,6 +34,7 @@ jobs:
       - name: Test bundled
         run: |
           export DYLD_LIBRARY_PATH=/opt/homebrew/opt/gcc@14/lib/gcc/14:$DYLD_LIBRARY_PATH
+          export LD_LIBRARY_PATH=/opt/homebrew/opt/gcc@14/lib/gcc/14:$LD_LIBRARY_PATH
           cargo b --features bundled 
           cargo t --features bundled create
           cargo t --features bundled --examples
