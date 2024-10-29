@@ -25,7 +25,7 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libblas-dev liblapack-dev libgmp-dev
+          sudo apt-get install -y libblas-dev liblapack-dev zlib1g-dev
       - name: Test bundled
         run: |
           cargo b --features bundled -vv
