@@ -48,10 +48,13 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
     use cmake::Config;
     let mut dst = Config::new(source_path);
 
-    dst.define("AUTOBUILD", "ON").build()
+    dst
+        .define("AUTOBUILD", "ON")
+        .define("IPOPT", "OFF")
+        .build()
 }
 
 #[cfg(not(feature = "from-source"))]
-pub fn compile_scip(source_path: PathBuf) -> PathBuf {
+pub fn compile_scip(_source_path: PathBuf) -> PathBuf {
     unimplemented!("Cannot compile SCIP without the `from-source` feature")
 }
