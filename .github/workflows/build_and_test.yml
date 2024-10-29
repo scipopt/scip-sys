@@ -30,6 +30,7 @@ jobs:
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-14'
         run: |
           brew install gcc
+          brew info gcc
       - name: Test bundled
         run: |
           export DYLD_LIBRARY_PATH=/opt/homebrew/opt/gcc@14/lib/gcc/14:$DYLD_LIBRARY_PATH
