@@ -134,37 +134,40 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         };
 
+    #[cfg(feature = "static")] {
+        #[cfg(windows)]{
+            println!("cargo:rustc-link-lib=static=libscip");
+            println!("cargo:rustc-link-lib=static=libsoplex");
+            println!("cargo:rustc-link-lib=static=ipopt");
+        }
+        #[cfg(not(windows))]
+        {
+            println!("cargo:rustc-link-lib=static=ipopt");
+            println!("cargo:rustc-link-lib=static=soplex");
+            println!("cargo:rustc-link-lib=static=z");
+            println!("cargo:rustc-link-lib=static=scip");
+            println!("cargo:rustc-link-lib=lapack");
+            println!("cargo:rustc-link-lib=blas");
+            println!("cargo:rustc-link-lib=coinmumps");
+            println!("cargo:rustc-link-lib=gfortran");
+            println!("cargo:rustc-link-lib=metis");
+        }
 
-    #[cfg(windows)]{
-        println!("cargo:rustc-link-lib=static=libscip");
-        println!("cargo:rustc-link-lib=static=libsoplex");
-        println!("cargo:rustc-link-lib=static=ipopt");
+        let target = env::var("TARGET").unwrap();
+        let apple = target.contains("apple");
+        let linux = target.contains("linux");
+        let mingw = target.contains("pc-windows-gnu");
+        if apple {
+            println!("cargo:rustc-link-lib=dylib=c++");
+        } else if linux || mingw {
+            println!("cargo:rustc-link-lib=dylib=stdc++");
+        }
+
     }
-    #[cfg(not(windows))]
-    {
-        println!("cargo:rustc-link-lib=static=ipopt");
-        println!("cargo:rustc-link-lib=static=soplex");
-        println!("cargo:rustc-link-lib=static=z");
-        println!("cargo:rustc-link-lib=static=scip");
-        println!("cargo:rustc-link-lib=lapack");
-        println!("cargo:rustc-link-lib=blas");
-        println!("cargo:rustc-link-lib=coinmumps");
-        println!("cargo:rustc-link-lib=gfortran");
-        println!("cargo:rustc-link-lib=metis");
+
+    #[cfg(not(feature = "static"))] {
+       println!("cargo:rustc-link-lib=dylib=scip");
     }
-
-    let target = env::var("TARGET").unwrap();
-    let apple = target.contains("apple");
-    let linux = target.contains("linux");
-    let mingw = target.contains("pc-windows-gnu");
-    if apple {
-        println!("cargo:rustc-link-lib=dylib=c++");
-    } else if linux || mingw {
-        println!("cargo:rustc-link-lib=dylib=stdc++");
-    }
-
-
-    println!("cargo:rustc-link-arg=-no-pie");
 
 
     let builder = builder

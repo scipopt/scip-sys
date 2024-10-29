@@ -36,18 +36,18 @@ jobs:
       - name: Test bundled (if not mac)
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'windows-latest'
         run: |
-          cargo b --features bundled 
-          cargo t --features bundled create
-          cargo t --features bundled --examples
+          cargo b --features bundled,static 
+          cargo t --features bundled,static create
+          cargo t --features bundled,static --examples
 
       - name: Test bundled (if mac)
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-14'
         run: |
           export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/14
           export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/14
-          cargo b --features bundled --no-default-features
-          cargo t --features bundled create
-          cargo t --features bundled --examples
+          cargo b --features bundled,static --no-default-features
+          cargo t --features bundled,static create
+          cargo t --features bundled,static --examples
 
   from-source-test:
     strategy:
