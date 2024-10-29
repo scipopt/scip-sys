@@ -139,8 +139,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("cargo:rustc-link-lib=static=libscip");
     #[cfg(not(windows))]
     {
-        println!("cargo:rustc-link-lib=static=gmp");
-        println!("cargo:rustc-link-lib=static=gmpxx");
+        // println!("cargo:rustc-link-lib=static=gmp");
+        // println!("cargo:rustc-link-lib=static=gmpxx");
         println!("cargo:rustc-link-lib=static=ipopt");
         println!("cargo:rustc-link-lib=static=soplex");
         println!("cargo:rustc-link-lib=static=z");
@@ -149,11 +149,15 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=blas");
     }
 
-    #[cfg(darwin)]
-    println!("cargo:rustc-link-lib=c++");
-
-    #[cfg(linux)]
-    println!("cargo:rustc-link-lib=stdc++");
+    let target = env::var("TARGET").unwrap();
+    let apple = target.contains("apple");
+    let linux = target.contains("linux");
+    let mingw = target.contains("pc-windows-gnu");
+    if apple {
+        println!("cargo:rustc-link-lib=dylib=c++");
+    } else if linux || mingw {
+        println!("cargo:rustc-link-lib=dylib=stdc++");
+    }
 
 
     println!("cargo:rustc-link-arg=-no-pie");
