@@ -13,10 +13,10 @@ jobs:
     strategy:
       matrix:
         os: [
-          ubuntu-latest,
-          macos-latest,
-          macos-14, # macOS arm runner
-#          windows-latest,
+#          ubuntu-latest,
+#          macos-latest,
+#          macos-14, # macOS arm runner
+          windows-latest,
         ]
     runs-on: ${{ matrix.os }}
     steps:
