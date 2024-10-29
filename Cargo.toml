@@ -1,6 +1,6 @@
 [package]
 name = "scip-sys"
-version = "0.1.13"
+version = "0.1.14"
 edition = "2021"
 description = "Bindings for the C SCIP solver."
 repository = "https://github.com/scipopt/scip-sys"
