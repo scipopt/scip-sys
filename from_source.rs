@@ -50,6 +50,8 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
 
     dst
         .define("AUTOBUILD", "ON")
+        .define("SHARED", "false")
+        .define("IPOPT", "OFF")
         .build()
 }
 
