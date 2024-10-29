@@ -147,6 +147,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=blas");
         println!("cargo:rustc-link-lib=coinmumps");
         println!("cargo:rustc-link-lib=gfortran");
+        println!("cargo:rustc-link-lib=metis");
     }
 
     let target = env::var("TARGET").unwrap();
