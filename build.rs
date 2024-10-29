@@ -135,8 +135,10 @@ fn main() -> Result<(), Box<dyn Error>> {
         };
 
 
-    #[cfg(windows)]
-    println!("cargo:rustc-link-lib=static=libscip");
+    #[cfg(windows)]{
+        println!("cargo:rustc-link-lib=static=libscip");
+        println!("cargo:rustc-link-lib=static=libipopt");
+    }
     #[cfg(not(windows))]
     {
         println!("cargo:rustc-link-lib=static=ipopt");
