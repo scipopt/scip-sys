@@ -153,6 +153,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=metis");
         }
 
+        println!("cargo:rustc-link-arg=-no-pie");
+
         let target = env::var("TARGET").unwrap();
         let apple = target.contains("apple");
         let linux = target.contains("linux");
