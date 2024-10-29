@@ -29,8 +29,8 @@ jobs:
       - name: Install requirements on macos
         if: matrix.os == 'macos-latest' || matrix.os == 'macos-14'
         run: |
-           echo "export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/14" >> "${GITHUB_ENV}"
-           echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/homebrew/Cellar/gcc/14.2.0/lib/gcc/14" >> "${GITHUB_ENV}"
+          brew install gcc
+          brew info gcc
 
       - name: Test bundled (if not mac)
         if: matrix.os != 'ubuntu-latest'
