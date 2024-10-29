@@ -1,15 +1,14 @@
 #[cfg(feature = "bundled")]
+use crate::download::download_and_extract_zip;
+#[cfg(feature = "bundled")]
 use std::env;
 #[cfg(feature = "bundled")]
 use std::path::PathBuf;
-#[cfg(feature = "bundled")]
-use crate::download::download_and_extract_zip;
 
 #[cfg(feature = "bundled")]
 pub fn is_bundled_feature_enabled() -> bool {
     true
 }
-
 
 #[cfg(feature = "bundled")]
 pub fn download_scip() {
@@ -38,15 +37,12 @@ pub fn download_scip() {
     };
 
     let url = format!(
-        "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/libscip-{os_string}.zip"
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.5.0/libscip-{os_string}.zip"
     );
 
-    download_and_extract_zip(&url, &extract_path).unwrap_or_else(
-        |e| panic!("Failed to download and extract SCIP: {}", e),
-    );
+    download_and_extract_zip(&url, &extract_path)
+        .unwrap_or_else(|e| panic!("Failed to download and extract SCIP: {}", e));
 }
-
 
 #[cfg(not(feature = "bundled"))]
 pub fn download_scip() {}
-
