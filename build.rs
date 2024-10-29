@@ -155,7 +155,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let linux = target.contains("linux");
     let mingw = target.contains("pc-windows-gnu");
     if apple {
-        println!("cargo:rustc-link-lib=static=gmp");
         println!("cargo:rustc-link-lib=dylib=c++");
     } else if linux || mingw {
         println!("cargo:rustc-link-lib=dylib=stdc++");
