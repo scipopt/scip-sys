@@ -145,6 +145,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("cargo:rustc-link-lib=static=scip");
         println!("cargo:rustc-link-lib=lapack");
         println!("cargo:rustc-link-lib=blas");
+        println!("cargo:rustc-link-lib=coinmumps");
     }
 
     let target = env::var("TARGET").unwrap();
