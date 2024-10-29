@@ -26,6 +26,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libblas-dev liblapack-dev zlib1g-dev libmetis-dev
+      - name: Install requirements on macos
+        if: matrix.os == 'macos-latest' || matrix.os == 'macos-14'
+        run: |
+          brew install gcc
       - name: Test bundled
         run: |
           cargo b --features bundled -vv
