@@ -150,7 +150,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     #[cfg(darwin)]
-    println!("cargo:rustc-link-lib=dylib=c++");
+    println!("cargo:rustc-link-lib=c++");
 
     #[cfg(linux)]
     println!("cargo:rustc-link-lib=stdc++");
