@@ -23,7 +23,7 @@ pub fn download_scip_source() -> PathBuf {
 
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let url = "https://github.com/scipopt/scip/releases/download/v911/scipoptsuite-9.1.1.tgz";
+    let url = "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-9.1.1.zip";
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
     if target.join("scipoptsuite-9.0.0").exists() {
