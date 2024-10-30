@@ -151,7 +151,6 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=stdc++");
         }
         println!("cargo:rustc-link-lib=soplex");
-        println!("cargo:rustc-link-lib=z");
     }
 
     let builder = builder

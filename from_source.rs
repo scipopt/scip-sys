@@ -56,7 +56,8 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
         .define("BOOST", "OFF")
         .define("AUTOBUILD","OFF")
         .define("PAPILO", "OFF")
-        .define("SYM", "none")
+        .define("SYM", "snauty")
+        .define("ZLIB", "OFF")
         .define("SHARED", "OFF")
         .build()
 }

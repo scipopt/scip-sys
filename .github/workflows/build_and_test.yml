@@ -35,7 +35,6 @@ jobs:
 #          macos-14,
 #          ubuntu-latest,
             windows-latest,
-            ubuntu-22.04 # arm64
         ]
     runs-on: ${{ matrix.os }}
     steps:
