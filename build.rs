@@ -144,13 +144,11 @@ fn main() -> Result<(), Box<dyn Error>> {
         let target = env::var("TARGET").unwrap();
         let apple = target.contains("apple");
         let linux = target.contains("linux");
-        let windows = target.contains("windows");
+        let mingw = target.contains("pc-windows-gnu");
         if apple {
-            println!("cargo:rustc-link-lib=c++");
-        } else if linux {
-            println!("cargo:rustc-link-lib=stdc++");
-        } else if windows {
-            println!("cargo:rustc-link-lib=static=stdc++");
+            println!("cargo:rustc-link-lib=dylib=c++");
+        } else if linux || mingw {
+            println!("cargo:rustc-link-lib=dylib=stdc++");
         }
         println!("cargo:rustc-link-lib=soplex");
     }
