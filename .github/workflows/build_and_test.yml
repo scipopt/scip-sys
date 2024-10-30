@@ -31,10 +31,10 @@ jobs:
     strategy:
       matrix:
         os: [
-#          macos-latest,
-#          macos-14,
-#          ubuntu-latest,
-            windows-latest,
+          macos-latest,
+          macos-14,
+          ubuntu-latest,
+          windows-latest,
         ]
     runs-on: ${{ matrix.os }}
     steps:
@@ -69,16 +69,3 @@ jobs:
 #              cargo test --features from-source create
 #              cargo test --features from-source --examples
 #            "
-
-# TODO: fix this, needs tbb
-#  windows-from-source:
-#    runs-on: windows-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#
-#      - name: Test from-source
-#        run: |
-#          echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
-#          cargo b --features from-source -vv
-#          cargo t --features from-source create
-#          cargo t --features from-source --examples
