@@ -23,15 +23,16 @@ pub fn download_scip_source() -> PathBuf {
 
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let url = "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-9.1.1.zip";
+    let scip_version = "9.1.1";
+    let url = format!("https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-{scip_version}.zip");
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
-    if target.join("scipoptsuite-9.0.0").exists() {
+    if target.join(format!("scipoptsuite-{scip_version}")).exists() {
         println!("cargo:warning=SCIP was previously downloaded, skipping download");
     } else {
-        download_and_extract_zip(url, &*target).expect("Failed to download SCIP");
+        download_and_extract_zip(&url, &*target).expect("Failed to download SCIP");
     }
-    target.join("scipoptsuite-9.0.0")
+    target.join(format!("scipoptsuite-{scip_version}"))
 }
 
 
