@@ -32,6 +32,17 @@ run the following command to add the crate with the `from-source` feature
 cargo add scip-sys --features from-source
 ```
 
+### Finding libscip at runtime 
+`scip-sys` will emit the path where it found libscip in the environment variable `DEP_SCIP_LIBDIR` at build time.
+You can use this variable to find the path to the shared library at runtime. You can do so by adding the following to your `build.rs`
+```rust
+fn main() {
+    let libscip_dir = std::env::var("DEP_SCIP_LIBDIR").unwrap();
+    println!("cargo:rustc-link-arg=-Wl,-rpath,{}", libscip_dir);
+}
+```
+
+
 ## License
 This repo is distributed under the open-source Apache 2.0 [license](https://www.apache.org/licenses/LICENSE-2.0). Although, to simplify the building process the C-headers for the SCIPOptSuite and its dependent software are included.
 These dependencies include *Bliss* that is distributed under the GNU Lesser General Public [license](http://www.gnu.org/licenses/). 
