@@ -137,11 +137,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     #[cfg(windows)] {
         println!("cargo:rustc-link-lib=libscip");
-        println!("cargo:rustc-link-lib=libsoplex");
     }
     #[cfg(not(windows))] {
         println!("cargo:rustc-link-lib=scip");
-        println!("cargo:rustc-link-lib=soplex");
     }
 
     #[cfg(feature = "from-source")] {
@@ -153,6 +151,13 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=dylib=c++");
         } else if linux || mingw {
             println!("cargo:rustc-link-lib=dylib=stdc++");
+        }
+
+        #[cfg(windows)] {
+            println!("cargo:rustc-link-lib=libsoplex");
+        }
+        #[cfg(not(windows))] {
+            println!("cargo:rustc-link-lib=soplex");
         }
     }
 
