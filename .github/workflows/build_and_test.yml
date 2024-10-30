@@ -50,7 +50,7 @@ jobs:
           cargo t --features from-source --examples
 
   from-source-linux-arm-test:
-    runs-on: ubuntu-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v3
 
