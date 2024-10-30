@@ -49,6 +49,27 @@ jobs:
           cargo t --features from-source create
           cargo t --features from-source --examples
 
+  linux-conda-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: test
+          allow-softlinks: true
+
+      - name: Install dependencies (SCIPOptSuite)
+        run: |
+          conda install -y --prefix $CONDA/envs/test --channel conda-forge scip
+          echo "LD_LIBRARY_PATH=$CONDA/envs/test/lib" >> "${GITHUB_ENV}"
+          echo "CONDA_PREFIX=$CONDA/envs/test" >> "${GITHUB_ENV}"
+
+      - name: Test
+        run: |
+          cargo b -vv
+          cargo t create
+          cargo t --examples
+
 #  from-source-linux-arm-test:
 #    runs-on: ubuntu-latest
 #    steps:
