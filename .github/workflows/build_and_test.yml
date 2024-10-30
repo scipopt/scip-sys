@@ -49,6 +49,27 @@ jobs:
           cargo t --features from-source create
           cargo t --features from-source --examples
 
+  from-source-linux-arm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up QEMU for ARM64 emulation
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
+
+      - name: Run test in ARM64 environment
+        run: |
+          docker run --rm --platform linux/arm64 \
+            -v ${{ github.workspace }}:/workspace \
+            -w /workspace \
+            rust:latest /bin/bash -c "
+              cargo build --features from-source -vv
+              cargo test --features from-source create
+              cargo test --features from-source --examples
+            "
+
 # TODO: fix this, needs tbb
 #  windows-from-source:
 #    runs-on: windows-latest
