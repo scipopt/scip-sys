@@ -34,6 +34,7 @@ jobs:
           macos-latest,
           macos-14,
           ubuntu-latest,
+          windows-latest,
         ]
     runs-on: ${{ matrix.os }}
     steps:
@@ -41,22 +42,30 @@ jobs:
       - name: Install bison
         if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-14' }}
         run: |
-          brew install bison
+          brew install bison gcc
       - name: Test from-source
         run: |
           cargo b --features from-source -vv
           cargo t --features from-source create
           cargo t --features from-source --examples
 
-# TODO: fix this, needs tbb
-#  windows-from-source:
-#    runs-on: windows-latest
+#  from-source-linux-arm-test:
+#    runs-on: ubuntu-latest
 #    steps:
 #      - uses: actions/checkout@v3
 #
-#      - name: Test from-source
+#      - name: Set up QEMU for ARM64 emulation
+#        uses: docker/setup-qemu-action@v2
+#        with:
+#          platforms: arm64
+#
+#      - name: Run test in ARM64 environment
 #        run: |
-#          echo "${{ runner.workspace }}/vcpkg" >> $GITHUB_PATH
-#          cargo b --features from-source -vv
-#          cargo t --features from-source create
-#          cargo t --features from-source --examples
+#          docker run --rm --platform linux/arm64 \
+#            -v ${{ github.workspace }}:/workspace \
+#            -w /workspace \
+#            rust:latest /bin/bash -c "
+#              cargo build --features from-source -vv
+#              cargo test --features from-source create
+#              cargo test --features from-source --examples
+#            "
