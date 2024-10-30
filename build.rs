@@ -134,10 +134,25 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
         };
 
+
     #[cfg(windows)]
     println!("cargo:rustc-link-lib=libscip");
     #[cfg(not(windows))]
     println!("cargo:rustc-link-lib=scip");
+
+    #[cfg(feature ="from-source")] {
+        let target = env::var("TARGET").unwrap();
+        let apple = target.contains("apple");
+        let linux = target.contains("linux");
+        let windows = target.contains("windows");
+        if apple {
+            println!("cargo:rustc-link-lib=c++");
+        } else if linux || windows {
+            println!("cargo:rustc-link-lib=stdc++");
+        }
+        println!("cargo:rustc-link-lib=soplex");
+        println!("cargo:rustc-link-lib=z");
+    }
 
     let builder = builder
         .blocklist_item("FP_NAN")

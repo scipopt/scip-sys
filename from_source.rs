@@ -49,7 +49,14 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
     let mut dst = Config::new(source_path);
 
     dst
-        .define("AUTOBUILD", "ON")
+        .define("IPOPT", "OFF")
+        .define("ZIMPL", "OFF")
+        .define("GMP", "OFF")
+        .define("READLINE", "OFF")
+        .define("BOOST", "OFF")
+        .define("AUTOBUILD","OFF")
+        .define("PAPILO", "OFF")
+        .define("SYM", "none")
         .define("SHARED", "OFF")
         .build()
 }
