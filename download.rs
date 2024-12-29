@@ -29,6 +29,9 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
 
     println!("cargo:warning=Downloaded to {:?}", zip_path);
     println!("cargo:warning=Extracting to {:?}", target_dir);
+    for entry in std::fs::read_dir(&target_dir)? {
+        println!("cargo:warning=Extracted file: {:?}", entry?.path());
+    }
     extract(Cursor::new(
         std::fs::read(zip_path).unwrap(),
     ), &target_dir, false)?;
