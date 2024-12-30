@@ -19,9 +19,7 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
 
     // Create a temporary file to store the ZIP
     let dir = tempdir()?;
-    let zip_path = dir.path().join("scip.zip");
-
-
+    let zip_path = dir.path().join("libscip.zip");
 
     let mut temp_file = File::create(&zip_path)?;
     temp_file.write_all(&content)?;
@@ -33,5 +31,18 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
         std::fs::read(zip_path).unwrap(),
     ), &target_dir, false)?;
 
+    // Check if the extracted content is another zip file
+    let extracted_files: Vec<_> = std::fs::read_dir(&target_dir)?.collect();
+    if extracted_files.len() == 1 {
+        let first_file = extracted_files[0].as_ref().unwrap();
+        if first_file.path().extension().map_or(false, |ext| ext == "zip") {
+            println!("cargo:warning=Found nested zip file, extracting again");
+            let nested_zip_path = first_file.path();
+            extract(Cursor::new(
+                std::fs::read(&nested_zip_path).unwrap(),
+            ), &(target_dir.join("scip_install")), true)?;
+            std::fs::remove_file(nested_zip_path)?;
+        }
+    }
     Ok(())
 }
