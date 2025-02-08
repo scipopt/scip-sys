@@ -46,10 +46,9 @@ fn main() {
 
     unsafe { SCIPsolve(scip_ptr) };
 
-
     let obj_val = unsafe { SCIPgetPrimalbound(scip_ptr) };
     let eps = unsafe { SCIPfeastol(scip_ptr) };
-    assert!((obj_val-1.0).abs() < eps);
+    assert!((obj_val - 1.0).abs() < eps);
 
     unsafe { SCIPreleaseVar(scip_ptr, &mut var_ptr) };
     unsafe { SCIPreleaseCons(scip_ptr, &mut cons_ptr) };
