@@ -11,8 +11,8 @@ use std::env;
 use std::error::Error;
 use std::path::PathBuf;
 
+use crate::from_source::{compile_scip, download_scip_source, is_from_source_feature_enabled};
 use bundled::*;
-use crate::from_source::{download_scip_source, is_from_source_feature_enabled, compile_scip};
 
 #[cfg(not(feature = "bundled"))]
 pub fn is_bundled_feature_enabled() -> bool {
@@ -29,7 +29,7 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         println!("cargo:libdir={}", lib_dir_path);
 
         #[cfg(windows)]
-            let lib_dir_path = PathBuf::from(&path).join("bin");
+        let lib_dir_path = PathBuf::from(&path).join("bin");
         #[cfg(windows)]
         println!("cargo:rustc-link-search={}", lib_dir_path.to_str().unwrap());
     } else {
@@ -94,55 +94,56 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let builder =
-        if is_bundled_feature_enabled() {
-            download_scip();
-            let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
-            _build_from_scip_dir(path.to_str().unwrap())
-        } else if is_from_source_feature_enabled() {
-            let source_path = download_scip_source();
-            let build_path = compile_scip(source_path);
-            _build_from_scip_dir(build_path.to_str().unwrap())
+    let builder = if is_bundled_feature_enabled() {
+        download_scip();
+        let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
+        _build_from_scip_dir(path.to_str().unwrap())
+    } else if is_from_source_feature_enabled() {
+        let source_path = download_scip_source();
+        let build_path = compile_scip(source_path);
+        _build_from_scip_dir(build_path.to_str().unwrap())
+    } else {
+        let builder = look_in_scipoptdir_and_conda_env();
+        if builder.is_some() {
+            builder.unwrap()
         } else {
-            let builder = look_in_scipoptdir_and_conda_env();
-            if builder.is_some() {
-                builder.unwrap()
-            } else {
-                println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
-                println!("cargo:warning=Looking for SCIP in system libraries");
+            println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
+            println!("cargo:warning=Looking for SCIP in system libraries");
 
-                let headers_dir_path = "headers/";
-                let headers_dir = PathBuf::from(headers_dir_path);
-                let scip_header_file = PathBuf::from(&headers_dir)
-                    .join("scip")
-                    .join("scip.h")
-                    .to_str()
-                    .unwrap()
-                    .to_owned();
-                let scipdefplugins_header_file = PathBuf::from(&headers_dir)
-                    .join("scip")
-                    .join("scipdefplugins.h")
-                    .to_str()
-                    .unwrap()
-                    .to_owned();
+            let headers_dir_path = "headers/";
+            let headers_dir = PathBuf::from(headers_dir_path);
+            let scip_header_file = PathBuf::from(&headers_dir)
+                .join("scip")
+                .join("scip.h")
+                .to_str()
+                .unwrap()
+                .to_owned();
+            let scipdefplugins_header_file = PathBuf::from(&headers_dir)
+                .join("scip")
+                .join("scipdefplugins.h")
+                .to_str()
+                .unwrap()
+                .to_owned();
 
-                bindgen::Builder::default()
-                    .header(scip_header_file)
-                    .header(scipdefplugins_header_file)
-                    .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-                    .clang_arg(format!("-I{}", headers_dir_path))
-            }
-        };
+            bindgen::Builder::default()
+                .header(scip_header_file)
+                .header(scipdefplugins_header_file)
+                .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+                .clang_arg(format!("-I{}", headers_dir_path))
+        }
+    };
 
-
-    #[cfg(windows)] {
+    #[cfg(windows)]
+    {
         println!("cargo:rustc-link-lib=libscip");
     }
-    #[cfg(not(windows))] {
+    #[cfg(not(windows))]
+    {
         println!("cargo:rustc-link-lib=scip");
     }
 
-    #[cfg(feature = "from-source")] {
+    #[cfg(feature = "from-source")]
+    {
         let target = env::var("TARGET").unwrap();
         let apple = target.contains("apple");
         let linux = target.contains("linux");
@@ -153,10 +154,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=dylib=stdc++");
         }
 
-        #[cfg(windows)] {
+        #[cfg(windows)]
+        {
             println!("cargo:rustc-link-lib=libsoplex");
         }
-        #[cfg(not(windows))] {
+        #[cfg(not(windows))]
+        {
             println!("cargo:rustc-link-lib=soplex");
         }
     }

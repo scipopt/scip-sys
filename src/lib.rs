@@ -8,11 +8,10 @@
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
-
 #[cfg(test)]
 mod tests {
-    use std::mem::MaybeUninit;
     use super::*;
+    use std::mem::MaybeUninit;
 
     #[test]
     fn test_create() {
