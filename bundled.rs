@@ -27,7 +27,7 @@ pub fn download_scip() {
     let os_string = if os == "linux" && arch == "x86_64" {
         "linux"
     } else if os == "macos" && arch == "x86_64" {
-        "macos"
+        "macos-intel"
     } else if os == "macos" && arch == "aarch64" {
         "macos-arm"
     } else if os == "windows" && arch == "x86_64" {
