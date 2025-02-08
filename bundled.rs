@@ -36,8 +36,14 @@ pub fn download_scip() {
         panic!("Unsupported OS-arch combination: {}-{}", os, arch);
     };
 
+    // if debug mode is enabled, download the debug version of SCIP
+    #[cfg(debug_assertions)]
+    let debug_str = "-debug";
+    #[cfg(not(debug_assertions))]
+    let debug_str = "";
+
     let url = format!(
-        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.7.0/libscip-{os_string}.zip"
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.7.0/libscip-{os_string}{debug_str}.zip",
     );
 
     download_and_extract_zip(&url, &extract_path)

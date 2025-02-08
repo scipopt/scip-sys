@@ -23,9 +23,27 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test bundled
         run: |
-          cargo b --features bundled -vv
+          cargo b --features bundled --release
+          cargo t --features bundled --release create
+          cargo t --features bundled --release --examples     
+
+  bundled-debug-test:
+    strategy:
+      matrix:
+        os: [
+          ubuntu-latest,
+          macos-latest,
+          macos-14, # macOS arm runner
+          windows-latest,
+        ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test bundled
+        run: |
+          cargo b --features bundled
           cargo t --features bundled create
-          cargo t --features bundled --examples
+          cargo t --features bundled --examples   
 
   from-source-test:
     strategy:
