@@ -43,7 +43,7 @@ pub fn download_scip() {
     let debug_str = "";
 
     let url = format!(
-        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.7.0/libscip-{os_string}{debug_str}"
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.7.0/libscip-{os_string}{debug_str}.zip",
     );
 
     download_and_extract_zip(&url, &extract_path)
