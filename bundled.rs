@@ -19,8 +19,8 @@ pub fn download_scip() {
         return;
     }
 
-    let os = env::consts::OS;
-    let arch = std::env::consts::ARCH;
+    let os = std::env::var("CARGO_CFG_TARGET_OS").unwrap();
+    let arch = std::env::var("CARGO_CFG_TARGET_ARCH").unwrap();
     println!("cargo:warning=Detected OS: {}", os);
     println!("cargo:warning=Detected arch: {}", arch);
 
