@@ -17,6 +17,7 @@ jobs:
           macos-13,
           macos-14, # macOS arm runner
           windows-latest,
+          ubuntu-24.04-arm
         ]
     runs-on: ${{ matrix.os }}
     steps:

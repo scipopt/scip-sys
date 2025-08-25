@@ -26,7 +26,10 @@ pub fn download_scip() {
 
     let os_string = if os == "linux" && arch == "x86_64" {
         "linux"
-    } else if os == "macos" && arch == "x86_64" {
+    } else if os == "linux" && arch == "aarch64" {
+        "linux-arm"
+    }
+    else if os == "macos" && arch == "x86_64" {
         "macos-intel"
     } else if os == "macos" && arch == "aarch64" {
         "macos-arm"
@@ -43,7 +46,7 @@ pub fn download_scip() {
     let debug_str = "";
 
     let url = format!(
-        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.7.0/libscip-{os_string}{debug_str}.zip",
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}{debug_str}.zip",
     );
 
     download_and_extract_zip(&url, &extract_path)
