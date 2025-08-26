@@ -1,3 +1,4 @@
+use std::ffi::CString;
 use scip_sys::*;
 use std::mem::MaybeUninit;
 
@@ -9,7 +10,7 @@ fn main() {
     // include default plugins
     unsafe { SCIPincludeDefaultPlugins(scip_ptr) };
 
-    unsafe { SCIPcreateProbBasic(scip_ptr, "test".as_ptr() as *const i8) };
+    unsafe { SCIPcreateProbBasic(scip_ptr, CString::new("test").unwrap().as_ptr()) };
 
     // add a variable
     let mut var_ptr = MaybeUninit::uninit();
@@ -17,7 +18,7 @@ fn main() {
         SCIPcreateVarBasic(
             scip_ptr,
             var_ptr.as_mut_ptr(),
-            "x".as_ptr() as *const i8,
+            CString::new("x").unwrap().as_ptr(),
             0.0,
             1.0,
             1.0,
@@ -33,7 +34,7 @@ fn main() {
         SCIPcreateConsBasicLinear(
             scip_ptr,
             cons_ptr.as_mut_ptr(),
-            "c".as_ptr() as *const i8,
+            CString::new("c").unwrap().as_ptr(),
             1,
             &mut var_ptr,
             &mut 1.0,
