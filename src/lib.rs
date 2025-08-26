@@ -10,6 +10,7 @@ include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 #[cfg(test)]
 mod tests {
+    use std::ffi::CString;
     use super::*;
     use std::mem::MaybeUninit;
 
@@ -22,7 +23,8 @@ mod tests {
         // include default plugins
         unsafe { SCIPincludeDefaultPlugins(scip_ptr) };
 
-        unsafe { SCIPcreateProbBasic(scip_ptr, "test".as_ptr() as *const i8) };
+        let name = CString::new("test").unwrap();
+        unsafe { SCIPcreateProbBasic(scip_ptr, name.as_ptr()) };
 
         // add a variable
         let mut var_ptr = MaybeUninit::uninit();
@@ -30,7 +32,7 @@ mod tests {
             SCIPcreateVarBasic(
                 scip_ptr,
                 var_ptr.as_mut_ptr(),
-                "x".as_ptr() as *const i8,
+                CString::new("x").unwrap().as_ptr(),
                 0.0,
                 1.0,
                 1.0,
@@ -46,7 +48,7 @@ mod tests {
             SCIPcreateConsBasicLinear(
                 scip_ptr,
                 cons_ptr.as_mut_ptr(),
-                "c".as_ptr() as *const i8,
+                CString::new("c").unwrap().as_ptr(),
                 1,
                 &mut var_ptr,
                 &mut 1.0,
