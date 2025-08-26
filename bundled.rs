@@ -45,8 +45,12 @@ pub fn download_scip() {
     #[cfg(not(debug_assertions))]
     let debug_str = "";
 
+    // TODO: enable this when debug builds are available
+    // let url = format!(
+    //     "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}{debug_str}.zip",
+    // );
     let url = format!(
-        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}{debug_str}.zip",
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}.zip",
     );
 
     download_and_extract_zip(&url, &extract_path)
