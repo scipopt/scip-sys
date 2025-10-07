@@ -42,7 +42,7 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         );
     }
 
-    println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
+    // println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
 
     let include_dir = PathBuf::from(&path).join("include");
     let include_dir_path = include_dir.to_str().unwrap();
@@ -64,7 +64,7 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
     bindgen::Builder::default()
         .header(scip_header_file)
         .header(scipdefplugins_header_file)
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .clang_arg(format!("-I{}", include_dir_path))
 }
 
@@ -128,7 +128,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             bindgen::Builder::default()
                 .header(scip_header_file)
                 .header(scipdefplugins_header_file)
-                .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+                .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
                 .clang_arg(format!("-I{}", headers_dir_path))
         }
     };
@@ -163,6 +163,44 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=soplex");
         }
     }
+    
+    #[cfg(feature = "static")] {
+        #[cfg(windows)]{
+            println!("cargo:rustc-link-lib=static=libscip");
+            println!("cargo:rustc-link-lib=static=libsoplex");
+            println!("cargo:rustc-link-lib=static=ipopt");
+        }
+        #[cfg(not(windows))]
+        {
+            println!("cargo:rustc-link-lib=static=ipopt");
+            println!("cargo:rustc-link-lib=static=soplex");
+            println!("cargo:rustc-link-lib=static=z");
+            println!("cargo:rustc-link-lib=static=scip");
+            println!("cargo:rustc-link-lib=lapack");
+            println!("cargo:rustc-link-lib=blas");
+            println!("cargo:rustc-link-lib=coinmumps");
+            println!("cargo:rustc-link-lib=gfortran");
+            println!("cargo:rustc-link-lib=metis");
+        }
+
+        println!("cargo:rustc-link-arg=-no-pie");
+
+        let target = env::var("TARGET").unwrap();
+        let apple = target.contains("apple");
+        let linux = target.contains("linux");
+        let mingw = target.contains("pc-windows-gnu");
+        if apple {
+            println!("cargo:rustc-link-lib=dylib=c++");
+        } else if linux || mingw {
+            println!("cargo:rustc-link-lib=dylib=stdc++");
+        }
+
+    }
+
+    #[cfg(not(feature = "static"))] {
+       println!("cargo:rustc-link-lib=dylib=scip");
+    }
+
 
     let builder = builder
         .blocklist_item("FP_NAN")
@@ -170,7 +208,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .blocklist_item("FP_ZERO")
         .blocklist_item("FP_SUBNORMAL")
         .blocklist_item("FP_NORMAL")
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks));
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()));
 
     let bindings = builder.generate()?;
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());

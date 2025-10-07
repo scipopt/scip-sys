@@ -1,5 +1,5 @@
 #[cfg(feature = "from-source")]
-use crate::download::download_and_extract_zip;
+use crate::download::download_and_extract_tar_gz;
 #[cfg(feature = "from-source")]
 use std::env;
 use std::path::PathBuf;
@@ -21,14 +21,14 @@ pub fn download_scip_source() -> PathBuf {
 
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let scip_version = "9.1.1";
-    let url = format!("https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-{scip_version}.zip");
+    let scip_version = "9.2.3";
+    let url = format!("https://github.com/scipopt/scip/releases/download/v923/scipoptsuite-{scip_version}.tgz");
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
     if target.join(format!("scipoptsuite-{scip_version}")).exists() {
         println!("cargo:warning=SCIP was previously downloaded, skipping download");
     } else {
-        download_and_extract_zip(&url, &*target).expect("Failed to download SCIP");
+        download_and_extract_tar_gz(&url, &*target).expect("Failed to download SCIP");
     }
     target.join(format!("scipoptsuite-{scip_version}"))
 }
@@ -46,7 +46,8 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
     use cmake::Config;
     let mut dst = Config::new(source_path);
 
-    dst.define("IPOPT", "OFF")
+    dst.define("CMAKE_BUILD_TYPE", "Release")
+        .define("IPOPT", "OFF")
         .define("ZIMPL", "OFF")
         .define("GMP", "OFF")
         .define("READLINE", "OFF")
@@ -56,6 +57,11 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
         .define("SYM", "snauty")
         .define("ZLIB", "OFF")
         .define("SHARED", "OFF")
+        .define("GCG", "OFF")
+        .define("SANITIZE_ADDRESS", "OFF")
+        .define("SANITIZE_MEMORY", "OFF")
+        .define("SANITIZE_UNDEFINED", "OFF")
+        .define("SANITIZE_THREAD", "OFF")
         .build()
 }
 

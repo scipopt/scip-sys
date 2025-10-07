@@ -9,6 +9,11 @@ use std::time::Duration;
 use tempfile::tempdir;
 use zip_extract::extract;
 
+#[cfg(feature = "from-source")]
+use flate2::read::GzDecoder;
+#[cfg(feature = "from-source")]
+use tar::Archive;
+
 pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
     // Download the ZIP file
     println!("cargo:warning=Downloading from {}", url);
@@ -18,7 +23,7 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
 
     // Create a temporary file to store the ZIP
     let dir = tempdir()?;
-    let zip_path = dir.path().join("libscip.zip");
+    let zip_path = dir.path().join("libscip.tgz");
 
     let mut temp_file = File::create(&zip_path)?;
     temp_file.write_all(&content)?;
@@ -51,5 +56,25 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
             std::fs::remove_file(nested_zip_path)?;
         }
     }
+    Ok(())
+}
+
+#[cfg(feature = "from-source")]
+pub fn download_and_extract_tar_gz(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
+    // Download the tar.gz file
+    println!("cargo:warning=Downloading from {}", url);
+    let resp = ureq::get(url).timeout(Duration::from_secs(300)).call()?;
+    let mut content: Vec<u8> = Vec::new();
+    resp.into_reader().read_to_end(&mut content)?;
+
+    println!("cargo:warning=Extracting to {:?}", extract_path);
+
+    // Create GzDecoder and Archive
+    let tar_gz = GzDecoder::new(Cursor::new(content));
+    let mut archive = Archive::new(tar_gz);
+
+    // Extract the archive
+    archive.unpack(extract_path)?;
+
     Ok(())
 }
