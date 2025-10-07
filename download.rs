@@ -1,5 +1,4 @@
 use std::error::Error;
-use tempfile::tempdir;
 use std::fs::File;
 use std::io::Cursor;
 use std::io::Read;
@@ -7,8 +6,13 @@ use std::io::Write;
 use std::path::Path;
 use std::path::PathBuf;
 use std::time::Duration;
+use tempfile::tempdir;
 use zip_extract::extract;
 
+#[cfg(feature = "from-source")]
+use flate2::read::GzDecoder;
+#[cfg(feature = "from-source")]
+use tar::Archive;
 
 pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
     // Download the ZIP file
@@ -19,9 +23,7 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
 
     // Create a temporary file to store the ZIP
     let dir = tempdir()?;
-    let zip_path = dir.path().join("scip.zip");
-
-
+    let zip_path = dir.path().join("libscip.tgz");
 
     let mut temp_file = File::create(&zip_path)?;
     temp_file.write_all(&content)?;
@@ -29,9 +31,50 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
 
     println!("cargo:warning=Downloaded to {:?}", zip_path);
     println!("cargo:warning=Extracting to {:?}", target_dir);
-    extract(Cursor::new(
-        std::fs::read(zip_path).unwrap(),
-    ), &target_dir, false)?;
+    extract(
+        Cursor::new(std::fs::read(zip_path).unwrap()),
+        &target_dir,
+        false,
+    )?;
+
+    // Check if the extracted content is another zip file
+    let extracted_files: Vec<_> = std::fs::read_dir(&target_dir)?.collect();
+    if extracted_files.len() == 1 {
+        let first_file = extracted_files[0].as_ref().unwrap();
+        if first_file
+            .path()
+            .extension()
+            .map_or(false, |ext| ext == "zip")
+        {
+            println!("cargo:warning=Found nested zip file, extracting again");
+            let nested_zip_path = first_file.path();
+            extract(
+                Cursor::new(std::fs::read(&nested_zip_path).unwrap()),
+                &(target_dir.join("scip_install")),
+                true,
+            )?;
+            std::fs::remove_file(nested_zip_path)?;
+        }
+    }
+    Ok(())
+}
+
+#[cfg(feature = "from-source")]
+pub fn download_and_extract_tar_gz(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
+    // Download the tar.gz file
+    println!("cargo:warning=Downloading from {}", url);
+    let resp = ureq::get(url).timeout(Duration::from_secs(300)).call()?;
+    let mut content: Vec<u8> = Vec::new();
+    resp.into_reader().read_to_end(&mut content)?;
+
+    println!("cargo:warning=Extracting to {:?}", extract_path);
+
+    // Create GzDecoder and Archive
+    let tar_gz = GzDecoder::new(Cursor::new(content));
+    let mut archive = Archive::new(tar_gz);
+
+    // Extract the archive
+    archive.unpack(extract_path)?;
 
     Ok(())
 }

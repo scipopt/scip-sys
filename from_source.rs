@@ -1,8 +1,8 @@
-use std::path::PathBuf;
+#[cfg(feature = "from-source")]
+use crate::download::download_and_extract_tar_gz;
 #[cfg(feature = "from-source")]
 use std::env;
-#[cfg(feature = "from-source")]
-use crate::download::download_and_extract_zip;
+use std::path::PathBuf;
 
 #[cfg(feature = "from-source")]
 pub fn is_from_source_feature_enabled() -> bool {
@@ -14,26 +14,24 @@ pub fn is_from_source_feature_enabled() -> bool {
     false
 }
 
-
 #[cfg(not(feature = "from-source"))]
 pub fn download_scip_source() -> PathBuf {
     unimplemented!("Cannot download SCIP source code without the `from-source` feature")
 }
 
-
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let url = "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-9.0.0.zip";
+    let scip_version = "9.2.3";
+    let url = format!("https://github.com/scipopt/scip/releases/download/v923/scipoptsuite-{scip_version}.tgz");
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
-    if target.join("scipoptsuite-9.0.0").exists() {
+    if target.join(format!("scipoptsuite-{scip_version}")).exists() {
         println!("cargo:warning=SCIP was previously downloaded, skipping download");
     } else {
-        download_and_extract_zip(url, &*target).expect("Failed to download SCIP");
+        download_and_extract_tar_gz(&url, &*target).expect("Failed to download SCIP");
     }
-    target.join("scipoptsuite-9.0.0")
+    target.join(format!("scipoptsuite-{scip_version}"))
 }
-
 
 #[cfg(feature = "from-source")]
 pub fn compile_scip(source_path: PathBuf) -> PathBuf {
@@ -48,9 +46,22 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
     use cmake::Config;
     let mut dst = Config::new(source_path);
 
-    dst
-        .define("AUTOBUILD", "ON")
+    dst.define("CMAKE_BUILD_TYPE", "Release")
         .define("IPOPT", "OFF")
+        .define("ZIMPL", "OFF")
+        .define("GMP", "OFF")
+        .define("READLINE", "OFF")
+        .define("BOOST", "OFF")
+        .define("AUTOBUILD", "OFF")
+        .define("PAPILO", "OFF")
+        .define("SYM", "snauty")
+        .define("ZLIB", "OFF")
+        .define("SHARED", "OFF")
+        .define("GCG", "OFF")
+        .define("SANITIZE_ADDRESS", "OFF")
+        .define("SANITIZE_MEMORY", "OFF")
+        .define("SANITIZE_UNDEFINED", "OFF")
+        .define("SANITIZE_THREAD", "OFF")
         .build()
 }
 

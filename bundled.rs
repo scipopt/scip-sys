@@ -19,15 +19,18 @@ pub fn download_scip() {
         return;
     }
 
-    let os = env::consts::OS;
-    let arch = std::env::consts::ARCH;
+    let os = std::env::var("CARGO_CFG_TARGET_OS").unwrap();
+    let arch = std::env::var("CARGO_CFG_TARGET_ARCH").unwrap();
     println!("cargo:warning=Detected OS: {}", os);
     println!("cargo:warning=Detected arch: {}", arch);
 
     let os_string = if os == "linux" && arch == "x86_64" {
         "linux"
-    } else if os == "macos" && arch == "x86_64" {
-        "macos"
+    } else if os == "linux" && arch == "aarch64" {
+        "linux-arm"
+    }
+    else if os == "macos" && arch == "x86_64" {
+        "macos-intel"
     } else if os == "macos" && arch == "aarch64" {
         "macos-arm"
     } else if os == "windows" && arch == "x86_64" {
@@ -36,8 +39,18 @@ pub fn download_scip() {
         panic!("Unsupported OS-arch combination: {}-{}", os, arch);
     };
 
+    // if debug mode is enabled, download the debug version of SCIP
+    #[cfg(debug_assertions)]
+    let debug_str = "-debug";
+    #[cfg(not(debug_assertions))]
+    let debug_str = "";
+
+    // TODO: enable this when debug builds are available
+    // let url = format!(
+    //     "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}{debug_str}.zip",
+    // );
     let url = format!(
-        "https://github.com/scipopt/scip-sys/releases/download/v0.1.9/libscip-{os_string}.zip"
+        "https://github.com/scipopt/scipoptsuite-deploy/releases/download/v0.8.0/libscip-{os_string}.zip",
     );
 
     download_and_extract_zip(&url, &extract_path)
