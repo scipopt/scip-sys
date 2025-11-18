@@ -21,7 +21,7 @@ pub fn download_scip_source() -> PathBuf {
 
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let scip_version = "9.1.1";
+    let scip_version = "9.2.4";
     let url = format!("https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-{scip_version}.zip");
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
