@@ -44,9 +44,8 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
     }
 
     use cmake::Config;
-    let mut dst = Config::new(source_path);
-
-    dst.define("IPOPT", "OFF")
+    let dst = Config::new(source_path)
+        .define("IPOPT", "OFF")
         .define("ZIMPL", "OFF")
         .define("GMP", "OFF")
         .define("READLINE", "OFF")
@@ -56,7 +55,15 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
         .define("SYM", "snauty")
         .define("ZLIB", "OFF")
         .define("SHARED", "OFF")
-        .build()
+        .define("GCG", "OFF")
+        .define("UG", "OFF")
+        .define("SANITIZE_ADDRESS", "OFF")
+        .define("SANITIZE_MEMORY", "OFF")
+        .define("SANITIZE_UNDEFINED", "OFF")
+        .define("SANITIZE_THREAD", "OFF")
+        .build();
+
+    dst
 }
 
 #[cfg(not(feature = "from-source"))]
