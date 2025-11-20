@@ -17,7 +17,6 @@ from-source = ["ureq", "zip", "tempfile", "zip-extract", "cmake"]
 [build-dependencies]
 bindgen = "0.72.0"
 glob = "0.3.1"
-pkg-config = "0.3"
 ureq = { version = "2.9.6", optional = true }
 zip = { version = "0.5", optional = true }
 tempfile = { version = "3.2", optional = true }

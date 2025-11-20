@@ -14,8 +14,6 @@ use std::path::PathBuf;
 use crate::from_source::{compile_scip, download_scip_source, is_from_source_feature_enabled};
 use bundled::*;
 
-extern crate pkg_config;
-
 #[cfg(not(feature = "bundled"))]
 pub fn is_bundled_feature_enabled() -> bool {
     false
@@ -95,64 +93,38 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
     return None;
 }
 
-fn try_pkg_config() -> Option<bindgen::Builder> {
-    println!("cargo:warning=Trying to find SCIP via pkg-config");
+fn try_system_include_paths() -> Option<bindgen::Builder> {
+    println!("cargo:warning=Searching for SCIP in standard system directories");
 
-    match pkg_config::Config::new().probe("scip") {
-        Ok(library) => {
-            println!("cargo:warning=Found SCIP via pkg-config");
+    // Common system include paths
+    let search_paths = vec![
+        "/usr/include",
+        "/usr/local/include",
+        "/opt/local/include",           // MacPorts
+        "/opt/homebrew/include",         // Homebrew ARM Mac
+        "/usr/local/opt/scip/include",  // Homebrew Intel Mac
+    ];
 
-            // Get include paths from pkg-config
-            let include_paths = library.include_paths;
+    for base_path in search_paths {
+        let base = PathBuf::from(base_path);
+        let scip_h = base.join("scip").join("scip.h");
+        let scipdefplugins_h = base.join("scip").join("scipdefplugins.h");
 
-            if include_paths.is_empty() {
-                println!("cargo:warning=pkg-config found SCIP but no include paths provided");
-                return None;
-            }
+        if scip_h.exists() && scipdefplugins_h.exists() {
+            println!("cargo:warning=Found SCIP headers in {}", base_path);
 
-            // Find scip.h and scipdefplugins.h in the include paths
-            let mut scip_header = None;
-            let mut scipdefplugins_header = None;
-
-            for include_path in &include_paths {
-                let scip_h = include_path.join("scip").join("scip.h");
-                let scipdefplugins_h = include_path.join("scip").join("scipdefplugins.h");
-
-                if scip_h.exists() && scip_header.is_none() {
-                    scip_header = Some(scip_h);
-                }
-                if scipdefplugins_h.exists() && scipdefplugins_header.is_none() {
-                    scipdefplugins_header = Some(scipdefplugins_h);
-                }
-            }
-
-            match (scip_header, scipdefplugins_header) {
-                (Some(scip_h), Some(scipdefplugins_h)) => {
-                    println!("cargo:warning=Using SCIP headers from pkg-config");
-
-                    let mut builder = bindgen::Builder::default()
-                        .header(scip_h.to_str().unwrap())
-                        .header(scipdefplugins_h.to_str().unwrap())
-                        .parse_callbacks(Box::new(bindgen::CargoCallbacks));
-
-                    // Add all include paths as clang args
-                    for include_path in include_paths {
-                        builder = builder.clang_arg(format!("-I{}", include_path.display()));
-                    }
-
-                    Some(builder)
-                }
-                _ => {
-                    println!("cargo:warning=pkg-config found SCIP but couldn't find scip.h or scipdefplugins.h");
-                    None
-                }
-            }
-        }
-        Err(e) => {
-            println!("cargo:warning=pkg-config failed to find SCIP: {}", e);
-            None
+            return Some(
+                bindgen::Builder::default()
+                    .header(scip_h.to_str().unwrap())
+                    .header(scipdefplugins_h.to_str().unwrap())
+                    .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+                    .clang_arg(format!("-I{}", base_path))
+            );
         }
     }
+
+    println!("cargo:warning=Could not find SCIP headers in standard system directories");
+    None
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -172,13 +144,13 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environment");
             println!("cargo:warning=Looking for SCIP in system libraries");
 
-            // Try pkg-config
-            try_pkg_config().unwrap_or_else(|| {
+            // Try common system include paths
+            try_system_include_paths().unwrap_or_else(|| {
                 panic!(
                     "Could not find SCIP installation.\n\
                     Please either:\n\
                     - Set SCIPOPTDIR environment variable to point to your SCIP installation\n\
-                    - Install SCIP with pkg-config support (scip.pc file)\n\
+                    - Install SCIP system-wide (headers in /usr/include or /usr/local/include)\n\
                     - Use --features bundled to download and use a bundled version\n\
                     - Use --features from-source to build SCIP from source"
                 )
