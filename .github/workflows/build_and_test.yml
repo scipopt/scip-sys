@@ -86,10 +86,6 @@ jobs:
           echo "Checking for headers in standard locations..."
           ls -la /usr/include/scip/ || echo "No headers in /usr/include/scip"
           ls -la /usr/local/include/scip/ || echo "No headers in /usr/local/include/scip"
-          echo ""
-          echo "Checking for scip.h and scipdefplugins.h..."
-          find /usr -name "scip.h" 2>/dev/null || echo "scip.h not found in /usr"
-          find /usr -name "scipdefplugins.h" 2>/dev/null || echo "scipdefplugins.h not found in /usr"
 
       - name: Build and test (should find headers in system directories)
         run: |
