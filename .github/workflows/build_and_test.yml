@@ -68,6 +68,31 @@ jobs:
           cargo t --features from-source create
           cargo t --features from-source --examples
 
+  linux-system-test:
+    runs-on: ubuntu-22.04
+    env:
+      SCIP_VERSION: 9.2.4
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install SCIP from debian package
+        run: |
+          wget --quiet --no-check-certificate https://github.com/scipopt/scip/releases/download/v$(echo "${{ env.SCIP_VERSION }}" | tr -d '.')/SCIPOptSuite-${{ env.SCIP_VERSION }}-Linux-ubuntu22.deb
+          sudo apt-get update
+          sudo apt install -y ./SCIPOptSuite-${{ env.SCIP_VERSION }}-Linux-ubuntu22.deb
+
+      - name: Verify SCIP headers are in standard locations
+        run: |
+          echo "Checking for headers in standard locations..."
+          ls -la /usr/include/scip/ || echo "No headers in /usr/include/scip"
+          ls -la /usr/local/include/scip/ || echo "No headers in /usr/local/include/scip"
+
+      - name: Build and test (should find headers in system directories)
+        run: |
+          cargo b -vv
+          cargo t create
+          cargo t --examples
+
   linux-conda-test:
     runs-on: ubuntu-latest
     steps:

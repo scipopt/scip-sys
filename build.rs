@@ -93,6 +93,40 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
     return None;
 }
 
+fn try_system_include_paths() -> Option<bindgen::Builder> {
+    println!("cargo:warning=Searching for SCIP in standard system directories");
+
+    // Common system include paths
+    let search_paths = vec![
+        "/usr/include",
+        "/usr/local/include",
+        "/opt/local/include",           // MacPorts
+        "/opt/homebrew/include",         // Homebrew ARM Mac
+        "/usr/local/opt/scip/include",  // Homebrew Intel Mac
+    ];
+
+    for base_path in search_paths {
+        let base = PathBuf::from(base_path);
+        let scip_h = base.join("scip").join("scip.h");
+        let scipdefplugins_h = base.join("scip").join("scipdefplugins.h");
+
+        if scip_h.exists() && scipdefplugins_h.exists() {
+            println!("cargo:warning=Found SCIP headers in {}", base_path);
+
+            return Some(
+                bindgen::Builder::default()
+                    .header(scip_h.to_str().unwrap())
+                    .header(scipdefplugins_h.to_str().unwrap())
+                    .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+                    .clang_arg(format!("-I{}", base_path))
+            );
+        }
+    }
+
+    println!("cargo:warning=Could not find SCIP headers in standard system directories");
+    None
+}
+
 fn main() -> Result<(), Box<dyn Error>> {
     let builder = if is_bundled_feature_enabled() {
         download_scip();
@@ -107,29 +141,20 @@ fn main() -> Result<(), Box<dyn Error>> {
         if builder.is_some() {
             builder.unwrap()
         } else {
-            println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environemnt");
+            println!("cargo:warning=SCIP was not found in SCIPOPTDIR or in Conda environment");
             println!("cargo:warning=Looking for SCIP in system libraries");
 
-            let headers_dir_path = "headers/";
-            let headers_dir = PathBuf::from(headers_dir_path);
-            let scip_header_file = PathBuf::from(&headers_dir)
-                .join("scip")
-                .join("scip.h")
-                .to_str()
-                .unwrap()
-                .to_owned();
-            let scipdefplugins_header_file = PathBuf::from(&headers_dir)
-                .join("scip")
-                .join("scipdefplugins.h")
-                .to_str()
-                .unwrap()
-                .to_owned();
-
-            bindgen::Builder::default()
-                .header(scip_header_file)
-                .header(scipdefplugins_header_file)
-                .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-                .clang_arg(format!("-I{}", headers_dir_path))
+            // Try common system include paths
+            try_system_include_paths().unwrap_or_else(|| {
+                panic!(
+                    "Could not find SCIP installation.\n\
+                    Please either:\n\
+                    - Set SCIPOPTDIR environment variable to point to your SCIP installation\n\
+                    - Install SCIP system-wide (headers in /usr/include or /usr/local/include)\n\
+                    - Use --features bundled to download and use a bundled version\n\
+                    - Use --features from-source to build SCIP from source"
+                )
+            })
         }
     };
 
