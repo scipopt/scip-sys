@@ -10,8 +10,8 @@ include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
 #[cfg(test)]
 mod tests {
-    use std::ffi::CString;
     use super::*;
+    use std::ffi::CString;
     use std::mem::MaybeUninit;
 
     #[test]
@@ -68,5 +68,8 @@ mod tests {
         unsafe { SCIPreleaseVar(scip_ptr, &mut var_ptr) };
         unsafe { SCIPreleaseCons(scip_ptr, &mut cons_ptr) };
         unsafe { SCIPfree(&mut scip_ptr) };
+        // Get some constants defined in def.h
+        let test_scip_valid = SCIP_INVALID - 1.0;
+        assert!(test_scip_valid >= 0.0);
     }
 }
