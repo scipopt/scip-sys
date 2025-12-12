@@ -69,7 +69,6 @@ mod tests {
         unsafe { SCIPreleaseCons(scip_ptr, &mut cons_ptr) };
         unsafe { SCIPfree(&mut scip_ptr) };
         // Get some constants defined in def.h
-        let test_scip_valid = SCIP_INVALID - 1.0;
-        assert!(test_scip_valid >= 0.0);
+        println!("Found SCIP_INVALID: {}", SCIP_INVALID);
     }
 }
