@@ -100,7 +100,7 @@ fn look_in_scipoptdir_and_conda_env() -> Option<bindgen::Builder> {
         }
     }
 
-    return None;
+    None
 }
 
 fn try_system_include_paths() -> Option<bindgen::Builder> {

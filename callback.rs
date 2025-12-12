@@ -1,6 +1,6 @@
 //! This file contains some custom callbacks for bindgen.
 
-use bindgen::callbacks::{IntKind, Token, TokenKind};
+use bindgen::callbacks::{Token, TokenKind};
 use std::collections::HashSet;
 
 /// This callback will be used to remove the type casts.
