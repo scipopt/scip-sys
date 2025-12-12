@@ -119,14 +119,16 @@ fn try_system_include_paths() -> Option<bindgen::Builder> {
         let base = PathBuf::from(base_path);
         let scip_h = base.join("scip").join("scip.h");
         let scipdefplugins_h = base.join("scip").join("scipdefplugins.h");
+        let def_h = base.join("scip").join("def.h");
 
-        if scip_h.exists() && scipdefplugins_h.exists() {
+        if scip_h.exists() && scipdefplugins_h.exists() && def_h.exists() {
             println!("cargo:warning=Found SCIP headers in {}", base_path);
 
             return Some(
                 bindgen::Builder::default()
                     .header(scip_h.to_str().unwrap())
                     .header(scipdefplugins_h.to_str().unwrap())
+                    .header(def_h.to_str().unwrap())
                     .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
                     .clang_arg(format!("-I{}", base_path)),
             );
