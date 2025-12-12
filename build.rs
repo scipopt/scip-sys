@@ -1,4 +1,5 @@
 mod bundled;
+mod callback;
 mod from_source;
 
 #[cfg(any(feature = "bundled", feature = "from-source"))]
@@ -13,6 +14,7 @@ use std::path::PathBuf;
 
 use crate::from_source::{compile_scip, download_scip_source, is_from_source_feature_enabled};
 use bundled::*;
+use callback::DeriveCastedConstant;
 
 #[cfg(not(feature = "bundled"))]
 pub fn is_bundled_feature_enabled() -> bool {
@@ -60,10 +62,18 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         .to_str()
         .unwrap()
         .to_owned();
+    let scipdef_file = PathBuf::from(&path)
+        .join("include")
+        .join("scip")
+        .join("def.h")
+        .to_str()
+        .unwrap()
+        .to_owned();
 
     bindgen::Builder::default()
         .header(scip_header_file)
         .header(scipdefplugins_header_file)
+        .header(scipdef_file)
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .clang_arg(format!("-I{}", include_dir_path))
 }
@@ -100,9 +110,9 @@ fn try_system_include_paths() -> Option<bindgen::Builder> {
     let search_paths = vec![
         "/usr/include",
         "/usr/local/include",
-        "/opt/local/include",           // MacPorts
-        "/opt/homebrew/include",         // Homebrew ARM Mac
-        "/usr/local/opt/scip/include",  // Homebrew Intel Mac
+        "/opt/local/include",          // MacPorts
+        "/opt/homebrew/include",       // Homebrew ARM Mac
+        "/usr/local/opt/scip/include", // Homebrew Intel Mac
     ];
 
     for base_path in search_paths {
@@ -118,7 +128,7 @@ fn try_system_include_paths() -> Option<bindgen::Builder> {
                     .header(scip_h.to_str().unwrap())
                     .header(scipdefplugins_h.to_str().unwrap())
                     .parse_callbacks(Box::new(bindgen::CargoCallbacks))
-                    .clang_arg(format!("-I{}", base_path))
+                    .clang_arg(format!("-I{}", base_path)),
             );
         }
     }
@@ -188,6 +198,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             println!("cargo:rustc-link-lib=soplex");
         }
     }
+    // Setup the DeriveCastedConstant callback to target SCIP_INVALID
+    let derive_casted_constant = DeriveCastedConstant::new().target("SCIP_INVALID");
 
     let builder = builder
         .blocklist_item("FP_NAN")
@@ -195,7 +207,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         .blocklist_item("FP_ZERO")
         .blocklist_item("FP_SUBNORMAL")
         .blocklist_item("FP_NORMAL")
-        .parse_callbacks(Box::new(bindgen::CargoCallbacks));
+        .parse_callbacks(Box::new(bindgen::CargoCallbacks))
+        .parse_callbacks(Box::new(derive_casted_constant));
 
     let bindings = builder.generate()?;
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
