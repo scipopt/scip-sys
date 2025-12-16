@@ -7,9 +7,6 @@ repository = "https://github.com/scipopt/scip-sys"
 license = "Apache-2.0"
 links = "scip"
 
-[package.metadata.docs.rs]
-features = ["bundled"]
-
 [features]
 bundled = ["ureq", "zip", "tempfile", "zip-extract"]
 from-source = ["ureq", "zip", "tempfile", "zip-extract", "cmake"]
