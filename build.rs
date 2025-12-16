@@ -140,6 +140,14 @@ fn try_system_include_paths() -> Option<bindgen::Builder> {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
+    // Detect docs.rs build environment (no network access)
+    if env::var("DOCS_RS").is_ok() {
+        println!("cargo:warning=Building on docs.rs, using pre-generated bindings");
+        let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
+        std::fs::copy("src/bindings_pregenerated.rs", out_path.join("bindings.rs"))?;
+        return Ok(());
+    }
+
     let builder = if is_bundled_feature_enabled() {
         download_scip();
         let path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("scip_install");
