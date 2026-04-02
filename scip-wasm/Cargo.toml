@@ -1,0 +1,10 @@
+[package]
+name = "scip-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+scip-sys = { path = "..", features = ["from-source"] }

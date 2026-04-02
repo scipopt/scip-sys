@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCIP WASM Solver</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; margin: 0 auto; padding: 2rem; }
+    h1 { margin-bottom: 1.5rem; }
+    .controls { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    #fileInput { flex: 1; }
+    button { padding: 0.5rem 1.5rem; font-size: 1rem; cursor: pointer; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    #status { margin: 1rem 0; font-weight: bold; }
+    #logOutput {
+      background: #1e1e1e; color: #d4d4d4; padding: 1rem;
+      font-family: monospace; font-size: 0.85rem;
+      white-space: pre; overflow: auto;
+      max-height: 80vh; min-height: 300px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>SCIP MIP Solver</h1>
+  <div class="controls">
+    <input type="file" id="fileInput">
+    <button id="solveBtn" disabled>Solve</button>
+  </div>
+  <div id="status">Loading WASM module...</div>
+  <pre id="logOutput"></pre>
+
+  <script>
+    const STATUS_NAMES = {
+      0: 'Unknown', 1: 'Optimal', 2: 'Infeasible', 3: 'Unbounded',
+      4: 'Infeasible or Unbounded', 10: 'User Interrupt', 11: 'Terminate',
+      20: 'Node Limit', 21: 'Total Node Limit', 22: 'Stall Node Limit',
+      23: 'Time Limit', 24: 'Memory Limit', 25: 'Gap Limit',
+      26: 'Primal Limit', 27: 'Dual Limit',
+    };
+
+    const worker = new Worker('worker.js');
+    const solveBtn = document.getElementById('solveBtn');
+    const status = document.getElementById('status');
+    const logOutput = document.getElementById('logOutput');
+
+    worker.onmessage = function(e) {
+      const msg = e.data;
+      switch (msg.type) {
+        case 'ready':
+          solveBtn.disabled = false;
+          status.textContent = 'Ready. Upload an .mps or .lp file.';
+          break;
+        case 'log':
+          logOutput.textContent += msg.line + '\n';
+          logOutput.scrollTop = logOutput.scrollHeight;
+          break;
+        case 'done':
+          solveBtn.disabled = false;
+          if (msg.retcode === 1) {
+            const statusName = STATUS_NAMES[msg.status] || ('Status ' + msg.status);
+            if (msg.status === 1) {
+              status.textContent = 'Optimal! Objective value: ' + msg.objective;
+            } else {
+              status.textContent = statusName + ' (Objective: ' + msg.objective + ')';
+            }
+          } else {
+            const RETCODE_NAMES = {
+              0: 'ERROR', '-1': 'NOMEMORY', '-2': 'READERROR', '-3': 'WRITEERROR',
+              '-4': 'NOFILE', '-5': 'FILECREATEERROR', '-6': 'LPERROR',
+              '-7': 'NOPROBLEM', '-8': 'INVALIDCALL', '-9': 'INVALIDDATA',
+              '-10': 'INVALIDRESULT', '-11': 'PLUGINNOTFOUND',
+              '-12': 'PARAMETERUNKNOWN', '-13': 'PARAMETERWRONGTYPE',
+            };
+            const name = RETCODE_NAMES[msg.retcode] || msg.retcode;
+            status.textContent = 'SCIP error: ' + name + ' (retcode ' + msg.retcode + ')';
+          }
+          break;
+        case 'error':
+          status.textContent = msg.message;
+          break;
+      }
+    };
+
+    document.getElementById('fileInput').addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (file) status.textContent = 'File loaded: ' + file.name;
+    });
+
+    solveBtn.addEventListener('click', async () => {
+      const file = document.getElementById('fileInput').files[0];
+      if (!file) { alert('Please select a file first.'); return; }
+
+      const buffer = await file.arrayBuffer();
+      const filename = '/' + file.name;
+
+      logOutput.textContent = '';
+      status.textContent = 'Solving...';
+      solveBtn.disabled = true;
+
+      worker.postMessage({type: 'solve', buffer, filename}, [buffer]);
+    });
+  </script>
+</body>
+</html>

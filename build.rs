@@ -44,7 +44,10 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         );
     }
 
-    println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
+    let target = env::var("TARGET").unwrap();
+    if !target.contains("emscripten") {
+        println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
+    }
 
     let include_dir = PathBuf::from(&path).join("include");
     let include_dir_path = include_dir.to_str().unwrap();
@@ -70,12 +73,21 @@ fn _build_from_scip_dir(path: &str) -> bindgen::Builder {
         .unwrap()
         .to_owned();
 
-    bindgen::Builder::default()
+    let mut builder = bindgen::Builder::default()
         .header(scip_header_file)
         .header(scipdefplugins_header_file)
         .header(scipdef_file)
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
-        .clang_arg(format!("-I{}", include_dir_path))
+        .clang_arg(format!("-I{}", include_dir_path));
+
+    if target.contains("emscripten") {
+        let host = env::var("HOST").unwrap();
+        builder = builder
+            .clang_arg(format!("--target={}", host))
+            .layout_tests(false);
+    }
+
+    builder
 }
 
 fn lib_scip_in_dir(path: &str) -> bool {
@@ -190,10 +202,13 @@ fn main() -> Result<(), Box<dyn Error>> {
     #[cfg(feature = "from-source")]
     {
         let target = env::var("TARGET").unwrap();
+        let is_emscripten = target.contains("emscripten");
         let apple = target.contains("apple");
         let linux = target.contains("linux");
         let mingw = target.contains("pc-windows-gnu");
-        if apple {
+        if is_emscripten {
+            // Emscripten handles C++ stdlib linking automatically
+        } else if apple {
             println!("cargo:rustc-link-lib=dylib=c++");
         } else if linux || mingw {
             println!("cargo:rustc-link-lib=dylib=stdc++");

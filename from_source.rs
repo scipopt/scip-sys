@@ -43,8 +43,30 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
         return out_dir.to_path_buf();
     }
 
+    let target = env::var("TARGET").unwrap();
+    let is_emscripten = target.contains("emscripten");
+
     use cmake::Config;
-    let dst = Config::new(source_path)
+    let mut dst = Config::new(source_path);
+
+    if is_emscripten {
+        let emsdk = env::var("EMSDK").expect("EMSDK env var must be set for emscripten builds");
+        let toolchain = format!(
+            "{}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+            emsdk
+        );
+        dst.define("CMAKE_TOOLCHAIN_FILE", &toolchain);
+        dst.define("CMAKE_CROSSCOMPILING", "TRUE");
+        dst.define("TPI", "none");
+        dst.define("CMAKE_CXX_FLAGS", "-fwasm-exceptions");
+        dst.define("CMAKE_C_FLAGS", "-fwasm-exceptions");
+    }
+
+    if is_emscripten {
+        dst.define("BUILD_TESTING", "OFF");
+    }
+
+    let dst = dst
         .define("IPOPT", "OFF")
         .define("ZIMPL", "OFF")
         .define("GMP", "OFF")
