@@ -212,6 +212,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     let derive_casted_constant = DeriveCastedConstant::new().target("SCIP_INVALID");
 
     let builder = builder
+        // SCIP 10 annotates the deprecated `SCIP_VARTYPE_IMPLINT` enumerator with
+        // `SCIP_DEPRECATED`. On Windows that expands to `__declspec(deprecated)`,
+        // which clang cannot parse inside an enum; neutralize the macro for bindgen.
+        .clang_arg("-DSCIP_DEPRECATED=")
         .blocklist_item("FP_NAN")
         .blocklist_item("FP_INFINITE")
         .blocklist_item("FP_ZERO")
