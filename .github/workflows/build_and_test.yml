@@ -71,15 +71,15 @@ jobs:
   linux-system-test:
     runs-on: ubuntu-22.04
     env:
-      SCIP_VERSION: 9.2.4
+      SCIP_VERSION: 10.0.2
     steps:
       - uses: actions/checkout@v3
 
       - name: Install SCIP from debian package
         run: |
-          wget --quiet --no-check-certificate https://github.com/scipopt/scip/releases/download/v$(echo "${{ env.SCIP_VERSION }}" | tr -d '.')/SCIPOptSuite-${{ env.SCIP_VERSION }}-Linux-ubuntu22.deb
+          wget --quiet --no-check-certificate https://github.com/scipopt/scip/releases/download/v${{ env.SCIP_VERSION }}/scipoptsuite_${{ env.SCIP_VERSION }}-1+jammy_amd64.deb
           sudo apt-get update
-          sudo apt install -y ./SCIPOptSuite-${{ env.SCIP_VERSION }}-Linux-ubuntu22.deb
+          sudo apt install -y ./scipoptsuite_${{ env.SCIP_VERSION }}-1+jammy_amd64.deb
 
       - name: Verify SCIP headers are in standard locations
         run: |
@@ -104,7 +104,7 @@ jobs:
 
       - name: Install dependencies (SCIPOptSuite)
         run: |
-          conda install -y --prefix $CONDA/envs/test --channel conda-forge scip
+          conda install -y --prefix $CONDA/envs/test --channel conda-forge scip=10.0.2
           echo "LD_LIBRARY_PATH=$CONDA/envs/test/lib" >> "${GITHUB_ENV}"
           echo "CONDA_PREFIX=$CONDA/envs/test" >> "${GITHUB_ENV}"
 
