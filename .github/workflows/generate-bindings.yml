@@ -67,3 +67,5 @@ jobs:
           base: main
           branch: update-bundled-bindings
           delete-branch: true
+          # Only commit the bindings, never the downloaded artifacts/ directory.
+          add-paths: src/bindings/*.rs
