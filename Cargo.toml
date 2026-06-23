@@ -7,12 +7,19 @@ repository = "https://github.com/scipopt/scip-sys"
 license = "Apache-2.0"
 links = "scip"
 
+# `bindgen` (and the libclang it needs) is only required when the SCIP ABI is
+# not known ahead of time: the system/SCIPOPTDIR/conda paths and `from-source`.
+# It is enabled by default so those paths keep working out of the box. The
+# `bundled` path uses a pinned SCIP release with prebuilt bindings, so a
+# `--no-default-features --features bundled` build drops bindgen + libclang
+# entirely and builds noticeably faster.
 [features]
+default = ["bindgen"]
 bundled = ["ureq", "zip", "tempfile", "zip-extract"]
-from-source = ["ureq", "zip", "tempfile", "zip-extract", "cmake", "flate2", "tar"]
+from-source = ["ureq", "zip", "tempfile", "zip-extract", "cmake", "flate2", "tar", "bindgen"]
 
 [build-dependencies]
-bindgen = "0.72.0"
+bindgen = { version = "0.72.0", optional = true }
 glob = "0.3.1"
 ureq = { version = "2.9.6", optional = true }
 zip = { version = "0.5", optional = true }

@@ -5,9 +5,31 @@ use std::env;
 #[cfg(feature = "bundled")]
 use std::path::PathBuf;
 
+/// Map the current target OS/arch to the platform tag used both for the
+/// prebuilt SCIP download and for selecting the matching prebuilt bindings in
+/// `src/bindings/<tag>.rs`. Keeping a single source of truth ensures the
+/// downloaded library and the committed bindings always refer to the same
+/// platform.
 #[cfg(feature = "bundled")]
-pub fn is_bundled_feature_enabled() -> bool {
-    true
+pub fn target_string() -> String {
+    let os = std::env::var("CARGO_CFG_TARGET_OS").unwrap();
+    let arch = std::env::var("CARGO_CFG_TARGET_ARCH").unwrap();
+
+    let os_string = if os == "linux" && arch == "x86_64" {
+        "linux"
+    } else if os == "linux" && arch == "aarch64" {
+        "linux-arm"
+    } else if os == "macos" && arch == "x86_64" {
+        "macos-intel"
+    } else if os == "macos" && arch == "aarch64" {
+        "macos-arm"
+    } else if os == "windows" && arch == "x86_64" {
+        "windows"
+    } else {
+        panic!("Unsupported OS-arch combination: {}-{}", os, arch);
+    };
+
+    os_string.to_string()
 }
 
 #[cfg(feature = "bundled")]
@@ -24,26 +46,15 @@ pub fn download_scip() {
     println!("cargo:warning=Detected OS: {}", os);
     println!("cargo:warning=Detected arch: {}", arch);
 
-    let os_string = if os == "linux" && arch == "x86_64" {
-        "linux"
-    } else if os == "linux" && arch == "aarch64" {
-        "linux-arm"
-    }
-    else if os == "macos" && arch == "x86_64" {
-        "macos-intel"
-    } else if os == "macos" && arch == "aarch64" {
-        "macos-arm"
-    } else if os == "windows" && arch == "x86_64" {
-        "windows"
-    } else {
-        panic!("Unsupported OS-arch combination: {}-{}", os, arch);
-    };
+    let os_string = target_string();
 
     // if debug mode is enabled, download the debug version of SCIP
     #[cfg(debug_assertions)]
     let debug_str = "-debug";
     #[cfg(not(debug_assertions))]
     let debug_str = "";
+    // Only consumed by the (currently disabled) debug-build URL below.
+    let _ = debug_str;
 
     // TODO: enable this when debug builds are available
     // let url = format!(
@@ -57,6 +68,3 @@ pub fn download_scip() {
     download_and_extract_zip(&url, &extract_path)
         .unwrap_or_else(|e| panic!("Failed to download and extract SCIP: {}", e));
 }
-
-#[cfg(not(feature = "bundled"))]
-pub fn download_scip() {}
