@@ -1,5 +1,5 @@
 #[cfg(feature = "from-source")]
-use crate::download::download_and_extract_zip;
+use crate::download::download_and_extract_tar_gz;
 #[cfg(feature = "from-source")]
 use std::env;
 use std::path::PathBuf;
@@ -21,14 +21,16 @@ pub fn download_scip_source() -> PathBuf {
 
 #[cfg(feature = "from-source")]
 pub fn download_scip_source() -> PathBuf {
-    let scip_version = "9.2.4";
-    let url = format!("https://github.com/scipopt/scip-sys/releases/download/v0.1.9/scipoptsuite-{scip_version}.zip");
+    let scip_version = "10.0.2";
+    let url = format!(
+        "https://github.com/scipopt/scip/releases/download/v{scip_version}/scipoptsuite-{scip_version}.tgz"
+    );
     let target = env::var("OUT_DIR").unwrap();
     let target = std::path::Path::new(&target);
     if target.join(format!("scipoptsuite-{scip_version}")).exists() {
         println!("cargo:warning=SCIP was previously downloaded, skipping download");
     } else {
-        download_and_extract_zip(&url, &*target).expect("Failed to download SCIP");
+        download_and_extract_tar_gz(&url, target).expect("Failed to download SCIP");
     }
     target.join(format!("scipoptsuite-{scip_version}"))
 }

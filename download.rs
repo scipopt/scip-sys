@@ -32,8 +32,28 @@ pub fn download_and_extract_zip(url: &str, extract_path: &Path) -> Result<(), Bo
         false,
     )?;
 
-    // Check if the extracted content is another zip file
-    let extracted_files: Vec<_> = std::fs::read_dir(&target_dir)?.collect();
+    extract_nested_zip(&target_dir)?;
+    Ok(())
+}
+
+/// Downloads a `.tar.gz`/`.tgz` archive and extracts it into `extract_path`.
+#[cfg(feature = "from-source")]
+pub fn download_and_extract_tar_gz(url: &str, extract_path: &Path) -> Result<(), Box<dyn Error>> {
+    println!("cargo:warning=Downloading from {}", url);
+    let resp = ureq::get(url).timeout(Duration::from_secs(300)).call()?;
+    let mut content: Vec<u8> = Vec::new();
+    resp.into_reader().read_to_end(&mut content)?;
+
+    println!("cargo:warning=Extracting to {:?}", extract_path);
+    let decoder = flate2::read::GzDecoder::new(Cursor::new(content));
+    tar::Archive::new(decoder).unpack(extract_path)?;
+    Ok(())
+}
+
+/// If extracting produced a single nested zip file, extract that too (some
+/// release archives wrap the install in another zip).
+fn extract_nested_zip(target_dir: &Path) -> Result<(), Box<dyn Error>> {
+    let extracted_files: Vec<_> = std::fs::read_dir(target_dir)?.collect();
     if extracted_files.len() == 1 {
         let first_file = extracted_files[0].as_ref().unwrap();
         if first_file
