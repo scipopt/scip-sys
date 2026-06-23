@@ -25,6 +25,18 @@ run the following command to add the crate with the `bundled` feature
 cargo add scip-sys --features bundled
 ```
 
+Because the bundled SCIP release is pinned, the bindings are deterministic per
+platform and are shipped prebuilt in `src/bindings/`. The default build still
+keeps `bindgen` enabled (the system/`SCIPOPTDIR`/`from-source` paths need it),
+but the bundled path uses the prebuilt bindings and never runs `bindgen`. For
+the leanest build, disable default features to drop `bindgen` (and its
+`libclang` requirement) entirely:
+```bash
+cargo add scip-sys --no-default-features --features bundled
+```
+The prebuilt bindings are regenerated per platform by the `generate-bindings`
+GitHub Actions workflow; a CI check fails if they drift from the pinned release.
+
 ### `from-source` feature
 The crate provides the `from-source` feature that tries to download the source code and compile it. This provides the most flexibility but the compilation process can be slow. 
 run the following command to add the crate with the `from-source` feature
