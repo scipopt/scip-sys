@@ -136,477 +136,167 @@ where
         }
     }
 }
-pub const __has_safe_buffers: u32 = 1;
-pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 1;
-pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
-pub const __DARWIN_ONLY_VERS_1050: u32 = 1;
-pub const __DARWIN_UNIX03: u32 = 1;
-pub const __DARWIN_64_BIT_INO_T: u32 = 1;
-pub const __DARWIN_VERS_1050: u32 = 1;
-pub const __DARWIN_NON_CANCELABLE: u32 = 0;
-pub const __DARWIN_SUF_EXTSN: &[u8; 14] = b"$DARWIN_EXTSN\0";
-pub const __DARWIN_C_ANSI: u32 = 4096;
-pub const __DARWIN_C_FULL: u32 = 900000;
-pub const __DARWIN_C_LEVEL: u32 = 900000;
-pub const __STDC_WANT_LIB_EXT1__: u32 = 1;
-pub const __DARWIN_NO_LONG_LONG: u32 = 0;
-pub const _DARWIN_FEATURE_64_BIT_INODE: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_64_BIT_INODE: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_VERS_1050: u32 = 1;
-pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
-pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
-pub const __has_ptrcheck: u32 = 0;
-pub const __API_TO_BE_DEPRECATED: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_MACOS: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_IOS: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_MACCATALYST: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_WATCHOS: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_TVOS: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_DRIVERKIT: u32 = 100000;
-pub const __API_TO_BE_DEPRECATED_VISIONOS: u32 = 100000;
-pub const __MAC_10_0: u32 = 1000;
-pub const __MAC_10_1: u32 = 1010;
-pub const __MAC_10_2: u32 = 1020;
-pub const __MAC_10_3: u32 = 1030;
-pub const __MAC_10_4: u32 = 1040;
-pub const __MAC_10_5: u32 = 1050;
-pub const __MAC_10_6: u32 = 1060;
-pub const __MAC_10_7: u32 = 1070;
-pub const __MAC_10_8: u32 = 1080;
-pub const __MAC_10_9: u32 = 1090;
-pub const __MAC_10_10: u32 = 101000;
-pub const __MAC_10_10_2: u32 = 101002;
-pub const __MAC_10_10_3: u32 = 101003;
-pub const __MAC_10_11: u32 = 101100;
-pub const __MAC_10_11_2: u32 = 101102;
-pub const __MAC_10_11_3: u32 = 101103;
-pub const __MAC_10_11_4: u32 = 101104;
-pub const __MAC_10_12: u32 = 101200;
-pub const __MAC_10_12_1: u32 = 101201;
-pub const __MAC_10_12_2: u32 = 101202;
-pub const __MAC_10_12_4: u32 = 101204;
-pub const __MAC_10_13: u32 = 101300;
-pub const __MAC_10_13_1: u32 = 101301;
-pub const __MAC_10_13_2: u32 = 101302;
-pub const __MAC_10_13_4: u32 = 101304;
-pub const __MAC_10_14: u32 = 101400;
-pub const __MAC_10_14_1: u32 = 101401;
-pub const __MAC_10_14_4: u32 = 101404;
-pub const __MAC_10_14_5: u32 = 101405;
-pub const __MAC_10_14_6: u32 = 101406;
-pub const __MAC_10_15: u32 = 101500;
-pub const __MAC_10_15_1: u32 = 101501;
-pub const __MAC_10_15_4: u32 = 101504;
-pub const __MAC_10_16: u32 = 101600;
-pub const __MAC_11_0: u32 = 110000;
-pub const __MAC_11_1: u32 = 110100;
-pub const __MAC_11_3: u32 = 110300;
-pub const __MAC_11_4: u32 = 110400;
-pub const __MAC_11_5: u32 = 110500;
-pub const __MAC_11_6: u32 = 110600;
-pub const __MAC_12_0: u32 = 120000;
-pub const __MAC_12_1: u32 = 120100;
-pub const __MAC_12_2: u32 = 120200;
-pub const __MAC_12_3: u32 = 120300;
-pub const __MAC_12_4: u32 = 120400;
-pub const __MAC_12_5: u32 = 120500;
-pub const __MAC_12_6: u32 = 120600;
-pub const __MAC_12_7: u32 = 120700;
-pub const __MAC_13_0: u32 = 130000;
-pub const __MAC_13_1: u32 = 130100;
-pub const __MAC_13_2: u32 = 130200;
-pub const __MAC_13_3: u32 = 130300;
-pub const __MAC_13_4: u32 = 130400;
-pub const __MAC_13_5: u32 = 130500;
-pub const __MAC_13_6: u32 = 130600;
-pub const __MAC_14_0: u32 = 140000;
-pub const __MAC_14_1: u32 = 140100;
-pub const __MAC_14_2: u32 = 140200;
-pub const __MAC_14_3: u32 = 140300;
-pub const __MAC_14_4: u32 = 140400;
-pub const __MAC_14_5: u32 = 140500;
-pub const __IPHONE_2_0: u32 = 20000;
-pub const __IPHONE_2_1: u32 = 20100;
-pub const __IPHONE_2_2: u32 = 20200;
-pub const __IPHONE_3_0: u32 = 30000;
-pub const __IPHONE_3_1: u32 = 30100;
-pub const __IPHONE_3_2: u32 = 30200;
-pub const __IPHONE_4_0: u32 = 40000;
-pub const __IPHONE_4_1: u32 = 40100;
-pub const __IPHONE_4_2: u32 = 40200;
-pub const __IPHONE_4_3: u32 = 40300;
-pub const __IPHONE_5_0: u32 = 50000;
-pub const __IPHONE_5_1: u32 = 50100;
-pub const __IPHONE_6_0: u32 = 60000;
-pub const __IPHONE_6_1: u32 = 60100;
-pub const __IPHONE_7_0: u32 = 70000;
-pub const __IPHONE_7_1: u32 = 70100;
-pub const __IPHONE_8_0: u32 = 80000;
-pub const __IPHONE_8_1: u32 = 80100;
-pub const __IPHONE_8_2: u32 = 80200;
-pub const __IPHONE_8_3: u32 = 80300;
-pub const __IPHONE_8_4: u32 = 80400;
-pub const __IPHONE_9_0: u32 = 90000;
-pub const __IPHONE_9_1: u32 = 90100;
-pub const __IPHONE_9_2: u32 = 90200;
-pub const __IPHONE_9_3: u32 = 90300;
-pub const __IPHONE_10_0: u32 = 100000;
-pub const __IPHONE_10_1: u32 = 100100;
-pub const __IPHONE_10_2: u32 = 100200;
-pub const __IPHONE_10_3: u32 = 100300;
-pub const __IPHONE_11_0: u32 = 110000;
-pub const __IPHONE_11_1: u32 = 110100;
-pub const __IPHONE_11_2: u32 = 110200;
-pub const __IPHONE_11_3: u32 = 110300;
-pub const __IPHONE_11_4: u32 = 110400;
-pub const __IPHONE_12_0: u32 = 120000;
-pub const __IPHONE_12_1: u32 = 120100;
-pub const __IPHONE_12_2: u32 = 120200;
-pub const __IPHONE_12_3: u32 = 120300;
-pub const __IPHONE_12_4: u32 = 120400;
-pub const __IPHONE_13_0: u32 = 130000;
-pub const __IPHONE_13_1: u32 = 130100;
-pub const __IPHONE_13_2: u32 = 130200;
-pub const __IPHONE_13_3: u32 = 130300;
-pub const __IPHONE_13_4: u32 = 130400;
-pub const __IPHONE_13_5: u32 = 130500;
-pub const __IPHONE_13_6: u32 = 130600;
-pub const __IPHONE_13_7: u32 = 130700;
-pub const __IPHONE_14_0: u32 = 140000;
-pub const __IPHONE_14_1: u32 = 140100;
-pub const __IPHONE_14_2: u32 = 140200;
-pub const __IPHONE_14_3: u32 = 140300;
-pub const __IPHONE_14_5: u32 = 140500;
-pub const __IPHONE_14_4: u32 = 140400;
-pub const __IPHONE_14_6: u32 = 140600;
-pub const __IPHONE_14_7: u32 = 140700;
-pub const __IPHONE_14_8: u32 = 140800;
-pub const __IPHONE_15_0: u32 = 150000;
-pub const __IPHONE_15_1: u32 = 150100;
-pub const __IPHONE_15_2: u32 = 150200;
-pub const __IPHONE_15_3: u32 = 150300;
-pub const __IPHONE_15_4: u32 = 150400;
-pub const __IPHONE_15_5: u32 = 150500;
-pub const __IPHONE_15_6: u32 = 150600;
-pub const __IPHONE_15_7: u32 = 150700;
-pub const __IPHONE_15_8: u32 = 150800;
-pub const __IPHONE_16_0: u32 = 160000;
-pub const __IPHONE_16_1: u32 = 160100;
-pub const __IPHONE_16_2: u32 = 160200;
-pub const __IPHONE_16_3: u32 = 160300;
-pub const __IPHONE_16_4: u32 = 160400;
-pub const __IPHONE_16_5: u32 = 160500;
-pub const __IPHONE_16_6: u32 = 160600;
-pub const __IPHONE_16_7: u32 = 160700;
-pub const __IPHONE_17_0: u32 = 170000;
-pub const __IPHONE_17_1: u32 = 170100;
-pub const __IPHONE_17_2: u32 = 170200;
-pub const __IPHONE_17_3: u32 = 170300;
-pub const __IPHONE_17_4: u32 = 170400;
-pub const __IPHONE_17_5: u32 = 170500;
-pub const __WATCHOS_1_0: u32 = 10000;
-pub const __WATCHOS_2_0: u32 = 20000;
-pub const __WATCHOS_2_1: u32 = 20100;
-pub const __WATCHOS_2_2: u32 = 20200;
-pub const __WATCHOS_3_0: u32 = 30000;
-pub const __WATCHOS_3_1: u32 = 30100;
-pub const __WATCHOS_3_1_1: u32 = 30101;
-pub const __WATCHOS_3_2: u32 = 30200;
-pub const __WATCHOS_4_0: u32 = 40000;
-pub const __WATCHOS_4_1: u32 = 40100;
-pub const __WATCHOS_4_2: u32 = 40200;
-pub const __WATCHOS_4_3: u32 = 40300;
-pub const __WATCHOS_5_0: u32 = 50000;
-pub const __WATCHOS_5_1: u32 = 50100;
-pub const __WATCHOS_5_2: u32 = 50200;
-pub const __WATCHOS_5_3: u32 = 50300;
-pub const __WATCHOS_6_0: u32 = 60000;
-pub const __WATCHOS_6_1: u32 = 60100;
-pub const __WATCHOS_6_2: u32 = 60200;
-pub const __WATCHOS_7_0: u32 = 70000;
-pub const __WATCHOS_7_1: u32 = 70100;
-pub const __WATCHOS_7_2: u32 = 70200;
-pub const __WATCHOS_7_3: u32 = 70300;
-pub const __WATCHOS_7_4: u32 = 70400;
-pub const __WATCHOS_7_5: u32 = 70500;
-pub const __WATCHOS_7_6: u32 = 70600;
-pub const __WATCHOS_8_0: u32 = 80000;
-pub const __WATCHOS_8_1: u32 = 80100;
-pub const __WATCHOS_8_3: u32 = 80300;
-pub const __WATCHOS_8_4: u32 = 80400;
-pub const __WATCHOS_8_5: u32 = 80500;
-pub const __WATCHOS_8_6: u32 = 80600;
-pub const __WATCHOS_8_7: u32 = 80700;
-pub const __WATCHOS_8_8: u32 = 80800;
-pub const __WATCHOS_9_0: u32 = 90000;
-pub const __WATCHOS_9_1: u32 = 90100;
-pub const __WATCHOS_9_2: u32 = 90200;
-pub const __WATCHOS_9_3: u32 = 90300;
-pub const __WATCHOS_9_4: u32 = 90400;
-pub const __WATCHOS_9_5: u32 = 90500;
-pub const __WATCHOS_9_6: u32 = 90600;
-pub const __WATCHOS_10_0: u32 = 100000;
-pub const __WATCHOS_10_1: u32 = 100100;
-pub const __WATCHOS_10_2: u32 = 100200;
-pub const __WATCHOS_10_3: u32 = 100300;
-pub const __WATCHOS_10_4: u32 = 100400;
-pub const __WATCHOS_10_5: u32 = 100500;
-pub const __TVOS_9_0: u32 = 90000;
-pub const __TVOS_9_1: u32 = 90100;
-pub const __TVOS_9_2: u32 = 90200;
-pub const __TVOS_10_0: u32 = 100000;
-pub const __TVOS_10_0_1: u32 = 100001;
-pub const __TVOS_10_1: u32 = 100100;
-pub const __TVOS_10_2: u32 = 100200;
-pub const __TVOS_11_0: u32 = 110000;
-pub const __TVOS_11_1: u32 = 110100;
-pub const __TVOS_11_2: u32 = 110200;
-pub const __TVOS_11_3: u32 = 110300;
-pub const __TVOS_11_4: u32 = 110400;
-pub const __TVOS_12_0: u32 = 120000;
-pub const __TVOS_12_1: u32 = 120100;
-pub const __TVOS_12_2: u32 = 120200;
-pub const __TVOS_12_3: u32 = 120300;
-pub const __TVOS_12_4: u32 = 120400;
-pub const __TVOS_13_0: u32 = 130000;
-pub const __TVOS_13_2: u32 = 130200;
-pub const __TVOS_13_3: u32 = 130300;
-pub const __TVOS_13_4: u32 = 130400;
-pub const __TVOS_14_0: u32 = 140000;
-pub const __TVOS_14_1: u32 = 140100;
-pub const __TVOS_14_2: u32 = 140200;
-pub const __TVOS_14_3: u32 = 140300;
-pub const __TVOS_14_5: u32 = 140500;
-pub const __TVOS_14_6: u32 = 140600;
-pub const __TVOS_14_7: u32 = 140700;
-pub const __TVOS_15_0: u32 = 150000;
-pub const __TVOS_15_1: u32 = 150100;
-pub const __TVOS_15_2: u32 = 150200;
-pub const __TVOS_15_3: u32 = 150300;
-pub const __TVOS_15_4: u32 = 150400;
-pub const __TVOS_15_5: u32 = 150500;
-pub const __TVOS_15_6: u32 = 150600;
-pub const __TVOS_16_0: u32 = 160000;
-pub const __TVOS_16_1: u32 = 160100;
-pub const __TVOS_16_2: u32 = 160200;
-pub const __TVOS_16_3: u32 = 160300;
-pub const __TVOS_16_4: u32 = 160400;
-pub const __TVOS_16_5: u32 = 160500;
-pub const __TVOS_16_6: u32 = 160600;
-pub const __TVOS_17_0: u32 = 170000;
-pub const __TVOS_17_1: u32 = 170100;
-pub const __TVOS_17_2: u32 = 170200;
-pub const __TVOS_17_3: u32 = 170300;
-pub const __TVOS_17_4: u32 = 170400;
-pub const __TVOS_17_5: u32 = 170500;
-pub const __BRIDGEOS_2_0: u32 = 20000;
-pub const __BRIDGEOS_3_0: u32 = 30000;
-pub const __BRIDGEOS_3_1: u32 = 30100;
-pub const __BRIDGEOS_3_4: u32 = 30400;
-pub const __BRIDGEOS_4_0: u32 = 40000;
-pub const __BRIDGEOS_4_1: u32 = 40100;
-pub const __BRIDGEOS_5_0: u32 = 50000;
-pub const __BRIDGEOS_5_1: u32 = 50100;
-pub const __BRIDGEOS_5_3: u32 = 50300;
-pub const __BRIDGEOS_6_0: u32 = 60000;
-pub const __BRIDGEOS_6_2: u32 = 60200;
-pub const __BRIDGEOS_6_4: u32 = 60400;
-pub const __BRIDGEOS_6_5: u32 = 60500;
-pub const __BRIDGEOS_6_6: u32 = 60600;
-pub const __BRIDGEOS_7_0: u32 = 70000;
-pub const __BRIDGEOS_7_1: u32 = 70100;
-pub const __BRIDGEOS_7_2: u32 = 70200;
-pub const __BRIDGEOS_7_3: u32 = 70300;
-pub const __BRIDGEOS_7_4: u32 = 70400;
-pub const __BRIDGEOS_7_6: u32 = 70600;
-pub const __BRIDGEOS_8_0: u32 = 80000;
-pub const __BRIDGEOS_8_1: u32 = 80100;
-pub const __BRIDGEOS_8_2: u32 = 80200;
-pub const __BRIDGEOS_8_3: u32 = 80300;
-pub const __BRIDGEOS_8_4: u32 = 80400;
-pub const __BRIDGEOS_8_5: u32 = 80500;
-pub const __DRIVERKIT_19_0: u32 = 190000;
-pub const __DRIVERKIT_20_0: u32 = 200000;
-pub const __DRIVERKIT_21_0: u32 = 210000;
-pub const __DRIVERKIT_22_0: u32 = 220000;
-pub const __DRIVERKIT_22_4: u32 = 220400;
-pub const __DRIVERKIT_22_5: u32 = 220500;
-pub const __DRIVERKIT_22_6: u32 = 220600;
-pub const __DRIVERKIT_23_0: u32 = 230000;
-pub const __DRIVERKIT_23_1: u32 = 230100;
-pub const __DRIVERKIT_23_2: u32 = 230200;
-pub const __DRIVERKIT_23_3: u32 = 230300;
-pub const __DRIVERKIT_23_4: u32 = 230400;
-pub const __DRIVERKIT_23_5: u32 = 230500;
-pub const __VISIONOS_1_0: u32 = 10000;
-pub const __VISIONOS_1_1: u32 = 10100;
-pub const __VISIONOS_1_2: u32 = 10200;
-pub const MAC_OS_X_VERSION_10_0: u32 = 1000;
-pub const MAC_OS_X_VERSION_10_1: u32 = 1010;
-pub const MAC_OS_X_VERSION_10_2: u32 = 1020;
-pub const MAC_OS_X_VERSION_10_3: u32 = 1030;
-pub const MAC_OS_X_VERSION_10_4: u32 = 1040;
-pub const MAC_OS_X_VERSION_10_5: u32 = 1050;
-pub const MAC_OS_X_VERSION_10_6: u32 = 1060;
-pub const MAC_OS_X_VERSION_10_7: u32 = 1070;
-pub const MAC_OS_X_VERSION_10_8: u32 = 1080;
-pub const MAC_OS_X_VERSION_10_9: u32 = 1090;
-pub const MAC_OS_X_VERSION_10_10: u32 = 101000;
-pub const MAC_OS_X_VERSION_10_10_2: u32 = 101002;
-pub const MAC_OS_X_VERSION_10_10_3: u32 = 101003;
-pub const MAC_OS_X_VERSION_10_11: u32 = 101100;
-pub const MAC_OS_X_VERSION_10_11_2: u32 = 101102;
-pub const MAC_OS_X_VERSION_10_11_3: u32 = 101103;
-pub const MAC_OS_X_VERSION_10_11_4: u32 = 101104;
-pub const MAC_OS_X_VERSION_10_12: u32 = 101200;
-pub const MAC_OS_X_VERSION_10_12_1: u32 = 101201;
-pub const MAC_OS_X_VERSION_10_12_2: u32 = 101202;
-pub const MAC_OS_X_VERSION_10_12_4: u32 = 101204;
-pub const MAC_OS_X_VERSION_10_13: u32 = 101300;
-pub const MAC_OS_X_VERSION_10_13_1: u32 = 101301;
-pub const MAC_OS_X_VERSION_10_13_2: u32 = 101302;
-pub const MAC_OS_X_VERSION_10_13_4: u32 = 101304;
-pub const MAC_OS_X_VERSION_10_14: u32 = 101400;
-pub const MAC_OS_X_VERSION_10_14_1: u32 = 101401;
-pub const MAC_OS_X_VERSION_10_14_4: u32 = 101404;
-pub const MAC_OS_X_VERSION_10_14_5: u32 = 101405;
-pub const MAC_OS_X_VERSION_10_14_6: u32 = 101406;
-pub const MAC_OS_X_VERSION_10_15: u32 = 101500;
-pub const MAC_OS_X_VERSION_10_15_1: u32 = 101501;
-pub const MAC_OS_X_VERSION_10_15_4: u32 = 101504;
-pub const MAC_OS_X_VERSION_10_16: u32 = 101600;
-pub const MAC_OS_VERSION_11_0: u32 = 110000;
-pub const MAC_OS_VERSION_11_1: u32 = 110100;
-pub const MAC_OS_VERSION_11_3: u32 = 110300;
-pub const MAC_OS_VERSION_11_4: u32 = 110400;
-pub const MAC_OS_VERSION_11_5: u32 = 110500;
-pub const MAC_OS_VERSION_11_6: u32 = 110600;
-pub const MAC_OS_VERSION_12_0: u32 = 120000;
-pub const MAC_OS_VERSION_12_1: u32 = 120100;
-pub const MAC_OS_VERSION_12_2: u32 = 120200;
-pub const MAC_OS_VERSION_12_3: u32 = 120300;
-pub const MAC_OS_VERSION_12_4: u32 = 120400;
-pub const MAC_OS_VERSION_12_5: u32 = 120500;
-pub const MAC_OS_VERSION_12_6: u32 = 120600;
-pub const MAC_OS_VERSION_12_7: u32 = 120700;
-pub const MAC_OS_VERSION_13_0: u32 = 130000;
-pub const MAC_OS_VERSION_13_1: u32 = 130100;
-pub const MAC_OS_VERSION_13_2: u32 = 130200;
-pub const MAC_OS_VERSION_13_3: u32 = 130300;
-pub const MAC_OS_VERSION_13_4: u32 = 130400;
-pub const MAC_OS_VERSION_13_5: u32 = 130500;
-pub const MAC_OS_VERSION_13_6: u32 = 130600;
-pub const MAC_OS_VERSION_14_0: u32 = 140000;
-pub const MAC_OS_VERSION_14_1: u32 = 140100;
-pub const MAC_OS_VERSION_14_2: u32 = 140200;
-pub const MAC_OS_VERSION_14_3: u32 = 140300;
-pub const MAC_OS_VERSION_14_4: u32 = 140400;
-pub const MAC_OS_VERSION_14_5: u32 = 140500;
-pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 140500;
-pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
-pub const __PTHREAD_SIZE__: u32 = 8176;
-pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
-pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
-pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
-pub const __PTHREAD_COND_SIZE__: u32 = 40;
-pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
-pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
-pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
-pub const __DARWIN_WCHAR_MIN: i32 = -2147483648;
-pub const _FORTIFY_SOURCE: u32 = 2;
-pub const RENAME_SECLUDE: u32 = 1;
-pub const RENAME_SWAP: u32 = 2;
-pub const RENAME_EXCL: u32 = 4;
-pub const RENAME_RESERVED1: u32 = 8;
-pub const RENAME_NOFOLLOW_ANY: u32 = 16;
-pub const SEEK_SET: u32 = 0;
-pub const SEEK_CUR: u32 = 1;
-pub const SEEK_END: u32 = 2;
-pub const SEEK_HOLE: u32 = 3;
-pub const SEEK_DATA: u32 = 4;
-pub const __SLBF: u32 = 1;
-pub const __SNBF: u32 = 2;
-pub const __SRD: u32 = 4;
-pub const __SWR: u32 = 8;
-pub const __SRW: u32 = 16;
-pub const __SEOF: u32 = 32;
-pub const __SERR: u32 = 64;
-pub const __SMBF: u32 = 128;
-pub const __SAPP: u32 = 256;
-pub const __SSTR: u32 = 512;
-pub const __SOPT: u32 = 1024;
-pub const __SNPT: u32 = 2048;
-pub const __SOFF: u32 = 4096;
-pub const __SMOD: u32 = 8192;
-pub const __SALC: u32 = 16384;
-pub const __SIGN: u32 = 32768;
+#[doc = r" If Bindgen could only determine the size and alignment of a"]
+#[doc = r" type, it is represented like this."]
+#[derive(PartialEq, Copy, Clone, Debug, Hash)]
+#[repr(C)]
+pub struct __BindgenOpaqueArray<T: Copy, const N: usize>(pub [T; N]);
+impl<T: Copy + Default, const N: usize> Default for __BindgenOpaqueArray<T, N> {
+    fn default() -> Self {
+        Self([<T as Default>::default(); N])
+    }
+}
+pub const _STDIO_H: u32 = 1;
+pub const _FEATURES_H: u32 = 1;
+pub const _DEFAULT_SOURCE: u32 = 1;
+pub const __GLIBC_USE_ISOC2X: u32 = 0;
+pub const __USE_ISOC11: u32 = 1;
+pub const __USE_ISOC99: u32 = 1;
+pub const __USE_ISOC95: u32 = 1;
+pub const __USE_POSIX_IMPLICITLY: u32 = 1;
+pub const _POSIX_SOURCE: u32 = 1;
+pub const _POSIX_C_SOURCE: u32 = 200809;
+pub const __USE_POSIX: u32 = 1;
+pub const __USE_POSIX2: u32 = 1;
+pub const __USE_POSIX199309: u32 = 1;
+pub const __USE_POSIX199506: u32 = 1;
+pub const __USE_XOPEN2K: u32 = 1;
+pub const __USE_XOPEN2K8: u32 = 1;
+pub const _ATFILE_SOURCE: u32 = 1;
+pub const __WORDSIZE: u32 = 64;
+pub const __WORDSIZE_TIME64_COMPAT32: u32 = 0;
+pub const __TIMESIZE: u32 = 64;
+pub const __USE_MISC: u32 = 1;
+pub const __USE_ATFILE: u32 = 1;
+pub const __USE_FORTIFY_LEVEL: u32 = 0;
+pub const __GLIBC_USE_DEPRECATED_GETS: u32 = 0;
+pub const __GLIBC_USE_DEPRECATED_SCANF: u32 = 0;
+pub const __GLIBC_USE_C2X_STRTOL: u32 = 0;
+pub const _STDC_PREDEF_H: u32 = 1;
+pub const __STDC_IEC_559__: u32 = 1;
+pub const __STDC_IEC_60559_BFP__: u32 = 201404;
+pub const __STDC_IEC_559_COMPLEX__: u32 = 1;
+pub const __STDC_IEC_60559_COMPLEX__: u32 = 201404;
+pub const __STDC_ISO_10646__: u32 = 201706;
+pub const __GNU_LIBRARY__: u32 = 6;
+pub const __GLIBC__: u32 = 2;
+pub const __GLIBC_MINOR__: u32 = 39;
+pub const _SYS_CDEFS_H: u32 = 1;
+pub const __glibc_c99_flexarr_available: u32 = 1;
+pub const __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI: u32 = 0;
+pub const __HAVE_GENERIC_SELECTION: u32 = 1;
+pub const __GLIBC_USE_LIB_EXT2: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT_C2X: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_EXT: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_TYPES_EXT: u32 = 0;
+pub const _BITS_TYPES_H: u32 = 1;
+pub const _BITS_TYPESIZES_H: u32 = 1;
+pub const __OFF_T_MATCHES_OFF64_T: u32 = 1;
+pub const __INO_T_MATCHES_INO64_T: u32 = 1;
+pub const __RLIM_T_MATCHES_RLIM64_T: u32 = 1;
+pub const __STATFS_MATCHES_STATFS64: u32 = 1;
+pub const __FD_SETSIZE: u32 = 1024;
+pub const _BITS_TIME64_H: u32 = 1;
+pub const _____fpos_t_defined: u32 = 1;
+pub const ____mbstate_t_defined: u32 = 1;
+pub const _____fpos64_t_defined: u32 = 1;
+pub const ____FILE_defined: u32 = 1;
+pub const __FILE_defined: u32 = 1;
+pub const __struct_FILE_defined: u32 = 1;
+pub const _IO_EOF_SEEN: u32 = 16;
+pub const _IO_ERR_SEEN: u32 = 32;
+pub const _IO_USER_LOCK: u32 = 32768;
+pub const __cookie_io_functions_t_defined: u32 = 1;
 pub const _IOFBF: u32 = 0;
 pub const _IOLBF: u32 = 1;
 pub const _IONBF: u32 = 2;
-pub const BUFSIZ: u32 = 1024;
+pub const BUFSIZ: u32 = 8192;
 pub const EOF: i32 = -1;
-pub const FOPEN_MAX: u32 = 20;
-pub const FILENAME_MAX: u32 = 1024;
-pub const P_tmpdir: &[u8; 10] = b"/var/tmp/\0";
-pub const L_tmpnam: u32 = 1024;
-pub const TMP_MAX: u32 = 308915776;
-pub const L_ctermid: u32 = 1024;
-pub const _USE_FORTIFY_LEVEL: u32 = 2;
-pub const __WORDSIZE: u32 = 64;
-pub const INT8_MAX: u32 = 127;
-pub const INT16_MAX: u32 = 32767;
-pub const INT32_MAX: u32 = 2147483647;
-pub const INT64_MAX: u64 = 9223372036854775807;
+pub const SEEK_SET: u32 = 0;
+pub const SEEK_CUR: u32 = 1;
+pub const SEEK_END: u32 = 2;
+pub const P_tmpdir: &[u8; 5] = b"/tmp\0";
+pub const L_tmpnam: u32 = 20;
+pub const TMP_MAX: u32 = 238328;
+pub const _BITS_STDIO_LIM_H: u32 = 1;
+pub const FILENAME_MAX: u32 = 4096;
+pub const L_ctermid: u32 = 9;
+pub const FOPEN_MAX: u32 = 16;
+pub const __HAVE_FLOAT128: u32 = 1;
+pub const __HAVE_DISTINCT_FLOAT128: u32 = 0;
+pub const __HAVE_FLOAT64X: u32 = 1;
+pub const __HAVE_FLOAT64X_LONG_DOUBLE: u32 = 1;
+pub const __HAVE_FLOAT16: u32 = 0;
+pub const __HAVE_FLOAT32: u32 = 1;
+pub const __HAVE_FLOAT64: u32 = 1;
+pub const __HAVE_FLOAT32X: u32 = 1;
+pub const __HAVE_FLOAT128X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT16: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT128X: u32 = 0;
+pub const __HAVE_FLOATN_NOT_TYPEDEF: u32 = 0;
+pub const _STDINT_H: u32 = 1;
+pub const _BITS_WCHAR_H: u32 = 1;
+pub const _BITS_STDINT_INTN_H: u32 = 1;
+pub const _BITS_STDINT_UINTN_H: u32 = 1;
+pub const _BITS_STDINT_LEAST_H: u32 = 1;
 pub const INT8_MIN: i32 = -128;
 pub const INT16_MIN: i32 = -32768;
 pub const INT32_MIN: i32 = -2147483648;
-pub const INT64_MIN: i64 = -9223372036854775808;
+pub const INT8_MAX: u32 = 127;
+pub const INT16_MAX: u32 = 32767;
+pub const INT32_MAX: u32 = 2147483647;
 pub const UINT8_MAX: u32 = 255;
 pub const UINT16_MAX: u32 = 65535;
 pub const UINT32_MAX: u32 = 4294967295;
-pub const UINT64_MAX: i32 = -1;
 pub const INT_LEAST8_MIN: i32 = -128;
 pub const INT_LEAST16_MIN: i32 = -32768;
 pub const INT_LEAST32_MIN: i32 = -2147483648;
-pub const INT_LEAST64_MIN: i64 = -9223372036854775808;
 pub const INT_LEAST8_MAX: u32 = 127;
 pub const INT_LEAST16_MAX: u32 = 32767;
 pub const INT_LEAST32_MAX: u32 = 2147483647;
-pub const INT_LEAST64_MAX: u64 = 9223372036854775807;
 pub const UINT_LEAST8_MAX: u32 = 255;
 pub const UINT_LEAST16_MAX: u32 = 65535;
 pub const UINT_LEAST32_MAX: u32 = 4294967295;
-pub const UINT_LEAST64_MAX: i32 = -1;
 pub const INT_FAST8_MIN: i32 = -128;
-pub const INT_FAST16_MIN: i32 = -32768;
-pub const INT_FAST32_MIN: i32 = -2147483648;
-pub const INT_FAST64_MIN: i64 = -9223372036854775808;
+pub const INT_FAST16_MIN: i64 = -9223372036854775808;
+pub const INT_FAST32_MIN: i64 = -9223372036854775808;
 pub const INT_FAST8_MAX: u32 = 127;
-pub const INT_FAST16_MAX: u32 = 32767;
-pub const INT_FAST32_MAX: u32 = 2147483647;
-pub const INT_FAST64_MAX: u64 = 9223372036854775807;
+pub const INT_FAST16_MAX: u64 = 9223372036854775807;
+pub const INT_FAST32_MAX: u64 = 9223372036854775807;
 pub const UINT_FAST8_MAX: u32 = 255;
-pub const UINT_FAST16_MAX: u32 = 65535;
-pub const UINT_FAST32_MAX: u32 = 4294967295;
-pub const UINT_FAST64_MAX: i32 = -1;
-pub const INTPTR_MAX: u64 = 9223372036854775807;
+pub const UINT_FAST16_MAX: i32 = -1;
+pub const UINT_FAST32_MAX: i32 = -1;
 pub const INTPTR_MIN: i64 = -9223372036854775808;
+pub const INTPTR_MAX: u64 = 9223372036854775807;
 pub const UINTPTR_MAX: i32 = -1;
-pub const SIZE_MAX: i32 = -1;
-pub const RSIZE_MAX: i32 = -1;
-pub const WINT_MIN: i32 = -2147483648;
-pub const WINT_MAX: u32 = 2147483647;
+pub const PTRDIFF_MIN: i64 = -9223372036854775808;
+pub const PTRDIFF_MAX: u64 = 9223372036854775807;
 pub const SIG_ATOMIC_MIN: i32 = -2147483648;
 pub const SIG_ATOMIC_MAX: u32 = 2147483647;
-pub const FP_SUPERNORMAL: u32 = 6;
+pub const SIZE_MAX: i32 = -1;
+pub const WINT_MIN: u32 = 0;
+pub const WINT_MAX: u32 = 4294967295;
+pub const _MATH_H: u32 = 1;
+pub const _BITS_LIBM_SIMD_DECL_STUBS_H: u32 = 1;
+pub const __FP_LOGB0_IS_MIN: u32 = 0;
+pub const __FP_LOGBNAN_IS_MIN: u32 = 0;
+pub const FP_ILOGB0: i32 = -2147483647;
+pub const FP_ILOGBNAN: u32 = 2147483647;
 pub const FP_FAST_FMA: u32 = 1;
 pub const FP_FAST_FMAF: u32 = 1;
-pub const FP_FAST_FMAL: u32 = 1;
-pub const FP_ILOGB0: i32 = -2147483648;
-pub const FP_ILOGBNAN: i32 = -2147483648;
+pub const __MATH_DECLARING_DOUBLE: u32 = 1;
+pub const __MATH_DECLARING_FLOATN: u32 = 0;
+pub const __MATH_DECLARE_LDOUBLE: u32 = 1;
 pub const MATH_ERRNO: u32 = 1;
 pub const MATH_ERREXCEPT: u32 = 2;
+pub const math_errhandling: u32 = 3;
 pub const M_E: f64 = 2.718281828459045;
 pub const M_LOG2E: f64 = 1.4426950408889634;
 pub const M_LOG10E: f64 = 0.4342944819032518;
@@ -620,132 +310,86 @@ pub const M_2_PI: f64 = 0.6366197723675814;
 pub const M_2_SQRTPI: f64 = 1.1283791670955126;
 pub const M_SQRT2: f64 = 1.4142135623730951;
 pub const M_SQRT1_2: f64 = 0.7071067811865476;
-pub const FP_SNAN: u32 = 1;
-pub const FP_QNAN: u32 = 1;
-pub const DOMAIN: u32 = 1;
-pub const SING: u32 = 2;
-pub const OVERFLOW: u32 = 3;
-pub const UNDERFLOW: u32 = 4;
-pub const TLOSS: u32 = 5;
-pub const PLOSS: u32 = 6;
-pub const __DARWIN_CLK_TCK: u32 = 100;
-pub const MB_LEN_MAX: u32 = 6;
-pub const CLK_TCK: u32 = 100;
-pub const CHAR_BIT: u32 = 8;
-pub const SCHAR_MAX: u32 = 127;
-pub const SCHAR_MIN: i32 = -128;
-pub const UCHAR_MAX: u32 = 255;
-pub const CHAR_MAX: u32 = 127;
-pub const CHAR_MIN: i32 = -128;
-pub const USHRT_MAX: u32 = 65535;
-pub const SHRT_MAX: u32 = 32767;
-pub const SHRT_MIN: i32 = -32768;
-pub const UINT_MAX: u32 = 4294967295;
-pub const INT_MAX: u32 = 2147483647;
-pub const INT_MIN: i32 = -2147483648;
-pub const ULONG_MAX: i32 = -1;
-pub const LONG_MAX: u64 = 9223372036854775807;
-pub const LONG_MIN: i64 = -9223372036854775808;
-pub const ULLONG_MAX: i32 = -1;
-pub const LLONG_MAX: u64 = 9223372036854775807;
-pub const LLONG_MIN: i64 = -9223372036854775808;
-pub const LONG_BIT: u32 = 64;
-pub const SSIZE_MAX: u64 = 9223372036854775807;
-pub const WORD_BIT: u32 = 32;
-pub const SIZE_T_MAX: i32 = -1;
-pub const UQUAD_MAX: i32 = -1;
-pub const QUAD_MAX: u64 = 9223372036854775807;
-pub const QUAD_MIN: i64 = -9223372036854775808;
-pub const ARG_MAX: u32 = 1048576;
-pub const CHILD_MAX: u32 = 266;
-pub const GID_MAX: u32 = 2147483647;
-pub const LINK_MAX: u32 = 32767;
-pub const MAX_CANON: u32 = 1024;
-pub const MAX_INPUT: u32 = 1024;
-pub const NAME_MAX: u32 = 255;
-pub const NGROUPS_MAX: u32 = 16;
-pub const UID_MAX: u32 = 2147483647;
-pub const OPEN_MAX: u32 = 10240;
-pub const PATH_MAX: u32 = 1024;
-pub const PIPE_BUF: u32 = 512;
-pub const BC_BASE_MAX: u32 = 99;
-pub const BC_DIM_MAX: u32 = 2048;
-pub const BC_SCALE_MAX: u32 = 99;
-pub const BC_STRING_MAX: u32 = 1000;
-pub const CHARCLASS_NAME_MAX: u32 = 14;
-pub const COLL_WEIGHTS_MAX: u32 = 2;
-pub const EQUIV_CLASS_MAX: u32 = 2;
-pub const EXPR_NEST_MAX: u32 = 32;
-pub const LINE_MAX: u32 = 2048;
-pub const RE_DUP_MAX: u32 = 255;
-pub const NZERO: u32 = 20;
+pub const _LIBC_LIMITS_H_: u32 = 1;
+pub const MB_LEN_MAX: u32 = 16;
+pub const _BITS_POSIX1_LIM_H: u32 = 1;
+pub const _POSIX_AIO_LISTIO_MAX: u32 = 2;
+pub const _POSIX_AIO_MAX: u32 = 1;
 pub const _POSIX_ARG_MAX: u32 = 4096;
 pub const _POSIX_CHILD_MAX: u32 = 25;
+pub const _POSIX_DELAYTIMER_MAX: u32 = 32;
+pub const _POSIX_HOST_NAME_MAX: u32 = 255;
 pub const _POSIX_LINK_MAX: u32 = 8;
+pub const _POSIX_LOGIN_NAME_MAX: u32 = 9;
 pub const _POSIX_MAX_CANON: u32 = 255;
 pub const _POSIX_MAX_INPUT: u32 = 255;
+pub const _POSIX_MQ_OPEN_MAX: u32 = 8;
+pub const _POSIX_MQ_PRIO_MAX: u32 = 32;
 pub const _POSIX_NAME_MAX: u32 = 14;
 pub const _POSIX_NGROUPS_MAX: u32 = 8;
 pub const _POSIX_OPEN_MAX: u32 = 20;
 pub const _POSIX_PATH_MAX: u32 = 256;
 pub const _POSIX_PIPE_BUF: u32 = 512;
-pub const _POSIX_SSIZE_MAX: u32 = 32767;
-pub const _POSIX_STREAM_MAX: u32 = 8;
-pub const _POSIX_TZNAME_MAX: u32 = 6;
-pub const _POSIX2_BC_BASE_MAX: u32 = 99;
-pub const _POSIX2_BC_DIM_MAX: u32 = 2048;
-pub const _POSIX2_BC_SCALE_MAX: u32 = 99;
-pub const _POSIX2_BC_STRING_MAX: u32 = 1000;
-pub const _POSIX2_EQUIV_CLASS_MAX: u32 = 2;
-pub const _POSIX2_EXPR_NEST_MAX: u32 = 32;
-pub const _POSIX2_LINE_MAX: u32 = 2048;
-pub const _POSIX2_RE_DUP_MAX: u32 = 255;
-pub const _POSIX_AIO_LISTIO_MAX: u32 = 2;
-pub const _POSIX_AIO_MAX: u32 = 1;
-pub const _POSIX_DELAYTIMER_MAX: u32 = 32;
-pub const _POSIX_MQ_OPEN_MAX: u32 = 8;
-pub const _POSIX_MQ_PRIO_MAX: u32 = 32;
+pub const _POSIX_RE_DUP_MAX: u32 = 255;
 pub const _POSIX_RTSIG_MAX: u32 = 8;
 pub const _POSIX_SEM_NSEMS_MAX: u32 = 256;
 pub const _POSIX_SEM_VALUE_MAX: u32 = 32767;
 pub const _POSIX_SIGQUEUE_MAX: u32 = 32;
-pub const _POSIX_TIMER_MAX: u32 = 32;
-pub const _POSIX_CLOCKRES_MIN: u32 = 20000000;
-pub const _POSIX_THREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
-pub const _POSIX_THREAD_KEYS_MAX: u32 = 128;
-pub const _POSIX_THREAD_THREADS_MAX: u32 = 64;
-pub const PTHREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
-pub const PTHREAD_KEYS_MAX: u32 = 512;
-pub const PTHREAD_STACK_MIN: u32 = 16384;
-pub const _POSIX_HOST_NAME_MAX: u32 = 255;
-pub const _POSIX_LOGIN_NAME_MAX: u32 = 9;
-pub const _POSIX_SS_REPL_MAX: u32 = 4;
+pub const _POSIX_SSIZE_MAX: u32 = 32767;
+pub const _POSIX_STREAM_MAX: u32 = 8;
 pub const _POSIX_SYMLINK_MAX: u32 = 255;
 pub const _POSIX_SYMLOOP_MAX: u32 = 8;
-pub const _POSIX_TRACE_EVENT_NAME_MAX: u32 = 30;
-pub const _POSIX_TRACE_NAME_MAX: u32 = 8;
-pub const _POSIX_TRACE_SYS_MAX: u32 = 8;
-pub const _POSIX_TRACE_USER_EVENT_MAX: u32 = 32;
+pub const _POSIX_TIMER_MAX: u32 = 32;
 pub const _POSIX_TTY_NAME_MAX: u32 = 9;
-pub const _POSIX2_CHARCLASS_NAME_MAX: u32 = 14;
+pub const _POSIX_TZNAME_MAX: u32 = 6;
+pub const _POSIX_CLOCKRES_MIN: u32 = 20000000;
+pub const NR_OPEN: u32 = 1024;
+pub const NGROUPS_MAX: u32 = 65536;
+pub const ARG_MAX: u32 = 131072;
+pub const LINK_MAX: u32 = 127;
+pub const MAX_CANON: u32 = 255;
+pub const MAX_INPUT: u32 = 255;
+pub const NAME_MAX: u32 = 255;
+pub const PATH_MAX: u32 = 4096;
+pub const PIPE_BUF: u32 = 4096;
+pub const XATTR_NAME_MAX: u32 = 255;
+pub const XATTR_SIZE_MAX: u32 = 65536;
+pub const XATTR_LIST_MAX: u32 = 65536;
+pub const RTSIG_MAX: u32 = 32;
+pub const _POSIX_THREAD_KEYS_MAX: u32 = 128;
+pub const PTHREAD_KEYS_MAX: u32 = 1024;
+pub const _POSIX_THREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
+pub const PTHREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
+pub const _POSIX_THREAD_THREADS_MAX: u32 = 64;
+pub const AIO_PRIO_DELTA_MAX: u32 = 20;
+pub const PTHREAD_STACK_MIN: u32 = 131072;
+pub const DELAYTIMER_MAX: u32 = 2147483647;
+pub const TTY_NAME_MAX: u32 = 32;
+pub const LOGIN_NAME_MAX: u32 = 256;
+pub const HOST_NAME_MAX: u32 = 64;
+pub const MQ_PRIO_MAX: u32 = 32768;
+pub const SEM_VALUE_MAX: u32 = 2147483647;
+pub const _BITS_POSIX2_LIM_H: u32 = 1;
+pub const _POSIX2_BC_BASE_MAX: u32 = 99;
+pub const _POSIX2_BC_DIM_MAX: u32 = 2048;
+pub const _POSIX2_BC_SCALE_MAX: u32 = 99;
+pub const _POSIX2_BC_STRING_MAX: u32 = 1000;
 pub const _POSIX2_COLL_WEIGHTS_MAX: u32 = 2;
-pub const _POSIX_RE_DUP_MAX: u32 = 255;
-pub const OFF_MIN: i64 = -9223372036854775808;
-pub const OFF_MAX: u64 = 9223372036854775807;
-pub const PASS_MAX: u32 = 128;
-pub const NL_ARGMAX: u32 = 9;
-pub const NL_LANGMAX: u32 = 14;
-pub const NL_MSGMAX: u32 = 32767;
-pub const NL_NMAX: u32 = 1;
-pub const NL_SETMAX: u32 = 255;
-pub const NL_TEXTMAX: u32 = 2048;
-pub const _XOPEN_IOV_MAX: u32 = 16;
-pub const IOV_MAX: u32 = 1024;
-pub const _XOPEN_NAME_MAX: u32 = 255;
-pub const _XOPEN_PATH_MAX: u32 = 1024;
-pub const FLT_HAS_SUBNORM: u32 = 1;
-pub const DBL_HAS_SUBNORM: u32 = 1;
-pub const LDBL_HAS_SUBNORM: u32 = 1;
+pub const _POSIX2_EXPR_NEST_MAX: u32 = 32;
+pub const _POSIX2_LINE_MAX: u32 = 2048;
+pub const _POSIX2_RE_DUP_MAX: u32 = 255;
+pub const _POSIX2_CHARCLASS_NAME_MAX: u32 = 14;
+pub const BC_BASE_MAX: u32 = 99;
+pub const BC_DIM_MAX: u32 = 2048;
+pub const BC_SCALE_MAX: u32 = 99;
+pub const BC_STRING_MAX: u32 = 1000;
+pub const COLL_WEIGHTS_MAX: u32 = 255;
+pub const EXPR_NEST_MAX: u32 = 32;
+pub const LINE_MAX: u32 = 2048;
+pub const CHARCLASS_NAME_MAX: u32 = 2048;
+pub const RE_DUP_MAX: u32 = 32767;
+pub const CHAR_MIN: u32 = 0;
+pub const _ASSERT_H: u32 = 1;
 pub const SCIP_BUILD_TYPE: &[u8; 8] = b"Release\0";
 pub const SCIP_VERSION_MAJOR: u32 = 10;
 pub const SCIP_VERSION_MINOR: u32 = 0;
@@ -759,8 +403,6 @@ pub const SCIP_VERSION_SUB: u32 = 0;
 pub const SCIP_SUBVERSION: u32 = 0;
 pub const SCIP_APIVERSION: u32 = 156;
 pub const SCIP_COPYRIGHT: &[u8; 52] = b"Copyright (c) 2002-2026 Zuse Institute Berlin (ZIB)\0";
-pub const SCIP_LONGINT_MAX: u64 = 9223372036854775807;
-pub const SCIP_LONGINT_MIN: i64 = -9223372036854775808;
 pub const SCIP_LONGINT_FORMAT: &[u8; 4] = b"lld\0";
 pub const SCIP_REAL_UNITROUNDOFF: f64 = 0.00000000000000011102230246251565;
 pub const SCIP_REAL_FORMAT: &[u8; 3] = b"lf\0";
@@ -795,221 +437,64 @@ pub const SCIP_DEFAULT_MEM_ARRAYGROWFAC: f64 = 1.2;
 pub const SCIP_DEFAULT_MEM_ARRAYGROWINIT: u32 = 4;
 pub const SCIP_MAXTREEDEPTH: u32 = 1073741822;
 pub const SCIP_PROBINGSCORE_PENALTYRATIO: u32 = 2;
-pub const __DARWIN_NSIG: u32 = 32;
-pub const NSIG: u32 = 32;
-pub const _ARM_SIGNAL_: u32 = 1;
-pub const SIGHUP: u32 = 1;
-pub const SIGINT: u32 = 2;
-pub const SIGQUIT: u32 = 3;
-pub const SIGILL: u32 = 4;
-pub const SIGTRAP: u32 = 5;
-pub const SIGABRT: u32 = 6;
-pub const SIGIOT: u32 = 6;
-pub const SIGEMT: u32 = 7;
-pub const SIGFPE: u32 = 8;
-pub const SIGKILL: u32 = 9;
-pub const SIGBUS: u32 = 10;
-pub const SIGSEGV: u32 = 11;
-pub const SIGSYS: u32 = 12;
-pub const SIGPIPE: u32 = 13;
-pub const SIGALRM: u32 = 14;
-pub const SIGTERM: u32 = 15;
-pub const SIGURG: u32 = 16;
-pub const SIGSTOP: u32 = 17;
-pub const SIGTSTP: u32 = 18;
-pub const SIGCONT: u32 = 19;
-pub const SIGCHLD: u32 = 20;
-pub const SIGTTIN: u32 = 21;
-pub const SIGTTOU: u32 = 22;
-pub const SIGIO: u32 = 23;
-pub const SIGXCPU: u32 = 24;
-pub const SIGXFSZ: u32 = 25;
-pub const SIGVTALRM: u32 = 26;
-pub const SIGPROF: u32 = 27;
-pub const SIGWINCH: u32 = 28;
-pub const SIGINFO: u32 = 29;
-pub const SIGUSR1: u32 = 30;
-pub const SIGUSR2: u32 = 31;
-pub const __DARWIN_OPAQUE_ARM_THREAD_STATE64: u32 = 0;
-pub const SIGEV_NONE: u32 = 0;
-pub const SIGEV_SIGNAL: u32 = 1;
-pub const SIGEV_THREAD: u32 = 3;
-pub const ILL_NOOP: u32 = 0;
-pub const ILL_ILLOPC: u32 = 1;
-pub const ILL_ILLTRP: u32 = 2;
-pub const ILL_PRVOPC: u32 = 3;
-pub const ILL_ILLOPN: u32 = 4;
-pub const ILL_ILLADR: u32 = 5;
-pub const ILL_PRVREG: u32 = 6;
-pub const ILL_COPROC: u32 = 7;
-pub const ILL_BADSTK: u32 = 8;
-pub const FPE_NOOP: u32 = 0;
-pub const FPE_FLTDIV: u32 = 1;
-pub const FPE_FLTOVF: u32 = 2;
-pub const FPE_FLTUND: u32 = 3;
-pub const FPE_FLTRES: u32 = 4;
-pub const FPE_FLTINV: u32 = 5;
-pub const FPE_FLTSUB: u32 = 6;
-pub const FPE_INTDIV: u32 = 7;
-pub const FPE_INTOVF: u32 = 8;
-pub const SEGV_NOOP: u32 = 0;
-pub const SEGV_MAPERR: u32 = 1;
-pub const SEGV_ACCERR: u32 = 2;
-pub const BUS_NOOP: u32 = 0;
-pub const BUS_ADRALN: u32 = 1;
-pub const BUS_ADRERR: u32 = 2;
-pub const BUS_OBJERR: u32 = 3;
-pub const TRAP_BRKPT: u32 = 1;
-pub const TRAP_TRACE: u32 = 2;
-pub const CLD_NOOP: u32 = 0;
-pub const CLD_EXITED: u32 = 1;
-pub const CLD_KILLED: u32 = 2;
-pub const CLD_DUMPED: u32 = 3;
-pub const CLD_TRAPPED: u32 = 4;
-pub const CLD_STOPPED: u32 = 5;
-pub const CLD_CONTINUED: u32 = 6;
-pub const POLL_IN: u32 = 1;
-pub const POLL_OUT: u32 = 2;
-pub const POLL_MSG: u32 = 3;
-pub const POLL_ERR: u32 = 4;
-pub const POLL_PRI: u32 = 5;
-pub const POLL_HUP: u32 = 6;
-pub const SA_ONSTACK: u32 = 1;
-pub const SA_RESTART: u32 = 2;
-pub const SA_RESETHAND: u32 = 4;
-pub const SA_NOCLDSTOP: u32 = 8;
-pub const SA_NODEFER: u32 = 16;
-pub const SA_NOCLDWAIT: u32 = 32;
-pub const SA_SIGINFO: u32 = 64;
-pub const SA_USERTRAMP: u32 = 256;
-pub const SA_64REGSET: u32 = 512;
-pub const SA_USERSPACE_MASK: u32 = 127;
-pub const SIG_BLOCK: u32 = 1;
-pub const SIG_UNBLOCK: u32 = 2;
-pub const SIG_SETMASK: u32 = 3;
-pub const SI_USER: u32 = 65537;
-pub const SI_QUEUE: u32 = 65538;
-pub const SI_TIMER: u32 = 65539;
-pub const SI_ASYNCIO: u32 = 65540;
-pub const SI_MESGQ: u32 = 65541;
-pub const SS_ONSTACK: u32 = 1;
-pub const SS_DISABLE: u32 = 4;
-pub const MINSIGSTKSZ: u32 = 32768;
-pub const SIGSTKSZ: u32 = 131072;
-pub const SV_ONSTACK: u32 = 1;
-pub const SV_INTERRUPT: u32 = 2;
-pub const SV_RESETHAND: u32 = 4;
-pub const SV_NODEFER: u32 = 16;
-pub const SV_NOCLDSTOP: u32 = 8;
-pub const SV_SIGINFO: u32 = 64;
-pub const PRIO_PROCESS: u32 = 0;
-pub const PRIO_PGRP: u32 = 1;
-pub const PRIO_USER: u32 = 2;
-pub const PRIO_DARWIN_THREAD: u32 = 3;
-pub const PRIO_DARWIN_PROCESS: u32 = 4;
-pub const PRIO_MIN: i32 = -20;
-pub const PRIO_MAX: u32 = 20;
-pub const PRIO_DARWIN_BG: u32 = 4096;
-pub const PRIO_DARWIN_NONUI: u32 = 4097;
-pub const RUSAGE_SELF: u32 = 0;
-pub const RUSAGE_CHILDREN: i32 = -1;
-pub const RUSAGE_INFO_V0: u32 = 0;
-pub const RUSAGE_INFO_V1: u32 = 1;
-pub const RUSAGE_INFO_V2: u32 = 2;
-pub const RUSAGE_INFO_V3: u32 = 3;
-pub const RUSAGE_INFO_V4: u32 = 4;
-pub const RUSAGE_INFO_V5: u32 = 5;
-pub const RUSAGE_INFO_V6: u32 = 6;
-pub const RUSAGE_INFO_CURRENT: u32 = 6;
-pub const RU_PROC_RUNS_RESLIDE: u32 = 1;
-pub const RLIMIT_CPU: u32 = 0;
-pub const RLIMIT_FSIZE: u32 = 1;
-pub const RLIMIT_DATA: u32 = 2;
-pub const RLIMIT_STACK: u32 = 3;
-pub const RLIMIT_CORE: u32 = 4;
-pub const RLIMIT_AS: u32 = 5;
-pub const RLIMIT_RSS: u32 = 5;
-pub const RLIMIT_MEMLOCK: u32 = 6;
-pub const RLIMIT_NPROC: u32 = 7;
-pub const RLIMIT_NOFILE: u32 = 8;
-pub const RLIM_NLIMITS: u32 = 9;
-pub const _RLIMIT_POSIX_FLAG: u32 = 4096;
-pub const RLIMIT_WAKEUPS_MONITOR: u32 = 1;
-pub const RLIMIT_CPU_USAGE_MONITOR: u32 = 2;
-pub const RLIMIT_THREAD_CPULIMITS: u32 = 3;
-pub const RLIMIT_FOOTPRINT_INTERVAL: u32 = 4;
-pub const WAKEMON_ENABLE: u32 = 1;
-pub const WAKEMON_DISABLE: u32 = 2;
-pub const WAKEMON_GET_PARAMS: u32 = 4;
-pub const WAKEMON_SET_DEFAULTS: u32 = 8;
-pub const WAKEMON_MAKE_FATAL: u32 = 16;
-pub const CPUMON_MAKE_FATAL: u32 = 4096;
-pub const FOOTPRINT_INTERVAL_RESET: u32 = 1;
-pub const IOPOL_TYPE_DISK: u32 = 0;
-pub const IOPOL_TYPE_VFS_ATIME_UPDATES: u32 = 2;
-pub const IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES: u32 = 3;
-pub const IOPOL_TYPE_VFS_STATFS_NO_DATA_VOLUME: u32 = 4;
-pub const IOPOL_TYPE_VFS_TRIGGER_RESOLVE: u32 = 5;
-pub const IOPOL_TYPE_VFS_IGNORE_CONTENT_PROTECTION: u32 = 6;
-pub const IOPOL_TYPE_VFS_IGNORE_PERMISSIONS: u32 = 7;
-pub const IOPOL_TYPE_VFS_SKIP_MTIME_UPDATE: u32 = 8;
-pub const IOPOL_TYPE_VFS_ALLOW_LOW_SPACE_WRITES: u32 = 9;
-pub const IOPOL_TYPE_VFS_DISALLOW_RW_FOR_O_EVTONLY: u32 = 10;
-pub const IOPOL_SCOPE_PROCESS: u32 = 0;
-pub const IOPOL_SCOPE_THREAD: u32 = 1;
-pub const IOPOL_SCOPE_DARWIN_BG: u32 = 2;
-pub const IOPOL_DEFAULT: u32 = 0;
-pub const IOPOL_IMPORTANT: u32 = 1;
-pub const IOPOL_PASSIVE: u32 = 2;
-pub const IOPOL_THROTTLE: u32 = 3;
-pub const IOPOL_UTILITY: u32 = 4;
-pub const IOPOL_STANDARD: u32 = 5;
-pub const IOPOL_APPLICATION: u32 = 5;
-pub const IOPOL_NORMAL: u32 = 1;
-pub const IOPOL_ATIME_UPDATES_DEFAULT: u32 = 0;
-pub const IOPOL_ATIME_UPDATES_OFF: u32 = 1;
-pub const IOPOL_MATERIALIZE_DATALESS_FILES_DEFAULT: u32 = 0;
-pub const IOPOL_MATERIALIZE_DATALESS_FILES_OFF: u32 = 1;
-pub const IOPOL_MATERIALIZE_DATALESS_FILES_ON: u32 = 2;
-pub const IOPOL_VFS_STATFS_NO_DATA_VOLUME_DEFAULT: u32 = 0;
-pub const IOPOL_VFS_STATFS_FORCE_NO_DATA_VOLUME: u32 = 1;
-pub const IOPOL_VFS_TRIGGER_RESOLVE_DEFAULT: u32 = 0;
-pub const IOPOL_VFS_TRIGGER_RESOLVE_OFF: u32 = 1;
-pub const IOPOL_VFS_CONTENT_PROTECTION_DEFAULT: u32 = 0;
-pub const IOPOL_VFS_CONTENT_PROTECTION_IGNORE: u32 = 1;
-pub const IOPOL_VFS_IGNORE_PERMISSIONS_OFF: u32 = 0;
-pub const IOPOL_VFS_IGNORE_PERMISSIONS_ON: u32 = 1;
-pub const IOPOL_VFS_SKIP_MTIME_UPDATE_OFF: u32 = 0;
-pub const IOPOL_VFS_SKIP_MTIME_UPDATE_ON: u32 = 1;
-pub const IOPOL_VFS_ALLOW_LOW_SPACE_WRITES_OFF: u32 = 0;
-pub const IOPOL_VFS_ALLOW_LOW_SPACE_WRITES_ON: u32 = 1;
-pub const IOPOL_VFS_DISALLOW_RW_FOR_O_EVTONLY_DEFAULT: u32 = 0;
-pub const IOPOL_VFS_DISALLOW_RW_FOR_O_EVTONLY_ON: u32 = 1;
-pub const IOPOL_VFS_NOCACHE_WRITE_FS_BLKSIZE_DEFAULT: u32 = 0;
-pub const IOPOL_VFS_NOCACHE_WRITE_FS_BLKSIZE_ON: u32 = 1;
+pub const _STDLIB_H: u32 = 1;
 pub const WNOHANG: u32 = 1;
 pub const WUNTRACED: u32 = 2;
-pub const WCOREFLAG: u32 = 128;
-pub const _WSTOPPED: u32 = 127;
+pub const WSTOPPED: u32 = 2;
 pub const WEXITED: u32 = 4;
-pub const WSTOPPED: u32 = 8;
-pub const WCONTINUED: u32 = 16;
-pub const WNOWAIT: u32 = 32;
-pub const WAIT_ANY: i32 = -1;
-pub const WAIT_MYPGRP: u32 = 0;
-pub const _QUAD_HIGHWORD: u32 = 1;
-pub const _QUAD_LOWWORD: u32 = 0;
-pub const __DARWIN_LITTLE_ENDIAN: u32 = 1234;
-pub const __DARWIN_BIG_ENDIAN: u32 = 4321;
-pub const __DARWIN_PDP_ENDIAN: u32 = 3412;
-pub const __DARWIN_BYTE_ORDER: u32 = 1234;
+pub const WCONTINUED: u32 = 8;
+pub const WNOWAIT: u32 = 16777216;
+pub const __WNOTHREAD: u32 = 536870912;
+pub const __WALL: u32 = 1073741824;
+pub const __WCLONE: u32 = 2147483648;
+pub const __W_CONTINUED: u32 = 65535;
+pub const __WCOREFLAG: u32 = 128;
+pub const __ldiv_t_defined: u32 = 1;
+pub const __lldiv_t_defined: u32 = 1;
+pub const RAND_MAX: u32 = 2147483647;
+pub const EXIT_FAILURE: u32 = 1;
+pub const EXIT_SUCCESS: u32 = 0;
+pub const _SYS_TYPES_H: u32 = 1;
+pub const __clock_t_defined: u32 = 1;
+pub const __clockid_t_defined: u32 = 1;
+pub const __time_t_defined: u32 = 1;
+pub const __timer_t_defined: u32 = 1;
+pub const __BIT_TYPES_DEFINED__: u32 = 1;
+pub const _ENDIAN_H: u32 = 1;
+pub const _BITS_ENDIAN_H: u32 = 1;
+pub const __LITTLE_ENDIAN: u32 = 1234;
+pub const __BIG_ENDIAN: u32 = 4321;
+pub const __PDP_ENDIAN: u32 = 3412;
+pub const _BITS_ENDIANNESS_H: u32 = 1;
+pub const __BYTE_ORDER: u32 = 1234;
+pub const __FLOAT_WORD_ORDER: u32 = 1234;
 pub const LITTLE_ENDIAN: u32 = 1234;
 pub const BIG_ENDIAN: u32 = 4321;
 pub const PDP_ENDIAN: u32 = 3412;
 pub const BYTE_ORDER: u32 = 1234;
-pub const EXIT_FAILURE: u32 = 1;
-pub const EXIT_SUCCESS: u32 = 0;
-pub const RAND_MAX: u32 = 2147483647;
+pub const _BITS_BYTESWAP_H: u32 = 1;
+pub const _BITS_UINTN_IDENTITY_H: u32 = 1;
+pub const _SYS_SELECT_H: u32 = 1;
+pub const __sigset_t_defined: u32 = 1;
+pub const __timeval_defined: u32 = 1;
+pub const _STRUCT_TIMESPEC: u32 = 1;
+pub const FD_SETSIZE: u32 = 1024;
+pub const _BITS_PTHREADTYPES_COMMON_H: u32 = 1;
+pub const _THREAD_SHARED_TYPES_H: u32 = 1;
+pub const _BITS_PTHREADTYPES_ARCH_H: u32 = 1;
+pub const __SIZEOF_PTHREAD_ATTR_T: u32 = 64;
+pub const __SIZEOF_PTHREAD_MUTEX_T: u32 = 48;
+pub const __SIZEOF_PTHREAD_MUTEXATTR_T: u32 = 8;
+pub const __SIZEOF_PTHREAD_CONDATTR_T: u32 = 8;
+pub const __SIZEOF_PTHREAD_RWLOCK_T: u32 = 56;
+pub const __SIZEOF_PTHREAD_BARRIER_T: u32 = 32;
+pub const __SIZEOF_PTHREAD_BARRIERATTR_T: u32 = 8;
+pub const __SIZEOF_PTHREAD_COND_T: u32 = 48;
+pub const __SIZEOF_PTHREAD_RWLOCKATTR_T: u32 = 8;
+pub const _THREAD_MUTEX_INTERNAL_H: u32 = 1;
+pub const __PTHREAD_MUTEX_HAVE_PREV: u32 = 1;
+pub const __have_pthread_attr_t: u32 = 1;
+pub const _ALLOCA_H: u32 = 1;
 pub const SCIP_PRESOLTIMING_NONE: u32 = 2;
 pub const SCIP_PRESOLTIMING_FAST: u32 = 4;
 pub const SCIP_PRESOLTIMING_MEDIUM: u32 = 8;
@@ -1037,166 +522,165 @@ pub const SCIP_HEURTIMING_DURINGPRESOLLOOP: u32 = 512;
 pub const SCIP_HEURTIMING_AFTERPROPLOOP: u32 = 1024;
 pub const SCIP_HEURTIMING_AFTERNODE: u32 = 24;
 pub const SCIP_HEURTIMING_AFTERPLUNGE: u32 = 96;
-pub const __PRI_8_LENGTH_MODIFIER__: &[u8; 3] = b"hh\0";
-pub const __PRI_64_LENGTH_MODIFIER__: &[u8; 3] = b"ll\0";
-pub const __SCN_64_LENGTH_MODIFIER__: &[u8; 3] = b"ll\0";
-pub const __PRI_MAX_LENGTH_MODIFIER__: &[u8; 2] = b"j\0";
-pub const __SCN_MAX_LENGTH_MODIFIER__: &[u8; 2] = b"j\0";
-pub const PRId8: &[u8; 4] = b"hhd\0";
-pub const PRIi8: &[u8; 4] = b"hhi\0";
-pub const PRIo8: &[u8; 4] = b"hho\0";
-pub const PRIu8: &[u8; 4] = b"hhu\0";
-pub const PRIx8: &[u8; 4] = b"hhx\0";
-pub const PRIX8: &[u8; 4] = b"hhX\0";
-pub const PRId16: &[u8; 3] = b"hd\0";
-pub const PRIi16: &[u8; 3] = b"hi\0";
-pub const PRIo16: &[u8; 3] = b"ho\0";
-pub const PRIu16: &[u8; 3] = b"hu\0";
-pub const PRIx16: &[u8; 3] = b"hx\0";
-pub const PRIX16: &[u8; 3] = b"hX\0";
+pub const _INTTYPES_H: u32 = 1;
+pub const ____gwchar_t_defined: u32 = 1;
+pub const __PRI64_PREFIX: &[u8; 2] = b"l\0";
+pub const __PRIPTR_PREFIX: &[u8; 2] = b"l\0";
+pub const PRId8: &[u8; 2] = b"d\0";
+pub const PRId16: &[u8; 2] = b"d\0";
 pub const PRId32: &[u8; 2] = b"d\0";
-pub const PRIi32: &[u8; 2] = b"i\0";
-pub const PRIo32: &[u8; 2] = b"o\0";
-pub const PRIu32: &[u8; 2] = b"u\0";
-pub const PRIx32: &[u8; 2] = b"x\0";
-pub const PRIX32: &[u8; 2] = b"X\0";
-pub const PRId64: &[u8; 4] = b"lld\0";
-pub const PRIi64: &[u8; 4] = b"lli\0";
-pub const PRIo64: &[u8; 4] = b"llo\0";
-pub const PRIu64: &[u8; 4] = b"llu\0";
-pub const PRIx64: &[u8; 4] = b"llx\0";
-pub const PRIX64: &[u8; 4] = b"llX\0";
-pub const PRIdLEAST8: &[u8; 4] = b"hhd\0";
-pub const PRIiLEAST8: &[u8; 4] = b"hhi\0";
-pub const PRIoLEAST8: &[u8; 4] = b"hho\0";
-pub const PRIuLEAST8: &[u8; 4] = b"hhu\0";
-pub const PRIxLEAST8: &[u8; 4] = b"hhx\0";
-pub const PRIXLEAST8: &[u8; 4] = b"hhX\0";
-pub const PRIdLEAST16: &[u8; 3] = b"hd\0";
-pub const PRIiLEAST16: &[u8; 3] = b"hi\0";
-pub const PRIoLEAST16: &[u8; 3] = b"ho\0";
-pub const PRIuLEAST16: &[u8; 3] = b"hu\0";
-pub const PRIxLEAST16: &[u8; 3] = b"hx\0";
-pub const PRIXLEAST16: &[u8; 3] = b"hX\0";
+pub const PRId64: &[u8; 3] = b"ld\0";
+pub const PRIdLEAST8: &[u8; 2] = b"d\0";
+pub const PRIdLEAST16: &[u8; 2] = b"d\0";
 pub const PRIdLEAST32: &[u8; 2] = b"d\0";
+pub const PRIdLEAST64: &[u8; 3] = b"ld\0";
+pub const PRIdFAST8: &[u8; 2] = b"d\0";
+pub const PRIdFAST16: &[u8; 3] = b"ld\0";
+pub const PRIdFAST32: &[u8; 3] = b"ld\0";
+pub const PRIdFAST64: &[u8; 3] = b"ld\0";
+pub const PRIi8: &[u8; 2] = b"i\0";
+pub const PRIi16: &[u8; 2] = b"i\0";
+pub const PRIi32: &[u8; 2] = b"i\0";
+pub const PRIi64: &[u8; 3] = b"li\0";
+pub const PRIiLEAST8: &[u8; 2] = b"i\0";
+pub const PRIiLEAST16: &[u8; 2] = b"i\0";
 pub const PRIiLEAST32: &[u8; 2] = b"i\0";
+pub const PRIiLEAST64: &[u8; 3] = b"li\0";
+pub const PRIiFAST8: &[u8; 2] = b"i\0";
+pub const PRIiFAST16: &[u8; 3] = b"li\0";
+pub const PRIiFAST32: &[u8; 3] = b"li\0";
+pub const PRIiFAST64: &[u8; 3] = b"li\0";
+pub const PRIo8: &[u8; 2] = b"o\0";
+pub const PRIo16: &[u8; 2] = b"o\0";
+pub const PRIo32: &[u8; 2] = b"o\0";
+pub const PRIo64: &[u8; 3] = b"lo\0";
+pub const PRIoLEAST8: &[u8; 2] = b"o\0";
+pub const PRIoLEAST16: &[u8; 2] = b"o\0";
 pub const PRIoLEAST32: &[u8; 2] = b"o\0";
+pub const PRIoLEAST64: &[u8; 3] = b"lo\0";
+pub const PRIoFAST8: &[u8; 2] = b"o\0";
+pub const PRIoFAST16: &[u8; 3] = b"lo\0";
+pub const PRIoFAST32: &[u8; 3] = b"lo\0";
+pub const PRIoFAST64: &[u8; 3] = b"lo\0";
+pub const PRIu8: &[u8; 2] = b"u\0";
+pub const PRIu16: &[u8; 2] = b"u\0";
+pub const PRIu32: &[u8; 2] = b"u\0";
+pub const PRIu64: &[u8; 3] = b"lu\0";
+pub const PRIuLEAST8: &[u8; 2] = b"u\0";
+pub const PRIuLEAST16: &[u8; 2] = b"u\0";
 pub const PRIuLEAST32: &[u8; 2] = b"u\0";
+pub const PRIuLEAST64: &[u8; 3] = b"lu\0";
+pub const PRIuFAST8: &[u8; 2] = b"u\0";
+pub const PRIuFAST16: &[u8; 3] = b"lu\0";
+pub const PRIuFAST32: &[u8; 3] = b"lu\0";
+pub const PRIuFAST64: &[u8; 3] = b"lu\0";
+pub const PRIx8: &[u8; 2] = b"x\0";
+pub const PRIx16: &[u8; 2] = b"x\0";
+pub const PRIx32: &[u8; 2] = b"x\0";
+pub const PRIx64: &[u8; 3] = b"lx\0";
+pub const PRIxLEAST8: &[u8; 2] = b"x\0";
+pub const PRIxLEAST16: &[u8; 2] = b"x\0";
 pub const PRIxLEAST32: &[u8; 2] = b"x\0";
+pub const PRIxLEAST64: &[u8; 3] = b"lx\0";
+pub const PRIxFAST8: &[u8; 2] = b"x\0";
+pub const PRIxFAST16: &[u8; 3] = b"lx\0";
+pub const PRIxFAST32: &[u8; 3] = b"lx\0";
+pub const PRIxFAST64: &[u8; 3] = b"lx\0";
+pub const PRIX8: &[u8; 2] = b"X\0";
+pub const PRIX16: &[u8; 2] = b"X\0";
+pub const PRIX32: &[u8; 2] = b"X\0";
+pub const PRIX64: &[u8; 3] = b"lX\0";
+pub const PRIXLEAST8: &[u8; 2] = b"X\0";
+pub const PRIXLEAST16: &[u8; 2] = b"X\0";
 pub const PRIXLEAST32: &[u8; 2] = b"X\0";
-pub const PRIdLEAST64: &[u8; 4] = b"lld\0";
-pub const PRIiLEAST64: &[u8; 4] = b"lli\0";
-pub const PRIoLEAST64: &[u8; 4] = b"llo\0";
-pub const PRIuLEAST64: &[u8; 4] = b"llu\0";
-pub const PRIxLEAST64: &[u8; 4] = b"llx\0";
-pub const PRIXLEAST64: &[u8; 4] = b"llX\0";
-pub const PRIdFAST8: &[u8; 4] = b"hhd\0";
-pub const PRIiFAST8: &[u8; 4] = b"hhi\0";
-pub const PRIoFAST8: &[u8; 4] = b"hho\0";
-pub const PRIuFAST8: &[u8; 4] = b"hhu\0";
-pub const PRIxFAST8: &[u8; 4] = b"hhx\0";
-pub const PRIXFAST8: &[u8; 4] = b"hhX\0";
-pub const PRIdFAST16: &[u8; 3] = b"hd\0";
-pub const PRIiFAST16: &[u8; 3] = b"hi\0";
-pub const PRIoFAST16: &[u8; 3] = b"ho\0";
-pub const PRIuFAST16: &[u8; 3] = b"hu\0";
-pub const PRIxFAST16: &[u8; 3] = b"hx\0";
-pub const PRIXFAST16: &[u8; 3] = b"hX\0";
-pub const PRIdFAST32: &[u8; 2] = b"d\0";
-pub const PRIiFAST32: &[u8; 2] = b"i\0";
-pub const PRIoFAST32: &[u8; 2] = b"o\0";
-pub const PRIuFAST32: &[u8; 2] = b"u\0";
-pub const PRIxFAST32: &[u8; 2] = b"x\0";
-pub const PRIXFAST32: &[u8; 2] = b"X\0";
-pub const PRIdFAST64: &[u8; 4] = b"lld\0";
-pub const PRIiFAST64: &[u8; 4] = b"lli\0";
-pub const PRIoFAST64: &[u8; 4] = b"llo\0";
-pub const PRIuFAST64: &[u8; 4] = b"llu\0";
-pub const PRIxFAST64: &[u8; 4] = b"llx\0";
-pub const PRIXFAST64: &[u8; 4] = b"llX\0";
+pub const PRIXLEAST64: &[u8; 3] = b"lX\0";
+pub const PRIXFAST8: &[u8; 2] = b"X\0";
+pub const PRIXFAST16: &[u8; 3] = b"lX\0";
+pub const PRIXFAST32: &[u8; 3] = b"lX\0";
+pub const PRIXFAST64: &[u8; 3] = b"lX\0";
+pub const PRIdMAX: &[u8; 3] = b"ld\0";
+pub const PRIiMAX: &[u8; 3] = b"li\0";
+pub const PRIoMAX: &[u8; 3] = b"lo\0";
+pub const PRIuMAX: &[u8; 3] = b"lu\0";
+pub const PRIxMAX: &[u8; 3] = b"lx\0";
+pub const PRIXMAX: &[u8; 3] = b"lX\0";
 pub const PRIdPTR: &[u8; 3] = b"ld\0";
 pub const PRIiPTR: &[u8; 3] = b"li\0";
 pub const PRIoPTR: &[u8; 3] = b"lo\0";
 pub const PRIuPTR: &[u8; 3] = b"lu\0";
 pub const PRIxPTR: &[u8; 3] = b"lx\0";
 pub const PRIXPTR: &[u8; 3] = b"lX\0";
-pub const PRIdMAX: &[u8; 3] = b"jd\0";
-pub const PRIiMAX: &[u8; 3] = b"ji\0";
-pub const PRIoMAX: &[u8; 3] = b"jo\0";
-pub const PRIuMAX: &[u8; 3] = b"ju\0";
-pub const PRIxMAX: &[u8; 3] = b"jx\0";
-pub const PRIXMAX: &[u8; 3] = b"jX\0";
 pub const SCNd8: &[u8; 4] = b"hhd\0";
-pub const SCNi8: &[u8; 4] = b"hhi\0";
-pub const SCNo8: &[u8; 4] = b"hho\0";
-pub const SCNu8: &[u8; 4] = b"hhu\0";
-pub const SCNx8: &[u8; 4] = b"hhx\0";
 pub const SCNd16: &[u8; 3] = b"hd\0";
-pub const SCNi16: &[u8; 3] = b"hi\0";
-pub const SCNo16: &[u8; 3] = b"ho\0";
-pub const SCNu16: &[u8; 3] = b"hu\0";
-pub const SCNx16: &[u8; 3] = b"hx\0";
 pub const SCNd32: &[u8; 2] = b"d\0";
-pub const SCNi32: &[u8; 2] = b"i\0";
-pub const SCNo32: &[u8; 2] = b"o\0";
-pub const SCNu32: &[u8; 2] = b"u\0";
-pub const SCNx32: &[u8; 2] = b"x\0";
-pub const SCNd64: &[u8; 4] = b"lld\0";
-pub const SCNi64: &[u8; 4] = b"lli\0";
-pub const SCNo64: &[u8; 4] = b"llo\0";
-pub const SCNu64: &[u8; 4] = b"llu\0";
-pub const SCNx64: &[u8; 4] = b"llx\0";
+pub const SCNd64: &[u8; 3] = b"ld\0";
 pub const SCNdLEAST8: &[u8; 4] = b"hhd\0";
-pub const SCNiLEAST8: &[u8; 4] = b"hhi\0";
-pub const SCNoLEAST8: &[u8; 4] = b"hho\0";
-pub const SCNuLEAST8: &[u8; 4] = b"hhu\0";
-pub const SCNxLEAST8: &[u8; 4] = b"hhx\0";
 pub const SCNdLEAST16: &[u8; 3] = b"hd\0";
-pub const SCNiLEAST16: &[u8; 3] = b"hi\0";
-pub const SCNoLEAST16: &[u8; 3] = b"ho\0";
-pub const SCNuLEAST16: &[u8; 3] = b"hu\0";
-pub const SCNxLEAST16: &[u8; 3] = b"hx\0";
 pub const SCNdLEAST32: &[u8; 2] = b"d\0";
-pub const SCNiLEAST32: &[u8; 2] = b"i\0";
-pub const SCNoLEAST32: &[u8; 2] = b"o\0";
-pub const SCNuLEAST32: &[u8; 2] = b"u\0";
-pub const SCNxLEAST32: &[u8; 2] = b"x\0";
-pub const SCNdLEAST64: &[u8; 4] = b"lld\0";
-pub const SCNiLEAST64: &[u8; 4] = b"lli\0";
-pub const SCNoLEAST64: &[u8; 4] = b"llo\0";
-pub const SCNuLEAST64: &[u8; 4] = b"llu\0";
-pub const SCNxLEAST64: &[u8; 4] = b"llx\0";
+pub const SCNdLEAST64: &[u8; 3] = b"ld\0";
 pub const SCNdFAST8: &[u8; 4] = b"hhd\0";
+pub const SCNdFAST16: &[u8; 3] = b"ld\0";
+pub const SCNdFAST32: &[u8; 3] = b"ld\0";
+pub const SCNdFAST64: &[u8; 3] = b"ld\0";
+pub const SCNi8: &[u8; 4] = b"hhi\0";
+pub const SCNi16: &[u8; 3] = b"hi\0";
+pub const SCNi32: &[u8; 2] = b"i\0";
+pub const SCNi64: &[u8; 3] = b"li\0";
+pub const SCNiLEAST8: &[u8; 4] = b"hhi\0";
+pub const SCNiLEAST16: &[u8; 3] = b"hi\0";
+pub const SCNiLEAST32: &[u8; 2] = b"i\0";
+pub const SCNiLEAST64: &[u8; 3] = b"li\0";
 pub const SCNiFAST8: &[u8; 4] = b"hhi\0";
-pub const SCNoFAST8: &[u8; 4] = b"hho\0";
+pub const SCNiFAST16: &[u8; 3] = b"li\0";
+pub const SCNiFAST32: &[u8; 3] = b"li\0";
+pub const SCNiFAST64: &[u8; 3] = b"li\0";
+pub const SCNu8: &[u8; 4] = b"hhu\0";
+pub const SCNu16: &[u8; 3] = b"hu\0";
+pub const SCNu32: &[u8; 2] = b"u\0";
+pub const SCNu64: &[u8; 3] = b"lu\0";
+pub const SCNuLEAST8: &[u8; 4] = b"hhu\0";
+pub const SCNuLEAST16: &[u8; 3] = b"hu\0";
+pub const SCNuLEAST32: &[u8; 2] = b"u\0";
+pub const SCNuLEAST64: &[u8; 3] = b"lu\0";
 pub const SCNuFAST8: &[u8; 4] = b"hhu\0";
+pub const SCNuFAST16: &[u8; 3] = b"lu\0";
+pub const SCNuFAST32: &[u8; 3] = b"lu\0";
+pub const SCNuFAST64: &[u8; 3] = b"lu\0";
+pub const SCNo8: &[u8; 4] = b"hho\0";
+pub const SCNo16: &[u8; 3] = b"ho\0";
+pub const SCNo32: &[u8; 2] = b"o\0";
+pub const SCNo64: &[u8; 3] = b"lo\0";
+pub const SCNoLEAST8: &[u8; 4] = b"hho\0";
+pub const SCNoLEAST16: &[u8; 3] = b"ho\0";
+pub const SCNoLEAST32: &[u8; 2] = b"o\0";
+pub const SCNoLEAST64: &[u8; 3] = b"lo\0";
+pub const SCNoFAST8: &[u8; 4] = b"hho\0";
+pub const SCNoFAST16: &[u8; 3] = b"lo\0";
+pub const SCNoFAST32: &[u8; 3] = b"lo\0";
+pub const SCNoFAST64: &[u8; 3] = b"lo\0";
+pub const SCNx8: &[u8; 4] = b"hhx\0";
+pub const SCNx16: &[u8; 3] = b"hx\0";
+pub const SCNx32: &[u8; 2] = b"x\0";
+pub const SCNx64: &[u8; 3] = b"lx\0";
+pub const SCNxLEAST8: &[u8; 4] = b"hhx\0";
+pub const SCNxLEAST16: &[u8; 3] = b"hx\0";
+pub const SCNxLEAST32: &[u8; 2] = b"x\0";
+pub const SCNxLEAST64: &[u8; 3] = b"lx\0";
 pub const SCNxFAST8: &[u8; 4] = b"hhx\0";
-pub const SCNdFAST16: &[u8; 3] = b"hd\0";
-pub const SCNiFAST16: &[u8; 3] = b"hi\0";
-pub const SCNoFAST16: &[u8; 3] = b"ho\0";
-pub const SCNuFAST16: &[u8; 3] = b"hu\0";
-pub const SCNxFAST16: &[u8; 3] = b"hx\0";
-pub const SCNdFAST32: &[u8; 2] = b"d\0";
-pub const SCNiFAST32: &[u8; 2] = b"i\0";
-pub const SCNoFAST32: &[u8; 2] = b"o\0";
-pub const SCNuFAST32: &[u8; 2] = b"u\0";
-pub const SCNxFAST32: &[u8; 2] = b"x\0";
-pub const SCNdFAST64: &[u8; 4] = b"lld\0";
-pub const SCNiFAST64: &[u8; 4] = b"lli\0";
-pub const SCNoFAST64: &[u8; 4] = b"llo\0";
-pub const SCNuFAST64: &[u8; 4] = b"llu\0";
-pub const SCNxFAST64: &[u8; 4] = b"llx\0";
+pub const SCNxFAST16: &[u8; 3] = b"lx\0";
+pub const SCNxFAST32: &[u8; 3] = b"lx\0";
+pub const SCNxFAST64: &[u8; 3] = b"lx\0";
+pub const SCNdMAX: &[u8; 3] = b"ld\0";
+pub const SCNiMAX: &[u8; 3] = b"li\0";
+pub const SCNoMAX: &[u8; 3] = b"lo\0";
+pub const SCNuMAX: &[u8; 3] = b"lu\0";
+pub const SCNxMAX: &[u8; 3] = b"lx\0";
 pub const SCNdPTR: &[u8; 3] = b"ld\0";
 pub const SCNiPTR: &[u8; 3] = b"li\0";
 pub const SCNoPTR: &[u8; 3] = b"lo\0";
 pub const SCNuPTR: &[u8; 3] = b"lu\0";
 pub const SCNxPTR: &[u8; 3] = b"lx\0";
-pub const SCNdMAX: &[u8; 3] = b"jd\0";
-pub const SCNiMAX: &[u8; 3] = b"ji\0";
-pub const SCNoMAX: &[u8; 3] = b"jo\0";
-pub const SCNuMAX: &[u8; 3] = b"ju\0";
-pub const SCNxMAX: &[u8; 3] = b"jx\0";
-pub const SCIP_EVENTTYPE_FORMAT: &[u8; 4] = b"llx\0";
+pub const SCIP_EVENTTYPE_FORMAT: &[u8; 3] = b"lx\0";
 pub const SCIP_VARTYPE_BINARY_CHAR: u8 = 66u8;
 pub const SCIP_VARTYPE_INTEGER_CHAR: u8 = 73u8;
 pub const SCIP_VARTYPE_CONTINUOUS_CHAR: u8 = 67u8;
@@ -1231,8 +715,10 @@ pub const SCIP_EXPRPRINT_ALL: u32 = 255;
 pub const SCIP_NLPPARAM_DEFAULT_VERBLEVEL: u32 = 0;
 pub const SCIP_DECOMP_LINKVAR: i32 = -1;
 pub const SCIP_DECOMP_LINKCONS: i32 = -2;
-pub const __GNUC_VA_LIST: u32 = 1;
-pub const __HAS_FIXED_CHK_PROTOTYPES: u32 = 1;
+pub const _STRING_H: u32 = 1;
+pub const _BITS_TYPES_LOCALE_T_H: u32 = 1;
+pub const _BITS_TYPES___LOCALE_T_H: u32 = 1;
+pub const _STRINGS_H: u32 = 1;
 pub const QUAD_EPSILON: f64 = 0.000000000001;
 pub const __bool_true_false_are_defined: u32 = 1;
 pub const true_: u32 = 1;
@@ -1251,498 +737,306 @@ pub const SYM_COMPUTETIMING_BEFOREPRESOL: u32 = 0;
 pub const SYM_COMPUTETIMING_DURINGPRESOL: u32 = 1;
 pub const SYM_COMPUTETIMING_AFTERPRESOL: u32 = 2;
 pub const ARTIFICIALVARNAMEPREFIX: &[u8; 14] = b"andresultant_\0";
+pub type __gnuc_va_list = __BindgenOpaqueArray<u64, 4usize>;
+pub type __u_char = ::std::os::raw::c_uchar;
+pub type __u_short = ::std::os::raw::c_ushort;
+pub type __u_int = ::std::os::raw::c_uint;
+pub type __u_long = ::std::os::raw::c_ulong;
 pub type __int8_t = ::std::os::raw::c_schar;
 pub type __uint8_t = ::std::os::raw::c_uchar;
 pub type __int16_t = ::std::os::raw::c_short;
 pub type __uint16_t = ::std::os::raw::c_ushort;
 pub type __int32_t = ::std::os::raw::c_int;
 pub type __uint32_t = ::std::os::raw::c_uint;
-pub type __int64_t = ::std::os::raw::c_longlong;
-pub type __uint64_t = ::std::os::raw::c_ulonglong;
-pub type __darwin_intptr_t = ::std::os::raw::c_long;
-pub type __darwin_natural_t = ::std::os::raw::c_uint;
-pub type __darwin_ct_rune_t = ::std::os::raw::c_int;
+pub type __int64_t = ::std::os::raw::c_long;
+pub type __uint64_t = ::std::os::raw::c_ulong;
+pub type __int_least8_t = __int8_t;
+pub type __uint_least8_t = __uint8_t;
+pub type __int_least16_t = __int16_t;
+pub type __uint_least16_t = __uint16_t;
+pub type __int_least32_t = __int32_t;
+pub type __uint_least32_t = __uint32_t;
+pub type __int_least64_t = __int64_t;
+pub type __uint_least64_t = __uint64_t;
+pub type __quad_t = ::std::os::raw::c_long;
+pub type __u_quad_t = ::std::os::raw::c_ulong;
+pub type __intmax_t = ::std::os::raw::c_long;
+pub type __uintmax_t = ::std::os::raw::c_ulong;
+pub type __dev_t = ::std::os::raw::c_ulong;
+pub type __uid_t = ::std::os::raw::c_uint;
+pub type __gid_t = ::std::os::raw::c_uint;
+pub type __ino_t = ::std::os::raw::c_ulong;
+pub type __ino64_t = ::std::os::raw::c_ulong;
+pub type __mode_t = ::std::os::raw::c_uint;
+pub type __nlink_t = ::std::os::raw::c_uint;
+pub type __off_t = ::std::os::raw::c_long;
+pub type __off64_t = ::std::os::raw::c_long;
+pub type __pid_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __fsid_t {
+    pub __val: [::std::os::raw::c_int; 2usize],
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __fsid_t"][::std::mem::size_of::<__fsid_t>() - 8usize];
+    ["Alignment of __fsid_t"][::std::mem::align_of::<__fsid_t>() - 4usize];
+    ["Offset of field: __fsid_t::__val"][::std::mem::offset_of!(__fsid_t, __val) - 0usize];
+};
+pub type __clock_t = ::std::os::raw::c_long;
+pub type __rlim_t = ::std::os::raw::c_ulong;
+pub type __rlim64_t = ::std::os::raw::c_ulong;
+pub type __id_t = ::std::os::raw::c_uint;
+pub type __time_t = ::std::os::raw::c_long;
+pub type __useconds_t = ::std::os::raw::c_uint;
+pub type __suseconds_t = ::std::os::raw::c_long;
+pub type __suseconds64_t = ::std::os::raw::c_long;
+pub type __daddr_t = ::std::os::raw::c_int;
+pub type __key_t = ::std::os::raw::c_int;
+pub type __clockid_t = ::std::os::raw::c_int;
+pub type __timer_t = *mut ::std::os::raw::c_void;
+pub type __blksize_t = ::std::os::raw::c_int;
+pub type __blkcnt_t = ::std::os::raw::c_long;
+pub type __blkcnt64_t = ::std::os::raw::c_long;
+pub type __fsblkcnt_t = ::std::os::raw::c_ulong;
+pub type __fsblkcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsword_t = ::std::os::raw::c_long;
+pub type __ssize_t = ::std::os::raw::c_long;
+pub type __syscall_slong_t = ::std::os::raw::c_long;
+pub type __syscall_ulong_t = ::std::os::raw::c_ulong;
+pub type __loff_t = __off64_t;
+pub type __caddr_t = *mut ::std::os::raw::c_char;
+pub type __intptr_t = ::std::os::raw::c_long;
+pub type __socklen_t = ::std::os::raw::c_uint;
+pub type __sig_atomic_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy, Clone)]
-pub union __mbstate_t {
-    pub __mbstate8: [::std::os::raw::c_char; 128usize],
-    pub _mbstateL: ::std::os::raw::c_longlong,
+pub struct __mbstate_t {
+    pub __count: ::std::os::raw::c_int,
+    pub __value: __mbstate_t__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __mbstate_t__bindgen_ty_1 {
+    pub __wch: ::std::os::raw::c_uint,
+    pub __wchb: [::std::os::raw::c_char; 4usize],
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of __mbstate_t"][::std::mem::size_of::<__mbstate_t>() - 128usize];
-    ["Alignment of __mbstate_t"][::std::mem::align_of::<__mbstate_t>() - 8usize];
-    ["Offset of field: __mbstate_t::__mbstate8"]
-        [::std::mem::offset_of!(__mbstate_t, __mbstate8) - 0usize];
-    ["Offset of field: __mbstate_t::_mbstateL"]
-        [::std::mem::offset_of!(__mbstate_t, _mbstateL) - 0usize];
+    ["Size of __mbstate_t__bindgen_ty_1"]
+        [::std::mem::size_of::<__mbstate_t__bindgen_ty_1>() - 4usize];
+    ["Alignment of __mbstate_t__bindgen_ty_1"]
+        [::std::mem::align_of::<__mbstate_t__bindgen_ty_1>() - 4usize];
+    ["Offset of field: __mbstate_t__bindgen_ty_1::__wch"]
+        [::std::mem::offset_of!(__mbstate_t__bindgen_ty_1, __wch) - 0usize];
+    ["Offset of field: __mbstate_t__bindgen_ty_1::__wchb"]
+        [::std::mem::offset_of!(__mbstate_t__bindgen_ty_1, __wchb) - 0usize];
 };
-pub type __darwin_mbstate_t = __mbstate_t;
-pub type __darwin_ptrdiff_t = ::std::os::raw::c_long;
-pub type __darwin_size_t = ::std::os::raw::c_ulong;
-pub type __darwin_va_list = __builtin_va_list;
-pub type __darwin_wchar_t = ::std::os::raw::c_int;
-pub type __darwin_rune_t = __darwin_wchar_t;
-pub type __darwin_wint_t = ::std::os::raw::c_int;
-pub type __darwin_clock_t = ::std::os::raw::c_ulong;
-pub type __darwin_socklen_t = __uint32_t;
-pub type __darwin_ssize_t = ::std::os::raw::c_long;
-pub type __darwin_time_t = ::std::os::raw::c_long;
-pub type __darwin_blkcnt_t = __int64_t;
-pub type __darwin_blksize_t = __int32_t;
-pub type __darwin_dev_t = __int32_t;
-pub type __darwin_fsblkcnt_t = ::std::os::raw::c_uint;
-pub type __darwin_fsfilcnt_t = ::std::os::raw::c_uint;
-pub type __darwin_gid_t = __uint32_t;
-pub type __darwin_id_t = __uint32_t;
-pub type __darwin_ino64_t = __uint64_t;
-pub type __darwin_ino_t = __darwin_ino64_t;
-pub type __darwin_mach_port_name_t = __darwin_natural_t;
-pub type __darwin_mach_port_t = __darwin_mach_port_name_t;
-pub type __darwin_mode_t = __uint16_t;
-pub type __darwin_off_t = __int64_t;
-pub type __darwin_pid_t = __int32_t;
-pub type __darwin_sigset_t = __uint32_t;
-pub type __darwin_suseconds_t = __int32_t;
-pub type __darwin_uid_t = __uint32_t;
-pub type __darwin_useconds_t = __uint32_t;
-pub type __darwin_uuid_t = [::std::os::raw::c_uchar; 16usize];
-pub type __darwin_uuid_string_t = [::std::os::raw::c_char; 37usize];
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __mbstate_t"][::std::mem::size_of::<__mbstate_t>() - 8usize];
+    ["Alignment of __mbstate_t"][::std::mem::align_of::<__mbstate_t>() - 4usize];
+    ["Offset of field: __mbstate_t::__count"]
+        [::std::mem::offset_of!(__mbstate_t, __count) - 0usize];
+    ["Offset of field: __mbstate_t::__value"]
+        [::std::mem::offset_of!(__mbstate_t, __value) - 4usize];
+};
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_pthread_handler_rec {
-    pub __routine: ::std::option::Option<unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void)>,
-    pub __arg: *mut ::std::os::raw::c_void,
-    pub __next: *mut __darwin_pthread_handler_rec,
+#[derive(Copy, Clone)]
+pub struct _G_fpos_t {
+    pub __pos: __off_t,
+    pub __state: __mbstate_t,
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of __darwin_pthread_handler_rec"]
-        [::std::mem::size_of::<__darwin_pthread_handler_rec>() - 24usize];
-    ["Alignment of __darwin_pthread_handler_rec"]
-        [::std::mem::align_of::<__darwin_pthread_handler_rec>() - 8usize];
-    ["Offset of field: __darwin_pthread_handler_rec::__routine"]
-        [::std::mem::offset_of!(__darwin_pthread_handler_rec, __routine) - 0usize];
-    ["Offset of field: __darwin_pthread_handler_rec::__arg"]
-        [::std::mem::offset_of!(__darwin_pthread_handler_rec, __arg) - 8usize];
-    ["Offset of field: __darwin_pthread_handler_rec::__next"]
-        [::std::mem::offset_of!(__darwin_pthread_handler_rec, __next) - 16usize];
+    ["Size of _G_fpos_t"][::std::mem::size_of::<_G_fpos_t>() - 16usize];
+    ["Alignment of _G_fpos_t"][::std::mem::align_of::<_G_fpos_t>() - 8usize];
+    ["Offset of field: _G_fpos_t::__pos"][::std::mem::offset_of!(_G_fpos_t, __pos) - 0usize];
+    ["Offset of field: _G_fpos_t::__state"][::std::mem::offset_of!(_G_fpos_t, __state) - 8usize];
 };
+pub type __fpos_t = _G_fpos_t;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_attr_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 56usize],
+#[derive(Copy, Clone)]
+pub struct _G_fpos64_t {
+    pub __pos: __off64_t,
+    pub __state: __mbstate_t,
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of _opaque_pthread_attr_t"][::std::mem::size_of::<_opaque_pthread_attr_t>() - 64usize];
-    ["Alignment of _opaque_pthread_attr_t"]
-        [::std::mem::align_of::<_opaque_pthread_attr_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_attr_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_attr_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_attr_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_attr_t, __opaque) - 8usize];
+    ["Size of _G_fpos64_t"][::std::mem::size_of::<_G_fpos64_t>() - 16usize];
+    ["Alignment of _G_fpos64_t"][::std::mem::align_of::<_G_fpos64_t>() - 8usize];
+    ["Offset of field: _G_fpos64_t::__pos"][::std::mem::offset_of!(_G_fpos64_t, __pos) - 0usize];
+    ["Offset of field: _G_fpos64_t::__state"]
+        [::std::mem::offset_of!(_G_fpos64_t, __state) - 8usize];
 };
+pub type __fpos64_t = _G_fpos64_t;
+pub type __FILE = _IO_FILE;
+pub type FILE = _IO_FILE;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_cond_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 40usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_cond_t"][::std::mem::size_of::<_opaque_pthread_cond_t>() - 48usize];
-    ["Alignment of _opaque_pthread_cond_t"]
-        [::std::mem::align_of::<_opaque_pthread_cond_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_cond_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_cond_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_cond_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_cond_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_condattr_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 8usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_condattr_t"]
-        [::std::mem::size_of::<_opaque_pthread_condattr_t>() - 16usize];
-    ["Alignment of _opaque_pthread_condattr_t"]
-        [::std::mem::align_of::<_opaque_pthread_condattr_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_condattr_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_condattr_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_condattr_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_condattr_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_mutex_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 56usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_mutex_t"][::std::mem::size_of::<_opaque_pthread_mutex_t>() - 64usize];
-    ["Alignment of _opaque_pthread_mutex_t"]
-        [::std::mem::align_of::<_opaque_pthread_mutex_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_mutex_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_mutex_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_mutex_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_mutex_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_mutexattr_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 8usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_mutexattr_t"]
-        [::std::mem::size_of::<_opaque_pthread_mutexattr_t>() - 16usize];
-    ["Alignment of _opaque_pthread_mutexattr_t"]
-        [::std::mem::align_of::<_opaque_pthread_mutexattr_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_mutexattr_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_mutexattr_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_mutexattr_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_mutexattr_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_once_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 8usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_once_t"][::std::mem::size_of::<_opaque_pthread_once_t>() - 16usize];
-    ["Alignment of _opaque_pthread_once_t"]
-        [::std::mem::align_of::<_opaque_pthread_once_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_once_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_once_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_once_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_once_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_rwlock_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 192usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_rwlock_t"]
-        [::std::mem::size_of::<_opaque_pthread_rwlock_t>() - 200usize];
-    ["Alignment of _opaque_pthread_rwlock_t"]
-        [::std::mem::align_of::<_opaque_pthread_rwlock_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_rwlock_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_rwlock_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_rwlock_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_rwlock_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_rwlockattr_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __opaque: [::std::os::raw::c_char; 16usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_rwlockattr_t"]
-        [::std::mem::size_of::<_opaque_pthread_rwlockattr_t>() - 24usize];
-    ["Alignment of _opaque_pthread_rwlockattr_t"]
-        [::std::mem::align_of::<_opaque_pthread_rwlockattr_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_rwlockattr_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_rwlockattr_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_rwlockattr_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_rwlockattr_t, __opaque) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _opaque_pthread_t {
-    pub __sig: ::std::os::raw::c_long,
-    pub __cleanup_stack: *mut __darwin_pthread_handler_rec,
-    pub __opaque: [::std::os::raw::c_char; 8176usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _opaque_pthread_t"][::std::mem::size_of::<_opaque_pthread_t>() - 8192usize];
-    ["Alignment of _opaque_pthread_t"][::std::mem::align_of::<_opaque_pthread_t>() - 8usize];
-    ["Offset of field: _opaque_pthread_t::__sig"]
-        [::std::mem::offset_of!(_opaque_pthread_t, __sig) - 0usize];
-    ["Offset of field: _opaque_pthread_t::__cleanup_stack"]
-        [::std::mem::offset_of!(_opaque_pthread_t, __cleanup_stack) - 8usize];
-    ["Offset of field: _opaque_pthread_t::__opaque"]
-        [::std::mem::offset_of!(_opaque_pthread_t, __opaque) - 16usize];
-};
-pub type __darwin_pthread_attr_t = _opaque_pthread_attr_t;
-pub type __darwin_pthread_cond_t = _opaque_pthread_cond_t;
-pub type __darwin_pthread_condattr_t = _opaque_pthread_condattr_t;
-pub type __darwin_pthread_key_t = ::std::os::raw::c_ulong;
-pub type __darwin_pthread_mutex_t = _opaque_pthread_mutex_t;
-pub type __darwin_pthread_mutexattr_t = _opaque_pthread_mutexattr_t;
-pub type __darwin_pthread_once_t = _opaque_pthread_once_t;
-pub type __darwin_pthread_rwlock_t = _opaque_pthread_rwlock_t;
-pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
-pub type __darwin_pthread_t = *mut _opaque_pthread_t;
-pub type __darwin_nl_item = ::std::os::raw::c_int;
-pub type __darwin_wctrans_t = ::std::os::raw::c_int;
-pub type __darwin_wctype_t = __uint32_t;
-pub type u_int8_t = ::std::os::raw::c_uchar;
-pub type u_int16_t = ::std::os::raw::c_ushort;
-pub type u_int32_t = ::std::os::raw::c_uint;
-pub type u_int64_t = ::std::os::raw::c_ulonglong;
-pub type register_t = i64;
-pub type user_addr_t = u_int64_t;
-pub type user_size_t = u_int64_t;
-pub type user_ssize_t = i64;
-pub type user_long_t = i64;
-pub type user_ulong_t = u_int64_t;
-pub type user_time_t = i64;
-pub type user_off_t = i64;
-pub type syscall_arg_t = u_int64_t;
-pub type va_list = __darwin_va_list;
-unsafe extern "C" {
-    pub fn renameat(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn renamex_np(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn renameatx_np(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *const ::std::os::raw::c_char,
-        arg5: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
-}
-pub type fpos_t = __darwin_off_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __sbuf {
-    pub _base: *mut ::std::os::raw::c_uchar,
-    pub _size: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __sbuf"][::std::mem::size_of::<__sbuf>() - 16usize];
-    ["Alignment of __sbuf"][::std::mem::align_of::<__sbuf>() - 8usize];
-    ["Offset of field: __sbuf::_base"][::std::mem::offset_of!(__sbuf, _base) - 0usize];
-    ["Offset of field: __sbuf::_size"][::std::mem::offset_of!(__sbuf, _size) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __sFILEX {
+pub struct _IO_marker {
     _unused: [u8; 0],
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __sFILE {
-    pub _p: *mut ::std::os::raw::c_uchar,
-    pub _r: ::std::os::raw::c_int,
-    pub _w: ::std::os::raw::c_int,
-    pub _flags: ::std::os::raw::c_short,
-    pub _file: ::std::os::raw::c_short,
-    pub _bf: __sbuf,
-    pub _lbfsize: ::std::os::raw::c_int,
-    pub _cookie: *mut ::std::os::raw::c_void,
-    pub _close: ::std::option::Option<
-        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
-    >,
-    pub _read: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: *mut ::std::os::raw::c_char,
-            arg3: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub _seek: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: fpos_t,
-            arg3: ::std::os::raw::c_int,
-        ) -> fpos_t,
-    >,
-    pub _write: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: *const ::std::os::raw::c_char,
-            arg3: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
-    >,
-    pub _ub: __sbuf,
-    pub _extra: *mut __sFILEX,
-    pub _ur: ::std::os::raw::c_int,
-    pub _ubuf: [::std::os::raw::c_uchar; 3usize],
-    pub _nbuf: [::std::os::raw::c_uchar; 1usize],
-    pub _lb: __sbuf,
-    pub _blksize: ::std::os::raw::c_int,
-    pub _offset: fpos_t,
+pub struct _IO_codecvt {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_wide_data {
+    _unused: [u8; 0],
+}
+pub type _IO_lock_t = ::std::os::raw::c_void;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_FILE {
+    pub _flags: ::std::os::raw::c_int,
+    pub _IO_read_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_read_end: *mut ::std::os::raw::c_char,
+    pub _IO_read_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_write_end: *mut ::std::os::raw::c_char,
+    pub _IO_buf_base: *mut ::std::os::raw::c_char,
+    pub _IO_buf_end: *mut ::std::os::raw::c_char,
+    pub _IO_save_base: *mut ::std::os::raw::c_char,
+    pub _IO_backup_base: *mut ::std::os::raw::c_char,
+    pub _IO_save_end: *mut ::std::os::raw::c_char,
+    pub _markers: *mut _IO_marker,
+    pub _chain: *mut _IO_FILE,
+    pub _fileno: ::std::os::raw::c_int,
+    pub _flags2: ::std::os::raw::c_int,
+    pub _old_offset: __off_t,
+    pub _cur_column: ::std::os::raw::c_ushort,
+    pub _vtable_offset: ::std::os::raw::c_schar,
+    pub _shortbuf: [::std::os::raw::c_char; 1usize],
+    pub _lock: *mut _IO_lock_t,
+    pub _offset: __off64_t,
+    pub _codecvt: *mut _IO_codecvt,
+    pub _wide_data: *mut _IO_wide_data,
+    pub _freeres_list: *mut _IO_FILE,
+    pub _freeres_buf: *mut ::std::os::raw::c_void,
+    pub __pad5: usize,
+    pub _mode: ::std::os::raw::c_int,
+    pub _unused2: [::std::os::raw::c_char; 20usize],
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
-    ["Size of __sFILE"][::std::mem::size_of::<__sFILE>() - 152usize];
-    ["Alignment of __sFILE"][::std::mem::align_of::<__sFILE>() - 8usize];
-    ["Offset of field: __sFILE::_p"][::std::mem::offset_of!(__sFILE, _p) - 0usize];
-    ["Offset of field: __sFILE::_r"][::std::mem::offset_of!(__sFILE, _r) - 8usize];
-    ["Offset of field: __sFILE::_w"][::std::mem::offset_of!(__sFILE, _w) - 12usize];
-    ["Offset of field: __sFILE::_flags"][::std::mem::offset_of!(__sFILE, _flags) - 16usize];
-    ["Offset of field: __sFILE::_file"][::std::mem::offset_of!(__sFILE, _file) - 18usize];
-    ["Offset of field: __sFILE::_bf"][::std::mem::offset_of!(__sFILE, _bf) - 24usize];
-    ["Offset of field: __sFILE::_lbfsize"][::std::mem::offset_of!(__sFILE, _lbfsize) - 40usize];
-    ["Offset of field: __sFILE::_cookie"][::std::mem::offset_of!(__sFILE, _cookie) - 48usize];
-    ["Offset of field: __sFILE::_close"][::std::mem::offset_of!(__sFILE, _close) - 56usize];
-    ["Offset of field: __sFILE::_read"][::std::mem::offset_of!(__sFILE, _read) - 64usize];
-    ["Offset of field: __sFILE::_seek"][::std::mem::offset_of!(__sFILE, _seek) - 72usize];
-    ["Offset of field: __sFILE::_write"][::std::mem::offset_of!(__sFILE, _write) - 80usize];
-    ["Offset of field: __sFILE::_ub"][::std::mem::offset_of!(__sFILE, _ub) - 88usize];
-    ["Offset of field: __sFILE::_extra"][::std::mem::offset_of!(__sFILE, _extra) - 104usize];
-    ["Offset of field: __sFILE::_ur"][::std::mem::offset_of!(__sFILE, _ur) - 112usize];
-    ["Offset of field: __sFILE::_ubuf"][::std::mem::offset_of!(__sFILE, _ubuf) - 116usize];
-    ["Offset of field: __sFILE::_nbuf"][::std::mem::offset_of!(__sFILE, _nbuf) - 119usize];
-    ["Offset of field: __sFILE::_lb"][::std::mem::offset_of!(__sFILE, _lb) - 120usize];
-    ["Offset of field: __sFILE::_blksize"][::std::mem::offset_of!(__sFILE, _blksize) - 136usize];
-    ["Offset of field: __sFILE::_offset"][::std::mem::offset_of!(__sFILE, _offset) - 144usize];
+    ["Size of _IO_FILE"][::std::mem::size_of::<_IO_FILE>() - 216usize];
+    ["Alignment of _IO_FILE"][::std::mem::align_of::<_IO_FILE>() - 8usize];
+    ["Offset of field: _IO_FILE::_flags"][::std::mem::offset_of!(_IO_FILE, _flags) - 0usize];
+    ["Offset of field: _IO_FILE::_IO_read_ptr"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_read_ptr) - 8usize];
+    ["Offset of field: _IO_FILE::_IO_read_end"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_read_end) - 16usize];
+    ["Offset of field: _IO_FILE::_IO_read_base"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_read_base) - 24usize];
+    ["Offset of field: _IO_FILE::_IO_write_base"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_write_base) - 32usize];
+    ["Offset of field: _IO_FILE::_IO_write_ptr"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_write_ptr) - 40usize];
+    ["Offset of field: _IO_FILE::_IO_write_end"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_write_end) - 48usize];
+    ["Offset of field: _IO_FILE::_IO_buf_base"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_buf_base) - 56usize];
+    ["Offset of field: _IO_FILE::_IO_buf_end"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_buf_end) - 64usize];
+    ["Offset of field: _IO_FILE::_IO_save_base"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_save_base) - 72usize];
+    ["Offset of field: _IO_FILE::_IO_backup_base"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_backup_base) - 80usize];
+    ["Offset of field: _IO_FILE::_IO_save_end"]
+        [::std::mem::offset_of!(_IO_FILE, _IO_save_end) - 88usize];
+    ["Offset of field: _IO_FILE::_markers"][::std::mem::offset_of!(_IO_FILE, _markers) - 96usize];
+    ["Offset of field: _IO_FILE::_chain"][::std::mem::offset_of!(_IO_FILE, _chain) - 104usize];
+    ["Offset of field: _IO_FILE::_fileno"][::std::mem::offset_of!(_IO_FILE, _fileno) - 112usize];
+    ["Offset of field: _IO_FILE::_flags2"][::std::mem::offset_of!(_IO_FILE, _flags2) - 116usize];
+    ["Offset of field: _IO_FILE::_old_offset"]
+        [::std::mem::offset_of!(_IO_FILE, _old_offset) - 120usize];
+    ["Offset of field: _IO_FILE::_cur_column"]
+        [::std::mem::offset_of!(_IO_FILE, _cur_column) - 128usize];
+    ["Offset of field: _IO_FILE::_vtable_offset"]
+        [::std::mem::offset_of!(_IO_FILE, _vtable_offset) - 130usize];
+    ["Offset of field: _IO_FILE::_shortbuf"]
+        [::std::mem::offset_of!(_IO_FILE, _shortbuf) - 131usize];
+    ["Offset of field: _IO_FILE::_lock"][::std::mem::offset_of!(_IO_FILE, _lock) - 136usize];
+    ["Offset of field: _IO_FILE::_offset"][::std::mem::offset_of!(_IO_FILE, _offset) - 144usize];
+    ["Offset of field: _IO_FILE::_codecvt"][::std::mem::offset_of!(_IO_FILE, _codecvt) - 152usize];
+    ["Offset of field: _IO_FILE::_wide_data"]
+        [::std::mem::offset_of!(_IO_FILE, _wide_data) - 160usize];
+    ["Offset of field: _IO_FILE::_freeres_list"]
+        [::std::mem::offset_of!(_IO_FILE, _freeres_list) - 168usize];
+    ["Offset of field: _IO_FILE::_freeres_buf"]
+        [::std::mem::offset_of!(_IO_FILE, _freeres_buf) - 176usize];
+    ["Offset of field: _IO_FILE::__pad5"][::std::mem::offset_of!(_IO_FILE, __pad5) - 184usize];
+    ["Offset of field: _IO_FILE::_mode"][::std::mem::offset_of!(_IO_FILE, _mode) - 192usize];
+    ["Offset of field: _IO_FILE::_unused2"][::std::mem::offset_of!(_IO_FILE, _unused2) - 196usize];
 };
-pub type FILE = __sFILE;
+pub type cookie_read_function_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        __cookie: *mut ::std::os::raw::c_void,
+        __buf: *mut ::std::os::raw::c_char,
+        __nbytes: usize,
+    ) -> __ssize_t,
+>;
+pub type cookie_write_function_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        __cookie: *mut ::std::os::raw::c_void,
+        __buf: *const ::std::os::raw::c_char,
+        __nbytes: usize,
+    ) -> __ssize_t,
+>;
+pub type cookie_seek_function_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        __cookie: *mut ::std::os::raw::c_void,
+        __pos: *mut __off64_t,
+        __w: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type cookie_close_function_t = ::std::option::Option<
+    unsafe extern "C" fn(__cookie: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+>;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_cookie_io_functions_t {
+    pub read: cookie_read_function_t,
+    pub write: cookie_write_function_t,
+    pub seek: cookie_seek_function_t,
+    pub close: cookie_close_function_t,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of _IO_cookie_io_functions_t"]
+        [::std::mem::size_of::<_IO_cookie_io_functions_t>() - 32usize];
+    ["Alignment of _IO_cookie_io_functions_t"]
+        [::std::mem::align_of::<_IO_cookie_io_functions_t>() - 8usize];
+    ["Offset of field: _IO_cookie_io_functions_t::read"]
+        [::std::mem::offset_of!(_IO_cookie_io_functions_t, read) - 0usize];
+    ["Offset of field: _IO_cookie_io_functions_t::write"]
+        [::std::mem::offset_of!(_IO_cookie_io_functions_t, write) - 8usize];
+    ["Offset of field: _IO_cookie_io_functions_t::seek"]
+        [::std::mem::offset_of!(_IO_cookie_io_functions_t, seek) - 16usize];
+    ["Offset of field: _IO_cookie_io_functions_t::close"]
+        [::std::mem::offset_of!(_IO_cookie_io_functions_t, close) - 24usize];
+};
+pub type cookie_io_functions_t = _IO_cookie_io_functions_t;
+pub type va_list = __gnuc_va_list;
+pub type off_t = __off_t;
+pub type fpos_t = __fpos_t;
 unsafe extern "C" {
-    pub static mut __stdinp: *mut FILE;
+    pub static mut stdin: *mut FILE;
 }
 unsafe extern "C" {
-    pub static mut __stdoutp: *mut FILE;
+    pub static mut stdout: *mut FILE;
 }
 unsafe extern "C" {
-    pub static mut __stderrp: *mut FILE;
+    pub static mut stderr: *mut FILE;
 }
 unsafe extern "C" {
-    pub fn clearerr(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn fclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn feof(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ferror(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fflush(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgetc(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fgets(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut FILE,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fopen(
-        __filename: *const ::std::os::raw::c_char,
-        __mode: *const ::std::os::raw::c_char,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fprintf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fputc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fputs(arg1: *const ::std::os::raw::c_char, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fread(
-        __ptr: *mut ::std::os::raw::c_void,
-        __size: ::std::os::raw::c_ulong,
-        __nitems: ::std::os::raw::c_ulong,
-        __stream: *mut FILE,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn freopen(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut FILE,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fscanf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fseek(
-        arg1: *mut FILE,
-        arg2: ::std::os::raw::c_long,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fsetpos(arg1: *mut FILE, arg2: *const fpos_t) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ftell(arg1: *mut FILE) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn fwrite(
-        __ptr: *const ::std::os::raw::c_void,
-        __size: ::std::os::raw::c_ulong,
-        __nitems: ::std::os::raw::c_ulong,
-        __stream: *mut FILE,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn getc(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getchar() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn gets(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn perror(arg1: *const ::std::os::raw::c_char);
-}
-unsafe extern "C" {
-    pub fn printf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putchar(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn puts(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn remove(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn remove(__filename: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn rename(
@@ -1751,35 +1045,15 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn rewind(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn scanf(arg1: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setbuf(arg1: *mut FILE, arg2: *mut ::std::os::raw::c_char);
-}
-unsafe extern "C" {
-    pub fn setvbuf(
-        arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: usize,
+    pub fn renameat(
+        __oldfd: ::std::os::raw::c_int,
+        __old: *const ::std::os::raw::c_char,
+        __newfd: ::std::os::raw::c_int,
+        __new: *const ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn sprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn sscanf(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
+    pub fn fclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn tmpfile() -> *mut FILE;
@@ -1788,2639 +1062,1906 @@ unsafe extern "C" {
     pub fn tmpnam(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn ungetc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vfprintf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vprintf(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vsprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ctermid(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn fdopen(arg1: ::std::os::raw::c_int, arg2: *const ::std::os::raw::c_char) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn fileno(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn pclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn popen(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> *mut FILE;
-}
-unsafe extern "C" {
-    pub fn __srget(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __svfscanf(
-        arg1: *mut FILE,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn __swbuf(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn flockfile(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn ftrylockfile(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn funlockfile(arg1: *mut FILE);
-}
-unsafe extern "C" {
-    pub fn getc_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putc_unlocked(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putchar_unlocked(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getw(arg1: *mut FILE) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putw(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn tmpnam_r(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
     pub fn tempnam(
         __dir: *const ::std::os::raw::c_char,
-        __prefix: *const ::std::os::raw::c_char,
+        __pfx: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
-pub type off_t = __darwin_off_t;
 unsafe extern "C" {
-    pub fn fseeko(
+    pub fn fflush(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fflush_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn freopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
         __stream: *mut FILE,
-        __offset: off_t,
-        __whence: ::std::os::raw::c_int,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fdopen(__fd: ::std::os::raw::c_int, __modes: *const ::std::os::raw::c_char)
+    -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fopencookie(
+        __magic_cookie: *mut ::std::os::raw::c_void,
+        __modes: *const ::std::os::raw::c_char,
+        __io_funcs: cookie_io_functions_t,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn fmemopen(
+        __s: *mut ::std::os::raw::c_void,
+        __len: usize,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn open_memstream(
+        __bufloc: *mut *mut ::std::os::raw::c_char,
+        __sizeloc: *mut usize,
+    ) -> *mut FILE;
+}
+unsafe extern "C" {
+    pub fn setbuf(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char);
+}
+unsafe extern "C" {
+    pub fn setvbuf(
+        __stream: *mut FILE,
+        __buf: *mut ::std::os::raw::c_char,
+        __modes: ::std::os::raw::c_int,
+        __n: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn ftello(__stream: *mut FILE) -> off_t;
+    pub fn setbuffer(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char, __size: usize);
+}
+unsafe extern "C" {
+    pub fn setlinebuf(__stream: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn fprintf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn printf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn sprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vfprintf(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vprintf(
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vsprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn snprintf(
-        __str: *mut ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vsnprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vasprintf(
+        __ptr: *mut *mut ::std::os::raw::c_char,
+        __f: *const ::std::os::raw::c_char,
+        __arg: __gnuc_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __asprintf(
+        __ptr: *mut *mut ::std::os::raw::c_char,
+        __fmt: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn asprintf(
+        __ptr: *mut *mut ::std::os::raw::c_char,
+        __fmt: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn vdprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        __arg: __gnuc_va_list,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn dprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fscanf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn scanf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn sscanf(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+pub type _Float128 = u128;
+pub type _Float32 = f32;
+pub type _Float64 = f64;
+pub type _Float32x = f64;
+pub type _Float64x = u128;
+unsafe extern "C" {
+    #[link_name = "\u{1}__isoc99_fscanf"]
+    pub fn fscanf1(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    #[link_name = "\u{1}__isoc99_scanf"]
+    pub fn scanf1(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    #[link_name = "\u{1}__isoc99_sscanf"]
+    pub fn sscanf1(
+        __s: *const ::std::os::raw::c_char,
         __format: *const ::std::os::raw::c_char,
         ...
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn vfscanf(
-        __stream: *mut FILE,
+        __s: *mut FILE,
         __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn vscanf(
         __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn vsnprintf(
-        __str: *mut ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
-        __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn vsscanf(
-        __str: *const ::std::os::raw::c_char,
+        __s: *const ::std::os::raw::c_char,
         __format: *const ::std::os::raw::c_char,
-        arg1: __builtin_va_list,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn dprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        ...
+    #[link_name = "\u{1}__isoc99_vfscanf"]
+    pub fn vfscanf1(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn vdprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
+    #[link_name = "\u{1}__isoc99_vscanf"]
+    pub fn vscanf1(
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
     ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    #[link_name = "\u{1}__isoc99_vsscanf"]
+    pub fn vsscanf1(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: __BindgenOpaqueArray<u64, 4usize>,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgetc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getchar() -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgetc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fputc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putchar(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fputc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE)
+    -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putchar_unlocked(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getw(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn putw(__w: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fgets(
+        __s: *mut ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn __getdelim(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
 }
 unsafe extern "C" {
     pub fn getdelim(
-        __linep: *mut *mut ::std::os::raw::c_char,
-        __linecapp: *mut usize,
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
         __delimiter: ::std::os::raw::c_int,
         __stream: *mut FILE,
-    ) -> isize;
+    ) -> __ssize_t;
 }
 unsafe extern "C" {
     pub fn getline(
-        __linep: *mut *mut ::std::os::raw::c_char,
-        __linecapp: *mut usize,
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut usize,
         __stream: *mut FILE,
-    ) -> isize;
+    ) -> __ssize_t;
 }
 unsafe extern "C" {
-    pub fn fmemopen(
-        __buf: *mut ::std::os::raw::c_void,
+    pub fn fputs(__s: *const ::std::os::raw::c_char, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn puts(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ungetc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fread(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __stream: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn fwrite(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __s: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn fread_unlocked(
+        __ptr: *mut ::std::os::raw::c_void,
         __size: usize,
-        __mode: *const ::std::os::raw::c_char,
+        __n: usize,
+        __stream: *mut FILE,
+    ) -> usize;
+}
+unsafe extern "C" {
+    pub fn fwrite_unlocked(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: usize,
+        __n: usize,
+        __stream: *mut FILE,
+    ) -> usize;
+}
+unsafe extern "C" {
+    pub fn fseek(
+        __stream: *mut FILE,
+        __off: ::std::os::raw::c_long,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ftell(__stream: *mut FILE) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn rewind(__stream: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn fseeko(
+        __stream: *mut FILE,
+        __off: __off_t,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ftello(__stream: *mut FILE) -> __off_t;
+}
+unsafe extern "C" {
+    pub fn fgetpos(__stream: *mut FILE, __pos: *mut fpos_t) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fsetpos(__stream: *mut FILE, __pos: *const fpos_t) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn clearerr(__stream: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn feof(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ferror(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn clearerr_unlocked(__stream: *mut FILE);
+}
+unsafe extern "C" {
+    pub fn feof_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ferror_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn perror(__s: *const ::std::os::raw::c_char);
+}
+unsafe extern "C" {
+    pub fn fileno(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn fileno_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn pclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn popen(
+        __command: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
     ) -> *mut FILE;
 }
 unsafe extern "C" {
-    pub fn open_memstream(
-        __bufp: *mut *mut ::std::os::raw::c_char,
-        __sizep: *mut usize,
-    ) -> *mut FILE;
+    pub fn ctermid(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub static sys_nerr: ::std::os::raw::c_int;
+    pub fn flockfile(__stream: *mut FILE);
 }
 unsafe extern "C" {
-    pub static sys_errlist: [*const ::std::os::raw::c_char; 0usize];
+    pub fn ftrylockfile(__stream: *mut FILE) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn asprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
+    pub fn funlockfile(__stream: *mut FILE);
 }
 unsafe extern "C" {
-    pub fn ctermid_r(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn __uflow(arg1: *mut FILE) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn fgetln(arg1: *mut FILE, arg2: *mut usize) -> *mut ::std::os::raw::c_char;
+    pub fn __overflow(arg1: *mut FILE, arg2: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+pub type int_least8_t = __int_least8_t;
+pub type int_least16_t = __int_least16_t;
+pub type int_least32_t = __int_least32_t;
+pub type int_least64_t = __int_least64_t;
+pub type uint_least8_t = __uint_least8_t;
+pub type uint_least16_t = __uint_least16_t;
+pub type uint_least32_t = __uint_least32_t;
+pub type uint_least64_t = __uint_least64_t;
+pub type int_fast8_t = ::std::os::raw::c_schar;
+pub type int_fast16_t = ::std::os::raw::c_long;
+pub type int_fast32_t = ::std::os::raw::c_long;
+pub type int_fast64_t = ::std::os::raw::c_long;
+pub type uint_fast8_t = ::std::os::raw::c_uchar;
+pub type uint_fast16_t = ::std::os::raw::c_ulong;
+pub type uint_fast32_t = ::std::os::raw::c_ulong;
+pub type uint_fast64_t = ::std::os::raw::c_ulong;
+pub type intmax_t = __intmax_t;
+pub type uintmax_t = __uintmax_t;
+pub type __f32x4_t = [f32; 4usize];
+pub type __f64x2_t = [f64; 2usize];
+pub type __sv_f32_t = __BindgenOpaqueArray<u128, 0usize>;
+pub type __sv_f64_t = __BindgenOpaqueArray<u128, 0usize>;
+pub type __sv_bool_t = __BindgenOpaqueArray<u16, 0usize>;
+unsafe extern "C" {
+    pub fn _ZGVsMxvv_atan2f(arg1: __sv_f32_t, arg2: __sv_f32_t, arg3: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn fmtcheck(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> *const ::std::os::raw::c_char;
+    pub fn _ZGVsMxv_acosf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn fpurge(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_asinf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn setbuffer(
-        arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    );
+    pub fn _ZGVsMxv_atanf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn setlinebuf(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_cosf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn vasprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: va_list,
-    ) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_expf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn funopen(
-        arg1: *const ::std::os::raw::c_void,
-        arg2: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *mut ::std::os::raw::c_char,
-                arg3: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
-        >,
-        arg3: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_char,
-                arg3: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
-        >,
-        arg4: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: fpos_t,
-                arg3: ::std::os::raw::c_int,
-            ) -> fpos_t,
-        >,
-        arg5: ::std::option::Option<
-            unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
-        >,
-    ) -> *mut FILE;
+    pub fn _ZGVsMxv_exp10f(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn __sprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: usize,
-        arg4: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_exp2f(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn __snprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: usize,
-        arg3: ::std::os::raw::c_int,
-        arg4: usize,
-        arg5: *const ::std::os::raw::c_char,
-        ...
-    ) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_expm1f(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn __vsprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: usize,
-        arg4: *const ::std::os::raw::c_char,
-        arg5: va_list,
-    ) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_logf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
 unsafe extern "C" {
-    pub fn __vsnprintf_chk(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: usize,
-        arg3: ::std::os::raw::c_int,
-        arg4: usize,
-        arg5: *const ::std::os::raw::c_char,
-        arg6: va_list,
-    ) -> ::std::os::raw::c_int;
+    pub fn _ZGVsMxv_log10f(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
 }
-pub type int_least8_t = i8;
-pub type int_least16_t = i16;
-pub type int_least32_t = i32;
-pub type int_least64_t = i64;
-pub type uint_least8_t = u8;
-pub type uint_least16_t = u16;
-pub type uint_least32_t = u32;
-pub type uint_least64_t = u64;
-pub type int_fast8_t = i8;
-pub type int_fast16_t = i16;
-pub type int_fast32_t = i32;
-pub type int_fast64_t = i64;
-pub type uint_fast8_t = u8;
-pub type uint_fast16_t = u16;
-pub type uint_fast32_t = u32;
-pub type uint_fast64_t = u64;
-pub type intmax_t = ::std::os::raw::c_long;
-pub type uintmax_t = ::std::os::raw::c_ulong;
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log1pf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log2f(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_sinf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_tanf(arg1: __sv_f32_t, arg2: __sv_bool_t) -> __sv_f32_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxvv_atan2(arg1: __sv_f64_t, arg2: __sv_f64_t, arg3: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_acos(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_asin(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_atan(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_cos(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_exp(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_exp10(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_exp2(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_expm1(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log10(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log1p(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_log2(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_sin(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
+unsafe extern "C" {
+    pub fn _ZGVsMxv_tan(arg1: __sv_f64_t, arg2: __sv_bool_t) -> __sv_f64_t;
+}
 pub type float_t = f32;
 pub type double_t = f64;
 unsafe extern "C" {
-    pub fn __math_errhandling() -> ::std::os::raw::c_int;
+    pub fn __fpclassify(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn __fpclassifyf(arg1: f32) -> ::std::os::raw::c_int;
+    pub fn __signbit(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn __fpclassifyd(arg1: f64) -> ::std::os::raw::c_int;
+    pub fn __isinf(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn __fpclassifyl(arg1: f64) -> ::std::os::raw::c_int;
+    pub fn __finite(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn acosf(arg1: f32) -> f32;
+    pub fn __isnan(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn acos(arg1: f64) -> f64;
+    pub fn __iseqsig(__x: f64, __y: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn acosl(arg1: f64) -> f64;
+    pub fn __issignaling(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn asinf(arg1: f32) -> f32;
+    pub fn acos(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn asin(arg1: f64) -> f64;
+    pub fn __acos(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn asinl(arg1: f64) -> f64;
+    pub fn asin(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atanf(arg1: f32) -> f32;
+    pub fn __asin(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atan(arg1: f64) -> f64;
+    pub fn atan(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atanl(arg1: f64) -> f64;
+    pub fn __atan(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atan2f(arg1: f32, arg2: f32) -> f32;
+    pub fn atan2(__y: f64, __x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atan2(arg1: f64, arg2: f64) -> f64;
+    pub fn __atan2(__y: f64, __x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atan2l(arg1: f64, arg2: f64) -> f64;
+    pub fn cos(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn cosf(arg1: f32) -> f32;
+    pub fn __cos(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn cos(arg1: f64) -> f64;
+    pub fn sin(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn cosl(arg1: f64) -> f64;
+    pub fn __sin(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn sinf(arg1: f32) -> f32;
+    pub fn tan(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn sin(arg1: f64) -> f64;
+    pub fn __tan(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn sinl(arg1: f64) -> f64;
+    pub fn cosh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tanf(arg1: f32) -> f32;
+    pub fn __cosh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tan(arg1: f64) -> f64;
+    pub fn sinh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tanl(arg1: f64) -> f64;
+    pub fn __sinh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn acoshf(arg1: f32) -> f32;
+    pub fn tanh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn acosh(arg1: f64) -> f64;
+    pub fn __tanh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn acoshl(arg1: f64) -> f64;
+    pub fn acosh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn asinhf(arg1: f32) -> f32;
+    pub fn __acosh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn asinh(arg1: f64) -> f64;
+    pub fn asinh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn asinhl(arg1: f64) -> f64;
+    pub fn __asinh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atanhf(arg1: f32) -> f32;
+    pub fn atanh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atanh(arg1: f64) -> f64;
+    pub fn __atanh(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn atanhl(arg1: f64) -> f64;
+    pub fn exp(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn coshf(arg1: f32) -> f32;
+    pub fn __exp(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn cosh(arg1: f64) -> f64;
+    pub fn frexp(__x: f64, __exponent: *mut ::std::os::raw::c_int) -> f64;
 }
 unsafe extern "C" {
-    pub fn coshl(arg1: f64) -> f64;
+    pub fn __frexp(__x: f64, __exponent: *mut ::std::os::raw::c_int) -> f64;
 }
 unsafe extern "C" {
-    pub fn sinhf(arg1: f32) -> f32;
+    pub fn ldexp(__x: f64, __exponent: ::std::os::raw::c_int) -> f64;
 }
 unsafe extern "C" {
-    pub fn sinh(arg1: f64) -> f64;
+    pub fn __ldexp(__x: f64, __exponent: ::std::os::raw::c_int) -> f64;
 }
 unsafe extern "C" {
-    pub fn sinhl(arg1: f64) -> f64;
+    pub fn log(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tanhf(arg1: f32) -> f32;
+    pub fn __log(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tanh(arg1: f64) -> f64;
+    pub fn log10(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn tanhl(arg1: f64) -> f64;
+    pub fn __log10(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn expf(arg1: f32) -> f32;
+    pub fn modf(__x: f64, __iptr: *mut f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn exp(arg1: f64) -> f64;
+    pub fn __modf(__x: f64, __iptr: *mut f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn expl(arg1: f64) -> f64;
+    pub fn expm1(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn exp2f(arg1: f32) -> f32;
+    pub fn __expm1(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn exp2(arg1: f64) -> f64;
+    pub fn log1p(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn exp2l(arg1: f64) -> f64;
+    pub fn __log1p(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn expm1f(arg1: f32) -> f32;
+    pub fn logb(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn expm1(arg1: f64) -> f64;
+    pub fn __logb(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn expm1l(arg1: f64) -> f64;
+    pub fn exp2(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn logf(arg1: f32) -> f32;
+    pub fn __exp2(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log(arg1: f64) -> f64;
+    pub fn log2(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn logl(arg1: f64) -> f64;
+    pub fn __log2(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log10f(arg1: f32) -> f32;
+    pub fn pow(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log10(arg1: f64) -> f64;
+    pub fn __pow(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log10l(arg1: f64) -> f64;
+    pub fn sqrt(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log2f(arg1: f32) -> f32;
+    pub fn __sqrt(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log2(arg1: f64) -> f64;
+    pub fn hypot(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log2l(arg1: f64) -> f64;
+    pub fn __hypot(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log1pf(arg1: f32) -> f32;
+    pub fn cbrt(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log1p(arg1: f64) -> f64;
+    pub fn __cbrt(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn log1pl(arg1: f64) -> f64;
+    pub fn ceil(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn logbf(arg1: f32) -> f32;
+    pub fn __ceil(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn logb(arg1: f64) -> f64;
+    pub fn fabs(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn logbl(arg1: f64) -> f64;
+    pub fn __fabs(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn modff(arg1: f32, arg2: *mut f32) -> f32;
+    pub fn floor(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn modf(arg1: f64, arg2: *mut f64) -> f64;
+    pub fn __floor(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn modfl(arg1: f64, arg2: *mut f64) -> f64;
+    pub fn fmod(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn ldexpf(arg1: f32, arg2: ::std::os::raw::c_int) -> f32;
+    pub fn __fmod(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn ldexp(arg1: f64, arg2: ::std::os::raw::c_int) -> f64;
+    pub fn isinf(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn ldexpl(arg1: f64, arg2: ::std::os::raw::c_int) -> f64;
+    pub fn finite(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn frexpf(arg1: f32, arg2: *mut ::std::os::raw::c_int) -> f32;
+    pub fn drem(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn frexp(arg1: f64, arg2: *mut ::std::os::raw::c_int) -> f64;
+    pub fn __drem(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn frexpl(arg1: f64, arg2: *mut ::std::os::raw::c_int) -> f64;
+    pub fn significand(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn ilogbf(arg1: f32) -> ::std::os::raw::c_int;
+    pub fn __significand(__x: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn ilogb(arg1: f64) -> ::std::os::raw::c_int;
+    pub fn copysign(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn ilogbl(arg1: f64) -> ::std::os::raw::c_int;
+    pub fn __copysign(__x: f64, __y: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn scalbnf(arg1: f32, arg2: ::std::os::raw::c_int) -> f32;
+    pub fn nan(__tagb: *const ::std::os::raw::c_char) -> f64;
 }
 unsafe extern "C" {
-    pub fn scalbn(arg1: f64, arg2: ::std::os::raw::c_int) -> f64;
+    pub fn __nan(__tagb: *const ::std::os::raw::c_char) -> f64;
 }
 unsafe extern "C" {
-    pub fn scalbnl(arg1: f64, arg2: ::std::os::raw::c_int) -> f64;
-}
-unsafe extern "C" {
-    pub fn scalblnf(arg1: f32, arg2: ::std::os::raw::c_long) -> f32;
-}
-unsafe extern "C" {
-    pub fn scalbln(arg1: f64, arg2: ::std::os::raw::c_long) -> f64;
-}
-unsafe extern "C" {
-    pub fn scalblnl(arg1: f64, arg2: ::std::os::raw::c_long) -> f64;
-}
-unsafe extern "C" {
-    pub fn fabsf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fabs(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fabsl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn cbrtf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn cbrt(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn cbrtl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn hypotf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn hypot(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn hypotl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn powf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn pow(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn powl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn sqrtf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn sqrt(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn sqrtl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn erff(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn erf(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn erfl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn erfcf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn erfc(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn erfcl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn lgammaf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn lgamma(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn lgammal(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn tgammaf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn tgamma(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn tgammal(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn ceilf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn ceil(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn ceill(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn floorf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn floor(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn floorl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nearbyintf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn nearbyint(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nearbyintl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn rintf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn rint(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn rintl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn lrintf(arg1: f32) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn lrint(arg1: f64) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn lrintl(arg1: f64) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn roundf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn round(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn roundl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn lroundf(arg1: f32) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn lround(arg1: f64) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn lroundl(arg1: f64) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn llrintf(arg1: f32) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn llrint(arg1: f64) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn llrintl(arg1: f64) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn llroundf(arg1: f32) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn llround(arg1: f64) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn llroundl(arg1: f64) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn truncf(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn trunc(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn truncl(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmodf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fmod(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmodl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn remainderf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn remainder(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn remainderl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn remquof(arg1: f32, arg2: f32, arg3: *mut ::std::os::raw::c_int) -> f32;
-}
-unsafe extern "C" {
-    pub fn remquo(arg1: f64, arg2: f64, arg3: *mut ::std::os::raw::c_int) -> f64;
-}
-unsafe extern "C" {
-    pub fn remquol(arg1: f64, arg2: f64, arg3: *mut ::std::os::raw::c_int) -> f64;
-}
-unsafe extern "C" {
-    pub fn copysignf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn copysign(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn copysignl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nanf(arg1: *const ::std::os::raw::c_char) -> f32;
-}
-unsafe extern "C" {
-    pub fn nan(arg1: *const ::std::os::raw::c_char) -> f64;
-}
-unsafe extern "C" {
-    pub fn nanl(arg1: *const ::std::os::raw::c_char) -> f64;
-}
-unsafe extern "C" {
-    pub fn nextafterf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn nextafter(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nextafterl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nexttoward(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn nexttowardf(arg1: f32, arg2: f64) -> f32;
-}
-unsafe extern "C" {
-    pub fn nexttowardl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fdimf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fdim(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fdiml(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmaxf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fmax(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmaxl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fminf(arg1: f32, arg2: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fmin(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fminl(arg1: f64, arg2: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmaf(arg1: f32, arg2: f32, arg3: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn fma(arg1: f64, arg2: f64, arg3: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn fmal(arg1: f64, arg2: f64, arg3: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn __exp10f(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn __exp10(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn __cospif(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn __cospi(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn __sinpif(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn __sinpi(arg1: f64) -> f64;
-}
-unsafe extern "C" {
-    pub fn __tanpif(arg1: f32) -> f32;
-}
-unsafe extern "C" {
-    pub fn __tanpi(arg1: f64) -> f64;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __float2 {
-    pub __sinval: f32,
-    pub __cosval: f32,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __float2"][::std::mem::size_of::<__float2>() - 8usize];
-    ["Alignment of __float2"][::std::mem::align_of::<__float2>() - 4usize];
-    ["Offset of field: __float2::__sinval"][::std::mem::offset_of!(__float2, __sinval) - 0usize];
-    ["Offset of field: __float2::__cosval"][::std::mem::offset_of!(__float2, __cosval) - 4usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __double2 {
-    pub __sinval: f64,
-    pub __cosval: f64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __double2"][::std::mem::size_of::<__double2>() - 16usize];
-    ["Alignment of __double2"][::std::mem::align_of::<__double2>() - 8usize];
-    ["Offset of field: __double2::__sinval"][::std::mem::offset_of!(__double2, __sinval) - 0usize];
-    ["Offset of field: __double2::__cosval"][::std::mem::offset_of!(__double2, __cosval) - 8usize];
-};
-unsafe extern "C" {
-    pub fn __sincosf_stret(arg1: f32) -> __float2;
-}
-unsafe extern "C" {
-    pub fn __sincos_stret(arg1: f64) -> __double2;
-}
-unsafe extern "C" {
-    pub fn __sincospif_stret(arg1: f32) -> __float2;
-}
-unsafe extern "C" {
-    pub fn __sincospi_stret(arg1: f64) -> __double2;
+    pub fn isnan(__value: f64) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn j0(arg1: f64) -> f64;
 }
 unsafe extern "C" {
+    pub fn __j0(arg1: f64) -> f64;
+}
+unsafe extern "C" {
     pub fn j1(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __j1(arg1: f64) -> f64;
 }
 unsafe extern "C" {
     pub fn jn(arg1: ::std::os::raw::c_int, arg2: f64) -> f64;
 }
 unsafe extern "C" {
+    pub fn __jn(arg1: ::std::os::raw::c_int, arg2: f64) -> f64;
+}
+unsafe extern "C" {
     pub fn y0(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __y0(arg1: f64) -> f64;
 }
 unsafe extern "C" {
     pub fn y1(arg1: f64) -> f64;
 }
 unsafe extern "C" {
+    pub fn __y1(arg1: f64) -> f64;
+}
+unsafe extern "C" {
     pub fn yn(arg1: ::std::os::raw::c_int, arg2: f64) -> f64;
 }
 unsafe extern "C" {
-    pub fn scalb(arg1: f64, arg2: f64) -> f64;
+    pub fn __yn(arg1: ::std::os::raw::c_int, arg2: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn erf(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __erf(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn erfc(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __erfc(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn lgamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __lgamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn tgamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __tgamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn gamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __gamma(arg1: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn lgamma_r(arg1: f64, __signgamp: *mut ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn __lgamma_r(arg1: f64, __signgamp: *mut ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn rint(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __rint(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn nextafter(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __nextafter(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn nexttoward(__x: f64, __y: u128) -> f64;
+}
+unsafe extern "C" {
+    pub fn __nexttoward(__x: f64, __y: u128) -> f64;
+}
+unsafe extern "C" {
+    pub fn remainder(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __remainder(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn scalbn(__x: f64, __n: ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn __scalbn(__x: f64, __n: ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn ilogb(__x: f64) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __ilogb(__x: f64) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn scalbln(__x: f64, __n: ::std::os::raw::c_long) -> f64;
+}
+unsafe extern "C" {
+    pub fn __scalbln(__x: f64, __n: ::std::os::raw::c_long) -> f64;
+}
+unsafe extern "C" {
+    pub fn nearbyint(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __nearbyint(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn round(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __round(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn trunc(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __trunc(__x: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn remquo(__x: f64, __y: f64, __quo: *mut ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn __remquo(__x: f64, __y: f64, __quo: *mut ::std::os::raw::c_int) -> f64;
+}
+unsafe extern "C" {
+    pub fn lrint(__x: f64) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lrint(__x: f64) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llrint(__x: f64) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llrint(__x: f64) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn lround(__x: f64) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lround(__x: f64) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llround(__x: f64) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llround(__x: f64) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn fdim(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __fdim(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn fmax(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __fmax(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn fmin(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __fmin(__x: f64, __y: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn fma(__x: f64, __y: f64, __z: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __fma(__x: f64, __y: f64, __z: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn scalb(__x: f64, __n: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __scalb(__x: f64, __n: f64) -> f64;
+}
+unsafe extern "C" {
+    pub fn __fpclassifyf(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __signbitf(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __isinff(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __finitef(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __isnanf(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __iseqsigf(__x: f32, __y: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __issignalingf(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn acosf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __acosf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn asinf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __asinf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn atanf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __atanf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn atan2f(__y: f32, __x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __atan2f(__y: f32, __x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn cosf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __cosf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn sinf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __sinf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn tanf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __tanf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn coshf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __coshf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn sinhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __sinhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn tanhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __tanhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn acoshf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __acoshf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn asinhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __asinhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn atanhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __atanhf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn expf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __expf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn frexpf(__x: f32, __exponent: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn __frexpf(__x: f32, __exponent: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn ldexpf(__x: f32, __exponent: ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn __ldexpf(__x: f32, __exponent: ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn logf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __logf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn log10f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __log10f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn modff(__x: f32, __iptr: *mut f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __modff(__x: f32, __iptr: *mut f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn expm1f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __expm1f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn log1pf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __log1pf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn logbf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __logbf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn exp2f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __exp2f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn log2f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __log2f(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn powf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __powf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn sqrtf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __sqrtf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn hypotf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __hypotf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn cbrtf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __cbrtf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn ceilf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __ceilf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn fabsf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fabsf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn floorf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __floorf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn fmodf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fmodf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn isinff(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn finitef(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn dremf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __dremf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn significandf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __significandf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn copysignf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __copysignf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn nanf(__tagb: *const ::std::os::raw::c_char) -> f32;
+}
+unsafe extern "C" {
+    pub fn __nanf(__tagb: *const ::std::os::raw::c_char) -> f32;
+}
+unsafe extern "C" {
+    pub fn isnanf(__value: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn j0f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __j0f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn j1f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __j1f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn jnf(arg1: ::std::os::raw::c_int, arg2: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __jnf(arg1: ::std::os::raw::c_int, arg2: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn y0f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __y0f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn y1f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __y1f(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn ynf(arg1: ::std::os::raw::c_int, arg2: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __ynf(arg1: ::std::os::raw::c_int, arg2: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn erff(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __erff(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn erfcf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __erfcf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn lgammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __lgammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn tgammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __tgammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn gammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __gammaf(arg1: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn lgammaf_r(arg1: f32, __signgamp: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn __lgammaf_r(arg1: f32, __signgamp: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn rintf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __rintf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn nextafterf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __nextafterf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn nexttowardf(__x: f32, __y: u128) -> f32;
+}
+unsafe extern "C" {
+    pub fn __nexttowardf(__x: f32, __y: u128) -> f32;
+}
+unsafe extern "C" {
+    pub fn remainderf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __remainderf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn scalbnf(__x: f32, __n: ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn __scalbnf(__x: f32, __n: ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn ilogbf(__x: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __ilogbf(__x: f32) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn scalblnf(__x: f32, __n: ::std::os::raw::c_long) -> f32;
+}
+unsafe extern "C" {
+    pub fn __scalblnf(__x: f32, __n: ::std::os::raw::c_long) -> f32;
+}
+unsafe extern "C" {
+    pub fn nearbyintf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __nearbyintf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn roundf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __roundf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn truncf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __truncf(__x: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn remquof(__x: f32, __y: f32, __quo: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn __remquof(__x: f32, __y: f32, __quo: *mut ::std::os::raw::c_int) -> f32;
+}
+unsafe extern "C" {
+    pub fn lrintf(__x: f32) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lrintf(__x: f32) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llrintf(__x: f32) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llrintf(__x: f32) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn lroundf(__x: f32) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lroundf(__x: f32) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llroundf(__x: f32) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llroundf(__x: f32) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn fdimf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fdimf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn fmaxf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fmaxf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn fminf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fminf(__x: f32, __y: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn fmaf(__x: f32, __y: f32, __z: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fmaf(__x: f32, __y: f32, __z: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn scalbf(__x: f32, __n: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __scalbf(__x: f32, __n: f32) -> f32;
+}
+unsafe extern "C" {
+    pub fn __fpclassifyl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __signbitl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __isinfl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __finitel(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __isnanl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __iseqsigl(__x: u128, __y: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __issignalingl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn acosl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __acosl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn asinl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __asinl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn atanl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __atanl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn atan2l(__y: u128, __x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __atan2l(__y: u128, __x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn cosl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __cosl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn sinl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __sinl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn tanl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __tanl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn coshl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __coshl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn sinhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __sinhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn tanhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __tanhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn acoshl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __acoshl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn asinhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __asinhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn atanhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __atanhl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn expl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __expl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn frexpl(__x: u128, __exponent: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn __frexpl(__x: u128, __exponent: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn ldexpl(__x: u128, __exponent: ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn __ldexpl(__x: u128, __exponent: ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn logl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __logl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn log10l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __log10l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn modfl(__x: u128, __iptr: *mut u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __modfl(__x: u128, __iptr: *mut u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn expm1l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __expm1l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn log1pl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __log1pl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn logbl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __logbl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn exp2l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __exp2l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn log2l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __log2l(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn powl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __powl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn sqrtl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __sqrtl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn hypotl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __hypotl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn cbrtl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __cbrtl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn ceill(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __ceill(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn fabsl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fabsl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn floorl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __floorl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn fmodl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fmodl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn isinfl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn finitel(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn dreml(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __dreml(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn significandl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __significandl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn copysignl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __copysignl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn nanl(__tagb: *const ::std::os::raw::c_char) -> u128;
+}
+unsafe extern "C" {
+    pub fn __nanl(__tagb: *const ::std::os::raw::c_char) -> u128;
+}
+unsafe extern "C" {
+    pub fn isnanl(__value: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn j0l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __j0l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn j1l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __j1l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn jnl(arg1: ::std::os::raw::c_int, arg2: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __jnl(arg1: ::std::os::raw::c_int, arg2: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn y0l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __y0l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn y1l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __y1l(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn ynl(arg1: ::std::os::raw::c_int, arg2: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __ynl(arg1: ::std::os::raw::c_int, arg2: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn erfl(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __erfl(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn erfcl(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __erfcl(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn lgammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __lgammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn tgammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __tgammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn gammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __gammal(arg1: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn lgammal_r(arg1: u128, __signgamp: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn __lgammal_r(arg1: u128, __signgamp: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn rintl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __rintl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn nextafterl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __nextafterl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn nexttowardl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __nexttowardl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn remainderl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __remainderl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn scalbnl(__x: u128, __n: ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn __scalbnl(__x: u128, __n: ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn ilogbl(__x: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn __ilogbl(__x: u128) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn scalblnl(__x: u128, __n: ::std::os::raw::c_long) -> u128;
+}
+unsafe extern "C" {
+    pub fn __scalblnl(__x: u128, __n: ::std::os::raw::c_long) -> u128;
+}
+unsafe extern "C" {
+    pub fn nearbyintl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __nearbyintl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn roundl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __roundl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn truncl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __truncl(__x: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn remquol(__x: u128, __y: u128, __quo: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn __remquol(__x: u128, __y: u128, __quo: *mut ::std::os::raw::c_int) -> u128;
+}
+unsafe extern "C" {
+    pub fn lrintl(__x: u128) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lrintl(__x: u128) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llrintl(__x: u128) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llrintl(__x: u128) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn lroundl(__x: u128) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn __lroundl(__x: u128) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llroundl(__x: u128) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn __llroundl(__x: u128) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn fdiml(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fdiml(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn fmaxl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fmaxl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn fminl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fminl(__x: u128, __y: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn fmal(__x: u128, __y: u128, __z: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __fmal(__x: u128, __y: u128, __z: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn scalbl(__x: u128, __n: u128) -> u128;
+}
+unsafe extern "C" {
+    pub fn __scalbl(__x: u128, __n: u128) -> u128;
 }
 unsafe extern "C" {
     pub static mut signgam: ::std::os::raw::c_int;
 }
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct exception {
-    pub type_: ::std::os::raw::c_int,
-    pub name: *mut ::std::os::raw::c_char,
-    pub arg1: f64,
-    pub arg2: f64,
-    pub retval: f64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of exception"][::std::mem::size_of::<exception>() - 40usize];
-    ["Alignment of exception"][::std::mem::align_of::<exception>() - 8usize];
-    ["Offset of field: exception::type_"][::std::mem::offset_of!(exception, type_) - 0usize];
-    ["Offset of field: exception::name"][::std::mem::offset_of!(exception, name) - 8usize];
-    ["Offset of field: exception::arg1"][::std::mem::offset_of!(exception, arg1) - 16usize];
-    ["Offset of field: exception::arg2"][::std::mem::offset_of!(exception, arg2) - 24usize];
-    ["Offset of field: exception::retval"][::std::mem::offset_of!(exception, retval) - 32usize];
-};
+pub const FP_NAN: _bindgen_ty_1 = 0;
+pub const FP_INFINITE: _bindgen_ty_1 = 1;
+pub const FP_ZERO: _bindgen_ty_1 = 2;
+pub const FP_SUBNORMAL: _bindgen_ty_1 = 3;
+pub const FP_NORMAL: _bindgen_ty_1 = 4;
+pub type _bindgen_ty_1 = ::std::os::raw::c_uint;
 unsafe extern "C" {
-    pub fn __assert_rtn(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *const ::std::os::raw::c_char,
+    pub fn __assert_fail(
+        __assertion: *const ::std::os::raw::c_char,
+        __file: *const ::std::os::raw::c_char,
+        __line: ::std::os::raw::c_uint,
+        __function: *const ::std::os::raw::c_char,
     ) -> !;
 }
-pub const idtype_t_P_ALL: idtype_t = 0;
-pub const idtype_t_P_PID: idtype_t = 1;
-pub const idtype_t_P_PGID: idtype_t = 2;
-pub type idtype_t = ::std::os::raw::c_uint;
-pub type pid_t = __darwin_pid_t;
-pub type id_t = __darwin_id_t;
-pub type sig_atomic_t = ::std::os::raw::c_int;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_exception_state {
-    pub __exception: __uint32_t,
-    pub __fsr: __uint32_t,
-    pub __far: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_exception_state"]
-        [::std::mem::size_of::<__darwin_arm_exception_state>() - 12usize];
-    ["Alignment of __darwin_arm_exception_state"]
-        [::std::mem::align_of::<__darwin_arm_exception_state>() - 4usize];
-    ["Offset of field: __darwin_arm_exception_state::__exception"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state, __exception) - 0usize];
-    ["Offset of field: __darwin_arm_exception_state::__fsr"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state, __fsr) - 4usize];
-    ["Offset of field: __darwin_arm_exception_state::__far"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state, __far) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_exception_state64 {
-    pub __far: __uint64_t,
-    pub __esr: __uint32_t,
-    pub __exception: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_exception_state64"]
-        [::std::mem::size_of::<__darwin_arm_exception_state64>() - 16usize];
-    ["Alignment of __darwin_arm_exception_state64"]
-        [::std::mem::align_of::<__darwin_arm_exception_state64>() - 8usize];
-    ["Offset of field: __darwin_arm_exception_state64::__far"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state64, __far) - 0usize];
-    ["Offset of field: __darwin_arm_exception_state64::__esr"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state64, __esr) - 8usize];
-    ["Offset of field: __darwin_arm_exception_state64::__exception"]
-        [::std::mem::offset_of!(__darwin_arm_exception_state64, __exception) - 12usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_thread_state {
-    pub __r: [__uint32_t; 13usize],
-    pub __sp: __uint32_t,
-    pub __lr: __uint32_t,
-    pub __pc: __uint32_t,
-    pub __cpsr: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_thread_state"]
-        [::std::mem::size_of::<__darwin_arm_thread_state>() - 68usize];
-    ["Alignment of __darwin_arm_thread_state"]
-        [::std::mem::align_of::<__darwin_arm_thread_state>() - 4usize];
-    ["Offset of field: __darwin_arm_thread_state::__r"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state, __r) - 0usize];
-    ["Offset of field: __darwin_arm_thread_state::__sp"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state, __sp) - 52usize];
-    ["Offset of field: __darwin_arm_thread_state::__lr"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state, __lr) - 56usize];
-    ["Offset of field: __darwin_arm_thread_state::__pc"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state, __pc) - 60usize];
-    ["Offset of field: __darwin_arm_thread_state::__cpsr"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state, __cpsr) - 64usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_thread_state64 {
-    pub __x: [__uint64_t; 29usize],
-    pub __fp: __uint64_t,
-    pub __lr: __uint64_t,
-    pub __sp: __uint64_t,
-    pub __pc: __uint64_t,
-    pub __cpsr: __uint32_t,
-    pub __pad: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_thread_state64"]
-        [::std::mem::size_of::<__darwin_arm_thread_state64>() - 272usize];
-    ["Alignment of __darwin_arm_thread_state64"]
-        [::std::mem::align_of::<__darwin_arm_thread_state64>() - 8usize];
-    ["Offset of field: __darwin_arm_thread_state64::__x"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __x) - 0usize];
-    ["Offset of field: __darwin_arm_thread_state64::__fp"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __fp) - 232usize];
-    ["Offset of field: __darwin_arm_thread_state64::__lr"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __lr) - 240usize];
-    ["Offset of field: __darwin_arm_thread_state64::__sp"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __sp) - 248usize];
-    ["Offset of field: __darwin_arm_thread_state64::__pc"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __pc) - 256usize];
-    ["Offset of field: __darwin_arm_thread_state64::__cpsr"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __cpsr) - 264usize];
-    ["Offset of field: __darwin_arm_thread_state64::__pad"]
-        [::std::mem::offset_of!(__darwin_arm_thread_state64, __pad) - 268usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_vfp_state {
-    pub __r: [__uint32_t; 64usize],
-    pub __fpscr: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_vfp_state"][::std::mem::size_of::<__darwin_arm_vfp_state>() - 260usize];
-    ["Alignment of __darwin_arm_vfp_state"]
-        [::std::mem::align_of::<__darwin_arm_vfp_state>() - 4usize];
-    ["Offset of field: __darwin_arm_vfp_state::__r"]
-        [::std::mem::offset_of!(__darwin_arm_vfp_state, __r) - 0usize];
-    ["Offset of field: __darwin_arm_vfp_state::__fpscr"]
-        [::std::mem::offset_of!(__darwin_arm_vfp_state, __fpscr) - 256usize];
-};
-#[repr(C)]
-#[repr(align(16))]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_neon_state64 {
-    pub __v: [__uint128_t; 32usize],
-    pub __fpsr: __uint32_t,
-    pub __fpcr: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_neon_state64"]
-        [::std::mem::size_of::<__darwin_arm_neon_state64>() - 528usize];
-    ["Alignment of __darwin_arm_neon_state64"]
-        [::std::mem::align_of::<__darwin_arm_neon_state64>() - 16usize];
-    ["Offset of field: __darwin_arm_neon_state64::__v"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state64, __v) - 0usize];
-    ["Offset of field: __darwin_arm_neon_state64::__fpsr"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state64, __fpsr) - 512usize];
-    ["Offset of field: __darwin_arm_neon_state64::__fpcr"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state64, __fpcr) - 516usize];
-};
-#[repr(C)]
-#[repr(align(16))]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_neon_state {
-    pub __v: [__uint128_t; 16usize],
-    pub __fpsr: __uint32_t,
-    pub __fpcr: __uint32_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_neon_state"]
-        [::std::mem::size_of::<__darwin_arm_neon_state>() - 272usize];
-    ["Alignment of __darwin_arm_neon_state"]
-        [::std::mem::align_of::<__darwin_arm_neon_state>() - 16usize];
-    ["Offset of field: __darwin_arm_neon_state::__v"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state, __v) - 0usize];
-    ["Offset of field: __darwin_arm_neon_state::__fpsr"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state, __fpsr) - 256usize];
-    ["Offset of field: __darwin_arm_neon_state::__fpcr"]
-        [::std::mem::offset_of!(__darwin_arm_neon_state, __fpcr) - 260usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __arm_pagein_state {
-    pub __pagein_error: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __arm_pagein_state"][::std::mem::size_of::<__arm_pagein_state>() - 4usize];
-    ["Alignment of __arm_pagein_state"][::std::mem::align_of::<__arm_pagein_state>() - 4usize];
-    ["Offset of field: __arm_pagein_state::__pagein_error"]
-        [::std::mem::offset_of!(__arm_pagein_state, __pagein_error) - 0usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __arm_legacy_debug_state {
-    pub __bvr: [__uint32_t; 16usize],
-    pub __bcr: [__uint32_t; 16usize],
-    pub __wvr: [__uint32_t; 16usize],
-    pub __wcr: [__uint32_t; 16usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __arm_legacy_debug_state"]
-        [::std::mem::size_of::<__arm_legacy_debug_state>() - 256usize];
-    ["Alignment of __arm_legacy_debug_state"]
-        [::std::mem::align_of::<__arm_legacy_debug_state>() - 4usize];
-    ["Offset of field: __arm_legacy_debug_state::__bvr"]
-        [::std::mem::offset_of!(__arm_legacy_debug_state, __bvr) - 0usize];
-    ["Offset of field: __arm_legacy_debug_state::__bcr"]
-        [::std::mem::offset_of!(__arm_legacy_debug_state, __bcr) - 64usize];
-    ["Offset of field: __arm_legacy_debug_state::__wvr"]
-        [::std::mem::offset_of!(__arm_legacy_debug_state, __wvr) - 128usize];
-    ["Offset of field: __arm_legacy_debug_state::__wcr"]
-        [::std::mem::offset_of!(__arm_legacy_debug_state, __wcr) - 192usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_debug_state32 {
-    pub __bvr: [__uint32_t; 16usize],
-    pub __bcr: [__uint32_t; 16usize],
-    pub __wvr: [__uint32_t; 16usize],
-    pub __wcr: [__uint32_t; 16usize],
-    pub __mdscr_el1: __uint64_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_debug_state32"]
-        [::std::mem::size_of::<__darwin_arm_debug_state32>() - 264usize];
-    ["Alignment of __darwin_arm_debug_state32"]
-        [::std::mem::align_of::<__darwin_arm_debug_state32>() - 8usize];
-    ["Offset of field: __darwin_arm_debug_state32::__bvr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state32, __bvr) - 0usize];
-    ["Offset of field: __darwin_arm_debug_state32::__bcr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state32, __bcr) - 64usize];
-    ["Offset of field: __darwin_arm_debug_state32::__wvr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state32, __wvr) - 128usize];
-    ["Offset of field: __darwin_arm_debug_state32::__wcr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state32, __wcr) - 192usize];
-    ["Offset of field: __darwin_arm_debug_state32::__mdscr_el1"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state32, __mdscr_el1) - 256usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_debug_state64 {
-    pub __bvr: [__uint64_t; 16usize],
-    pub __bcr: [__uint64_t; 16usize],
-    pub __wvr: [__uint64_t; 16usize],
-    pub __wcr: [__uint64_t; 16usize],
-    pub __mdscr_el1: __uint64_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_debug_state64"]
-        [::std::mem::size_of::<__darwin_arm_debug_state64>() - 520usize];
-    ["Alignment of __darwin_arm_debug_state64"]
-        [::std::mem::align_of::<__darwin_arm_debug_state64>() - 8usize];
-    ["Offset of field: __darwin_arm_debug_state64::__bvr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state64, __bvr) - 0usize];
-    ["Offset of field: __darwin_arm_debug_state64::__bcr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state64, __bcr) - 128usize];
-    ["Offset of field: __darwin_arm_debug_state64::__wvr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state64, __wvr) - 256usize];
-    ["Offset of field: __darwin_arm_debug_state64::__wcr"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state64, __wcr) - 384usize];
-    ["Offset of field: __darwin_arm_debug_state64::__mdscr_el1"]
-        [::std::mem::offset_of!(__darwin_arm_debug_state64, __mdscr_el1) - 512usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_arm_cpmu_state64 {
-    pub __ctrs: [__uint64_t; 16usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_arm_cpmu_state64"]
-        [::std::mem::size_of::<__darwin_arm_cpmu_state64>() - 128usize];
-    ["Alignment of __darwin_arm_cpmu_state64"]
-        [::std::mem::align_of::<__darwin_arm_cpmu_state64>() - 8usize];
-    ["Offset of field: __darwin_arm_cpmu_state64::__ctrs"]
-        [::std::mem::offset_of!(__darwin_arm_cpmu_state64, __ctrs) - 0usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_mcontext32 {
-    pub __es: __darwin_arm_exception_state,
-    pub __ss: __darwin_arm_thread_state,
-    pub __fs: __darwin_arm_vfp_state,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_mcontext32"][::std::mem::size_of::<__darwin_mcontext32>() - 340usize];
-    ["Alignment of __darwin_mcontext32"][::std::mem::align_of::<__darwin_mcontext32>() - 4usize];
-    ["Offset of field: __darwin_mcontext32::__es"]
-        [::std::mem::offset_of!(__darwin_mcontext32, __es) - 0usize];
-    ["Offset of field: __darwin_mcontext32::__ss"]
-        [::std::mem::offset_of!(__darwin_mcontext32, __ss) - 12usize];
-    ["Offset of field: __darwin_mcontext32::__fs"]
-        [::std::mem::offset_of!(__darwin_mcontext32, __fs) - 80usize];
-};
-#[repr(C)]
-#[repr(align(16))]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_mcontext64 {
-    pub __es: __darwin_arm_exception_state64,
-    pub __ss: __darwin_arm_thread_state64,
-    pub __ns: __darwin_arm_neon_state64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_mcontext64"][::std::mem::size_of::<__darwin_mcontext64>() - 816usize];
-    ["Alignment of __darwin_mcontext64"][::std::mem::align_of::<__darwin_mcontext64>() - 16usize];
-    ["Offset of field: __darwin_mcontext64::__es"]
-        [::std::mem::offset_of!(__darwin_mcontext64, __es) - 0usize];
-    ["Offset of field: __darwin_mcontext64::__ss"]
-        [::std::mem::offset_of!(__darwin_mcontext64, __ss) - 16usize];
-    ["Offset of field: __darwin_mcontext64::__ns"]
-        [::std::mem::offset_of!(__darwin_mcontext64, __ns) - 288usize];
-};
-pub type mcontext_t = *mut __darwin_mcontext64;
-pub type pthread_attr_t = __darwin_pthread_attr_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_sigaltstack {
-    pub ss_sp: *mut ::std::os::raw::c_void,
-    pub ss_size: __darwin_size_t,
-    pub ss_flags: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_sigaltstack"][::std::mem::size_of::<__darwin_sigaltstack>() - 24usize];
-    ["Alignment of __darwin_sigaltstack"][::std::mem::align_of::<__darwin_sigaltstack>() - 8usize];
-    ["Offset of field: __darwin_sigaltstack::ss_sp"]
-        [::std::mem::offset_of!(__darwin_sigaltstack, ss_sp) - 0usize];
-    ["Offset of field: __darwin_sigaltstack::ss_size"]
-        [::std::mem::offset_of!(__darwin_sigaltstack, ss_size) - 8usize];
-    ["Offset of field: __darwin_sigaltstack::ss_flags"]
-        [::std::mem::offset_of!(__darwin_sigaltstack, ss_flags) - 16usize];
-};
-pub type stack_t = __darwin_sigaltstack;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct __darwin_ucontext {
-    pub uc_onstack: ::std::os::raw::c_int,
-    pub uc_sigmask: __darwin_sigset_t,
-    pub uc_stack: __darwin_sigaltstack,
-    pub uc_link: *mut __darwin_ucontext,
-    pub uc_mcsize: __darwin_size_t,
-    pub uc_mcontext: *mut __darwin_mcontext64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __darwin_ucontext"][::std::mem::size_of::<__darwin_ucontext>() - 56usize];
-    ["Alignment of __darwin_ucontext"][::std::mem::align_of::<__darwin_ucontext>() - 8usize];
-    ["Offset of field: __darwin_ucontext::uc_onstack"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_onstack) - 0usize];
-    ["Offset of field: __darwin_ucontext::uc_sigmask"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_sigmask) - 4usize];
-    ["Offset of field: __darwin_ucontext::uc_stack"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_stack) - 8usize];
-    ["Offset of field: __darwin_ucontext::uc_link"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_link) - 32usize];
-    ["Offset of field: __darwin_ucontext::uc_mcsize"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_mcsize) - 40usize];
-    ["Offset of field: __darwin_ucontext::uc_mcontext"]
-        [::std::mem::offset_of!(__darwin_ucontext, uc_mcontext) - 48usize];
-};
-pub type ucontext_t = __darwin_ucontext;
-pub type sigset_t = __darwin_sigset_t;
-pub type uid_t = __darwin_uid_t;
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub union sigval {
-    pub sival_int: ::std::os::raw::c_int,
-    pub sival_ptr: *mut ::std::os::raw::c_void,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of sigval"][::std::mem::size_of::<sigval>() - 8usize];
-    ["Alignment of sigval"][::std::mem::align_of::<sigval>() - 8usize];
-    ["Offset of field: sigval::sival_int"][::std::mem::offset_of!(sigval, sival_int) - 0usize];
-    ["Offset of field: sigval::sival_ptr"][::std::mem::offset_of!(sigval, sival_ptr) - 0usize];
-};
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct sigevent {
-    pub sigev_notify: ::std::os::raw::c_int,
-    pub sigev_signo: ::std::os::raw::c_int,
-    pub sigev_value: sigval,
-    pub sigev_notify_function: ::std::option::Option<unsafe extern "C" fn(arg1: sigval)>,
-    pub sigev_notify_attributes: *mut pthread_attr_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of sigevent"][::std::mem::size_of::<sigevent>() - 32usize];
-    ["Alignment of sigevent"][::std::mem::align_of::<sigevent>() - 8usize];
-    ["Offset of field: sigevent::sigev_notify"]
-        [::std::mem::offset_of!(sigevent, sigev_notify) - 0usize];
-    ["Offset of field: sigevent::sigev_signo"]
-        [::std::mem::offset_of!(sigevent, sigev_signo) - 4usize];
-    ["Offset of field: sigevent::sigev_value"]
-        [::std::mem::offset_of!(sigevent, sigev_value) - 8usize];
-    ["Offset of field: sigevent::sigev_notify_function"]
-        [::std::mem::offset_of!(sigevent, sigev_notify_function) - 16usize];
-    ["Offset of field: sigevent::sigev_notify_attributes"]
-        [::std::mem::offset_of!(sigevent, sigev_notify_attributes) - 24usize];
-};
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __siginfo {
-    pub si_signo: ::std::os::raw::c_int,
-    pub si_errno: ::std::os::raw::c_int,
-    pub si_code: ::std::os::raw::c_int,
-    pub si_pid: pid_t,
-    pub si_uid: uid_t,
-    pub si_status: ::std::os::raw::c_int,
-    pub si_addr: *mut ::std::os::raw::c_void,
-    pub si_value: sigval,
-    pub si_band: ::std::os::raw::c_long,
-    pub __pad: [::std::os::raw::c_ulong; 7usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __siginfo"][::std::mem::size_of::<__siginfo>() - 104usize];
-    ["Alignment of __siginfo"][::std::mem::align_of::<__siginfo>() - 8usize];
-    ["Offset of field: __siginfo::si_signo"][::std::mem::offset_of!(__siginfo, si_signo) - 0usize];
-    ["Offset of field: __siginfo::si_errno"][::std::mem::offset_of!(__siginfo, si_errno) - 4usize];
-    ["Offset of field: __siginfo::si_code"][::std::mem::offset_of!(__siginfo, si_code) - 8usize];
-    ["Offset of field: __siginfo::si_pid"][::std::mem::offset_of!(__siginfo, si_pid) - 12usize];
-    ["Offset of field: __siginfo::si_uid"][::std::mem::offset_of!(__siginfo, si_uid) - 16usize];
-    ["Offset of field: __siginfo::si_status"]
-        [::std::mem::offset_of!(__siginfo, si_status) - 20usize];
-    ["Offset of field: __siginfo::si_addr"][::std::mem::offset_of!(__siginfo, si_addr) - 24usize];
-    ["Offset of field: __siginfo::si_value"][::std::mem::offset_of!(__siginfo, si_value) - 32usize];
-    ["Offset of field: __siginfo::si_band"][::std::mem::offset_of!(__siginfo, si_band) - 40usize];
-    ["Offset of field: __siginfo::__pad"][::std::mem::offset_of!(__siginfo, __pad) - 48usize];
-};
-pub type siginfo_t = __siginfo;
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub union __sigaction_u {
-    pub __sa_handler: ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>,
-    pub __sa_sigaction: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: ::std::os::raw::c_int,
-            arg2: *mut __siginfo,
-            arg3: *mut ::std::os::raw::c_void,
-        ),
-    >,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __sigaction_u"][::std::mem::size_of::<__sigaction_u>() - 8usize];
-    ["Alignment of __sigaction_u"][::std::mem::align_of::<__sigaction_u>() - 8usize];
-    ["Offset of field: __sigaction_u::__sa_handler"]
-        [::std::mem::offset_of!(__sigaction_u, __sa_handler) - 0usize];
-    ["Offset of field: __sigaction_u::__sa_sigaction"]
-        [::std::mem::offset_of!(__sigaction_u, __sa_sigaction) - 0usize];
-};
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct __sigaction {
-    pub __sigaction_u: __sigaction_u,
-    pub sa_tramp: ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: *mut ::std::os::raw::c_void,
-            arg2: ::std::os::raw::c_int,
-            arg3: ::std::os::raw::c_int,
-            arg4: *mut siginfo_t,
-            arg5: *mut ::std::os::raw::c_void,
-        ),
-    >,
-    pub sa_mask: sigset_t,
-    pub sa_flags: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of __sigaction"][::std::mem::size_of::<__sigaction>() - 24usize];
-    ["Alignment of __sigaction"][::std::mem::align_of::<__sigaction>() - 8usize];
-    ["Offset of field: __sigaction::__sigaction_u"]
-        [::std::mem::offset_of!(__sigaction, __sigaction_u) - 0usize];
-    ["Offset of field: __sigaction::sa_tramp"]
-        [::std::mem::offset_of!(__sigaction, sa_tramp) - 8usize];
-    ["Offset of field: __sigaction::sa_mask"]
-        [::std::mem::offset_of!(__sigaction, sa_mask) - 16usize];
-    ["Offset of field: __sigaction::sa_flags"]
-        [::std::mem::offset_of!(__sigaction, sa_flags) - 20usize];
-};
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub struct sigaction {
-    pub __sigaction_u: __sigaction_u,
-    pub sa_mask: sigset_t,
-    pub sa_flags: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of sigaction"][::std::mem::size_of::<sigaction>() - 16usize];
-    ["Alignment of sigaction"][::std::mem::align_of::<sigaction>() - 8usize];
-    ["Offset of field: sigaction::__sigaction_u"]
-        [::std::mem::offset_of!(sigaction, __sigaction_u) - 0usize];
-    ["Offset of field: sigaction::sa_mask"][::std::mem::offset_of!(sigaction, sa_mask) - 8usize];
-    ["Offset of field: sigaction::sa_flags"][::std::mem::offset_of!(sigaction, sa_flags) - 12usize];
-};
-pub type sig_t = ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct sigvec {
-    pub sv_handler: ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>,
-    pub sv_mask: ::std::os::raw::c_int,
-    pub sv_flags: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of sigvec"][::std::mem::size_of::<sigvec>() - 16usize];
-    ["Alignment of sigvec"][::std::mem::align_of::<sigvec>() - 8usize];
-    ["Offset of field: sigvec::sv_handler"][::std::mem::offset_of!(sigvec, sv_handler) - 0usize];
-    ["Offset of field: sigvec::sv_mask"][::std::mem::offset_of!(sigvec, sv_mask) - 8usize];
-    ["Offset of field: sigvec::sv_flags"][::std::mem::offset_of!(sigvec, sv_flags) - 12usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct sigstack {
-    pub ss_sp: *mut ::std::os::raw::c_char,
-    pub ss_onstack: ::std::os::raw::c_int,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of sigstack"][::std::mem::size_of::<sigstack>() - 16usize];
-    ["Alignment of sigstack"][::std::mem::align_of::<sigstack>() - 8usize];
-    ["Offset of field: sigstack::ss_sp"][::std::mem::offset_of!(sigstack, ss_sp) - 0usize];
-    ["Offset of field: sigstack::ss_onstack"]
-        [::std::mem::offset_of!(sigstack, ss_onstack) - 8usize];
-};
 unsafe extern "C" {
-    pub fn signal(
-        arg1: ::std::os::raw::c_int,
-        arg2: ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>,
-    ) -> ::std::option::Option<
-        unsafe extern "C" fn(
-            arg1: ::std::os::raw::c_int,
-            arg2: ::std::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>,
-        ),
-    >;
-}
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct timeval {
-    pub tv_sec: __darwin_time_t,
-    pub tv_usec: __darwin_suseconds_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of timeval"][::std::mem::size_of::<timeval>() - 16usize];
-    ["Alignment of timeval"][::std::mem::align_of::<timeval>() - 8usize];
-    ["Offset of field: timeval::tv_sec"][::std::mem::offset_of!(timeval, tv_sec) - 0usize];
-    ["Offset of field: timeval::tv_usec"][::std::mem::offset_of!(timeval, tv_usec) - 8usize];
-};
-pub type rlim_t = __uint64_t;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage {
-    pub ru_utime: timeval,
-    pub ru_stime: timeval,
-    pub ru_maxrss: ::std::os::raw::c_long,
-    pub ru_ixrss: ::std::os::raw::c_long,
-    pub ru_idrss: ::std::os::raw::c_long,
-    pub ru_isrss: ::std::os::raw::c_long,
-    pub ru_minflt: ::std::os::raw::c_long,
-    pub ru_majflt: ::std::os::raw::c_long,
-    pub ru_nswap: ::std::os::raw::c_long,
-    pub ru_inblock: ::std::os::raw::c_long,
-    pub ru_oublock: ::std::os::raw::c_long,
-    pub ru_msgsnd: ::std::os::raw::c_long,
-    pub ru_msgrcv: ::std::os::raw::c_long,
-    pub ru_nsignals: ::std::os::raw::c_long,
-    pub ru_nvcsw: ::std::os::raw::c_long,
-    pub ru_nivcsw: ::std::os::raw::c_long,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage"][::std::mem::size_of::<rusage>() - 144usize];
-    ["Alignment of rusage"][::std::mem::align_of::<rusage>() - 8usize];
-    ["Offset of field: rusage::ru_utime"][::std::mem::offset_of!(rusage, ru_utime) - 0usize];
-    ["Offset of field: rusage::ru_stime"][::std::mem::offset_of!(rusage, ru_stime) - 16usize];
-    ["Offset of field: rusage::ru_maxrss"][::std::mem::offset_of!(rusage, ru_maxrss) - 32usize];
-    ["Offset of field: rusage::ru_ixrss"][::std::mem::offset_of!(rusage, ru_ixrss) - 40usize];
-    ["Offset of field: rusage::ru_idrss"][::std::mem::offset_of!(rusage, ru_idrss) - 48usize];
-    ["Offset of field: rusage::ru_isrss"][::std::mem::offset_of!(rusage, ru_isrss) - 56usize];
-    ["Offset of field: rusage::ru_minflt"][::std::mem::offset_of!(rusage, ru_minflt) - 64usize];
-    ["Offset of field: rusage::ru_majflt"][::std::mem::offset_of!(rusage, ru_majflt) - 72usize];
-    ["Offset of field: rusage::ru_nswap"][::std::mem::offset_of!(rusage, ru_nswap) - 80usize];
-    ["Offset of field: rusage::ru_inblock"][::std::mem::offset_of!(rusage, ru_inblock) - 88usize];
-    ["Offset of field: rusage::ru_oublock"][::std::mem::offset_of!(rusage, ru_oublock) - 96usize];
-    ["Offset of field: rusage::ru_msgsnd"][::std::mem::offset_of!(rusage, ru_msgsnd) - 104usize];
-    ["Offset of field: rusage::ru_msgrcv"][::std::mem::offset_of!(rusage, ru_msgrcv) - 112usize];
-    ["Offset of field: rusage::ru_nsignals"]
-        [::std::mem::offset_of!(rusage, ru_nsignals) - 120usize];
-    ["Offset of field: rusage::ru_nvcsw"][::std::mem::offset_of!(rusage, ru_nvcsw) - 128usize];
-    ["Offset of field: rusage::ru_nivcsw"][::std::mem::offset_of!(rusage, ru_nivcsw) - 136usize];
-};
-pub type rusage_info_t = *mut ::std::os::raw::c_void;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v0 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v0"][::std::mem::size_of::<rusage_info_v0>() - 96usize];
-    ["Alignment of rusage_info_v0"][::std::mem::align_of::<rusage_info_v0>() - 8usize];
-    ["Offset of field: rusage_info_v0::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v0::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v0::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v0::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v0::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v0::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v0::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v0::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v0::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v0::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v0::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v0, ri_proc_exit_abstime) - 88usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v1 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v1"][::std::mem::size_of::<rusage_info_v1>() - 144usize];
-    ["Alignment of rusage_info_v1"][::std::mem::align_of::<rusage_info_v1>() - 8usize];
-    ["Offset of field: rusage_info_v1::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v1::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v1::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v1::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v1::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v1::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v1::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v1::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v1::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v1::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v1::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v1::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v1::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v1::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v1::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v1::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v1::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v1, ri_child_elapsed_abstime) - 136usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v2 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-    pub ri_diskio_bytesread: u64,
-    pub ri_diskio_byteswritten: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v2"][::std::mem::size_of::<rusage_info_v2>() - 160usize];
-    ["Alignment of rusage_info_v2"][::std::mem::align_of::<rusage_info_v2>() - 8usize];
-    ["Offset of field: rusage_info_v2::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v2::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v2::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v2::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v2::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v2::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v2::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v2::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v2::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v2::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v2::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v2::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v2::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v2::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v2::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v2::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v2::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_child_elapsed_abstime) - 136usize];
-    ["Offset of field: rusage_info_v2::ri_diskio_bytesread"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_diskio_bytesread) - 144usize];
-    ["Offset of field: rusage_info_v2::ri_diskio_byteswritten"]
-        [::std::mem::offset_of!(rusage_info_v2, ri_diskio_byteswritten) - 152usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v3 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-    pub ri_diskio_bytesread: u64,
-    pub ri_diskio_byteswritten: u64,
-    pub ri_cpu_time_qos_default: u64,
-    pub ri_cpu_time_qos_maintenance: u64,
-    pub ri_cpu_time_qos_background: u64,
-    pub ri_cpu_time_qos_utility: u64,
-    pub ri_cpu_time_qos_legacy: u64,
-    pub ri_cpu_time_qos_user_initiated: u64,
-    pub ri_cpu_time_qos_user_interactive: u64,
-    pub ri_billed_system_time: u64,
-    pub ri_serviced_system_time: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v3"][::std::mem::size_of::<rusage_info_v3>() - 232usize];
-    ["Alignment of rusage_info_v3"][::std::mem::align_of::<rusage_info_v3>() - 8usize];
-    ["Offset of field: rusage_info_v3::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v3::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v3::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v3::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v3::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v3::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v3::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v3::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v3::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v3::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v3::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v3::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v3::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v3::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v3::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v3::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v3::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_child_elapsed_abstime) - 136usize];
-    ["Offset of field: rusage_info_v3::ri_diskio_bytesread"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_diskio_bytesread) - 144usize];
-    ["Offset of field: rusage_info_v3::ri_diskio_byteswritten"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_diskio_byteswritten) - 152usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_default"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_default) - 160usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_maintenance"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_maintenance) - 168usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_background"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_background) - 176usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_utility"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_utility) - 184usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_legacy"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_legacy) - 192usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_user_initiated"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_user_initiated) - 200usize];
-    ["Offset of field: rusage_info_v3::ri_cpu_time_qos_user_interactive"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_cpu_time_qos_user_interactive) - 208usize];
-    ["Offset of field: rusage_info_v3::ri_billed_system_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_billed_system_time) - 216usize];
-    ["Offset of field: rusage_info_v3::ri_serviced_system_time"]
-        [::std::mem::offset_of!(rusage_info_v3, ri_serviced_system_time) - 224usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v4 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-    pub ri_diskio_bytesread: u64,
-    pub ri_diskio_byteswritten: u64,
-    pub ri_cpu_time_qos_default: u64,
-    pub ri_cpu_time_qos_maintenance: u64,
-    pub ri_cpu_time_qos_background: u64,
-    pub ri_cpu_time_qos_utility: u64,
-    pub ri_cpu_time_qos_legacy: u64,
-    pub ri_cpu_time_qos_user_initiated: u64,
-    pub ri_cpu_time_qos_user_interactive: u64,
-    pub ri_billed_system_time: u64,
-    pub ri_serviced_system_time: u64,
-    pub ri_logical_writes: u64,
-    pub ri_lifetime_max_phys_footprint: u64,
-    pub ri_instructions: u64,
-    pub ri_cycles: u64,
-    pub ri_billed_energy: u64,
-    pub ri_serviced_energy: u64,
-    pub ri_interval_max_phys_footprint: u64,
-    pub ri_runnable_time: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v4"][::std::mem::size_of::<rusage_info_v4>() - 296usize];
-    ["Alignment of rusage_info_v4"][::std::mem::align_of::<rusage_info_v4>() - 8usize];
-    ["Offset of field: rusage_info_v4::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v4::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v4::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v4::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v4::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v4::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v4::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v4::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v4::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v4::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v4::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v4::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v4::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v4::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v4::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v4::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v4::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_child_elapsed_abstime) - 136usize];
-    ["Offset of field: rusage_info_v4::ri_diskio_bytesread"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_diskio_bytesread) - 144usize];
-    ["Offset of field: rusage_info_v4::ri_diskio_byteswritten"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_diskio_byteswritten) - 152usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_default"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_default) - 160usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_maintenance"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_maintenance) - 168usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_background"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_background) - 176usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_utility"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_utility) - 184usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_legacy"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_legacy) - 192usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_user_initiated"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_user_initiated) - 200usize];
-    ["Offset of field: rusage_info_v4::ri_cpu_time_qos_user_interactive"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cpu_time_qos_user_interactive) - 208usize];
-    ["Offset of field: rusage_info_v4::ri_billed_system_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_billed_system_time) - 216usize];
-    ["Offset of field: rusage_info_v4::ri_serviced_system_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_serviced_system_time) - 224usize];
-    ["Offset of field: rusage_info_v4::ri_logical_writes"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_logical_writes) - 232usize];
-    ["Offset of field: rusage_info_v4::ri_lifetime_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_lifetime_max_phys_footprint) - 240usize];
-    ["Offset of field: rusage_info_v4::ri_instructions"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_instructions) - 248usize];
-    ["Offset of field: rusage_info_v4::ri_cycles"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_cycles) - 256usize];
-    ["Offset of field: rusage_info_v4::ri_billed_energy"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_billed_energy) - 264usize];
-    ["Offset of field: rusage_info_v4::ri_serviced_energy"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_serviced_energy) - 272usize];
-    ["Offset of field: rusage_info_v4::ri_interval_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_interval_max_phys_footprint) - 280usize];
-    ["Offset of field: rusage_info_v4::ri_runnable_time"]
-        [::std::mem::offset_of!(rusage_info_v4, ri_runnable_time) - 288usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v5 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-    pub ri_diskio_bytesread: u64,
-    pub ri_diskio_byteswritten: u64,
-    pub ri_cpu_time_qos_default: u64,
-    pub ri_cpu_time_qos_maintenance: u64,
-    pub ri_cpu_time_qos_background: u64,
-    pub ri_cpu_time_qos_utility: u64,
-    pub ri_cpu_time_qos_legacy: u64,
-    pub ri_cpu_time_qos_user_initiated: u64,
-    pub ri_cpu_time_qos_user_interactive: u64,
-    pub ri_billed_system_time: u64,
-    pub ri_serviced_system_time: u64,
-    pub ri_logical_writes: u64,
-    pub ri_lifetime_max_phys_footprint: u64,
-    pub ri_instructions: u64,
-    pub ri_cycles: u64,
-    pub ri_billed_energy: u64,
-    pub ri_serviced_energy: u64,
-    pub ri_interval_max_phys_footprint: u64,
-    pub ri_runnable_time: u64,
-    pub ri_flags: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v5"][::std::mem::size_of::<rusage_info_v5>() - 304usize];
-    ["Alignment of rusage_info_v5"][::std::mem::align_of::<rusage_info_v5>() - 8usize];
-    ["Offset of field: rusage_info_v5::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v5::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v5::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v5::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v5::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v5::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v5::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v5::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v5::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v5::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v5::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v5::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v5::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v5::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v5::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v5::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v5::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_child_elapsed_abstime) - 136usize];
-    ["Offset of field: rusage_info_v5::ri_diskio_bytesread"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_diskio_bytesread) - 144usize];
-    ["Offset of field: rusage_info_v5::ri_diskio_byteswritten"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_diskio_byteswritten) - 152usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_default"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_default) - 160usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_maintenance"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_maintenance) - 168usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_background"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_background) - 176usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_utility"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_utility) - 184usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_legacy"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_legacy) - 192usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_user_initiated"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_user_initiated) - 200usize];
-    ["Offset of field: rusage_info_v5::ri_cpu_time_qos_user_interactive"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cpu_time_qos_user_interactive) - 208usize];
-    ["Offset of field: rusage_info_v5::ri_billed_system_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_billed_system_time) - 216usize];
-    ["Offset of field: rusage_info_v5::ri_serviced_system_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_serviced_system_time) - 224usize];
-    ["Offset of field: rusage_info_v5::ri_logical_writes"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_logical_writes) - 232usize];
-    ["Offset of field: rusage_info_v5::ri_lifetime_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_lifetime_max_phys_footprint) - 240usize];
-    ["Offset of field: rusage_info_v5::ri_instructions"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_instructions) - 248usize];
-    ["Offset of field: rusage_info_v5::ri_cycles"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_cycles) - 256usize];
-    ["Offset of field: rusage_info_v5::ri_billed_energy"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_billed_energy) - 264usize];
-    ["Offset of field: rusage_info_v5::ri_serviced_energy"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_serviced_energy) - 272usize];
-    ["Offset of field: rusage_info_v5::ri_interval_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_interval_max_phys_footprint) - 280usize];
-    ["Offset of field: rusage_info_v5::ri_runnable_time"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_runnable_time) - 288usize];
-    ["Offset of field: rusage_info_v5::ri_flags"]
-        [::std::mem::offset_of!(rusage_info_v5, ri_flags) - 296usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rusage_info_v6 {
-    pub ri_uuid: [u8; 16usize],
-    pub ri_user_time: u64,
-    pub ri_system_time: u64,
-    pub ri_pkg_idle_wkups: u64,
-    pub ri_interrupt_wkups: u64,
-    pub ri_pageins: u64,
-    pub ri_wired_size: u64,
-    pub ri_resident_size: u64,
-    pub ri_phys_footprint: u64,
-    pub ri_proc_start_abstime: u64,
-    pub ri_proc_exit_abstime: u64,
-    pub ri_child_user_time: u64,
-    pub ri_child_system_time: u64,
-    pub ri_child_pkg_idle_wkups: u64,
-    pub ri_child_interrupt_wkups: u64,
-    pub ri_child_pageins: u64,
-    pub ri_child_elapsed_abstime: u64,
-    pub ri_diskio_bytesread: u64,
-    pub ri_diskio_byteswritten: u64,
-    pub ri_cpu_time_qos_default: u64,
-    pub ri_cpu_time_qos_maintenance: u64,
-    pub ri_cpu_time_qos_background: u64,
-    pub ri_cpu_time_qos_utility: u64,
-    pub ri_cpu_time_qos_legacy: u64,
-    pub ri_cpu_time_qos_user_initiated: u64,
-    pub ri_cpu_time_qos_user_interactive: u64,
-    pub ri_billed_system_time: u64,
-    pub ri_serviced_system_time: u64,
-    pub ri_logical_writes: u64,
-    pub ri_lifetime_max_phys_footprint: u64,
-    pub ri_instructions: u64,
-    pub ri_cycles: u64,
-    pub ri_billed_energy: u64,
-    pub ri_serviced_energy: u64,
-    pub ri_interval_max_phys_footprint: u64,
-    pub ri_runnable_time: u64,
-    pub ri_flags: u64,
-    pub ri_user_ptime: u64,
-    pub ri_system_ptime: u64,
-    pub ri_pinstructions: u64,
-    pub ri_pcycles: u64,
-    pub ri_energy_nj: u64,
-    pub ri_penergy_nj: u64,
-    pub ri_secure_time_in_system: u64,
-    pub ri_secure_ptime_in_system: u64,
-    pub ri_reserved: [u64; 12usize],
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rusage_info_v6"][::std::mem::size_of::<rusage_info_v6>() - 464usize];
-    ["Alignment of rusage_info_v6"][::std::mem::align_of::<rusage_info_v6>() - 8usize];
-    ["Offset of field: rusage_info_v6::ri_uuid"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_uuid) - 0usize];
-    ["Offset of field: rusage_info_v6::ri_user_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_user_time) - 16usize];
-    ["Offset of field: rusage_info_v6::ri_system_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_system_time) - 24usize];
-    ["Offset of field: rusage_info_v6::ri_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_pkg_idle_wkups) - 32usize];
-    ["Offset of field: rusage_info_v6::ri_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_interrupt_wkups) - 40usize];
-    ["Offset of field: rusage_info_v6::ri_pageins"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_pageins) - 48usize];
-    ["Offset of field: rusage_info_v6::ri_wired_size"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_wired_size) - 56usize];
-    ["Offset of field: rusage_info_v6::ri_resident_size"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_resident_size) - 64usize];
-    ["Offset of field: rusage_info_v6::ri_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_phys_footprint) - 72usize];
-    ["Offset of field: rusage_info_v6::ri_proc_start_abstime"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_proc_start_abstime) - 80usize];
-    ["Offset of field: rusage_info_v6::ri_proc_exit_abstime"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_proc_exit_abstime) - 88usize];
-    ["Offset of field: rusage_info_v6::ri_child_user_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_user_time) - 96usize];
-    ["Offset of field: rusage_info_v6::ri_child_system_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_system_time) - 104usize];
-    ["Offset of field: rusage_info_v6::ri_child_pkg_idle_wkups"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_pkg_idle_wkups) - 112usize];
-    ["Offset of field: rusage_info_v6::ri_child_interrupt_wkups"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_interrupt_wkups) - 120usize];
-    ["Offset of field: rusage_info_v6::ri_child_pageins"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_pageins) - 128usize];
-    ["Offset of field: rusage_info_v6::ri_child_elapsed_abstime"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_child_elapsed_abstime) - 136usize];
-    ["Offset of field: rusage_info_v6::ri_diskio_bytesread"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_diskio_bytesread) - 144usize];
-    ["Offset of field: rusage_info_v6::ri_diskio_byteswritten"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_diskio_byteswritten) - 152usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_default"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_default) - 160usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_maintenance"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_maintenance) - 168usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_background"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_background) - 176usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_utility"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_utility) - 184usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_legacy"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_legacy) - 192usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_user_initiated"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_user_initiated) - 200usize];
-    ["Offset of field: rusage_info_v6::ri_cpu_time_qos_user_interactive"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cpu_time_qos_user_interactive) - 208usize];
-    ["Offset of field: rusage_info_v6::ri_billed_system_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_billed_system_time) - 216usize];
-    ["Offset of field: rusage_info_v6::ri_serviced_system_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_serviced_system_time) - 224usize];
-    ["Offset of field: rusage_info_v6::ri_logical_writes"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_logical_writes) - 232usize];
-    ["Offset of field: rusage_info_v6::ri_lifetime_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_lifetime_max_phys_footprint) - 240usize];
-    ["Offset of field: rusage_info_v6::ri_instructions"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_instructions) - 248usize];
-    ["Offset of field: rusage_info_v6::ri_cycles"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_cycles) - 256usize];
-    ["Offset of field: rusage_info_v6::ri_billed_energy"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_billed_energy) - 264usize];
-    ["Offset of field: rusage_info_v6::ri_serviced_energy"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_serviced_energy) - 272usize];
-    ["Offset of field: rusage_info_v6::ri_interval_max_phys_footprint"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_interval_max_phys_footprint) - 280usize];
-    ["Offset of field: rusage_info_v6::ri_runnable_time"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_runnable_time) - 288usize];
-    ["Offset of field: rusage_info_v6::ri_flags"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_flags) - 296usize];
-    ["Offset of field: rusage_info_v6::ri_user_ptime"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_user_ptime) - 304usize];
-    ["Offset of field: rusage_info_v6::ri_system_ptime"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_system_ptime) - 312usize];
-    ["Offset of field: rusage_info_v6::ri_pinstructions"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_pinstructions) - 320usize];
-    ["Offset of field: rusage_info_v6::ri_pcycles"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_pcycles) - 328usize];
-    ["Offset of field: rusage_info_v6::ri_energy_nj"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_energy_nj) - 336usize];
-    ["Offset of field: rusage_info_v6::ri_penergy_nj"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_penergy_nj) - 344usize];
-    ["Offset of field: rusage_info_v6::ri_secure_time_in_system"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_secure_time_in_system) - 352usize];
-    ["Offset of field: rusage_info_v6::ri_secure_ptime_in_system"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_secure_ptime_in_system) - 360usize];
-    ["Offset of field: rusage_info_v6::ri_reserved"]
-        [::std::mem::offset_of!(rusage_info_v6, ri_reserved) - 368usize];
-};
-pub type rusage_info_current = rusage_info_v6;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct rlimit {
-    pub rlim_cur: rlim_t,
-    pub rlim_max: rlim_t,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of rlimit"][::std::mem::size_of::<rlimit>() - 16usize];
-    ["Alignment of rlimit"][::std::mem::align_of::<rlimit>() - 8usize];
-    ["Offset of field: rlimit::rlim_cur"][::std::mem::offset_of!(rlimit, rlim_cur) - 0usize];
-    ["Offset of field: rlimit::rlim_max"][::std::mem::offset_of!(rlimit, rlim_max) - 8usize];
-};
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct proc_rlimit_control_wakeupmon {
-    pub wm_flags: u32,
-    pub wm_rate: i32,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of proc_rlimit_control_wakeupmon"]
-        [::std::mem::size_of::<proc_rlimit_control_wakeupmon>() - 8usize];
-    ["Alignment of proc_rlimit_control_wakeupmon"]
-        [::std::mem::align_of::<proc_rlimit_control_wakeupmon>() - 4usize];
-    ["Offset of field: proc_rlimit_control_wakeupmon::wm_flags"]
-        [::std::mem::offset_of!(proc_rlimit_control_wakeupmon, wm_flags) - 0usize];
-    ["Offset of field: proc_rlimit_control_wakeupmon::wm_rate"]
-        [::std::mem::offset_of!(proc_rlimit_control_wakeupmon, wm_rate) - 4usize];
-};
-unsafe extern "C" {
-    pub fn getpriority(arg1: ::std::os::raw::c_int, arg2: id_t) -> ::std::os::raw::c_int;
+    pub fn __assert_perror_fail(
+        __errnum: ::std::os::raw::c_int,
+        __file: *const ::std::os::raw::c_char,
+        __line: ::std::os::raw::c_uint,
+        __function: *const ::std::os::raw::c_char,
+    ) -> !;
 }
 unsafe extern "C" {
-    pub fn getiopolicy_np(
-        arg1: ::std::os::raw::c_int,
-        arg2: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+    pub fn __assert(
+        __assertion: *const ::std::os::raw::c_char,
+        __file: *const ::std::os::raw::c_char,
+        __line: ::std::os::raw::c_int,
+    ) -> !;
 }
-unsafe extern "C" {
-    pub fn getrlimit(arg1: ::std::os::raw::c_int, arg2: *mut rlimit) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn getrusage(arg1: ::std::os::raw::c_int, arg2: *mut rusage) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setpriority(
-        arg1: ::std::os::raw::c_int,
-        arg2: id_t,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setiopolicy_np(
-        arg1: ::std::os::raw::c_int,
-        arg2: ::std::os::raw::c_int,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn setrlimit(arg1: ::std::os::raw::c_int, arg2: *const rlimit) -> ::std::os::raw::c_int;
-}
-#[repr(C, packed)]
-#[derive(Debug, Copy, Clone)]
-pub struct _OSUnalignedU16 {
-    pub __val: u16,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _OSUnalignedU16"][::std::mem::size_of::<_OSUnalignedU16>() - 2usize];
-    ["Alignment of _OSUnalignedU16"][::std::mem::align_of::<_OSUnalignedU16>() - 1usize];
-    ["Offset of field: _OSUnalignedU16::__val"]
-        [::std::mem::offset_of!(_OSUnalignedU16, __val) - 0usize];
-};
-#[repr(C, packed)]
-#[derive(Debug, Copy, Clone)]
-pub struct _OSUnalignedU32 {
-    pub __val: u32,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _OSUnalignedU32"][::std::mem::size_of::<_OSUnalignedU32>() - 4usize];
-    ["Alignment of _OSUnalignedU32"][::std::mem::align_of::<_OSUnalignedU32>() - 1usize];
-    ["Offset of field: _OSUnalignedU32::__val"]
-        [::std::mem::offset_of!(_OSUnalignedU32, __val) - 0usize];
-};
-#[repr(C, packed)]
-#[derive(Debug, Copy, Clone)]
-pub struct _OSUnalignedU64 {
-    pub __val: u64,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _OSUnalignedU64"][::std::mem::size_of::<_OSUnalignedU64>() - 8usize];
-    ["Alignment of _OSUnalignedU64"][::std::mem::align_of::<_OSUnalignedU64>() - 1usize];
-    ["Offset of field: _OSUnalignedU64::__val"]
-        [::std::mem::offset_of!(_OSUnalignedU64, __val) - 0usize];
-};
-#[repr(C)]
-#[derive(Copy, Clone)]
-pub union wait {
-    pub w_status: ::std::os::raw::c_int,
-    pub w_T: wait__bindgen_ty_1,
-    pub w_S: wait__bindgen_ty_2,
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct wait__bindgen_ty_1 {
-    pub _bitfield_align_1: [u16; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of wait__bindgen_ty_1"][::std::mem::size_of::<wait__bindgen_ty_1>() - 4usize];
-    ["Alignment of wait__bindgen_ty_1"][::std::mem::align_of::<wait__bindgen_ty_1>() - 4usize];
-};
-impl wait__bindgen_ty_1 {
-    #[inline]
-    pub fn w_Termsig(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 7u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Termsig(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 7u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Termsig_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                0usize,
-                7u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Termsig_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                0usize,
-                7u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn w_Coredump(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(7usize, 1u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Coredump(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(7usize, 1u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Coredump_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                7usize,
-                1u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Coredump_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                7usize,
-                1u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn w_Retcode(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(8usize, 8u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Retcode(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(8usize, 8u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Retcode_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                8usize,
-                8u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Retcode_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                8usize,
-                8u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn w_Filler(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(16usize, 16u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Filler(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(16usize, 16u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Filler_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                16usize,
-                16u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Filler_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                16usize,
-                16u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        w_Termsig: ::std::os::raw::c_uint,
-        w_Coredump: ::std::os::raw::c_uint,
-        w_Retcode: ::std::os::raw::c_uint,
-        w_Filler: ::std::os::raw::c_uint,
-    ) -> __BindgenBitfieldUnit<[u8; 4usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 7u8, {
-            let w_Termsig: u32 = unsafe { ::std::mem::transmute(w_Termsig) };
-            w_Termsig as u64
-        });
-        __bindgen_bitfield_unit.set(7usize, 1u8, {
-            let w_Coredump: u32 = unsafe { ::std::mem::transmute(w_Coredump) };
-            w_Coredump as u64
-        });
-        __bindgen_bitfield_unit.set(8usize, 8u8, {
-            let w_Retcode: u32 = unsafe { ::std::mem::transmute(w_Retcode) };
-            w_Retcode as u64
-        });
-        __bindgen_bitfield_unit.set(16usize, 16u8, {
-            let w_Filler: u32 = unsafe { ::std::mem::transmute(w_Filler) };
-            w_Filler as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[repr(C)]
-#[repr(align(4))]
-#[derive(Debug, Copy, Clone)]
-pub struct wait__bindgen_ty_2 {
-    pub _bitfield_align_1: [u16; 0],
-    pub _bitfield_1: __BindgenBitfieldUnit<[u8; 4usize]>,
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of wait__bindgen_ty_2"][::std::mem::size_of::<wait__bindgen_ty_2>() - 4usize];
-    ["Alignment of wait__bindgen_ty_2"][::std::mem::align_of::<wait__bindgen_ty_2>() - 4usize];
-};
-impl wait__bindgen_ty_2 {
-    #[inline]
-    pub fn w_Stopval(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(0usize, 8u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Stopval(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(0usize, 8u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Stopval_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                0usize,
-                8u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Stopval_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                0usize,
-                8u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn w_Stopsig(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(8usize, 8u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Stopsig(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(8usize, 8u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Stopsig_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                8usize,
-                8u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Stopsig_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                8usize,
-                8u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn w_Filler(&self) -> ::std::os::raw::c_uint {
-        unsafe { ::std::mem::transmute(self._bitfield_1.get(16usize, 16u8) as u32) }
-    }
-    #[inline]
-    pub fn set_w_Filler(&mut self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            self._bitfield_1.set(16usize, 16u8, val as u64)
-        }
-    }
-    #[inline]
-    pub unsafe fn w_Filler_raw(this: *const Self) -> ::std::os::raw::c_uint {
-        unsafe {
-            ::std::mem::transmute(<__BindgenBitfieldUnit<[u8; 4usize]>>::raw_get(
-                ::std::ptr::addr_of!((*this)._bitfield_1),
-                16usize,
-                16u8,
-            ) as u32)
-        }
-    }
-    #[inline]
-    pub unsafe fn set_w_Filler_raw(this: *mut Self, val: ::std::os::raw::c_uint) {
-        unsafe {
-            let val: u32 = ::std::mem::transmute(val);
-            <__BindgenBitfieldUnit<[u8; 4usize]>>::raw_set(
-                ::std::ptr::addr_of_mut!((*this)._bitfield_1),
-                16usize,
-                16u8,
-                val as u64,
-            )
-        }
-    }
-    #[inline]
-    pub fn new_bitfield_1(
-        w_Stopval: ::std::os::raw::c_uint,
-        w_Stopsig: ::std::os::raw::c_uint,
-        w_Filler: ::std::os::raw::c_uint,
-    ) -> __BindgenBitfieldUnit<[u8; 4usize]> {
-        let mut __bindgen_bitfield_unit: __BindgenBitfieldUnit<[u8; 4usize]> = Default::default();
-        __bindgen_bitfield_unit.set(0usize, 8u8, {
-            let w_Stopval: u32 = unsafe { ::std::mem::transmute(w_Stopval) };
-            w_Stopval as u64
-        });
-        __bindgen_bitfield_unit.set(8usize, 8u8, {
-            let w_Stopsig: u32 = unsafe { ::std::mem::transmute(w_Stopsig) };
-            w_Stopsig as u64
-        });
-        __bindgen_bitfield_unit.set(16usize, 16u8, {
-            let w_Filler: u32 = unsafe { ::std::mem::transmute(w_Filler) };
-            w_Filler as u64
-        });
-        __bindgen_bitfield_unit
-    }
-}
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of wait"][::std::mem::size_of::<wait>() - 4usize];
-    ["Alignment of wait"][::std::mem::align_of::<wait>() - 4usize];
-    ["Offset of field: wait::w_status"][::std::mem::offset_of!(wait, w_status) - 0usize];
-    ["Offset of field: wait::w_T"][::std::mem::offset_of!(wait, w_T) - 0usize];
-    ["Offset of field: wait::w_S"][::std::mem::offset_of!(wait, w_S) - 0usize];
-};
-unsafe extern "C" {
-    pub fn wait(arg1: *mut ::std::os::raw::c_int) -> pid_t;
-}
-unsafe extern "C" {
-    pub fn waitpid(
-        arg1: pid_t,
-        arg2: *mut ::std::os::raw::c_int,
-        arg3: ::std::os::raw::c_int,
-    ) -> pid_t;
-}
-unsafe extern "C" {
-    pub fn waitid(
-        arg1: idtype_t,
-        arg2: id_t,
-        arg3: *mut siginfo_t,
-        arg4: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn wait3(
-        arg1: *mut ::std::os::raw::c_int,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut rusage,
-    ) -> pid_t;
-}
-unsafe extern "C" {
-    pub fn wait4(
-        arg1: pid_t,
-        arg2: *mut ::std::os::raw::c_int,
-        arg3: ::std::os::raw::c_int,
-        arg4: *mut rusage,
-    ) -> pid_t;
-}
-unsafe extern "C" {
-    pub fn alloca(arg1: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
-}
-pub type ct_rune_t = __darwin_ct_rune_t;
-pub type rune_t = __darwin_rune_t;
-pub type wchar_t = __darwin_wchar_t;
+pub type wchar_t = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct div_t {
@@ -4461,115 +3002,716 @@ const _: () = {
     ["Offset of field: lldiv_t::rem"][::std::mem::offset_of!(lldiv_t, rem) - 8usize];
 };
 unsafe extern "C" {
-    pub static mut __mb_cur_max: ::std::os::raw::c_int;
-}
-pub type malloc_type_id_t = ::std::os::raw::c_ulonglong;
-unsafe extern "C" {
-    pub fn malloc_type_malloc(
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn __ctype_get_mb_cur_max() -> usize;
 }
 unsafe extern "C" {
-    pub fn malloc_type_calloc(
-        count: usize,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn atof(__nptr: *const ::std::os::raw::c_char) -> f64;
 }
 unsafe extern "C" {
-    pub fn malloc_type_free(ptr: *mut ::std::os::raw::c_void, type_id: malloc_type_id_t);
+    pub fn atoi(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn malloc_type_realloc(
-        ptr: *mut ::std::os::raw::c_void,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn atol(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
 }
 unsafe extern "C" {
-    pub fn malloc_type_valloc(
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn atoll(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_longlong;
 }
 unsafe extern "C" {
-    pub fn malloc_type_aligned_alloc(
-        alignment: usize,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn strtod(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f64;
 }
 unsafe extern "C" {
-    pub fn malloc_type_posix_memalign(
-        memptr: *mut *mut ::std::os::raw::c_void,
-        alignment: usize,
-        size: usize,
-        type_id: malloc_type_id_t,
+    pub fn strtof(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f32;
+}
+unsafe extern "C" {
+    pub fn strtold(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> u128;
+}
+unsafe extern "C" {
+    pub fn strtol(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn strtoul(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn strtoq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn strtouq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+unsafe extern "C" {
+    pub fn strtoll(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn strtoull(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+unsafe extern "C" {
+    pub fn l64a(__n: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn a64l(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+}
+pub type u_char = __u_char;
+pub type u_short = __u_short;
+pub type u_int = __u_int;
+pub type u_long = __u_long;
+pub type quad_t = __quad_t;
+pub type u_quad_t = __u_quad_t;
+pub type fsid_t = __fsid_t;
+pub type loff_t = __loff_t;
+pub type ino_t = __ino_t;
+pub type dev_t = __dev_t;
+pub type gid_t = __gid_t;
+pub type mode_t = __mode_t;
+pub type nlink_t = __nlink_t;
+pub type uid_t = __uid_t;
+pub type pid_t = __pid_t;
+pub type id_t = __id_t;
+pub type daddr_t = __daddr_t;
+pub type caddr_t = __caddr_t;
+pub type key_t = __key_t;
+pub type clock_t = __clock_t;
+pub type clockid_t = __clockid_t;
+pub type time_t = __time_t;
+pub type timer_t = __timer_t;
+pub type ulong = ::std::os::raw::c_ulong;
+pub type ushort = ::std::os::raw::c_ushort;
+pub type uint = ::std::os::raw::c_uint;
+pub type u_int8_t = __uint8_t;
+pub type u_int16_t = __uint16_t;
+pub type u_int32_t = __uint32_t;
+pub type u_int64_t = __uint64_t;
+pub type register_t = ::std::os::raw::c_long;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sigset_t {
+    pub __val: [::std::os::raw::c_ulong; 16usize],
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __sigset_t"][::std::mem::size_of::<__sigset_t>() - 128usize];
+    ["Alignment of __sigset_t"][::std::mem::align_of::<__sigset_t>() - 8usize];
+    ["Offset of field: __sigset_t::__val"][::std::mem::offset_of!(__sigset_t, __val) - 0usize];
+};
+pub type sigset_t = __sigset_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timeval {
+    pub tv_sec: __time_t,
+    pub tv_usec: __suseconds_t,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of timeval"][::std::mem::size_of::<timeval>() - 16usize];
+    ["Alignment of timeval"][::std::mem::align_of::<timeval>() - 8usize];
+    ["Offset of field: timeval::tv_sec"][::std::mem::offset_of!(timeval, tv_sec) - 0usize];
+    ["Offset of field: timeval::tv_usec"][::std::mem::offset_of!(timeval, tv_usec) - 8usize];
+};
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timespec {
+    pub tv_sec: __time_t,
+    pub tv_nsec: __syscall_slong_t,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of timespec"][::std::mem::size_of::<timespec>() - 16usize];
+    ["Alignment of timespec"][::std::mem::align_of::<timespec>() - 8usize];
+    ["Offset of field: timespec::tv_sec"][::std::mem::offset_of!(timespec, tv_sec) - 0usize];
+    ["Offset of field: timespec::tv_nsec"][::std::mem::offset_of!(timespec, tv_nsec) - 8usize];
+};
+pub type suseconds_t = __suseconds_t;
+pub type __fd_mask = ::std::os::raw::c_long;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fd_set {
+    pub __fds_bits: [__fd_mask; 16usize],
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of fd_set"][::std::mem::size_of::<fd_set>() - 128usize];
+    ["Alignment of fd_set"][::std::mem::align_of::<fd_set>() - 8usize];
+    ["Offset of field: fd_set::__fds_bits"][::std::mem::offset_of!(fd_set, __fds_bits) - 0usize];
+};
+pub type fd_mask = __fd_mask;
+unsafe extern "C" {
+    pub fn select(
+        __nfds: ::std::os::raw::c_int,
+        __readfds: *mut fd_set,
+        __writefds: *mut fd_set,
+        __exceptfds: *mut fd_set,
+        __timeout: *mut timeval,
     ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn pselect(
+        __nfds: ::std::os::raw::c_int,
+        __readfds: *mut fd_set,
+        __writefds: *mut fd_set,
+        __exceptfds: *mut fd_set,
+        __timeout: *const timespec,
+        __sigmask: *const __sigset_t,
+    ) -> ::std::os::raw::c_int;
+}
+pub type blksize_t = __blksize_t;
+pub type blkcnt_t = __blkcnt_t;
+pub type fsblkcnt_t = __fsblkcnt_t;
+pub type fsfilcnt_t = __fsfilcnt_t;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __atomic_wide_counter {
+    pub __value64: ::std::os::raw::c_ulonglong,
+    pub __value32: __atomic_wide_counter__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct _malloc_zone_t {
-    _unused: [u8; 0],
+pub struct __atomic_wide_counter__bindgen_ty_1 {
+    pub __low: ::std::os::raw::c_uint,
+    pub __high: ::std::os::raw::c_uint,
 }
-pub type malloc_zone_t = _malloc_zone_t;
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __atomic_wide_counter__bindgen_ty_1"]
+        [::std::mem::size_of::<__atomic_wide_counter__bindgen_ty_1>() - 8usize];
+    ["Alignment of __atomic_wide_counter__bindgen_ty_1"]
+        [::std::mem::align_of::<__atomic_wide_counter__bindgen_ty_1>() - 4usize];
+    ["Offset of field: __atomic_wide_counter__bindgen_ty_1::__low"]
+        [::std::mem::offset_of!(__atomic_wide_counter__bindgen_ty_1, __low) - 0usize];
+    ["Offset of field: __atomic_wide_counter__bindgen_ty_1::__high"]
+        [::std::mem::offset_of!(__atomic_wide_counter__bindgen_ty_1, __high) - 4usize];
+};
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __atomic_wide_counter"][::std::mem::size_of::<__atomic_wide_counter>() - 8usize];
+    ["Alignment of __atomic_wide_counter"]
+        [::std::mem::align_of::<__atomic_wide_counter>() - 8usize];
+    ["Offset of field: __atomic_wide_counter::__value64"]
+        [::std::mem::offset_of!(__atomic_wide_counter, __value64) - 0usize];
+    ["Offset of field: __atomic_wide_counter::__value32"]
+        [::std::mem::offset_of!(__atomic_wide_counter, __value32) - 0usize];
+};
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_internal_list {
+    pub __prev: *mut __pthread_internal_list,
+    pub __next: *mut __pthread_internal_list,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __pthread_internal_list"][::std::mem::size_of::<__pthread_internal_list>() - 16usize];
+    ["Alignment of __pthread_internal_list"]
+        [::std::mem::align_of::<__pthread_internal_list>() - 8usize];
+    ["Offset of field: __pthread_internal_list::__prev"]
+        [::std::mem::offset_of!(__pthread_internal_list, __prev) - 0usize];
+    ["Offset of field: __pthread_internal_list::__next"]
+        [::std::mem::offset_of!(__pthread_internal_list, __next) - 8usize];
+};
+pub type __pthread_list_t = __pthread_internal_list;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_internal_slist {
+    pub __next: *mut __pthread_internal_slist,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __pthread_internal_slist"]
+        [::std::mem::size_of::<__pthread_internal_slist>() - 8usize];
+    ["Alignment of __pthread_internal_slist"]
+        [::std::mem::align_of::<__pthread_internal_slist>() - 8usize];
+    ["Offset of field: __pthread_internal_slist::__next"]
+        [::std::mem::offset_of!(__pthread_internal_slist, __next) - 0usize];
+};
+pub type __pthread_slist_t = __pthread_internal_slist;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_mutex_s {
+    pub __lock: ::std::os::raw::c_int,
+    pub __count: ::std::os::raw::c_uint,
+    pub __owner: ::std::os::raw::c_int,
+    pub __nusers: ::std::os::raw::c_uint,
+    pub __kind: ::std::os::raw::c_int,
+    pub __spins: ::std::os::raw::c_int,
+    pub __list: __pthread_list_t,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __pthread_mutex_s"][::std::mem::size_of::<__pthread_mutex_s>() - 40usize];
+    ["Alignment of __pthread_mutex_s"][::std::mem::align_of::<__pthread_mutex_s>() - 8usize];
+    ["Offset of field: __pthread_mutex_s::__lock"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __lock) - 0usize];
+    ["Offset of field: __pthread_mutex_s::__count"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __count) - 4usize];
+    ["Offset of field: __pthread_mutex_s::__owner"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __owner) - 8usize];
+    ["Offset of field: __pthread_mutex_s::__nusers"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __nusers) - 12usize];
+    ["Offset of field: __pthread_mutex_s::__kind"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __kind) - 16usize];
+    ["Offset of field: __pthread_mutex_s::__spins"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __spins) - 20usize];
+    ["Offset of field: __pthread_mutex_s::__list"]
+        [::std::mem::offset_of!(__pthread_mutex_s, __list) - 24usize];
+};
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_rwlock_arch_t {
+    pub __readers: ::std::os::raw::c_uint,
+    pub __writers: ::std::os::raw::c_uint,
+    pub __wrphase_futex: ::std::os::raw::c_uint,
+    pub __writers_futex: ::std::os::raw::c_uint,
+    pub __pad3: ::std::os::raw::c_uint,
+    pub __pad4: ::std::os::raw::c_uint,
+    pub __cur_writer: ::std::os::raw::c_int,
+    pub __shared: ::std::os::raw::c_int,
+    pub __pad1: ::std::os::raw::c_ulong,
+    pub __pad2: ::std::os::raw::c_ulong,
+    pub __flags: ::std::os::raw::c_uint,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __pthread_rwlock_arch_t"][::std::mem::size_of::<__pthread_rwlock_arch_t>() - 56usize];
+    ["Alignment of __pthread_rwlock_arch_t"]
+        [::std::mem::align_of::<__pthread_rwlock_arch_t>() - 8usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__readers"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __readers) - 0usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__writers"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __writers) - 4usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__wrphase_futex"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __wrphase_futex) - 8usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__writers_futex"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __writers_futex) - 12usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__pad3"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __pad3) - 16usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__pad4"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __pad4) - 20usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__cur_writer"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __cur_writer) - 24usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__shared"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __shared) - 28usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__pad1"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __pad1) - 32usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__pad2"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __pad2) - 40usize];
+    ["Offset of field: __pthread_rwlock_arch_t::__flags"]
+        [::std::mem::offset_of!(__pthread_rwlock_arch_t, __flags) - 48usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct __pthread_cond_s {
+    pub __wseq: __atomic_wide_counter,
+    pub __g1_start: __atomic_wide_counter,
+    pub __g_refs: [::std::os::raw::c_uint; 2usize],
+    pub __g_size: [::std::os::raw::c_uint; 2usize],
+    pub __g1_orig_size: ::std::os::raw::c_uint,
+    pub __wrefs: ::std::os::raw::c_uint,
+    pub __g_signals: [::std::os::raw::c_uint; 2usize],
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __pthread_cond_s"][::std::mem::size_of::<__pthread_cond_s>() - 48usize];
+    ["Alignment of __pthread_cond_s"][::std::mem::align_of::<__pthread_cond_s>() - 8usize];
+    ["Offset of field: __pthread_cond_s::__wseq"]
+        [::std::mem::offset_of!(__pthread_cond_s, __wseq) - 0usize];
+    ["Offset of field: __pthread_cond_s::__g1_start"]
+        [::std::mem::offset_of!(__pthread_cond_s, __g1_start) - 8usize];
+    ["Offset of field: __pthread_cond_s::__g_refs"]
+        [::std::mem::offset_of!(__pthread_cond_s, __g_refs) - 16usize];
+    ["Offset of field: __pthread_cond_s::__g_size"]
+        [::std::mem::offset_of!(__pthread_cond_s, __g_size) - 24usize];
+    ["Offset of field: __pthread_cond_s::__g1_orig_size"]
+        [::std::mem::offset_of!(__pthread_cond_s, __g1_orig_size) - 32usize];
+    ["Offset of field: __pthread_cond_s::__wrefs"]
+        [::std::mem::offset_of!(__pthread_cond_s, __wrefs) - 36usize];
+    ["Offset of field: __pthread_cond_s::__g_signals"]
+        [::std::mem::offset_of!(__pthread_cond_s, __g_signals) - 40usize];
+};
+pub type __tss_t = ::std::os::raw::c_uint;
+pub type __thrd_t = ::std::os::raw::c_ulong;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __once_flag {
+    pub __data: ::std::os::raw::c_int,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __once_flag"][::std::mem::size_of::<__once_flag>() - 4usize];
+    ["Alignment of __once_flag"][::std::mem::align_of::<__once_flag>() - 4usize];
+    ["Offset of field: __once_flag::__data"][::std::mem::offset_of!(__once_flag, __data) - 0usize];
+};
+pub type pthread_t = ::std::os::raw::c_ulong;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_mutexattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_int,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_mutexattr_t"][::std::mem::size_of::<pthread_mutexattr_t>() - 8usize];
+    ["Alignment of pthread_mutexattr_t"][::std::mem::align_of::<pthread_mutexattr_t>() - 4usize];
+    ["Offset of field: pthread_mutexattr_t::__size"]
+        [::std::mem::offset_of!(pthread_mutexattr_t, __size) - 0usize];
+    ["Offset of field: pthread_mutexattr_t::__align"]
+        [::std::mem::offset_of!(pthread_mutexattr_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_condattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_int,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_condattr_t"][::std::mem::size_of::<pthread_condattr_t>() - 8usize];
+    ["Alignment of pthread_condattr_t"][::std::mem::align_of::<pthread_condattr_t>() - 4usize];
+    ["Offset of field: pthread_condattr_t::__size"]
+        [::std::mem::offset_of!(pthread_condattr_t, __size) - 0usize];
+    ["Offset of field: pthread_condattr_t::__align"]
+        [::std::mem::offset_of!(pthread_condattr_t, __align) - 0usize];
+};
+pub type pthread_key_t = ::std::os::raw::c_uint;
+pub type pthread_once_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_attr_t {
+    pub __size: [::std::os::raw::c_char; 64usize],
+    pub __align: ::std::os::raw::c_long,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_attr_t"][::std::mem::size_of::<pthread_attr_t>() - 64usize];
+    ["Alignment of pthread_attr_t"][::std::mem::align_of::<pthread_attr_t>() - 8usize];
+    ["Offset of field: pthread_attr_t::__size"]
+        [::std::mem::offset_of!(pthread_attr_t, __size) - 0usize];
+    ["Offset of field: pthread_attr_t::__align"]
+        [::std::mem::offset_of!(pthread_attr_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_mutex_t {
+    pub __data: __pthread_mutex_s,
+    pub __size: [::std::os::raw::c_char; 48usize],
+    pub __align: ::std::os::raw::c_long,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_mutex_t"][::std::mem::size_of::<pthread_mutex_t>() - 48usize];
+    ["Alignment of pthread_mutex_t"][::std::mem::align_of::<pthread_mutex_t>() - 8usize];
+    ["Offset of field: pthread_mutex_t::__data"]
+        [::std::mem::offset_of!(pthread_mutex_t, __data) - 0usize];
+    ["Offset of field: pthread_mutex_t::__size"]
+        [::std::mem::offset_of!(pthread_mutex_t, __size) - 0usize];
+    ["Offset of field: pthread_mutex_t::__align"]
+        [::std::mem::offset_of!(pthread_mutex_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_cond_t {
+    pub __data: __pthread_cond_s,
+    pub __size: [::std::os::raw::c_char; 48usize],
+    pub __align: ::std::os::raw::c_longlong,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_cond_t"][::std::mem::size_of::<pthread_cond_t>() - 48usize];
+    ["Alignment of pthread_cond_t"][::std::mem::align_of::<pthread_cond_t>() - 8usize];
+    ["Offset of field: pthread_cond_t::__data"]
+        [::std::mem::offset_of!(pthread_cond_t, __data) - 0usize];
+    ["Offset of field: pthread_cond_t::__size"]
+        [::std::mem::offset_of!(pthread_cond_t, __size) - 0usize];
+    ["Offset of field: pthread_cond_t::__align"]
+        [::std::mem::offset_of!(pthread_cond_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_rwlock_t {
+    pub __data: __pthread_rwlock_arch_t,
+    pub __size: [::std::os::raw::c_char; 56usize],
+    pub __align: ::std::os::raw::c_long,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_rwlock_t"][::std::mem::size_of::<pthread_rwlock_t>() - 56usize];
+    ["Alignment of pthread_rwlock_t"][::std::mem::align_of::<pthread_rwlock_t>() - 8usize];
+    ["Offset of field: pthread_rwlock_t::__data"]
+        [::std::mem::offset_of!(pthread_rwlock_t, __data) - 0usize];
+    ["Offset of field: pthread_rwlock_t::__size"]
+        [::std::mem::offset_of!(pthread_rwlock_t, __size) - 0usize];
+    ["Offset of field: pthread_rwlock_t::__align"]
+        [::std::mem::offset_of!(pthread_rwlock_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_rwlockattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_long,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_rwlockattr_t"][::std::mem::size_of::<pthread_rwlockattr_t>() - 8usize];
+    ["Alignment of pthread_rwlockattr_t"][::std::mem::align_of::<pthread_rwlockattr_t>() - 8usize];
+    ["Offset of field: pthread_rwlockattr_t::__size"]
+        [::std::mem::offset_of!(pthread_rwlockattr_t, __size) - 0usize];
+    ["Offset of field: pthread_rwlockattr_t::__align"]
+        [::std::mem::offset_of!(pthread_rwlockattr_t, __align) - 0usize];
+};
+pub type pthread_spinlock_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_barrier_t {
+    pub __size: [::std::os::raw::c_char; 32usize],
+    pub __align: ::std::os::raw::c_long,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_barrier_t"][::std::mem::size_of::<pthread_barrier_t>() - 32usize];
+    ["Alignment of pthread_barrier_t"][::std::mem::align_of::<pthread_barrier_t>() - 8usize];
+    ["Offset of field: pthread_barrier_t::__size"]
+        [::std::mem::offset_of!(pthread_barrier_t, __size) - 0usize];
+    ["Offset of field: pthread_barrier_t::__align"]
+        [::std::mem::offset_of!(pthread_barrier_t, __align) - 0usize];
+};
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_barrierattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_int,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of pthread_barrierattr_t"][::std::mem::size_of::<pthread_barrierattr_t>() - 8usize];
+    ["Alignment of pthread_barrierattr_t"]
+        [::std::mem::align_of::<pthread_barrierattr_t>() - 4usize];
+    ["Offset of field: pthread_barrierattr_t::__size"]
+        [::std::mem::offset_of!(pthread_barrierattr_t, __size) - 0usize];
+    ["Offset of field: pthread_barrierattr_t::__align"]
+        [::std::mem::offset_of!(pthread_barrierattr_t, __align) - 0usize];
+};
 unsafe extern "C" {
-    pub fn malloc_type_zone_malloc(
-        zone: *mut malloc_zone_t,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn random() -> ::std::os::raw::c_long;
 }
 unsafe extern "C" {
-    pub fn malloc_type_zone_calloc(
-        zone: *mut malloc_zone_t,
-        count: usize,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn srandom(__seed: ::std::os::raw::c_uint);
 }
 unsafe extern "C" {
-    pub fn malloc_type_zone_free(
-        zone: *mut malloc_zone_t,
-        ptr: *mut ::std::os::raw::c_void,
-        type_id: malloc_type_id_t,
-    );
+    pub fn initstate(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: usize,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn malloc_type_zone_realloc(
-        zone: *mut malloc_zone_t,
-        ptr: *mut ::std::os::raw::c_void,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn setstate(__statebuf: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct random_data {
+    pub fptr: *mut i32,
+    pub rptr: *mut i32,
+    pub state: *mut i32,
+    pub rand_type: ::std::os::raw::c_int,
+    pub rand_deg: ::std::os::raw::c_int,
+    pub rand_sep: ::std::os::raw::c_int,
+    pub end_ptr: *mut i32,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of random_data"][::std::mem::size_of::<random_data>() - 48usize];
+    ["Alignment of random_data"][::std::mem::align_of::<random_data>() - 8usize];
+    ["Offset of field: random_data::fptr"][::std::mem::offset_of!(random_data, fptr) - 0usize];
+    ["Offset of field: random_data::rptr"][::std::mem::offset_of!(random_data, rptr) - 8usize];
+    ["Offset of field: random_data::state"][::std::mem::offset_of!(random_data, state) - 16usize];
+    ["Offset of field: random_data::rand_type"]
+        [::std::mem::offset_of!(random_data, rand_type) - 24usize];
+    ["Offset of field: random_data::rand_deg"]
+        [::std::mem::offset_of!(random_data, rand_deg) - 28usize];
+    ["Offset of field: random_data::rand_sep"]
+        [::std::mem::offset_of!(random_data, rand_sep) - 32usize];
+    ["Offset of field: random_data::end_ptr"]
+        [::std::mem::offset_of!(random_data, end_ptr) - 40usize];
+};
+unsafe extern "C" {
+    pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn malloc_type_zone_valloc(
-        zone: *mut malloc_zone_t,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn srandom_r(
+        __seed: ::std::os::raw::c_uint,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn malloc_type_zone_memalign(
-        zone: *mut malloc_zone_t,
-        alignment: usize,
-        size: usize,
-        type_id: malloc_type_id_t,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn initstate_r(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: usize,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn setstate_r(
+        __statebuf: *mut ::std::os::raw::c_char,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn rand() -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn srand(__seed: ::std::os::raw::c_uint);
+}
+unsafe extern "C" {
+    pub fn rand_r(__seed: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn drand48() -> f64;
+}
+unsafe extern "C" {
+    pub fn erand48(__xsubi: *mut ::std::os::raw::c_ushort) -> f64;
+}
+unsafe extern "C" {
+    pub fn lrand48() -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn nrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn mrand48() -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn jrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn srand48(__seedval: ::std::os::raw::c_long);
+}
+unsafe extern "C" {
+    pub fn seed48(__seed16v: *mut ::std::os::raw::c_ushort) -> *mut ::std::os::raw::c_ushort;
+}
+unsafe extern "C" {
+    pub fn lcong48(__param: *mut ::std::os::raw::c_ushort);
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct drand48_data {
+    pub __x: [::std::os::raw::c_ushort; 3usize],
+    pub __old_x: [::std::os::raw::c_ushort; 3usize],
+    pub __c: ::std::os::raw::c_ushort,
+    pub __init: ::std::os::raw::c_ushort,
+    pub __a: ::std::os::raw::c_ulonglong,
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of drand48_data"][::std::mem::size_of::<drand48_data>() - 24usize];
+    ["Alignment of drand48_data"][::std::mem::align_of::<drand48_data>() - 8usize];
+    ["Offset of field: drand48_data::__x"][::std::mem::offset_of!(drand48_data, __x) - 0usize];
+    ["Offset of field: drand48_data::__old_x"]
+        [::std::mem::offset_of!(drand48_data, __old_x) - 6usize];
+    ["Offset of field: drand48_data::__c"][::std::mem::offset_of!(drand48_data, __c) - 12usize];
+    ["Offset of field: drand48_data::__init"]
+        [::std::mem::offset_of!(drand48_data, __init) - 14usize];
+    ["Offset of field: drand48_data::__a"][::std::mem::offset_of!(drand48_data, __a) - 16usize];
+};
+unsafe extern "C" {
+    pub fn drand48_r(__buffer: *mut drand48_data, __result: *mut f64) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn erand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn lrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn nrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn mrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn jrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn srand48_r(
+        __seedval: ::std::os::raw::c_long,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn seed48_r(
+        __seed16v: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn lcong48_r(
+        __param: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn arc4random() -> __uint32_t;
+}
+unsafe extern "C" {
+    pub fn arc4random_buf(__buf: *mut ::std::os::raw::c_void, __size: usize);
+}
+unsafe extern "C" {
+    pub fn arc4random_uniform(__upper_bound: __uint32_t) -> __uint32_t;
 }
 unsafe extern "C" {
     pub fn malloc(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
     pub fn calloc(
-        __count: ::std::os::raw::c_ulong,
+        __nmemb: ::std::os::raw::c_ulong,
         __size: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_void;
-}
-unsafe extern "C" {
-    pub fn free(arg1: *mut ::std::os::raw::c_void);
 }
 unsafe extern "C" {
     pub fn realloc(
@@ -4578,19 +3720,20 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn reallocf(
+    pub fn free(__ptr: *mut ::std::os::raw::c_void);
+}
+unsafe extern "C" {
+    pub fn reallocarray(
         __ptr: *mut ::std::os::raw::c_void,
+        __nmemb: usize,
         __size: usize,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn valloc(arg1: usize) -> *mut ::std::os::raw::c_void;
+    pub fn alloca(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn aligned_alloc(
-        __alignment: ::std::os::raw::c_ulong,
-        __size: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_void;
+    pub fn valloc(__size: usize) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
     pub fn posix_memalign(
@@ -4600,554 +3743,265 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn abort() -> !;
-}
-unsafe extern "C" {
-    pub fn abs(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn atexit(arg1: ::std::option::Option<unsafe extern "C" fn()>) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn atof(arg1: *const ::std::os::raw::c_char) -> f64;
-}
-unsafe extern "C" {
-    pub fn atoi(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn atol(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn atoll(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn bsearch(
-        __key: *const ::std::os::raw::c_void,
-        __base: *const ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
+    pub fn aligned_alloc(
+        __alignment: ::std::os::raw::c_ulong,
+        __size: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn div(arg1: ::std::os::raw::c_int, arg2: ::std::os::raw::c_int) -> div_t;
+    pub fn abort() -> !;
 }
 unsafe extern "C" {
-    pub fn exit(arg1: ::std::os::raw::c_int) -> !;
+    pub fn atexit(__func: ::std::option::Option<unsafe extern "C" fn()>) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn getenv(arg1: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn labs(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn ldiv(arg1: ::std::os::raw::c_long, arg2: ::std::os::raw::c_long) -> ldiv_t;
-}
-unsafe extern "C" {
-    pub fn llabs(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn lldiv(arg1: ::std::os::raw::c_longlong, arg2: ::std::os::raw::c_longlong) -> lldiv_t;
-}
-unsafe extern "C" {
-    pub fn mblen(__s: *const ::std::os::raw::c_char, __n: usize) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn mbstowcs(arg1: *mut wchar_t, arg2: *const ::std::os::raw::c_char, arg3: usize) -> usize;
-}
-unsafe extern "C" {
-    pub fn mbtowc(
-        arg1: *mut wchar_t,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: usize,
+    pub fn at_quick_exit(
+        __func: ::std::option::Option<unsafe extern "C" fn()>,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn qsort(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: ::std::option::Option<
+    pub fn on_exit(
+        __func: ::std::option::Option<
             unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
+                __status: ::std::os::raw::c_int,
+                __arg: *mut ::std::os::raw::c_void,
+            ),
         >,
-    );
-}
-unsafe extern "C" {
-    pub fn rand() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn srand(arg1: ::std::os::raw::c_uint);
-}
-unsafe extern "C" {
-    pub fn strtod(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-    ) -> f64;
-}
-unsafe extern "C" {
-    pub fn strtof(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-    ) -> f32;
-}
-unsafe extern "C" {
-    pub fn strtol(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn strtold(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-    ) -> f64;
-}
-unsafe extern "C" {
-    pub fn strtoll(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn strtoul(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn strtoull(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulonglong;
-}
-unsafe extern "C" {
-    pub fn system(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn wcstombs(arg1: *mut ::std::os::raw::c_char, arg2: *const wchar_t, arg3: usize) -> usize;
-}
-unsafe extern "C" {
-    pub fn wctomb(arg1: *mut ::std::os::raw::c_char, arg2: wchar_t) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn _Exit(arg1: ::std::os::raw::c_int) -> !;
-}
-unsafe extern "C" {
-    pub fn a64l(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn drand48() -> f64;
-}
-unsafe extern "C" {
-    pub fn ecvt(
-        arg1: f64,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_int,
-        arg4: *mut ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn erand48(arg1: *mut ::std::os::raw::c_ushort) -> f64;
-}
-unsafe extern "C" {
-    pub fn fcvt(
-        arg1: f64,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_int,
-        arg4: *mut ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn gcvt(
-        arg1: f64,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn getsubopt(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *const *mut ::std::os::raw::c_char,
-        arg3: *mut *mut ::std::os::raw::c_char,
+        __arg: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn grantpt(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn exit(__status: ::std::os::raw::c_int) -> !;
 }
 unsafe extern "C" {
-    pub fn initstate(
-        arg1: ::std::os::raw::c_uint,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: usize,
-    ) -> *mut ::std::os::raw::c_char;
+    pub fn quick_exit(__status: ::std::os::raw::c_int) -> !;
 }
 unsafe extern "C" {
-    pub fn jrand48(arg1: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+    pub fn _Exit(__status: ::std::os::raw::c_int) -> !;
 }
 unsafe extern "C" {
-    pub fn l64a(arg1: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_char;
+    pub fn getenv(__name: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn lcong48(arg1: *mut ::std::os::raw::c_ushort);
-}
-unsafe extern "C" {
-    pub fn lrand48() -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn mktemp(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn mkstemp(arg1: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn mrand48() -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn nrand48(arg1: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn posix_openpt(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ptsname(arg1: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn ptsname_r(
-        fildes: ::std::os::raw::c_int,
-        buffer: *mut ::std::os::raw::c_char,
-        buflen: usize,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn putenv(arg1: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn random() -> ::std::os::raw::c_long;
-}
-unsafe extern "C" {
-    pub fn rand_r(arg1: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    #[link_name = "\u{1}_realpath$DARWIN_EXTSN"]
-    pub fn realpath(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn seed48(arg1: *mut ::std::os::raw::c_ushort) -> *mut ::std::os::raw::c_ushort;
+    pub fn putenv(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
     pub fn setenv(
         __name: *const ::std::os::raw::c_char,
         __value: *const ::std::os::raw::c_char,
-        __overwrite: ::std::os::raw::c_int,
+        __replace: ::std::os::raw::c_int,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn setkey(arg1: *const ::std::os::raw::c_char);
+    pub fn unsetenv(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn setstate(arg1: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn clearenv() -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn srand48(arg1: ::std::os::raw::c_long);
+    pub fn mktemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn srandom(arg1: ::std::os::raw::c_uint);
+    pub fn mkstemp(__template: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn unlockpt(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn mkstemps(
+        __template: *mut ::std::os::raw::c_char,
+        __suffixlen: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn unsetenv(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-pub type dev_t = __darwin_dev_t;
-pub type mode_t = __darwin_mode_t;
-unsafe extern "C" {
-    pub fn arc4random() -> u32;
+    pub fn mkdtemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn arc4random_addrandom(arg1: *mut ::std::os::raw::c_uchar, arg2: ::std::os::raw::c_int);
+    pub fn system(__command: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn arc4random_buf(__buf: *mut ::std::os::raw::c_void, __nbytes: usize);
+    pub fn realpath(
+        __name: *const ::std::os::raw::c_char,
+        __resolved: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
+pub type __compar_fn_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        arg1: *const ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
 unsafe extern "C" {
-    pub fn arc4random_stir();
-}
-unsafe extern "C" {
-    pub fn arc4random_uniform(__upper_bound: u32) -> u32;
-}
-unsafe extern "C" {
-    pub fn atexit_b(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn bsearch_b(
+    pub fn bsearch(
         __key: *const ::std::os::raw::c_void,
         __base: *const ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: *mut ::std::os::raw::c_void,
+        __nmemb: usize,
+        __size: usize,
+        __compar: __compar_fn_t,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn cgetcap(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
+    pub fn qsort(
+        __base: *mut ::std::os::raw::c_void,
+        __nmemb: usize,
+        __size: usize,
+        __compar: __compar_fn_t,
+    );
+}
+unsafe extern "C" {
+    pub fn abs(__x: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn labs(__x: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
+}
+unsafe extern "C" {
+    pub fn llabs(__x: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
+}
+unsafe extern "C" {
+    pub fn div(__numer: ::std::os::raw::c_int, __denom: ::std::os::raw::c_int) -> div_t;
+}
+unsafe extern "C" {
+    pub fn ldiv(__numer: ::std::os::raw::c_long, __denom: ::std::os::raw::c_long) -> ldiv_t;
+}
+unsafe extern "C" {
+    pub fn lldiv(
+        __numer: ::std::os::raw::c_longlong,
+        __denom: ::std::os::raw::c_longlong,
+    ) -> lldiv_t;
+}
+unsafe extern "C" {
+    pub fn ecvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn cgetclose() -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetent(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetfirst(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetmatch(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetnext(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetnum(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_long,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetset(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetstr(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn cgetustr(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: *mut *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn daemon(
-        arg1: ::std::os::raw::c_int,
-        arg2: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn devname(arg1: dev_t, arg2: mode_t) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn devname_r(
-        arg1: dev_t,
-        arg2: mode_t,
-        buf: *mut ::std::os::raw::c_char,
-        len: ::std::os::raw::c_int,
+    pub fn fcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn getbsize(
-        arg1: *mut ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_long,
+    pub fn gcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn getloadavg(arg1: *mut f64, arg2: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn qecvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn getprogname() -> *const ::std::os::raw::c_char;
+    pub fn qfcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn setprogname(arg1: *const ::std::os::raw::c_char);
+    pub fn qgcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn heapsort(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
+    pub fn ecvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn heapsort_b(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: *mut ::std::os::raw::c_void,
+    pub fn fcvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn mergesort(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
+    pub fn qecvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn mergesort_b(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: *mut ::std::os::raw::c_void,
+    pub fn qfcvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn psort(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *const ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
-    );
+    pub fn mblen(__s: *const ::std::os::raw::c_char, __n: usize) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn psort_b(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: *mut ::std::os::raw::c_void,
-    );
-}
-unsafe extern "C" {
-    pub fn psort_r(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        arg1: *mut ::std::os::raw::c_void,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-                arg3: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
-    );
-}
-unsafe extern "C" {
-    pub fn qsort_b(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        __compar: *mut ::std::os::raw::c_void,
-    );
-}
-unsafe extern "C" {
-    pub fn qsort_r(
-        __base: *mut ::std::os::raw::c_void,
-        __nel: usize,
-        __width: usize,
-        arg1: *mut ::std::os::raw::c_void,
-        __compar: ::std::option::Option<
-            unsafe extern "C" fn(
-                arg1: *mut ::std::os::raw::c_void,
-                arg2: *const ::std::os::raw::c_void,
-                arg3: *const ::std::os::raw::c_void,
-            ) -> ::std::os::raw::c_int,
-        >,
-    );
-}
-unsafe extern "C" {
-    pub fn radixsort(
-        __base: *mut *const ::std::os::raw::c_uchar,
-        __nel: ::std::os::raw::c_int,
-        __table: *const ::std::os::raw::c_uchar,
-        __endbyte: ::std::os::raw::c_uint,
+    pub fn mbtowc(
+        __pwc: *mut wchar_t,
+        __s: *const ::std::os::raw::c_char,
+        __n: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn rpmatch(arg1: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn wctomb(__s: *mut ::std::os::raw::c_char, __wchar: wchar_t) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn sradixsort(
-        __base: *mut *const ::std::os::raw::c_uchar,
-        __nel: ::std::os::raw::c_int,
-        __table: *const ::std::os::raw::c_uchar,
-        __endbyte: ::std::os::raw::c_uint,
+    pub fn mbstowcs(__pwcs: *mut wchar_t, __s: *const ::std::os::raw::c_char, __n: usize) -> usize;
+}
+unsafe extern "C" {
+    pub fn wcstombs(__s: *mut ::std::os::raw::c_char, __pwcs: *const wchar_t, __n: usize) -> usize;
+}
+unsafe extern "C" {
+    pub fn rpmatch(__response: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn getsubopt(
+        __optionp: *mut *mut ::std::os::raw::c_char,
+        __tokens: *const *mut ::std::os::raw::c_char,
+        __valuep: *mut *mut ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn sranddev();
+    pub fn getloadavg(__loadavg: *mut f64, __nelem: ::std::os::raw::c_int)
+    -> ::std::os::raw::c_int;
 }
-unsafe extern "C" {
-    pub fn srandomdev();
+#[repr(C)]
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
+pub struct max_align_t {
+    pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
+    pub __bindgen_padding_0: u64,
+    pub __clang_max_align_nonce2: u128,
 }
-unsafe extern "C" {
-    pub fn strtonum(
-        __numstr: *const ::std::os::raw::c_char,
-        __minval: ::std::os::raw::c_longlong,
-        __maxval: ::std::os::raw::c_longlong,
-        __errstrp: *mut *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn strtoq(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_longlong;
-}
-unsafe extern "C" {
-    pub fn strtouq(
-        __str: *const ::std::os::raw::c_char,
-        __endptr: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulonglong;
-}
-unsafe extern "C" {
-    pub static mut suboptarg: *mut ::std::os::raw::c_char;
-}
-pub type rsize_t = ::std::os::raw::c_ulong;
-pub type max_align_t = f64;
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of max_align_t"][::std::mem::size_of::<max_align_t>() - 32usize];
+    ["Alignment of max_align_t"][::std::mem::align_of::<max_align_t>() - 16usize];
+    ["Offset of field: max_align_t::__clang_max_align_nonce1"]
+        [::std::mem::offset_of!(max_align_t, __clang_max_align_nonce1) - 0usize];
+    ["Offset of field: max_align_t::__clang_max_align_nonce2"]
+        [::std::mem::offset_of!(max_align_t, __clang_max_align_nonce2) - 16usize];
+};
 unsafe extern "C" {
     #[doc = " allocates array and initializes it with 0; returns NULL if memory allocation failed"]
     pub fn BMSallocClearMemory_call(
@@ -6045,14 +4899,12 @@ pub struct SCIP_ParamSet {
     _unused: [u8; 0],
 }
 pub type SCIP_PARAMSET = SCIP_ParamSet;
-unsafe extern "C" {
-    pub fn imaxabs(j: intmax_t) -> intmax_t;
-}
+pub type __gwchar_t = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct imaxdiv_t {
-    pub quot: intmax_t,
-    pub rem: intmax_t,
+    pub quot: ::std::os::raw::c_long,
+    pub rem: ::std::os::raw::c_long,
 }
 #[allow(clippy::unnecessary_operation, clippy::identity_op)]
 const _: () = {
@@ -6061,6 +4913,9 @@ const _: () = {
     ["Offset of field: imaxdiv_t::quot"][::std::mem::offset_of!(imaxdiv_t, quot) - 0usize];
     ["Offset of field: imaxdiv_t::rem"][::std::mem::offset_of!(imaxdiv_t, rem) - 8usize];
 };
+unsafe extern "C" {
+    pub fn imaxabs(__n: intmax_t) -> intmax_t;
+}
 unsafe extern "C" {
     pub fn imaxdiv(__numer: intmax_t, __denom: intmax_t) -> imaxdiv_t;
 }
@@ -6080,15 +4935,15 @@ unsafe extern "C" {
 }
 unsafe extern "C" {
     pub fn wcstoimax(
-        __nptr: *const wchar_t,
-        __endptr: *mut *mut wchar_t,
+        __nptr: *const __gwchar_t,
+        __endptr: *mut *mut __gwchar_t,
         __base: ::std::os::raw::c_int,
     ) -> intmax_t;
 }
 unsafe extern "C" {
     pub fn wcstoumax(
-        __nptr: *const wchar_t,
-        __endptr: *mut *mut wchar_t,
+        __nptr: *const __gwchar_t,
+        __endptr: *mut *mut __gwchar_t,
         __base: ::std::os::raw::c_int,
     ) -> uintmax_t;
 }
@@ -8364,12 +7219,14 @@ unsafe extern "C" {
     pub fn SCIPbanditGetNActions(bandit: *mut SCIP_BANDIT) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two benderss w. r. to their priority"]
     pub fn SCIPbendersComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting benderss w.r.t. to their name"]
     pub fn SCIPbendersCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -8739,12 +7596,14 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two Benders' decomposition cuts w. r. to their priority"]
     pub fn SCIPbenderscutComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting Benders' decomposition cuts w.r.t. to their name"]
     pub fn SCIPbenderscutCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -8807,12 +7666,14 @@ unsafe extern "C" {
     );
 }
 unsafe extern "C" {
+    #[doc = " compares two branching rules w. r. to their priority"]
     pub fn SCIPbranchruleComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting branching rules w.r.t. to their name"]
     pub fn SCIPbranchruleCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -8916,12 +7777,14 @@ unsafe extern "C" {
     pub fn SCIPbranchruleIsInitialized(branchrule: *mut SCIP_BRANCHRULE) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two conflict handlers w. r. to their priority"]
     pub fn SCIPconflicthdlrComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting conflict handler w.r.t. to their name"]
     pub fn SCIPconflicthdlrCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -8973,24 +7836,28 @@ unsafe extern "C" {
     pub fn SCIPconflicthdlrGetTime(conflicthdlr: *mut SCIP_CONFLICTHDLR) -> f64;
 }
 unsafe extern "C" {
+    #[doc = " compares two constraint handlers w.r.t. their separation priority"]
     pub fn SCIPconshdlrCompSepa(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two constraint handlers w.r.t. their enforcing priority"]
     pub fn SCIPconshdlrCompEnfo(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two constraint handlers w.r.t. their feasibility check priority"]
     pub fn SCIPconshdlrCompCheck(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two constraints w.r.t. their feasibility check priority"]
     pub fn SCIPconsCompCheck(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -10566,6 +9433,7 @@ unsafe extern "C" {
     pub fn SCIPexprhdlrHasGetSymData(exprhdlr: *mut SCIP_EXPRHDLR) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two expression handler w.r.t. their name"]
     pub fn SCIPexprhdlrComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -11028,18 +9896,21 @@ unsafe extern "C" {
     pub fn SCIPfclose(fp: *mut SCIP_FILE) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two heuristics w.r.t. to their delay positions and priorities"]
     pub fn SCIPheurComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two heuristics w.r.t. to their priority values"]
     pub fn SCIPheurCompPriority(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting heuristics w.r.t. to their name"]
     pub fn SCIPheurCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -11336,12 +10207,14 @@ unsafe extern "C" {
     pub fn SCIPvariableGraphFree(scip: *mut SCIP, vargraph: *mut *mut SCIP_VGRAPH);
 }
 unsafe extern "C" {
+    #[doc = " compares two compressions w. r. to their priority"]
     pub fn SCIPcomprComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting compressions w.r.t. to their name"]
     pub fn SCIPcomprCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -11491,6 +10364,7 @@ unsafe extern "C" {
     pub fn SCIPiisGetSubscip(iis: *mut SCIP_IIS) -> *mut SCIP;
 }
 unsafe extern "C" {
+    #[doc = " compares two IIS finders w. r. to their priority"]
     pub fn SCIPiisfinderComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -11837,6 +10711,7 @@ unsafe extern "C" {
     pub fn SCIPboundtypeOpposite(boundtype: SCIP_BOUNDTYPE) -> SCIP_BOUNDTYPE;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting rows by non-decreasing index"]
     pub fn SCIProwComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -12009,6 +10884,7 @@ pub struct SCIP_LPiExact {
 }
 pub type SCIP_LPIEXACT = SCIP_LPiExact;
 unsafe extern "C" {
+    #[doc = " comparison method for sorting rows by non-decreasing index"]
     pub fn SCIProwExactComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -12420,10 +11296,31 @@ unsafe extern "C" {
         varineq: *mut ::std::os::raw::c_uint,
     ) -> SCIP_RETCODE;
 }
-pub type __gnuc_va_list = __builtin_va_list;
 unsafe extern "C" {
-    pub fn memchr(
-        __s: *const ::std::os::raw::c_void,
+    pub fn memcpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn memmove(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn memccpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __c: ::std::os::raw::c_int,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn memset(
+        __s: *mut ::std::os::raw::c_void,
         __c: ::std::os::raw::c_int,
         __n: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_void;
@@ -12436,36 +11333,43 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn memcpy(
-        __dst: *mut ::std::os::raw::c_void,
-        __src: *const ::std::os::raw::c_void,
+    pub fn __memcmpeq(
+        __s1: *const ::std::os::raw::c_void,
+        __s2: *const ::std::os::raw::c_void,
+        __n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn memchr(
+        __s: *const ::std::os::raw::c_void,
+        __c: ::std::os::raw::c_int,
         __n: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
-    pub fn memmove(
-        __dst: *mut ::std::os::raw::c_void,
-        __src: *const ::std::os::raw::c_void,
-        __len: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_void;
-}
-unsafe extern "C" {
-    pub fn memset(
-        __b: *mut ::std::os::raw::c_void,
-        __c: ::std::os::raw::c_int,
-        __len: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_void;
-}
-unsafe extern "C" {
-    pub fn strcat(
-        __s1: *mut ::std::os::raw::c_char,
-        __s2: *const ::std::os::raw::c_char,
+    pub fn strcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strchr(
-        __s: *const ::std::os::raw::c_char,
-        __c: ::std::os::raw::c_int,
+    pub fn strncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn strcat(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn strncat(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
@@ -12475,37 +11379,6 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn strcoll(
-        __s1: *const ::std::os::raw::c_char,
-        __s2: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn strcpy(
-        __dst: *mut ::std::os::raw::c_char,
-        __src: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn strcspn(
-        __s: *const ::std::os::raw::c_char,
-        __charset: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn strerror(__errnum: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn strlen(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn strncat(
-        __s1: *mut ::std::os::raw::c_char,
-        __s2: *const ::std::os::raw::c_char,
-        __n: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
     pub fn strncmp(
         __s1: *const ::std::os::raw::c_char,
         __s2: *const ::std::os::raw::c_char,
@@ -12513,16 +11386,72 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn strncpy(
-        __dst: *mut ::std::os::raw::c_char,
+    pub fn strcoll(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn strxfrm(
+        __dest: *mut ::std::os::raw::c_char,
         __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __locale_struct {
+    pub __locales: [*mut __locale_data; 13usize],
+    pub __ctype_b: *const ::std::os::raw::c_ushort,
+    pub __ctype_tolower: *const ::std::os::raw::c_int,
+    pub __ctype_toupper: *const ::std::os::raw::c_int,
+    pub __names: [*const ::std::os::raw::c_char; 13usize],
+}
+#[allow(clippy::unnecessary_operation, clippy::identity_op)]
+const _: () = {
+    ["Size of __locale_struct"][::std::mem::size_of::<__locale_struct>() - 232usize];
+    ["Alignment of __locale_struct"][::std::mem::align_of::<__locale_struct>() - 8usize];
+    ["Offset of field: __locale_struct::__locales"]
+        [::std::mem::offset_of!(__locale_struct, __locales) - 0usize];
+    ["Offset of field: __locale_struct::__ctype_b"]
+        [::std::mem::offset_of!(__locale_struct, __ctype_b) - 104usize];
+    ["Offset of field: __locale_struct::__ctype_tolower"]
+        [::std::mem::offset_of!(__locale_struct, __ctype_tolower) - 112usize];
+    ["Offset of field: __locale_struct::__ctype_toupper"]
+        [::std::mem::offset_of!(__locale_struct, __ctype_toupper) - 120usize];
+    ["Offset of field: __locale_struct::__names"]
+        [::std::mem::offset_of!(__locale_struct, __names) - 128usize];
+};
+pub type __locale_t = *mut __locale_struct;
+pub type locale_t = __locale_t;
+unsafe extern "C" {
+    pub fn strcoll_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __l: locale_t,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn strxfrm_l(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: usize,
+        __l: locale_t,
+    ) -> usize;
+}
+unsafe extern "C" {
+    pub fn strdup(__s: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn strndup(
+        __string: *const ::std::os::raw::c_char,
         __n: ::std::os::raw::c_ulong,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strpbrk(
+    pub fn strchr(
         __s: *const ::std::os::raw::c_char,
-        __charset: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
@@ -12532,147 +11461,174 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strspn(
+    pub fn strchrnul(
         __s: *const ::std::os::raw::c_char,
-        __charset: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn strcspn(
+        __s: *const ::std::os::raw::c_char,
+        __reject: *const ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_ulong;
 }
 unsafe extern "C" {
+    pub fn strspn(
+        __s: *const ::std::os::raw::c_char,
+        __accept: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn strpbrk(
+        __s: *const ::std::os::raw::c_char,
+        __accept: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
     pub fn strstr(
-        __big: *const ::std::os::raw::c_char,
-        __little: *const ::std::os::raw::c_char,
+        __haystack: *const ::std::os::raw::c_char,
+        __needle: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
     pub fn strtok(
-        __str: *mut ::std::os::raw::c_char,
-        __sep: *const ::std::os::raw::c_char,
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strxfrm(
-        __s1: *mut ::std::os::raw::c_char,
-        __s2: *const ::std::os::raw::c_char,
-        __n: ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_ulong;
+    pub fn __strtok_r(
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+        __save_ptr: *mut *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
     pub fn strtok_r(
-        __str: *mut ::std::os::raw::c_char,
-        __sep: *const ::std::os::raw::c_char,
-        __lasts: *mut *mut ::std::os::raw::c_char,
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+        __save_ptr: *mut *mut ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
+    pub fn strcasestr(
+        __haystack: *const ::std::os::raw::c_char,
+        __needle: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    pub fn memmem(
+        __haystack: *const ::std::os::raw::c_void,
+        __haystacklen: usize,
+        __needle: *const ::std::os::raw::c_void,
+        __needlelen: usize,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn __mempcpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: usize,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn mempcpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+unsafe extern "C" {
+    pub fn strlen(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
+}
+unsafe extern "C" {
+    pub fn strnlen(__string: *const ::std::os::raw::c_char, __maxlen: usize) -> usize;
+}
+unsafe extern "C" {
+    pub fn strerror(__errnum: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
+}
+unsafe extern "C" {
+    #[link_name = "\u{1}__xpg_strerror_r"]
     pub fn strerror_r(
         __errnum: ::std::os::raw::c_int,
-        __strerrbuf: *mut ::std::os::raw::c_char,
+        __buf: *mut ::std::os::raw::c_char,
         __buflen: usize,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn strdup(__s1: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn strerror_l(
+        __errnum: ::std::os::raw::c_int,
+        __l: locale_t,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn memccpy(
-        __dst: *mut ::std::os::raw::c_void,
+    pub fn bcmp(
+        __s1: *const ::std::os::raw::c_void,
+        __s2: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn bcopy(
         __src: *const ::std::os::raw::c_void,
+        __dest: *mut ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    );
+}
+unsafe extern "C" {
+    pub fn bzero(__s: *mut ::std::os::raw::c_void, __n: ::std::os::raw::c_ulong);
+}
+unsafe extern "C" {
+    pub fn index(
+        __s: *const ::std::os::raw::c_char,
         __c: ::std::os::raw::c_int,
-        __n: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_void;
-}
-unsafe extern "C" {
-    pub fn stpcpy(
-        __dst: *mut ::std::os::raw::c_char,
-        __src: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn stpncpy(
-        __dst: *mut ::std::os::raw::c_char,
-        __src: *const ::std::os::raw::c_char,
-        __n: ::std::os::raw::c_ulong,
+    pub fn rindex(
+        __s: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strndup(
+    pub fn ffs(__i: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ffsl(__l: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn ffsll(__ll: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn strcasecmp(
         __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+unsafe extern "C" {
+    pub fn strncasecmp(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
         __n: ::std::os::raw::c_ulong,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn strnlen(__s1: *const ::std::os::raw::c_char, __n: usize) -> usize;
+    pub fn strcasecmp_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __loc: locale_t,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn strsignal(__sig: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
-}
-pub type errno_t = ::std::os::raw::c_int;
-unsafe extern "C" {
-    pub fn memset_s(
-        __s: *mut ::std::os::raw::c_void,
-        __smax: rsize_t,
-        __c: ::std::os::raw::c_int,
-        __n: rsize_t,
-    ) -> errno_t;
+    pub fn strncasecmp_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __n: usize,
+        __loc: locale_t,
+    ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
-    pub fn memmem(
-        __big: *const ::std::os::raw::c_void,
-        __big_len: usize,
-        __little: *const ::std::os::raw::c_void,
-        __little_len: usize,
-    ) -> *mut ::std::os::raw::c_void;
-}
-unsafe extern "C" {
-    pub fn memset_pattern4(
-        __b: *mut ::std::os::raw::c_void,
-        __pattern4: *const ::std::os::raw::c_void,
-        __len: usize,
-    );
-}
-unsafe extern "C" {
-    pub fn memset_pattern8(
-        __b: *mut ::std::os::raw::c_void,
-        __pattern8: *const ::std::os::raw::c_void,
-        __len: usize,
-    );
-}
-unsafe extern "C" {
-    pub fn memset_pattern16(
-        __b: *mut ::std::os::raw::c_void,
-        __pattern16: *const ::std::os::raw::c_void,
-        __len: usize,
-    );
-}
-unsafe extern "C" {
-    pub fn strcasestr(
-        __big: *const ::std::os::raw::c_char,
-        __little: *const ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn strnstr(
-        __big: *const ::std::os::raw::c_char,
-        __little: *const ::std::os::raw::c_char,
-        __len: usize,
-    ) -> *mut ::std::os::raw::c_char;
-}
-unsafe extern "C" {
-    pub fn strlcat(
-        __dst: *mut ::std::os::raw::c_char,
-        __source: *const ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn strlcpy(
-        __dst: *mut ::std::os::raw::c_char,
-        __source: *const ::std::os::raw::c_char,
-        __size: ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_ulong;
-}
-unsafe extern "C" {
-    pub fn strmode(__mode: ::std::os::raw::c_int, __bp: *mut ::std::os::raw::c_char);
+    pub fn explicit_bzero(__s: *mut ::std::os::raw::c_void, __n: usize);
 }
 unsafe extern "C" {
     pub fn strsep(
@@ -12681,85 +11637,47 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn swab(
-        arg1: *const ::std::os::raw::c_void,
-        arg2: *mut ::std::os::raw::c_void,
-        arg3: isize,
-    );
+    pub fn strsignal(__sig: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn timingsafe_bcmp(
-        __b1: *const ::std::os::raw::c_void,
-        __b2: *const ::std::os::raw::c_void,
-        __len: usize,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn strsignal_r(
-        __sig: ::std::os::raw::c_int,
-        __strsignalbuf: *mut ::std::os::raw::c_char,
-        __buflen: usize,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn bcmp(
-        arg1: *const ::std::os::raw::c_void,
-        arg2: *const ::std::os::raw::c_void,
-        arg3: ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn bcopy(
-        arg1: *const ::std::os::raw::c_void,
-        arg2: *mut ::std::os::raw::c_void,
-        arg3: usize,
-    );
-}
-unsafe extern "C" {
-    pub fn bzero(arg1: *mut ::std::os::raw::c_void, arg2: ::std::os::raw::c_ulong);
-}
-unsafe extern "C" {
-    pub fn index(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
+    pub fn __stpcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn rindex(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
+    pub fn stpcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn ffs(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn __stpncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: usize,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strcasecmp(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+    pub fn stpncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
 }
 unsafe extern "C" {
-    pub fn strncasecmp(
-        arg1: *const ::std::os::raw::c_char,
-        arg2: *const ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_ulong,
-    ) -> ::std::os::raw::c_int;
+    pub fn strlcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: usize,
+    ) -> usize;
 }
 unsafe extern "C" {
-    pub fn ffsl(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn ffsll(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn fls(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn flsl(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
-}
-unsafe extern "C" {
-    pub fn flsll(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
+    pub fn strlcat(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: usize,
+    ) -> usize;
 }
 unsafe extern "C" {
     #[doc = " Creates and captures a message handler which deals with warning, information, and dialog (interactive shell) methods.\n\n  Use SCIPsetMessagehdlr() to make SCIP aware of the created message handler.\n  @note The message handler does not handle error messages. For that see SCIPmessageSetErrorPrinting()\n  @note Creating a message handler automatically captures it."]
@@ -16230,12 +15148,14 @@ unsafe extern "C" {
     );
 }
 unsafe extern "C" {
+    #[doc = " default comparer for integers"]
     pub fn SCIPsortCompInt(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " implements argsort\n\n The data pointer is a lookup array of integers."]
     pub fn SCIPsortArgsortInt(
         dataptr: *mut ::std::os::raw::c_void,
         ind1: ::std::os::raw::c_int,
@@ -16243,6 +15163,7 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " implements argsort\n\n The data pointer is a lookup array, which are pointer arrays."]
     pub fn SCIPsortArgsortPtr(
         dataptr: *mut ::std::os::raw::c_void,
         ind1: ::std::os::raw::c_int,
@@ -21944,6 +20865,7 @@ unsafe extern "C" {
     );
 }
 unsafe extern "C" {
+    #[doc = " standard hash key comparator for string keys"]
     pub fn SCIPhashKeyEqString(
         userptr: *mut ::std::os::raw::c_void,
         key1: *mut ::std::os::raw::c_void,
@@ -21951,18 +20873,21 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " standard hashing function for string keys"]
     pub fn SCIPhashKeyValString(
         userptr: *mut ::std::os::raw::c_void,
         key: *mut ::std::os::raw::c_void,
     ) -> u64;
 }
 unsafe extern "C" {
+    #[doc = " gets the element as the key"]
     pub fn SCIPhashGetKeyStandard(
         userptr: *mut ::std::os::raw::c_void,
         elem: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
+    #[doc = " returns TRUE iff both keys(pointer) are equal"]
     pub fn SCIPhashKeyEqPtr(
         userptr: *mut ::std::os::raw::c_void,
         key1: *mut ::std::os::raw::c_void,
@@ -21970,6 +20895,7 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " returns the hash value of the key"]
     pub fn SCIPhashKeyValPtr(
         userptr: *mut ::std::os::raw::c_void,
         key: *mut ::std::os::raw::c_void,
@@ -23082,12 +22008,14 @@ unsafe extern "C" {
     pub fn SCIPparamIsDefault(param: *mut SCIP_PARAM) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two presolvers w. r. to their priority"]
     pub fn SCIPpresolComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting presolvers w.r.t. to their name"]
     pub fn SCIPpresolCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23186,12 +22114,14 @@ unsafe extern "C" {
     pub fn SCIPpresolGetNCalls(presol: *mut SCIP_PRESOL) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two pricers w. r. to their priority"]
     pub fn SCIPpricerComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting pricers w.r.t. to their name"]
     pub fn SCIPpricerCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23282,12 +22212,14 @@ unsafe extern "C" {
     pub fn SCIPreaderCanWrite(reader: *mut SCIP_READER) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two relaxation handlers w. r. to their priority"]
     pub fn SCIPrelaxComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting relaxators w.r.t. to their name"]
     pub fn SCIPrelaxCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23460,12 +22392,14 @@ unsafe extern "C" {
     pub fn SCIPreoptGetNTotalInfNodes(reopt: *mut SCIP_REOPT) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two separators w. r. to their priority"]
     pub fn SCIPsepaComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting separators w.r.t. to their name"]
     pub fn SCIPsepaCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23664,24 +22598,28 @@ unsafe extern "C" {
     pub fn SCIPcutselGetNLocalCutsFiltered(cutsel: *mut SCIP_CUTSEL) -> ::std::os::raw::c_longlong;
 }
 unsafe extern "C" {
+    #[doc = " compares two cut selectors w. r. to their priority"]
     pub fn SCIPcutselComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two propagators w. r. to their priority"]
     pub fn SCIPpropComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " compares two propagators w. r. to their presolving priority"]
     pub fn SCIPpropCompPresol(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting propagators w.r.t. to their name"]
     pub fn SCIPpropCompName(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23940,6 +22878,7 @@ unsafe extern "C" {
     pub fn SCIPsolGetRelConsViolation(sol: *mut SCIP_SOL) -> f64;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting solution by decreasing objective value (best solution will be sorted to the end)"]
     pub fn SCIPsolComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -23978,6 +22917,7 @@ unsafe extern "C" {
     pub fn SCIPtableIsInitialized(table: *mut SCIP_TABLE) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " node comparator for best lower bound"]
     pub fn SCIPnodeCompLowerbound(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -24168,6 +23108,7 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting active and negated variables by non-decreasing index, active and negated\n  variables are handled as the same variables"]
     pub fn SCIPvarCompActiveAndNegated(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -24178,24 +23119,28 @@ unsafe extern "C" {
     pub fn SCIPvarCompare(var1: *mut SCIP_VAR, var2: *mut SCIP_VAR) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting variables by non-decreasing index"]
     pub fn SCIPvarComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " comparison method for sorting variables by non-decreasing objective coefficient"]
     pub fn SCIPvarCompObj(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_int;
 }
 unsafe extern "C" {
+    #[doc = " hash key retrieval function for variables"]
     pub fn SCIPvarGetHashkey(
         userptr: *mut ::std::os::raw::c_void,
         elem: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
+    #[doc = " returns TRUE iff the indices of both variables are equal"]
     pub fn SCIPvarIsHashkeyEq(
         userptr: *mut ::std::os::raw::c_void,
         key1: *mut ::std::os::raw::c_void,
@@ -24203,6 +23148,7 @@ unsafe extern "C" {
     ) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " returns the hash value of the key"]
     pub fn SCIPvarGetHashkeyVal(
         userptr: *mut ::std::os::raw::c_void,
         key: *mut ::std::os::raw::c_void,
@@ -25937,7 +24883,9 @@ pub struct SCIP_AggrRow {
     pub slacksign: *mut ::std::os::raw::c_int,
     #[doc = "< weights of rows that have been added to the cutrow"]
     pub rowweights: *mut f64,
+    #[doc = "< right hand side of the cut row"]
     pub rhshi: f64,
+    #[doc = "< right hand side of the cut row"]
     pub rhslo: f64,
     #[doc = "< number of non-zeros in the cut row"]
     pub nnz: ::std::os::raw::c_int,
@@ -31471,6 +30419,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the print callback for an expression\n\n @see SCIP_DECL_EXPRPRINT"]
     pub fn SCIPcallExprPrint(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31481,6 +30430,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the curvature callback for an expression\n\n @see SCIP_DECL_EXPRCURVATURE\n\n Returns unknown curvature if callback not implemented."]
     pub fn SCIPcallExprCurvature(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31490,6 +30440,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the monotonicity callback for an expression\n\n @see SCIP_DECL_EXPRMONOTONICITY\n\n Returns unknown monotonicity if callback not implemented."]
     pub fn SCIPcallExprMonotonicity(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31518,6 +30469,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the interval evaluation callback for an expression\n\n @see SCIP_DECL_EXPRINTEVAL\n\n Returns entire interval if callback not implemented."]
     pub fn SCIPcallExprInteval(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31533,6 +30485,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the estimate callback for an expression\n\n @see SCIP_DECL_EXPRESTIMATE\n\n Returns without success if callback not implemented."]
     pub fn SCIPcallExprEstimate(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31549,6 +30502,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the initial estimators callback for an expression\n\n @see SCIP_DECL_EXPRINITESTIMATES\n\n Returns no estimators if callback not implemented."]
     pub fn SCIPcallExprInitestimates(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31560,6 +30514,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the simplify callback for an expression\n\n @see SCIP_DECL_EXPRSIMPLIFY\n\n Returns unmodified expression if simplify callback not implemented.\n\n Does not simplify descendants (children, etc). Use SCIPsimplifyExpr() for that."]
     pub fn SCIPcallExprSimplify(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31598,6 +30553,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the reverse propagation callback for an expression\n\n @see SCIP_DECL_EXPRREVERSEPROP\n\n Returns unmodified `childrenbounds` if reverseprop callback not implemented."]
     pub fn SCIPcallExprReverseprop(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -31607,6 +30563,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " calls the symmetry information callback for an expression\n\n Returns NULL pointer if not implemented."]
     pub fn SCIPcallExprGetSymData(
         scip: *mut SCIP,
         expr: *mut SCIP_EXPR,
@@ -33122,6 +32079,7 @@ unsafe extern "C" {
     -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " compares two NLPIs w.r.t. their priority"]
     pub fn SCIPnlpiComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -33418,6 +32376,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " gets internal pointer to NLP solver\n\n Depending on the solver interface, a solver pointer may exist for every NLP problem instance.\n For this case, a NLPI problem can be passed in as well."]
     pub fn SCIPgetNlpiSolverPointer(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33425,6 +32384,7 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
+    #[doc = " creates an empty problem instance"]
     pub fn SCIPcreateNlpiProblem(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33433,6 +32393,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " frees a problem instance"]
     pub fn SCIPfreeNlpiProblem(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33440,6 +32401,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " gets internal pointer to solver-internal problem instance"]
     pub fn SCIPgetNlpiProblemPointer(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33447,6 +32409,7 @@ unsafe extern "C" {
     ) -> *mut ::std::os::raw::c_void;
 }
 unsafe extern "C" {
+    #[doc = " add variables to nlpi"]
     pub fn SCIPaddNlpiVars(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33458,6 +32421,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " add constraints to nlpi"]
     pub fn SCIPaddNlpiConstraints(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33473,6 +32437,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " sets or overwrites objective, a minimization problem is expected"]
     pub fn SCIPsetNlpiObjective(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33485,6 +32450,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " change variable bounds"]
     pub fn SCIPchgNlpiVarBounds(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33496,6 +32462,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " change constraint sides"]
     pub fn SCIPchgNlpiConsSides(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33507,6 +32474,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " delete a set of variables"]
     pub fn SCIPdelNlpiVarSet(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33516,6 +32484,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " delete a set of constraints"]
     pub fn SCIPdelNlpiConsSet(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33525,6 +32494,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " changes or adds linear coefficients in a constraint or objective"]
     pub fn SCIPchgNlpiLinearCoefs(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33536,6 +32506,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " change the expression in the nonlinear part"]
     pub fn SCIPchgNlpiExpr(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33545,6 +32516,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " change the constant offset in the objective"]
     pub fn SCIPchgNlpiObjConstant(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33553,6 +32525,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " sets initial guess"]
     pub fn SCIPsetNlpiInitialGuess(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33564,6 +32537,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " try to solve NLP with all parameters given as SCIP_NLPPARAM struct\n\n Typical use is\n\n     SCIP_NLPPARAM nlparam = { SCIP_NLPPARAM_DEFAULT(scip); }\n     nlpparam.iterlimit = 42;\n     SCIP_CALL( SCIPsolveNlpiParam(scip, nlpi, nlpiproblem, nlpparam) );\n\n or, in \"one\" line:\n\n     SCIP_CALL( SCIPsolveNlpiParam(scip, nlpi, nlpiproblem,\n        (SCIP_NLPPARAM){ SCIP_NLPPARAM_DEFAULT(scip), .iterlimit = 42 }) );\n\n To get the latter, also \\ref SCIPsolveNlpi can be used."]
     pub fn SCIPsolveNlpiParam(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33572,6 +32546,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " gives solution status"]
     pub fn SCIPgetNlpiSolstat(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33579,6 +32554,7 @@ unsafe extern "C" {
     ) -> SCIP_NLPSOLSTAT;
 }
 unsafe extern "C" {
+    #[doc = " gives termination reason"]
     pub fn SCIPgetNlpiTermstat(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33586,6 +32562,7 @@ unsafe extern "C" {
     ) -> SCIP_NLPTERMSTAT;
 }
 unsafe extern "C" {
+    #[doc = " gives primal and dual solution\n for a ranged constraint, the dual variable is positive if the right hand side is active and negative if the left hand side is active"]
     pub fn SCIPgetNlpiSolution(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -33598,6 +32575,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " gives solve statistics"]
     pub fn SCIPgetNlpiStatistics(
         scip: *mut SCIP,
         nlpi: *mut SCIP_NLPI,
@@ -40782,6 +39760,7 @@ unsafe extern "C" {
     pub fn SCIPincludeConshdlrCountsols(scip: *mut SCIP) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the count command"]
     pub fn SCIPdialogExecCountPresolve(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -40790,6 +39769,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the count command"]
     pub fn SCIPdialogExecCount(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -40798,6 +39778,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " execution method of dialog for writing all solutions"]
     pub fn SCIPdialogExecWriteAllsolutions(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55019,6 +54000,7 @@ unsafe extern "C" {
     pub fn SCIPgetSlackConsSuperindicator(cons: *mut SCIP_CONS) -> *mut SCIP_CONS;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the SCIPtransformMinUC() command"]
     pub fn SCIPdialogExecChangeMinUC(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55241,6 +54223,7 @@ unsafe extern "C" {
     pub fn SCIPincludeDispDefault(scip: *mut SCIP) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " standard menu dialog execution method, that displays it's help screen if the remaining command line is empty"]
     pub fn SCIPdialogExecMenu(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55249,6 +54232,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " standard menu dialog execution method, that doesn't display it's help screen"]
     pub fn SCIPdialogExecMenuLazy(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55257,6 +54241,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the change add constraint"]
     pub fn SCIPdialogExecChangeAddCons(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55265,6 +54250,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the change bounds command"]
     pub fn SCIPdialogExecChangeBounds(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55273,6 +54259,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the freetransproblem command"]
     pub fn SCIPdialogExecChangeFreetransproblem(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55281,6 +54268,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the changing the objective sense"]
     pub fn SCIPdialogExecChangeObjSense(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55289,6 +54277,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the checksol command"]
     pub fn SCIPdialogExecChecksol(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55297,6 +54286,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the cliquegraph command"]
     pub fn SCIPdialogExecCliquegraph(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55305,6 +54295,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display benders command"]
     pub fn SCIPdialogExecDisplayBenders(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55313,6 +54304,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display branching command"]
     pub fn SCIPdialogExecDisplayBranching(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55321,6 +54313,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display compression command"]
     pub fn SCIPdialogExecDisplayCompression(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55329,6 +54322,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display conflict command"]
     pub fn SCIPdialogExecDisplayConflict(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55337,6 +54331,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display conshdlrs command"]
     pub fn SCIPdialogExecDisplayConshdlrs(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55345,6 +54340,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display displaycols command"]
     pub fn SCIPdialogExecDisplayDisplaycols(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55353,6 +54349,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display exprhdlrs command"]
     pub fn SCIPdialogExecDisplayExprhdlrs(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55361,6 +54358,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display cutselectors command"]
     pub fn SCIPdialogExecDisplayCutselectors(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55369,6 +54367,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display heuristics command"]
     pub fn SCIPdialogExecDisplayHeuristics(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55377,6 +54376,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display IIS command"]
     pub fn SCIPdialogExecDisplayIIS(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55385,6 +54385,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display memory command"]
     pub fn SCIPdialogExecDisplayMemory(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55393,6 +54394,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display nodeselectors command"]
     pub fn SCIPdialogExecDisplayNodeselectors(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55401,6 +54403,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display nlpi command"]
     pub fn SCIPdialogExecDisplayNlpi(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55409,6 +54412,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display parameters command"]
     pub fn SCIPdialogExecDisplayParameters(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55417,6 +54421,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display presolvers command"]
     pub fn SCIPdialogExecDisplayPresolvers(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55425,6 +54430,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display pricer command"]
     pub fn SCIPdialogExecDisplayPricers(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55433,6 +54439,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display problem command"]
     pub fn SCIPdialogExecDisplayProblem(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55441,6 +54448,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display propagators command"]
     pub fn SCIPdialogExecDisplayPropagators(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55449,6 +54457,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display readers command"]
     pub fn SCIPdialogExecDisplayReaders(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55457,6 +54466,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display relaxators command"]
     pub fn SCIPdialogExecDisplayRelaxators(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55465,6 +54475,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display separators command"]
     pub fn SCIPdialogExecDisplaySeparators(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55473,6 +54484,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display solution command"]
     pub fn SCIPdialogExecDisplaySolution(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55481,6 +54493,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display finitesolution command"]
     pub fn SCIPdialogExecDisplayFiniteSolution(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55489,6 +54502,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display dual solution command"]
     pub fn SCIPdialogExecDisplayDualSolution(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55497,6 +54511,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display of solutions in the pool command"]
     pub fn SCIPdialogExecDisplaySolutionPool(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55505,6 +54520,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display subproblem command"]
     pub fn SCIPdialogExecDisplaySubproblem(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55513,6 +54529,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display subsolution command"]
     pub fn SCIPdialogExecDisplaySubSolution(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55521,6 +54538,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display statistics command"]
     pub fn SCIPdialogExecDisplayStatistics(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55529,6 +54547,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display symmetry command"]
     pub fn SCIPdialogExecDisplaySymmetry(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55537,6 +54556,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display reoptstatistics command"]
     pub fn SCIPdialogExecDisplayReoptStatistics(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55545,6 +54565,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display transproblem command"]
     pub fn SCIPdialogExecDisplayTransproblem(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55553,6 +54574,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display value command"]
     pub fn SCIPdialogExecDisplayValue(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55561,6 +54583,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display varbranchstatistics command"]
     pub fn SCIPdialogExecDisplayVarbranchstatistics(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55569,6 +54592,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display LP solution quality command"]
     pub fn SCIPdialogExecDisplayLPSolutionQuality(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55577,6 +54601,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the display transsolution command"]
     pub fn SCIPdialogExecDisplayTranssolution(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55585,6 +54610,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the help command"]
     pub fn SCIPdialogExecHelp(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55593,6 +54619,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the free command"]
     pub fn SCIPdialogExecFree(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55601,6 +54628,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the newstart command"]
     pub fn SCIPdialogExecNewstart(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55609,6 +54637,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the transform command"]
     pub fn SCIPdialogExecTransform(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55617,6 +54646,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the optimize command"]
     pub fn SCIPdialogExecOptimize(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55625,6 +54655,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the parallelopt command"]
     pub fn SCIPdialogExecConcurrentOpt(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55633,6 +54664,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the presolve command"]
     pub fn SCIPdialogExecPresolve(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55641,6 +54673,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the iis command"]
     pub fn SCIPdialogExecIIS(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55649,6 +54682,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the quit command"]
     pub fn SCIPdialogExecQuit(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55657,6 +54691,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the read command"]
     pub fn SCIPdialogExecRead(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55665,6 +54700,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set default command"]
     pub fn SCIPdialogExecSetDefault(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55673,6 +54709,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set load command"]
     pub fn SCIPdialogExecSetLoad(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55681,6 +54718,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set save command"]
     pub fn SCIPdialogExecSetSave(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55689,6 +54727,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set diffsave command"]
     pub fn SCIPdialogExecSetDiffsave(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55697,6 +54736,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set parameter command"]
     pub fn SCIPdialogExecSetParam(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55705,9 +54745,11 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog description method for the set parameter command"]
     pub fn SCIPdialogDescSetParam(scip: *mut SCIP, dialog: *mut SCIP_DIALOG) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the fix parameter command"]
     pub fn SCIPdialogExecFixParam(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55716,9 +54758,11 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog description method for the fix parameter command"]
     pub fn SCIPdialogDescFixParam(scip: *mut SCIP, dialog: *mut SCIP_DIALOG) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set branching direction command"]
     pub fn SCIPdialogExecSetBranchingDirection(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55727,6 +54771,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set branching priority command"]
     pub fn SCIPdialogExecSetBranchingPriority(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55735,6 +54780,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set heuristics aggressive command"]
     pub fn SCIPdialogExecSetHeuristicsAggressive(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55743,6 +54789,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set heuristics default command"]
     pub fn SCIPdialogExecSetHeuristicsDefault(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55751,6 +54798,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set heuristics fast command"]
     pub fn SCIPdialogExecSetHeuristicsFast(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55759,6 +54807,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set heuristics off command"]
     pub fn SCIPdialogExecSetHeuristicsOff(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55767,6 +54816,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set presolving aggressive command"]
     pub fn SCIPdialogExecSetPresolvingAggressive(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55775,6 +54825,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set presolving default command"]
     pub fn SCIPdialogExecSetPresolvingDefault(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55783,6 +54834,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set presolving fast command"]
     pub fn SCIPdialogExecSetPresolvingFast(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55791,6 +54843,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set presolving off command"]
     pub fn SCIPdialogExecSetPresolvingOff(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55799,6 +54852,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set separating aggressive command"]
     pub fn SCIPdialogExecSetSeparatingAggressive(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55807,6 +54861,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set separating default command"]
     pub fn SCIPdialogExecSetSeparatingDefault(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55815,6 +54870,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set separating fast command"]
     pub fn SCIPdialogExecSetSeparatingFast(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55823,6 +54879,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set separating off command"]
     pub fn SCIPdialogExecSetSeparatingOff(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55831,6 +54888,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis counter command"]
     pub fn SCIPdialogExecSetEmphasisCounter(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55839,6 +54897,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis cpsolver command"]
     pub fn SCIPdialogExecSetEmphasisCpsolver(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55847,6 +54906,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis easy CIP command"]
     pub fn SCIPdialogExecSetEmphasisEasycip(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55855,6 +54915,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis feasibility command"]
     pub fn SCIPdialogExecSetEmphasisFeasibility(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55863,6 +54924,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis hard LP command"]
     pub fn SCIPdialogExecSetEmphasisHardlp(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55871,6 +54933,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis optimality command"]
     pub fn SCIPdialogExecSetEmphasisOptimality(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55879,6 +54942,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis numerics command"]
     pub fn SCIPdialogExecSetEmphasisNumerics(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55887,6 +54951,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set emphasis benchmark command"]
     pub fn SCIPdialogExecSetEmphasisBenchmark(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55895,6 +54960,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for the set limits objective command"]
     pub fn SCIPdialogExecSetLimitsObjective(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -55903,6 +54969,7 @@ unsafe extern "C" {
     ) -> SCIP_RETCODE;
 }
 unsafe extern "C" {
+    #[doc = " dialog execution method for linear constraint type classification"]
     pub fn SCIPdialogExecDisplayLinearConsClassification(
         scip: *mut SCIP,
         dialog: *mut SCIP_DIALOG,
@@ -57242,6 +56309,7 @@ unsafe extern "C" {
     pub fn SCIPnlhdlrHasSollinearize(nlhdlr: *mut SCIP_NLHDLR) -> ::std::os::raw::c_uint;
 }
 unsafe extern "C" {
+    #[doc = " compares two nonlinear handlers by detection priority\n\n if handlers have same detection priority, then compare by name"]
     pub fn SCIPnlhdlrComp(
         elem1: *mut ::std::os::raw::c_void,
         elem2: *mut ::std::os::raw::c_void,
@@ -58682,5 +57750,8 @@ unsafe extern "C" {
     #[doc = " includes default plugins into SCIP with respect to priorities"]
     pub fn SCIPincludeDefaultPlugins(scip: *mut SCIP) -> SCIP_RETCODE;
 }
-pub type __builtin_va_list = *mut ::std::os::raw::c_char;
-pub type __uint128_t = u128;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __locale_data {
+    pub _address: u8,
+}
