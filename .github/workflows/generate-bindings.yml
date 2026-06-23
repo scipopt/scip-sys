@@ -17,7 +17,7 @@ jobs:
             target: linux
           - os: ubuntu-24.04-arm
             target: linux-arm
-          - os: macos-15
+          - os: macos-15-intel # Intel macOS runner
             target: macos-intel
           - os: macos-14 # macOS arm runner
             target: macos-arm
@@ -64,5 +64,8 @@ jobs:
           body: |
             Automated regeneration of the per-platform prebuilt bundled bindings
             (`src/bindings/<target>.rs`) via the `generate-bindings` workflow.
+          base: main
           branch: update-bundled-bindings
           delete-branch: true
+          # Only commit the bindings, never the downloaded artifacts/ directory.
+          add-paths: src/bindings/*.rs
