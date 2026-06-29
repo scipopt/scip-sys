@@ -57,6 +57,7 @@ pub fn compile_scip(source_path: PathBuf) -> PathBuf {
         .define("SYM", "snauty")
         .define("ZLIB", "OFF")
         .define("SHARED", "OFF")
+        .define("CMAKE_INSTALL_LIBDIR", "lib")
         .define("GCG", "OFF")
         .define("UG", "OFF")
         .define("SANITIZE_ADDRESS", "OFF")
