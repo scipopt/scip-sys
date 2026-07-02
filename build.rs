@@ -19,25 +19,51 @@ use std::path::{Path, PathBuf};
 /// Emit the `cargo:` link-search / rpath directives for a SCIP install directory
 /// (one containing `lib/` and `include/`). This is independent of bindgen and is
 /// shared by every path that links against SCIP.
+/// Locate the directory under a SCIP install prefix that actually contains the
+/// SCIP libraries. CMake's GNUInstallDirs installs into `lib64` on many 64-bit
+/// Linux distributions (RHEL/Fedora/SUSE/...) and into `lib` elsewhere, so probe
+/// both instead of assuming `lib`.
+#[cfg(any(feature = "bundled", feature = "bindgen"))]
+fn find_scip_lib_dir(prefix: &str) -> Option<PathBuf> {
+    use glob::glob;
+    // On multilib systems `<prefix>/lib` may hold 32-bit libraries while the
+    // 64-bit ones live in `<prefix>/lib64` (CMake's GNUInstallDirs default on
+    // RHEL/Fedora/SUSE/...). Probe the directory matching the target's pointer
+    // width first so a 64-bit build doesn't pick up a 32-bit libscip.
+    let target_is_64bit = env::var("CARGO_CFG_TARGET_POINTER_WIDTH").as_deref() == Ok("64");
+    let candidates: &[&str] = if target_is_64bit {
+        &["lib64", "lib"]
+    } else {
+        &["lib"]
+    };
+    candidates
+        .into_iter()
+        .map(|sub| PathBuf::from(prefix).join(sub))
+        .find(|dir| {
+            glob(&format!("{}/libscip*", dir.display()))
+                .map(|paths| paths.count() > 0)
+                .unwrap_or(false)
+        })
+}
+
 #[cfg(any(feature = "bundled", feature = "bindgen"))]
 fn emit_link_search(path: &str) {
-    let lib_dir = PathBuf::from(&path).join("lib");
+    let lib_dir = find_scip_lib_dir(path).unwrap_or_else(|| {
+        panic!(
+            "no SCIP library found under {path}/lib or {path}/lib64, \
+             please check your SCIP installation"
+        )
+    });
     let lib_dir_path = lib_dir.to_str().unwrap();
 
-    if lib_dir.exists() {
-        println!("cargo:warning=Using SCIP from {}", lib_dir_path);
-        println!("cargo:rustc-link-search={}", lib_dir_path);
-        println!("cargo:libdir={}", lib_dir_path);
+    println!("cargo:warning=Using SCIP from {}", lib_dir_path);
+    println!("cargo:rustc-link-search={}", lib_dir_path);
+    println!("cargo:libdir={}", lib_dir_path);
 
-        #[cfg(windows)]
-        let lib_dir_path = PathBuf::from(&path).join("bin");
-        #[cfg(windows)]
-        println!("cargo:rustc-link-search={}", lib_dir_path.to_str().unwrap());
-    } else {
-        panic!(
-            "{}/lib does not exist, please check your SCIP installation",
-            path
-        );
+    #[cfg(windows)]
+    {
+        let bin_dir = PathBuf::from(&path).join("bin");
+        println!("cargo:rustc-link-search={}", bin_dir.to_str().unwrap());
     }
 
     println!("cargo:rustc-link-arg=-Wl,-rpath,{}", lib_dir_path);
@@ -144,8 +170,7 @@ fn finalize_and_generate(builder: bindgen::Builder, out_path: &Path) -> Result<(
 
 #[cfg(all(feature = "bindgen", not(feature = "bundled")))]
 fn lib_scip_in_dir(path: &str) -> bool {
-    use glob::glob;
-    glob(&format!("{}/lib/libscip*", path)).unwrap().count() > 0
+    find_scip_lib_dir(path).is_some()
 }
 
 #[cfg(all(feature = "bindgen", not(feature = "bundled")))]

@@ -195,6 +195,54 @@ jobs:
           cargo t create
           cargo t --examples
 
+  # Verifies the build script finds a SCIP install under `lib64` (CMake's
+  # GNUInstallDirs default on 64-bit RHEL/Fedora/SUSE-like systems). The prebuilt
+  # bundled libraries are re-laid into a `lib64` prefix that SCIPOPTDIR points at.
+  # A bogus `lib/libscip*` is planted as well, so the job also fails if `lib`
+  # (where 32-bit libraries live on multilib systems) is preferred over `lib64`.
+  linux-lib64-scipoptdir-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install runtime dependency of the prebuilt SCIP
+        run: sudo apt-get update && sudo apt-get install -y libgfortran5
+      - name: Lay out a lib64-style SCIP install from the bundled prebuilt
+        run: |
+          cargo build --features bundled --release
+          scip_install=$(find target/release -type d -name scip_install | head -1)
+          prefix="$GITHUB_WORKSPACE/scip-lib64"
+          mkdir -p "$prefix/lib64" "$prefix/lib"
+          cp -a "$scip_install/lib/." "$prefix/lib64/"
+          cp -a "$scip_install/include" "$prefix/"
+          # 32-bit libraries live in `lib` on multilib systems; a 64-bit build
+          # must pick `lib64`, so this bogus libscip in `lib` must be ignored.
+          echo "bogus" > "$prefix/lib/libscip.so"
+          echo "SCIPOPTDIR=$prefix" >> "$GITHUB_ENV"
+      - name: Build and run against the lib64 install
+        run: |
+          cargo build --release
+          cargo run --release --example create
+
+  # Builds the from-source feature on a lib64 distro (Rocky Linux 10, RHEL 10
+  # family). This is the environment the lib64 fix targets: CMake's
+  # GNUInstallDirs installs SCIP under `lib64` there. Guards that the
+  # from-source build keeps working on such a system.
+  linux-lib64-from-source-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and test from-source inside a Rocky Linux 10 container
+        run: |
+          docker run --rm -v "$GITHUB_WORKSPACE:/workspace" -w /workspace rockylinux/rockylinux:10 bash -c '
+            set -e
+            dnf -y install gcc gcc-c++ cmake clang-devel git diffutils which patch perl > /dev/null
+            curl -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
+            . "$HOME/.cargo/env"
+            export LIBCLANG_PATH=/usr/lib64
+            cargo build --features from-source -vv
+            cargo run --features from-source --example create
+          '
+
 #  from-source-linux-arm-test:
 #    runs-on: ubuntu-latest
 #    steps:
