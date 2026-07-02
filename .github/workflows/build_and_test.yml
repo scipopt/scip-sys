@@ -22,6 +22,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
+      - name: Install GCC (provides libgfortran for the prebuilt SCIP binary)
+        if: ${{ matrix.os == 'macos-15' || matrix.os == 'macos-14' }}
+        run: brew install gcc
       - name: Test bundled
         run: |
           cargo b --features bundled --release
